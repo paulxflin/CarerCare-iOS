@@ -15,6 +15,7 @@
 		ACB593522386F6F200A2478E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB593502386F6F200A2478E /* LaunchScreen.storyboard */; };
 		ACB5935D2386F6F200A2478E /* AlertAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5935C2386F6F200A2478E /* AlertAppTests.swift */; };
 		ACB593682386F6F200A2478E /* AlertAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB593672386F6F200A2478E /* AlertAppUITests.swift */; };
+		ACB593762387001700A2478E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ACB593752387001700A2478E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ACB593632386F6F200A2478E /* AlertAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB593672386F6F200A2478E /* AlertAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAppUITests.swift; sourceTree = "<group>"; };
 		ACB593692386F6F200A2478E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB593752387001700A2478E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		ACB593392386F6F000A2478E = {
 			isa = PBXGroup;
 			children = (
+				ACB593752387001700A2478E /* README.md */,
 				ACB593442386F6F000A2478E /* AlertApp */,
 				ACB5935B2386F6F200A2478E /* AlertAppTests */,
 				ACB593662386F6F200A2478E /* AlertAppUITests */,
@@ -234,6 +237,7 @@
 			files = (
 				ACB593522386F6F200A2478E /* LaunchScreen.storyboard in Resources */,
 				ACB5934F2386F6F100A2478E /* Assets.xcassets in Resources */,
+				ACB593762387001700A2478E /* README.md in Resources */,
 				ACB5934D2386F6F000A2478E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

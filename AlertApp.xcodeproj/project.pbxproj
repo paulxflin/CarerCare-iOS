@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0E9B86239DC46B0015619D /* AlertWeeklyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E9B85239DC46B0015619D /* AlertWeeklyVC.swift */; };
+		AC0E9B88239DCEBD0015619D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0E9B87239DCEBD0015619D /* MessageViewController.swift */; };
 		ACB593462386F6F000A2478E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB593452386F6F000A2478E /* AppDelegate.swift */; };
 		ACB593482386F6F000A2478E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB593472386F6F000A2478E /* SceneDelegate.swift */; };
 		ACB5934A2386F6F000A2478E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB593492386F6F000A2478E /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0E9B85239DC46B0015619D /* AlertWeeklyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWeeklyVC.swift; sourceTree = "<group>"; };
+		AC0E9B87239DCEBD0015619D /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		ACB593422386F6F000A2478E /* AlertApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB593452386F6F000A2478E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB593472386F6F000A2478E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				ACB593452386F6F000A2478E /* AppDelegate.swift */,
 				ACB593472386F6F000A2478E /* SceneDelegate.swift */,
+				AC0E9B85239DC46B0015619D /* AlertWeeklyVC.swift */,
+				AC0E9B87239DCEBD0015619D /* MessageViewController.swift */,
 				ACB593492386F6F000A2478E /* ViewController.swift */,
 				ACB5934B2386F6F000A2478E /* Main.storyboard */,
 				ACB5934E2386F6F100A2478E /* Assets.xcassets */,
@@ -263,9 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0E9B86239DC46B0015619D /* AlertWeeklyVC.swift in Sources */,
 				ACB5934A2386F6F000A2478E /* ViewController.swift in Sources */,
 				ACB593462386F6F000A2478E /* AppDelegate.swift in Sources */,
 				ACB593482386F6F000A2478E /* SceneDelegate.swift in Sources */,
+				AC0E9B88239DCEBD0015619D /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,14 +447,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4TK59KF8D;
 				INFOPLIST_FILE = AlertApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.AlertApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -456,14 +466,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4TK59KF8D;
 				INFOPLIST_FILE = AlertApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.AlertApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

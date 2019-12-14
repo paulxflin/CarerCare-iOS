@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544D1239BF692001B5EF4 /* AppDelegate.swift */; };
+		7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544D3239BF692001B5EF4 /* HomeViewController.swift */; };
+		7BC544D7239BF692001B5EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC544D5239BF692001B5EF4 /* Main.storyboard */; };
+		7BC544D9239BF695001B5EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC544D8239BF695001B5EF4 /* Assets.xcassets */; };
+		7BC544DC239BF695001B5EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */; };
+		7BC544E7239BF695001B5EF4 /* GapdarMyPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */; };
+		7BC544F2239BF695001B5EF4 /* GapdarMyPagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */; };
+		7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */; };
+		ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD92F23A57A60009AD624 /* PickerViewController.swift */; };
+		ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD93123A57A9D009AD624 /* MessageViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BC544E3239BF695001B5EF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BC544C6239BF692001B5EF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC544CD239BF692001B5EF4;
+			remoteInfo = GapdarMyPages;
+		};
+		7BC544EE239BF695001B5EF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BC544C6239BF692001B5EF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC544CD239BF692001B5EF4;
+			remoteInfo = GapdarMyPages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7BC544CE239BF692001B5EF4 /* GapdarMyPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GapdarMyPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC544D1239BF692001B5EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BC544D3239BF692001B5EF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7BC544D6239BF692001B5EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BC544D8239BF695001B5EF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BC544DB239BF695001B5EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BC544DD239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC544E2239BF695001B5EF4 /* GapdarMyPagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GapdarMyPagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapdarMyPagesTests.swift; sourceTree = "<group>"; };
+		7BC544E8239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC544ED239BF695001B5EF4 /* GapdarMyPagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GapdarMyPagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapdarMyPagesUITests.swift; sourceTree = "<group>"; };
+		7BC544F3239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		ACFFD92F23A57A60009AD624 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		ACFFD93123A57A9D009AD624 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BC544CB239BF692001B5EF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544DF239BF695001B5EF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544EA239BF695001B5EF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BC544C5239BF692001B5EF4 = {
+			isa = PBXGroup;
+			children = (
+				7BC544D0239BF692001B5EF4 /* GapdarMyPages */,
+				7BC544E5239BF695001B5EF4 /* GapdarMyPagesTests */,
+				7BC544F0239BF695001B5EF4 /* GapdarMyPagesUITests */,
+				7BC544CF239BF692001B5EF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BC544CF239BF692001B5EF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BC544CE239BF692001B5EF4 /* GapdarMyPages.app */,
+				7BC544E2239BF695001B5EF4 /* GapdarMyPagesTests.xctest */,
+				7BC544ED239BF695001B5EF4 /* GapdarMyPagesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BC544D0239BF692001B5EF4 /* GapdarMyPages */ = {
+			isa = PBXGroup;
+			children = (
+				ACFFD93123A57A9D009AD624 /* MessageViewController.swift */,
+				ACFFD92F23A57A60009AD624 /* PickerViewController.swift */,
+				7BC544D1239BF692001B5EF4 /* AppDelegate.swift */,
+				7BC544D3239BF692001B5EF4 /* HomeViewController.swift */,
+				7BC544D5239BF692001B5EF4 /* Main.storyboard */,
+				7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */,
+				7BC544D8239BF695001B5EF4 /* Assets.xcassets */,
+				7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */,
+				7BC544DD239BF695001B5EF4 /* Info.plist */,
+			);
+			path = GapdarMyPages;
+			sourceTree = "<group>";
+		};
+		7BC544E5239BF695001B5EF4 /* GapdarMyPagesTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */,
+				7BC544E8239BF695001B5EF4 /* Info.plist */,
+			);
+			path = GapdarMyPagesTests;
+			sourceTree = "<group>";
+		};
+		7BC544F0239BF695001B5EF4 /* GapdarMyPagesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */,
+				7BC544F3239BF695001B5EF4 /* Info.plist */,
+			);
+			path = GapdarMyPagesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BC544CD239BF692001B5EF4 /* GapdarMyPages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC544F6239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPages" */;
+			buildPhases = (
+				7BC544CA239BF692001B5EF4 /* Sources */,
+				7BC544CB239BF692001B5EF4 /* Frameworks */,
+				7BC544CC239BF692001B5EF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GapdarMyPages;
+			productName = GapdarMyPages;
+			productReference = 7BC544CE239BF692001B5EF4 /* GapdarMyPages.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BC544E1239BF695001B5EF4 /* GapdarMyPagesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC544F9239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesTests" */;
+			buildPhases = (
+				7BC544DE239BF695001B5EF4 /* Sources */,
+				7BC544DF239BF695001B5EF4 /* Frameworks */,
+				7BC544E0239BF695001B5EF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BC544E4239BF695001B5EF4 /* PBXTargetDependency */,
+			);
+			name = GapdarMyPagesTests;
+			productName = GapdarMyPagesTests;
+			productReference = 7BC544E2239BF695001B5EF4 /* GapdarMyPagesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BC544EC239BF695001B5EF4 /* GapdarMyPagesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC544FC239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesUITests" */;
+			buildPhases = (
+				7BC544E9239BF695001B5EF4 /* Sources */,
+				7BC544EA239BF695001B5EF4 /* Frameworks */,
+				7BC544EB239BF695001B5EF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BC544EF239BF695001B5EF4 /* PBXTargetDependency */,
+			);
+			name = GapdarMyPagesUITests;
+			productName = GapdarMyPagesUITests;
+			productReference = 7BC544ED239BF695001B5EF4 /* GapdarMyPagesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BC544C6239BF692001B5EF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = localadmin;
+				TargetAttributes = {
+					7BC544CD239BF692001B5EF4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7BC544E1239BF695001B5EF4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7BC544CD239BF692001B5EF4;
+					};
+					7BC544EC239BF695001B5EF4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7BC544CD239BF692001B5EF4;
+					};
+				};
+			};
+			buildConfigurationList = 7BC544C9239BF692001B5EF4 /* Build configuration list for PBXProject "GapdarMyPages" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BC544C5239BF692001B5EF4;
+			productRefGroup = 7BC544CF239BF692001B5EF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC544CD239BF692001B5EF4 /* GapdarMyPages */,
+				7BC544E1239BF695001B5EF4 /* GapdarMyPagesTests */,
+				7BC544EC239BF695001B5EF4 /* GapdarMyPagesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BC544CC239BF692001B5EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC544DC239BF695001B5EF4 /* LaunchScreen.storyboard in Resources */,
+				7BC544D9239BF695001B5EF4 /* Assets.xcassets in Resources */,
+				7BC544D7239BF692001B5EF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544E0239BF695001B5EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544EB239BF695001B5EF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BC544CA239BF692001B5EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */,
+				7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */,
+				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
+				ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */,
+				7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544DE239BF695001B5EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC544E7239BF695001B5EF4 /* GapdarMyPagesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC544E9239BF695001B5EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC544F2239BF695001B5EF4 /* GapdarMyPagesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BC544E4239BF695001B5EF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BC544CD239BF692001B5EF4 /* GapdarMyPages */;
+			targetProxy = 7BC544E3239BF695001B5EF4 /* PBXContainerItemProxy */;
+		};
+		7BC544EF239BF695001B5EF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BC544CD239BF692001B5EF4 /* GapdarMyPages */;
+			targetProxy = 7BC544EE239BF695001B5EF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BC544D5239BF692001B5EF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC544D6239BF692001B5EF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC544DB239BF695001B5EF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BC544F4239BF695001B5EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BC544F5239BF695001B5EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BC544F7239BF695001B5EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BC544F8239BF695001B5EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BC544FA239BF695001B5EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPagesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPagesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GapdarMyPages.app/GapdarMyPages";
+			};
+			name = Debug;
+		};
+		7BC544FB239BF695001B5EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPagesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPagesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GapdarMyPages.app/GapdarMyPages";
+			};
+			name = Release;
+		};
+		7BC544FD239BF696001B5EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPagesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPagesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GapdarMyPages;
+			};
+			name = Debug;
+		};
+		7BC544FE239BF696001B5EF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GapdarMyPagesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GapdarMyPagesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GapdarMyPages;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BC544C9239BF692001B5EF4 /* Build configuration list for PBXProject "GapdarMyPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC544F4239BF695001B5EF4 /* Debug */,
+				7BC544F5239BF695001B5EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC544F6239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC544F7239BF695001B5EF4 /* Debug */,
+				7BC544F8239BF695001B5EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC544F9239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC544FA239BF695001B5EF4 /* Debug */,
+				7BC544FB239BF695001B5EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC544FC239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC544FD239BF696001B5EF4 /* Debug */,
+				7BC544FE239BF696001B5EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BC544C6239BF692001B5EF4 /* Project object */;
+}

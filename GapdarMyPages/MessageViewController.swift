@@ -13,8 +13,11 @@ class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageCom
     //MARK: Properties
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var personLabel: UILabel!
     
     var msg: String?
+    
+    let defaults = UserDefaults.standard
         
     
     override func viewDidLoad() {
@@ -54,6 +57,9 @@ class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageCom
     }
     
     
+    @IBAction func updatePressed(_ sender: UIButton) {
+        personLabel.text = defaults.string(forKey: "selectedPerson")
+    }
     
 
     

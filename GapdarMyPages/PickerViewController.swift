@@ -19,6 +19,8 @@ class PickerViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     var selection : String?
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -49,6 +51,7 @@ class PickerViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selection = namePickerData[row]
         nameTextfield.text = selection
+        defaults.set(selection, forKey: "selectedPerson")
         namePicker.isHidden = true
     }
     

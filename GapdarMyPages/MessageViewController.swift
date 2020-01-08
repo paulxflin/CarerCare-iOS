@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import UserNotifications
 
 class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageComposeViewControllerDelegate  {
     //MARK: Properties
@@ -25,6 +26,7 @@ class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageCom
         
         //Handle the text field's user input through delegate callback
         messageTextField.delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
     }
     
     //MARK: UITextFieldDelegate
@@ -61,7 +63,20 @@ class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageCom
         personLabel.text = defaults.string(forKey: "selectedPerson")
     }
     
-
+    @IBAction func notificationPressed(_ sender: Any) {
+        let content = UNMutableNotificationContent()
+        content.title = "The 5 seconds are up!"
+        content.subtitle = "They are up now!"
+        content.body = "The 5 seconds are really up!"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     
 
 

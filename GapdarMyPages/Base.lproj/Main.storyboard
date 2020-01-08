@@ -297,6 +297,14 @@
                                     <segue destination="MF1-eF-a7q" kind="show" id="eHL-rB-NQe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5V-gE-9Cz">
+                                <rect key="frame" x="125" y="426" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Notifications"/>
+                                <connections>
+                                    <action selector="notificationPressed:" destination="CHv-Et-Rgg" eventType="touchUpInside" id="jIQ-bd-n3V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

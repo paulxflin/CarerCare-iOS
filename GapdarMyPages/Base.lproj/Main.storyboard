@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CEW-tu-r0H">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CEW-tu-r0H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-pH-cq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1402.4000000000001" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="476" y="-28.335832083958024"/>
         </scene>
         <!--Settings-->
         <scene sceneID="6Es-LO-QEC">
@@ -73,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zW-pR-fc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-561" y="-28"/>
+            <point key="canvasLocation" x="1316" y="-28.335832083958024"/>
         </scene>
         <!--Home-->
         <scene sceneID="aPZ-v5-cRy">
@@ -84,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lq-0q-HC5">
-                                <rect key="frame" x="121" y="74" width="132" height="29"/>
+                                <rect key="frame" x="121" y="94" width="132" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,23 +126,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODA-hb-lrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2930.4000000000001" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="-2494" y="-28"/>
         </scene>
-        <!--Statistics-->
-        <scene sceneID="zZ8-zx-Nm0">
+        <!--CallsStatistics-->
+        <scene sceneID="e6e-bT-30u">
             <objects>
-                <viewController id="JIT-Ya-UpI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nIE-1R-msb">
+                <viewController title="CallsStatistics" id="iAo-4Y-gZk" customClass="CallsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W7z-tI-XRg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.85496658207907494" green="1" blue="0.90880278276282289" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="DNz-Rd-gfC"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-PW-wVE">
+                                <rect key="frame" x="14" y="115" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calls Made "/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVh-mD-5pt">
+                                <rect key="frame" x="277" y="112" width="82" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Steps"/>
+                                <connections>
+                                    <segue destination="cjc-Y8-2LX" kind="show" id="Btx-Rc-4Tn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikB-vw-495" customClass="CombinedChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="172" width="359" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="kzO-KT-W5U"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Statistics" image="icons8-combo-chart-50" id="G0Y-uc-bWy"/>
+                    <navigationItem key="navigationItem" id="BQ4-HJ-bCZ"/>
+                    <connections>
+                        <outlet property="chartView" destination="ikB-vw-495" id="wKy-iF-mWv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LpJ-Ca-XGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVk-Xj-wNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2142" y="-28"/>
+            <point key="canvasLocation" x="-1287.2" y="747.9760119940031"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rNN-Pe-lJD">
@@ -152,11 +177,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JIT-Ya-UpI" kind="relationship" relationship="viewControllers" id="CTc-8Z-jyY"/>
                         <segue destination="e5q-s5-fDQ" kind="relationship" relationship="viewControllers" id="8x8-Nz-ZWj"/>
                         <segue destination="xwT-JC-vYg" kind="relationship" relationship="viewControllers" id="lg8-8B-hWB"/>
                         <segue destination="apu-AC-3g9" kind="relationship" relationship="viewControllers" id="cbb-8y-Tfe"/>
                         <segue destination="1Tw-kb-Lw7" kind="relationship" relationship="viewControllers" id="lZl-2T-iGw"/>
+                        <segue destination="eQe-S6-wsx" kind="relationship" relationship="viewControllers" id="uCj-Xw-2Eq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLQ-pH-UI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="dgB-cp-38Y">
-                                <rect key="frame" x="16" y="74" width="343" height="87.5"/>
+                                <rect key="frame" x="16" y="94" width="343" height="87.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let your care friends know that you are okay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-OE-MNl">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -225,7 +250,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PxH-8G-PUQ">
-                                <rect key="frame" x="20" y="64" width="335" height="96.5"/>
+                                <rect key="frame" x="20" y="84" width="335" height="92.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-hl-iGk">
                                         <rect key="frame" x="103.5" y="0.0" width="128.5" height="20.5"/>
@@ -234,12 +259,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put your message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-x0-8K7">
-                                        <rect key="frame" x="0.0" y="26.5" width="335" height="34"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="335" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="JbC-Dq-1yZ">
-                                        <rect key="frame" x="47" y="66.5" width="241" height="30"/>
+                                        <rect key="frame" x="47" y="62.5" width="241" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbX-zc-HuI">
                                                 <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -306,7 +331,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cUS-bI-Z1F" firstAttribute="centerY" secondItem="BCQ-aN-PqD" secondAttribute="centerY" id="AFj-AJ-PZO"/>
                             <constraint firstItem="cUS-bI-Z1F" firstAttribute="centerX" secondItem="BCQ-aN-PqD" secondAttribute="centerX" id="FI8-sN-8Ds"/>
@@ -480,7 +505,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-WD-tQ6">
-                                <rect key="frame" x="40" y="94" width="295" height="34"/>
+                                <rect key="frame" x="40" y="114" width="295" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -488,7 +513,7 @@
                                 <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8um-Ml-2Yi" firstAttribute="trailing" secondItem="T7d-WD-tQ6" secondAttribute="trailing" constant="40" id="9rr-2c-2lo"/>
                             <constraint firstItem="T7d-WD-tQ6" firstAttribute="leading" secondItem="8um-Ml-2Yi" secondAttribute="leading" constant="40" id="KBh-Q1-BGv"/>
@@ -515,7 +540,7 @@
                     <tabBarItem key="tabBarItem" title="Messages" image="icons8-composing-mail-50" id="kpn-fb-SH9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9yT-Uv-eRM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -527,6 +552,60 @@
             </objects>
             <point key="canvasLocation" x="-206" y="-797"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fQv-Aw-vTZ">
+            <objects>
+                <viewController id="cjc-Y8-2LX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dw4-ez-6df">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-e8-IZx">
+                                <rect key="frame" x="218" y="85" width="40" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Steps"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-Xb-EZP">
+                                <rect key="frame" x="46" y="85" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calls Made "/>
+                                <connections>
+                                    <segue destination="iAo-4Y-gZk" kind="show" id="Y6z-IG-4L2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiM-Ee-1b7">
+                                <rect key="frame" x="16" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84700556910000002" green="0.68272892399999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5s4-jg-Khy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N05-JQ-kCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="747.9760119940031"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="Hmp-5l-cpO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4iu-KJ-Hys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eQe-S6-wsx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistics" image="icons8-combo-chart-50" id="VSK-PY-vKr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xzo-cm-MZ1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iAo-4Y-gZk" kind="relationship" relationship="rootViewController" id="sh3-4p-9vX"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1495.2" y="-28.335832083958024"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icons8-combo-chart-50" width="50" height="50"/>
@@ -536,7 +615,5 @@
         <image name="icons8-settings-40" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WrX-yd-ODM"/>
-        <segue reference="92B-OW-Gjf"/>
     </inferredMetricsTieBreakers>
 </document>

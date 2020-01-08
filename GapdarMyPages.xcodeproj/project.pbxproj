@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0EE13903B17715C314542A /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB394DD5C99E11FEB35F10CA /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework */; };
+		25490EFBAEFFB74069D2BD0C /* Pods_GapdarMyPages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */; };
+		69C653D5FE1D286C3D97ED29 /* Pods_GapdarMyPagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */; };
+		7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */; };
+		7BC2FC8223C51A87009C5689 /* StepsStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */; };
 		7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544D1239BF692001B5EF4 /* AppDelegate.swift */; };
 		7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544D3239BF692001B5EF4 /* HomeViewController.swift */; };
 		7BC544D7239BF692001B5EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC544D5239BF692001B5EF4 /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		390C4D6281C420B92CB0A933 /* Pods-GapdarMyPagesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPagesTests.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPagesTests/Pods-GapdarMyPagesTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GapdarMyPages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EBFD13E2B351905ADC2345 /* Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsStatisticsViewController.swift; sourceTree = "<group>"; };
+		7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsStatisticsViewController.swift; sourceTree = "<group>"; };
 		7BC544CE239BF692001B5EF4 /* GapdarMyPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GapdarMyPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC544D1239BF692001B5EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BC544D3239BF692001B5EF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -53,8 +63,14 @@
 		7BC544F3239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
 		ACFFD92F23A57A60009AD624 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACFFD93123A57A9D009AD624 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GapdarMyPagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A3400DEAE828BAD3E48BE0 /* Pods-GapdarMyPagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPagesTests.debug.xcconfig"; path = "Target Support Files/Pods-GapdarMyPagesTests/Pods-GapdarMyPagesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB394DD5C99E11FEB35F10CA /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GapdarMyPages_GapdarMyPagesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79804C725BC2DE2A0DEAE38 /* Pods-GapdarMyPages-GapdarMyPagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages-GapdarMyPagesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB938FE36C6E0199594FAD89 /* Pods-GapdarMyPages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.debug.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25490EFBAEFFB74069D2BD0C /* Pods_GapdarMyPages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C653D5FE1D286C3D97ED29 /* Pods_GapdarMyPagesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0EE13903B17715C314542A /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +108,8 @@
 				7BC544E5239BF695001B5EF4 /* GapdarMyPagesTests */,
 				7BC544F0239BF695001B5EF4 /* GapdarMyPagesUITests */,
 				7BC544CF239BF692001B5EF4 /* Products */,
+				BC80DB0D6A28C2647BF645B8 /* Pods */,
+				92382A5B514D26254C9B6A09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +128,7 @@
 			children = (
 				ACFFD93123A57A9D009AD624 /* MessageViewController.swift */,
 				AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */,
+				7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */,
 				ACFFD92F23A57A60009AD624 /* PickerViewController.swift */,
 				7BC544D1239BF692001B5EF4 /* AppDelegate.swift */,
 				7BC544D3239BF692001B5EF4 /* HomeViewController.swift */,
@@ -115,6 +137,7 @@
 				7BC544D8239BF695001B5EF4 /* Assets.xcassets */,
 				7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */,
 				7BC544DD239BF695001B5EF4 /* Info.plist */,
+				7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */,
 			);
 			path = GapdarMyPages;
 			sourceTree = "<group>";
@@ -137,6 +160,29 @@
 			path = GapdarMyPagesUITests;
 			sourceTree = "<group>";
 		};
+		92382A5B514D26254C9B6A09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */,
+				BB394DD5C99E11FEB35F10CA /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework */,
+				B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC80DB0D6A28C2647BF645B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB938FE36C6E0199594FAD89 /* Pods-GapdarMyPages.debug.xcconfig */,
+				80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */,
+				D79804C725BC2DE2A0DEAE38 /* Pods-GapdarMyPages-GapdarMyPagesUITests.debug.xcconfig */,
+				44EBFD13E2B351905ADC2345 /* Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig */,
+				B5A3400DEAE828BAD3E48BE0 /* Pods-GapdarMyPagesTests.debug.xcconfig */,
+				390C4D6281C420B92CB0A933 /* Pods-GapdarMyPagesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC544F6239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPages" */;
 			buildPhases = (
+				D4DCF1774E1A7D125B24491D /* [CP] Check Pods Manifest.lock */,
 				7BC544CA239BF692001B5EF4 /* Sources */,
 				7BC544CB239BF692001B5EF4 /* Frameworks */,
 				7BC544CC239BF692001B5EF4 /* Resources */,
+				EC4AA0D7EE751AA4AECE2429 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC544F9239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesTests" */;
 			buildPhases = (
+				3E2171068F91A31B6753E2E1 /* [CP] Check Pods Manifest.lock */,
 				7BC544DE239BF695001B5EF4 /* Sources */,
 				7BC544DF239BF695001B5EF4 /* Frameworks */,
 				7BC544E0239BF695001B5EF4 /* Resources */,
@@ -179,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC544FC239BF695001B5EF4 /* Build configuration list for PBXNativeTarget "GapdarMyPagesUITests" */;
 			buildPhases = (
+				A67CE36ABBB5934DEAD1DF6B /* [CP] Check Pods Manifest.lock */,
 				7BC544E9239BF695001B5EF4 /* Sources */,
 				7BC544EA239BF695001B5EF4 /* Frameworks */,
 				7BC544EB239BF695001B5EF4 /* Resources */,
+				F6512317AE6912BB65A3136E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,15 +314,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E2171068F91A31B6753E2E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GapdarMyPagesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A67CE36ABBB5934DEAD1DF6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GapdarMyPages-GapdarMyPagesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4DCF1774E1A7D125B24491D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GapdarMyPages-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC4AA0D7EE751AA4AECE2429 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6512317AE6912BB65A3136E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BC544CA239BF692001B5EF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */,
+				7BC2FC8223C51A87009C5689 /* StepsStatisticsViewController.swift in Sources */,
 				7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */,
 				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
 				AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */,
+				7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */,
 				ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */,
 			);
@@ -446,6 +602,7 @@
 		};
 		7BC544F7239BF695001B5EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB938FE36C6E0199594FAD89 /* Pods-GapdarMyPages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +621,7 @@
 		};
 		7BC544F8239BF695001B5EF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +640,7 @@
 		};
 		7BC544FA239BF695001B5EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A3400DEAE828BAD3E48BE0 /* Pods-GapdarMyPagesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +662,7 @@
 		};
 		7BC544FB239BF695001B5EF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390C4D6281C420B92CB0A933 /* Pods-GapdarMyPagesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +684,7 @@
 		};
 		7BC544FD239BF696001B5EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D79804C725BC2DE2A0DEAE38 /* Pods-GapdarMyPages-GapdarMyPagesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +705,7 @@
 		};
 		7BC544FE239BF696001B5EF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EBFD13E2B351905ADC2345 /* Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

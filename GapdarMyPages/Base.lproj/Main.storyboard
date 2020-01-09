@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIa-fN-EfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2884" y="-28"/>
+            <point key="canvasLocation" x="-2884.057971014493" y="-28.125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X2q-tU-Axn">
@@ -957,6 +957,7 @@
         <image name="icons8-walking-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Btx-Rc-4Tn"/>
         <segue reference="WrX-yd-ODM"/>
         <segue reference="FNS-2a-rc5"/>
         <segue reference="Y6z-IG-4L2"/>

@@ -21,6 +21,9 @@ class stepController: UIViewController {
     {
         super.viewDidLoad()
         self.lbStep.text = "None"
+        let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
+        healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -46,14 +49,9 @@ class stepController: UIViewController {
     
     @IBAction func btPressed(_ sender: Any) {
         self.getStepsCount(forSpecificDate: Date()) { (steps) in
-            if steps == 0.0 {
+            DispatchQueue.main.async(execute: {
                 self.lbStep.text =  "\(steps)"
-            }
-            else {
-                DispatchQueue.main.async {
-                    self.lbStep.text =  "\(steps)"
-                }
-            }
+            })
         }
     }
 }

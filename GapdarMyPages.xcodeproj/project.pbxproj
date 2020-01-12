@@ -25,6 +25,7 @@
 		7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */; };
 		9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11323C61CAC0078003F /* ShareController.swift */; };
 		9A1FA11A23C63E770078003F /* stepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11923C63E760078003F /* stepController.swift */; };
+		ACFE509423CBCA0D004B67D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFE509323CBCA0D004B67D0 /* HealthKit.framework */; };
 		ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD92F23A57A60009AD624 /* PickerViewController.swift */; };
 		ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD93123A57A9D009AD624 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
 		9A1FA11323C61CAC0078003F /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		9A1FA11923C63E760078003F /* stepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepController.swift; sourceTree = "<group>"; };
+		ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GapdarMyPages.entitlements; sourceTree = "<group>"; };
+		ACFE509323CBCA0D004B67D0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		ACFFD92F23A57A60009AD624 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		ACFFD93123A57A9D009AD624 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GapdarMyPagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25490EFBAEFFB74069D2BD0C /* Pods_GapdarMyPages.framework in Frameworks */,
+				ACFE509423CBCA0D004B67D0 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,7 @@
 		7BC544D0239BF692001B5EF4 /* GapdarMyPages */ = {
 			isa = PBXGroup;
 			children = (
+				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
 				9A1FA11923C63E760078003F /* stepController.swift */,
 				9A1FA11323C61CAC0078003F /* ShareController.swift */,
 				7B19BC2C23B7F86A00D6767D /* GraphsViewController */,
@@ -183,6 +188,7 @@
 		92382A5B514D26254C9B6A09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACFE509323CBCA0D004B67D0 /* HealthKit.framework */,
 				3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */,
 				BB394DD5C99E11FEB35F10CA /* Pods_GapdarMyPages_GapdarMyPagesUITests.framework */,
 				B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */,
@@ -629,7 +635,9 @@
 			baseConfigurationReference = DB938FE36C6E0199594FAD89 /* Pods-GapdarMyPages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GapdarMyPages/GapdarMyPages.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 675QBW4S76;
 				INFOPLIST_FILE = GapdarMyPages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,7 +656,9 @@
 			baseConfigurationReference = 80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GapdarMyPages/GapdarMyPages.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 675QBW4S76;
 				INFOPLIST_FILE = GapdarMyPages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (

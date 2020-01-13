@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3E-sc-bNN">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4624" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="e5q-s5-fDQ" customClass="ContactsActvitiesSetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yam-So-qz9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who do you like to talk to the most?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ah-kF-k1g">
@@ -71,15 +71,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-pH-cq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3248" y="-798"/>
+            <point key="canvasLocation" x="-3148" y="-798"/>
         </scene>
         <!--Settings-->
         <scene sceneID="6Es-LO-QEC">
             <objects>
                 <viewController id="1Tw-kb-Lw7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYq-TH-Vhz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpd-FX-I2P">
+                                <rect key="frame" x="172" y="105" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PDF"/>
+                                <connections>
+                                    <segue destination="KhK-UA-IcC" kind="show" id="99m-8k-BcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-YY-gy4">
+                                <rect key="frame" x="172" y="274" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="step"/>
+                                <connections>
+                                    <segue destination="yX9-TS-0aa" kind="show" id="OSw-eh-i6q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SrB-bn-yM8"/>
                     </view>
@@ -87,14 +105,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zW-pR-fc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="-29"/>
+            <point key="canvasLocation" x="332" y="-28"/>
         </scene>
         <!--Item-->
         <scene sceneID="9hX-Ae-4Ea">
             <objects>
                 <viewController id="fdg-vM-0Gq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="liX-dX-c3D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your past weeks wellbeing score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5B-F9-O04">
@@ -201,7 +219,7 @@
             <objects>
                 <viewController id="u3E-sc-bNN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKD-i2-DcW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FRONT PAGE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-4L-f5M">
@@ -235,7 +253,7 @@
             <objects>
                 <viewController id="xwT-JC-vYg" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wI5-Wj-9dF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lq-0q-HC5">
@@ -373,7 +391,7 @@
             <objects>
                 <viewController title="CallsStatistics" id="iAo-4Y-gZk" customClass="CallsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W7z-tI-XRg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-PW-wVE">
@@ -405,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVk-Xj-wNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288.4057971014495" y="747.32142857142856"/>
+            <point key="canvasLocation" x="-1724" y="734"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rNN-Pe-lJD">
@@ -433,20 +451,20 @@
             <objects>
                 <viewController id="Qoc-Ax-dW2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBw-ti-uoe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="dgB-cp-38Y">
-                                <rect key="frame" x="16" y="86" width="382" height="87.333333333333314"/>
+                                <rect key="frame" x="16" y="86" width="343" height="87.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let your care friends know that you are okay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-OE-MNl">
-                                        <rect key="frame" x="19.666666666666657" y="0.0" width="342.66666666666674" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="Hcs-GD-cWH">
-                                        <rect key="frame" x="123" y="57.333333333333343" width="136" height="30"/>
+                                        <rect key="frame" x="103.5" y="57.5" width="136" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M15-WL-HQU">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -486,25 +504,25 @@
             <objects>
                 <viewController id="CHv-Et-Rgg" customClass="MessageViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BCQ-aN-PqD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PxH-8G-PUQ">
-                                <rect key="frame" x="20" y="76" width="374" height="96.333333333333314"/>
+                                <rect key="frame" x="20" y="76" width="335" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-hl-iGk">
-                                        <rect key="frame" x="123.00000000000001" y="0.0" width="128.33333333333337" height="20.333333333333332"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="128.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put your message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-x0-8K7">
-                                        <rect key="frame" x="0.0" y="26.333333333333329" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="JbC-Dq-1yZ">
-                                        <rect key="frame" x="66.666666666666686" y="66.333333333333343" width="241" height="30"/>
+                                        <rect key="frame" x="47" y="66.5" width="241" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbX-zc-HuI">
                                                 <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -526,7 +544,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUS-bI-Z1F">
-                                <rect key="frame" x="185.66666666666666" y="406" width="43" height="30"/>
+                                <rect key="frame" x="166" y="308.5" width="43" height="30"/>
                                 <state key="normal" title="Picker"/>
                                 <connections>
                                     <segue destination="Obb-7g-mJS" kind="show" id="WrX-yd-ODM"/>
@@ -598,7 +616,7 @@
             <objects>
                 <viewController id="MF1-eF-a7q" customClass="ComposeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aEJ-oH-d3E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e4-U6-QVG">
@@ -682,27 +700,27 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfV-AW-A4Q">
-                                <rect key="frame" x="0.0" y="334" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTH-wR-8BV">
-                                <rect key="frame" x="0.0" y="334" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-0i-cjz">
-                                <rect key="frame" x="0.0" y="334" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-mj-g4q">
-                                <rect key="frame" x="0.0" y="334" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnU-vc-Ll6">
-                                <rect key="frame" x="0.0" y="334" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="334" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
@@ -734,23 +752,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jj-Sg-LpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="-28"/>
+            <point key="canvasLocation" x="2198" y="-24"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="ZQC-jz-5f8">
             <objects>
                 <viewController id="Obb-7g-mJS" customClass="PickerViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KHp-05-K9K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-WD-tQ6">
-                                <rect key="frame" x="40" y="106" width="334" height="34"/>
+                                <rect key="frame" x="40" y="106" width="295" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTY-bd-fkN">
-                                <rect key="frame" x="47" y="313" width="320" height="216"/>
+                                <rect key="frame" x="27.5" y="215.5" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -780,7 +798,7 @@
                     <tabBarItem key="tabBarItem" title="Messages" image="icons8-composing-mail-50" id="kpn-fb-SH9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9yT-Uv-eRM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -797,7 +815,7 @@
             <objects>
                 <viewController id="cjc-Y8-2LX" customClass="StepsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dw4-ez-6df">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-e8-IZx">
@@ -828,7 +846,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N05-JQ-kCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207.24637681159422" y="747.32142857142856"/>
+            <point key="canvasLocation" x="-906" y="734"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="Hmp-5l-cpO">
@@ -837,7 +855,7 @@
                     <tabBarItem key="tabBarItem" title="Statistics" image="icons8-combo-chart-50" id="VSK-PY-vKr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xzo-cm-MZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -847,14 +865,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iu-KJ-Hys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1495.2" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="-1724" y="-28"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="mZZ-VS-JgD">
             <objects>
                 <viewController id="Gum-pY-GPP" customClass="ContactsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1hz-j5-aD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-6F-CXH">
@@ -881,14 +899,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMA-5W-uYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497.10144927536237" y="-23.4375"/>
+            <point key="canvasLocation" x="-682" y="-30"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J3i-0j-iJM">
             <objects>
                 <viewController id="y8G-TB-AAh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3T-rS-7uF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
@@ -941,7 +959,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssZ-uI-pie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2413" y="-798"/>
+            <point key="canvasLocation" x="-2201" y="-797"/>
+        </scene>
+        <!--Share Controller-->
+        <scene sceneID="kBM-eW-wyL">
+            <objects>
+                <viewController id="KhK-UA-IcC" customClass="ShareController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6h-w1-hPI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnk-s7-w0K">
+                                <rect key="frame" x="143" y="170" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btCreatePDF"/>
+                                <connections>
+                                    <action selector="createPDF:" destination="KhK-UA-IcC" eventType="touchUpInside" id="enM-dC-Zwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-4f-Vsa">
+                                <rect key="frame" x="146" y="276" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btSharePDF"/>
+                                <connections>
+                                    <action selector="sharePDF:" destination="KhK-UA-IcC" eventType="touchUpInside" id="ZQ3-Ww-yTE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avw-05-19s">
+                                <rect key="frame" x="149" y="219" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btViewPDF"/>
+                                <connections>
+                                    <action selector="viewPDF:" destination="KhK-UA-IcC" eventType="touchUpInside" id="bgw-Ob-KZ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ty-lG-u5K">
+                                <rect key="frame" x="22" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="1Tw-kb-Lw7" kind="show" id="Rst-KA-OKL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vf5-hw-YTU"/>
+                    </view>
+                    <connections>
+                        <outlet property="btCreatePDF" destination="Dnk-s7-w0K" id="pvI-0k-WsD"/>
+                        <outlet property="btSharePDF" destination="kCr-4f-Vsa" id="XOJ-4f-w58"/>
+                        <outlet property="btViewPDF" destination="Avw-05-19s" id="OT6-BS-79p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zwa-ae-QN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="-24"/>
+        </scene>
+        <!--Step Controller-->
+        <scene sceneID="f7h-qs-Amb">
+            <objects>
+                <viewController id="yX9-TS-0aa" customClass="stepController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wkF-rx-KMB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcR-LM-gKe">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="1Tw-kb-Lw7" kind="show" id="MjD-2R-bUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faN-ql-0r5">
+                                <rect key="frame" x="164" y="150" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btStep"/>
+                                <connections>
+                                    <action selector="btPressed:" destination="yX9-TS-0aa" eventType="touchUpInside" id="tBD-cD-uEJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lbStep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGP-04-PwJ">
+                                <rect key="frame" x="166" y="220" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4EA-5P-rzB"/>
+                    </view>
+                    <connections>
+                        <outlet property="btUpdate" destination="faN-ql-0r5" id="SqJ-1h-HA6"/>
+                        <outlet property="lbStep" destination="WGP-04-PwJ" id="Sg3-o8-hxW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGw-wa-sVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="734"/>
         </scene>
     </scenes>
     <resources>
@@ -955,10 +1071,10 @@
         <image name="icons8-walking-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Btx-Rc-4Tn"/>
         <segue reference="WrX-yd-ODM"/>
         <segue reference="FNS-2a-rc5"/>
         <segue reference="Y6z-IG-4L2"/>
-        <segue reference="2FX-Hi-3fi"/>
+        <segue reference="asc-vr-PPh"/>
+        <segue reference="MjD-2R-bUc"/>
     </inferredMetricsTieBreakers>
 </document>

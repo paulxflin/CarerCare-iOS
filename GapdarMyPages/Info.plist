@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string></string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>To gather your steps data from Health.</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Granting access to contacts will enable messages to be sent to them via the app. </string>
 	<key>CFBundleDevelopmentRegion</key>

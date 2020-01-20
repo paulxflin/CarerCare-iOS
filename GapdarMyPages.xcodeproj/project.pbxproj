@@ -21,10 +21,10 @@
 		7BC544E7239BF695001B5EF4 /* GapdarMyPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */; };
 		7BC544F2239BF695001B5EF4 /* GapdarMyPagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */; };
 		7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */; };
-		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
-		7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsViewController.swift */; };
 		9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11323C61CAC0078003F /* ShareController.swift */; };
 		9A1FA11A23C63E770078003F /* stepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11923C63E760078003F /* stepController.swift */; };
+		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
+		ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA16E9923D614BA00040709 /* SetUpViewController.swift */; };
 		ACFE509423CBCA0D004B67D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFE509323CBCA0D004B67D0 /* HealthKit.framework */; };
 		ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD92F23A57A60009AD624 /* PickerViewController.swift */; };
 		ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD93123A57A9D009AD624 /* MessageViewController.swift */; };
@@ -69,9 +69,10 @@
 		7BC544F3239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsActvitiesSetUpViewController.swift; sourceTree = "<group>"; };
 		80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
-		AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		9A1FA11323C61CAC0078003F /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		9A1FA11923C63E760078003F /* stepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepController.swift; sourceTree = "<group>"; };
+		AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		ACA16E9923D614BA00040709 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GapdarMyPages.entitlements; sourceTree = "<group>"; };
 		ACFE509323CBCA0D004B67D0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		ACFFD92F23A57A60009AD624 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
 				9A1FA11923C63E760078003F /* stepController.swift */,
 				9A1FA11323C61CAC0078003F /* ShareController.swift */,
-				7B19BC2C23B7F86A00D6767D /* GraphsViewController */,
 				ACFFD93123A57A9D009AD624 /* MessageViewController.swift */,
 				AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */,
 				7BA155E823C7C94C00635667 /* ContactsViewController.swift */,
@@ -149,6 +149,7 @@
 				7BC544D1239BF692001B5EF4 /* AppDelegate.swift */,
 				7BC544D3239BF692001B5EF4 /* HomeViewController.swift */,
 				7BC544D5239BF692001B5EF4 /* Main.storyboard */,
+				ACA16E9923D614BA00040709 /* SetUpViewController.swift */,
 				7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */,
 				7BC544D8239BF695001B5EF4 /* Assets.xcassets */,
 				7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */,
@@ -445,13 +446,13 @@
 				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
 				AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */,
 				7BA155E923C7C94C00635667 /* ContactsViewController.swift in Sources */,
+				ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */,
 				7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */,
 				ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,
 				9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */,
 				9A1FA11A23C63E770078003F /* stepController.swift in Sources */,
-				7BC54500239C0E9D001B5EF4 /* ContactsViewController.swift in Sources */,
-				7B19BC2F23B7F8DA00D6767D /* StepsTakenGraph.swift in Sources */,
+				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

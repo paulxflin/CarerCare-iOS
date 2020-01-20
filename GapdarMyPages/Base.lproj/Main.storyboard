@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3E-sc-bNN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3E-sc-bNN">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4624" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -214,21 +214,14 @@
             </objects>
             <point key="canvasLocation" x="-2884.057971014493" y="-28.125"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Up View Controller-->
         <scene sceneID="X2q-tU-Axn">
             <objects>
-                <viewController id="u3E-sc-bNN" sceneMemberID="viewController">
+                <viewController id="u3E-sc-bNN" customClass="SetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKD-i2-DcW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FRONT PAGE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-4L-f5M">
-                                <rect key="frame" x="79" y="268" width="257" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-Jl-Dbm">
                                 <rect key="frame" x="244" y="605" width="92" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -239,10 +232,112 @@
                                     <segue destination="e5q-s5-fDQ" kind="show" id="Pg4-24-t8g"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-Gu-buL">
+                                <rect key="frame" x="30" y="30" width="315" height="561"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-a4-6t1">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-5a-1mT">
+                                        <rect key="frame" x="0.0" y="30.5" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-gL-3oi">
+                                        <rect key="frame" x="0.0" y="74.5" width="112" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Kd-xUt">
+                                        <rect key="frame" x="0.0" y="105" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-RM-Mhr">
+                                        <rect key="frame" x="0.0" y="149" width="77" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-Kq-4K6">
+                                        <rect key="frame" x="0.0" y="179.5" width="80" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Wgg-UX-atW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="NHS 5 ways to wellbeing 1" translatesAutoresizingMaskIntoConstraints="NO" id="B22-P3-Ne9">
+                                        <rect key="frame" x="0.0" y="223.5" width="309" height="118"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Steps Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc5-4L-LeT">
+                                        <rect key="frame" x="0.0" y="351.5" width="186.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-4M-zhq">
+                                        <rect key="frame" x="0.0" y="382" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Check-in Call Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-mS-BSd">
+                                        <rect key="frame" x="0.0" y="426" width="244.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0id-vg-gPn">
+                                        <rect key="frame" x="0.0" y="456.5" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Persisted data: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJw-xZ-smU">
+                                        <rect key="frame" x="0.0" y="500.5" width="118.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-uz-eYZ">
+                                        <rect key="frame" x="0.0" y="531" width="84" height="30"/>
+                                        <state key="normal" title="Show Saved"/>
+                                        <connections>
+                                            <action selector="showPersistedPressed:" destination="u3E-sc-bNN" eventType="touchUpInside" id="tOL-gQ-uWg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0id-vg-gPn" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="0cv-Bf-snQ"/>
+                                    <constraint firstItem="LiK-5a-1mT" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="9af-2V-GUr"/>
+                                    <constraint firstAttribute="trailing" secondItem="LiK-5a-1mT" secondAttribute="trailing" id="RwE-LH-djG"/>
+                                    <constraint firstItem="hnh-Kd-xUt" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="SuU-eJ-rwK"/>
+                                    <constraint firstAttribute="trailing" secondItem="0id-vg-gPn" secondAttribute="trailing" id="XCQ-dm-vRB"/>
+                                    <constraint firstItem="ppB-4M-zhq" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="cqo-Ei-SF2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ppB-4M-zhq" secondAttribute="trailing" id="db1-ES-sJn"/>
+                                    <constraint firstAttribute="trailing" secondItem="hnh-Kd-xUt" secondAttribute="trailing" id="eIm-eK-pFd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.79768076836362845" blue="0.81569957959145278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xa6-Gu-buL" firstAttribute="top" secondItem="Mar-Ys-IT4" secondAttribute="top" constant="30" id="bjb-kk-iYp"/>
+                            <constraint firstItem="Xa6-Gu-buL" firstAttribute="leading" secondItem="Mar-Ys-IT4" secondAttribute="leading" constant="30" id="oSR-s2-PB2"/>
+                            <constraint firstItem="Mar-Ys-IT4" firstAttribute="trailing" secondItem="Xa6-Gu-buL" secondAttribute="trailing" constant="30" id="tMY-bI-2td"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mar-Ys-IT4"/>
                     </view>
+                    <connections>
+                        <outlet property="callsTF" destination="0id-vg-gPn" id="g9E-rL-GO1"/>
+                        <outlet property="nameTF" destination="LiK-5a-1mT" id="gFV-fM-sOd"/>
+                        <outlet property="persistLabel" destination="NJw-xZ-smU" id="YqU-RC-Otc"/>
+                        <outlet property="postcodeTF" destination="4XJ-Kq-4K6" id="VvF-Nl-osZ"/>
+                        <outlet property="refTF" destination="hnh-Kd-xUt" id="me4-fR-JVI"/>
+                        <outlet property="stepsTF" destination="ppB-4M-zhq" id="bS4-TM-PZi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nb-22-hUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,7 +499,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Steps"/>
                                 <connections>
-                                    <segue destination="cjc-Y8-2LX" kind="show" id="Btx-Rc-4Tn"/>
+                                    <segue destination="cjc-Y8-2LX" kind="show" animates="NO" id="Btx-Rc-4Tn"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikB-vw-495" customClass="CombinedChartView" customModule="Charts">
@@ -828,7 +923,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calls Made "/>
                                 <connections>
-                                    <segue destination="iAo-4Y-gZk" kind="show" id="Y6z-IG-4L2"/>
+                                    <segue destination="iAo-4Y-gZk" kind="show" animates="NO" id="Y6z-IG-4L2"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QV8-gk-W8w" customClass="CombinedChartView" customModule="Charts">
@@ -840,6 +935,7 @@
                         <color key="backgroundColor" red="0.84700556910000002" green="0.68272892399999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5s4-jg-Khy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lED-lq-Uag"/>
                     <connections>
                         <outlet property="chartView" destination="QV8-gk-W8w" id="V5R-Os-AZj"/>
                     </connections>
@@ -1061,6 +1157,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NHS 5 ways to wellbeing 1" width="309" height="118"/>
         <image name="icons8-combo-chart-50" width="50" height="50"/>
         <image name="icons8-composing-mail-50" width="50" height="50"/>
         <image name="icons8-contacts-40" width="40" height="40"/>

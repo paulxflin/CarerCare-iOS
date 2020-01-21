@@ -9,12 +9,10 @@
 import UIKit
 import ContactsUI
 
-class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDelegate {
+class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
     
-    
- 
-    var yContactsValue = 145
-    var yActivityValue = 535
+    var yContactsValue = 10
+    var yActivityValue = 10
     
     
     var phoneNumberTextFields: [UITextField] = []
@@ -26,12 +24,80 @@ class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDel
     var nameString : [String] = []
     var activityString : [String] = []
     
+    @IBOutlet weak var contactLabel: UILabel!
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var activityButton: UIButton!
+    
+    
+    
+    lazy var contactScrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentSize.height = 10
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+    
+    lazy var activityScrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentSize.height = 10
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+    
+    lazy var stackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [contactLabel, contactScrollView, contactButton, activityLabel, activityScrollView, activityButton])
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = .vertical
+        sv.spacing = 20
+        sv.alignment = .leading
+        sv.distribution = .equalSpacing
+        return sv
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupStackView()
+        contactScrollView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        setupContactScrollView()
+        setupActivityScrollView()
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    fileprivate func setupStackView() {
+        contactLabel.translatesAutoresizingMaskIntoConstraints = false
+        contactScrollView.translatesAutoresizingMaskIntoConstraints = false
+        contactButton.translatesAutoresizingMaskIntoConstraints = false
+        activityLabel.translatesAutoresizingMaskIntoConstraints = false
+        activityScrollView.translatesAutoresizingMaskIntoConstraints = false
+        activityButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
+            
+        ])
+    }
+    
+    
+    func setupContactScrollView() {
+        contactScrollView.leftAnchor.constraint(equalTo: stackView.leftAnchor).isActive = true
+        contactScrollView.rightAnchor.constraint(equalTo: stackView.rightAnchor).isActive = true
+        contactScrollView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+    }
+    
+    func setupActivityScrollView() {
+        activityScrollView.leftAnchor.constraint(equalTo: stackView.leftAnchor).isActive = true
+        activityScrollView.rightAnchor.constraint(equalTo: stackView.rightAnchor).isActive = true
+        activityScrollView.heightAnchor.constraint(equalToConstant: 130).isActive = true
     }
     
   
@@ -44,10 +110,6 @@ class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDel
     }
    
     
-   
-    
-    
-    
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         var familyName = ""
         var phoneNumber = ""
@@ -57,35 +119,47 @@ class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDel
             phoneNumber = phoneNo.stringValue
 
         }
-        let label = UILabel(frame: CGRect(x:44, y:yContactsValue, width:66, height:33))
+        
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height:33))
         //label.center = CGPoint(x:44, y:146)
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.text = "Name: "
-        self.view.addSubview(label)
+//        self.view.addSubview(label)
+        contactScrollView.addSubview(label)
         
-        let namelabel = UITextField(frame: CGRect(x:118, y:yContactsValue, width:272, height:33))
-        //namelabel.center = CGPoint(x:118, y:152)
-        namelabel.textAlignment = .center
-        namelabel.text = familyName
-        namelabel.backgroundColor = .white
-        self.view.addSubview(namelabel)
-        nameTextFields.append(namelabel)
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:272, height:33))
+        nameTF.delegate = self
+        
+        //nameTF.center = CGPoint(x:118, y:152)
+        nameTF.textAlignment = .center
+        nameTF.text = familyName
+        nameTF.backgroundColor = .white
+        nameTF.borderStyle = .roundedRect
+        contactScrollView.addSubview(nameTF)
+
+        nameTextFields.append(nameTF)
         yContactsValue += 40
         
-        let label2 = UILabel(frame: CGRect(x:44, y:yContactsValue, width:166, height:33))
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
         //label.center = CGPoint(x:44, y:146)
-        label2.textAlignment = .center
+        label2.textAlignment = .left
         label2.text = "Contact Number: "
-        self.view.addSubview(label2)
+//        self.view.addSubview(label2)
+        contactScrollView.addSubview(label2)
         
-        let numlabel = UITextField(frame: CGRect(x:200, y:yContactsValue, width:150, height:33))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:150, height:33))
+        numTF.delegate = self
         //namelabel.center = CGPoint(x:118, y:152)
-        
-        numlabel.text = phoneNumber
-        numlabel.backgroundColor = .white
-        self.view.addSubview(numlabel)
-        phoneNumberTextFields.append(numlabel)
+        numTF.text = phoneNumber
+        numTF.textAlignment = .center
+        numTF.backgroundColor = .white
+        numTF.borderStyle = .roundedRect
+//        self.view.addSubview(numlabel)
+        contactScrollView.addSubview(numTF)
+        phoneNumberTextFields.append(numTF)
         yContactsValue += 40
+        
+        contactScrollView.contentSize.height = CGFloat(yContactsValue)
     }
 
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
@@ -97,22 +171,23 @@ class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDel
     
     
     @IBAction func activityButtonPressed(_ sender: Any) {
-        let label = UILabel(frame: CGRect(x:44, y:yActivityValue, width:74, height:33))
+        let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:33))
         //label.center = CGPoint(x:44, y:146)
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.text = "Activity: "
-        self.view.addSubview(label)
+        activityScrollView.addSubview(label)
         
-        let activityLabel = UITextField(frame: CGRect(x:120, y:yActivityValue, width:231, height:33))
-        //label.center = CGPoint(x:44, y:146)
-       activityLabel.backgroundColor = .white
+        let activityTF = UITextField(frame: CGRect(x:80, y:yActivityValue, width:231, height:33))
+        activityTF.delegate = self
+        activityTF.backgroundColor = .white
+        activityTF.textAlignment = .left
+        activityTF.borderStyle = .roundedRect
         
-        
-        //createToolBar(textField: activityLabel)
-        //label.text = "Name: "
-        self.view.addSubview(activityLabel)
-        activityTextFields.append(activityLabel)
+        activityScrollView.addSubview(activityTF)
+        activityTextFields.append(activityTF)
         yActivityValue += 40
+        
+        activityScrollView.contentSize.height = CGFloat(yActivityValue)
         
     }
     
@@ -135,6 +210,12 @@ class ContactsActvitiesSetUpViewController: UIViewController, CNContactPickerDel
         print(nameString)
         print(activityString)
         self.performSegue(withIdentifier: "startTrackingSegue", sender: self)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard
+        textField.resignFirstResponder()
+        return true
     }
     
   

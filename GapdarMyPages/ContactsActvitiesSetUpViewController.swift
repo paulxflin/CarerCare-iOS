@@ -29,7 +29,7 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var activityButton: UIButton!
     
-    
+    let defaults = UserDefaults.standard
     
     lazy var contactScrollView: UIScrollView = {
         let view = UIScrollView()
@@ -194,7 +194,7 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     
 
     @IBAction func saveButtonPressed(_ sender: Any) {
-        print("I am in here")
+        //print("I am in here")
         for phoneNumber in phoneNumberTextFields{
             phoneNumberString.append(phoneNumber.text ?? "-")
         }
@@ -206,9 +206,20 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         for activity in activityTextFields{
             activityString.append(activity.text ?? "-")
         }
+        defaults.set(phoneNumberString, forKey: "phoneArray")
+        defaults.set(nameString, forKey: "nameArray")
+        defaults.set(activityString, forKey: "activityArray")
+        
+        /*
+        debug use only:
+        print(defaults.stringArray(forKey: "phoneArray")!)
+        print(defaults.stringArray(forKey: "nameArray")!)
+        print(defaults.stringArray(forKey: "activityArray")!)
+        
         print(phoneNumberString)
         print(nameString)
         print(activityString)
+         */
         self.performSegue(withIdentifier: "startTrackingSegue", sender: self)
     }
     

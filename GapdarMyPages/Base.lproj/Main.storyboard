@@ -1004,10 +1004,10 @@
             </objects>
             <point key="canvasLocation" x="-682" y="-30"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="J3i-0j-iJM">
             <objects>
-                <viewController id="y8G-TB-AAh" sceneMemberID="viewController">
+                <viewController id="y8G-TB-AAh" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3T-rS-7uF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1054,11 +1054,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
                                 <rect key="frame" x="294" y="665" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91538127419208337" blue="0.68707600061399243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="D7p-hT-Xd7"/>
                     </view>
+                    <connections>
+                        <outlet property="sharingSwitch" destination="cc8-2O-MPg" id="Ymg-6z-6F1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssZ-uI-pie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

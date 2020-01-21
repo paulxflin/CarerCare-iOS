@@ -11,7 +11,10 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let label = UILabel()
+    
+    let defaults = UserDefaults.standard
 
+    @IBOutlet weak var sharingSwitch: UISwitch!
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBAction func slider(_ sender: UISlider) {
@@ -23,6 +26,12 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func sharingSwitchPressed(_ sender: Any) {
+        defaults.set(sharingSwitch.isOn, forKey: "allowShare")
+        //Debugging
+        //print(defaults.bool(forKey: "allowShare"))
+        
+    }
     
 
 

@@ -57,15 +57,15 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func showPersistedPressed(_ sender: Any) {
         var msg: String
-        msg = defaults.string(forKey: "firstName")!
+        msg = defaults.string(forKey: "firstName") ?? "No Name"
         msg += " "
-        msg += defaults.string(forKey: "reference")!
+        msg += defaults.string(forKey: "reference") ?? "No Ref"
         msg += " "
-        msg += defaults.string(forKey: "postcode")!
+        msg += defaults.string(forKey: "postcode") ?? "No Postcode"
         msg += " "
-        msg += defaults.string(forKey: "targetSteps")!
+        msg += defaults.string(forKey: "targetSteps") ?? "No Steps"
         msg += " "
-        msg += defaults.string(forKey: "targetCalls")!
+        msg += defaults.string(forKey: "targetCalls") ?? "No Calls"
         persistLabel.text = msg
         
         

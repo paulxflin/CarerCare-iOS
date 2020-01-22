@@ -9,22 +9,91 @@
 import UIKit
 import ContactsUI
 
-class ContactsViewController: UIViewController, CNContactPickerDelegate {
+class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
     
     
-    var yContactsValue = 145
+    let defaults = UserDefaults.standard
     
+    var yContactsValue = 10
+    var phoneArray : [String] = []
+    var nameArray : [String] = []
     
+    var phoneNumberTextFields: [UITextField] = []
+    var nameTextFields : [UITextField] = []
     
-    
-    
+    lazy var contactSV: UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentSize.height = 10
+        view.backgroundColor = UIColor.white
+        return view
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
+        phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
+        nameArray = defaults.stringArray(forKey: "nameArray") ?? []
+        setupContactSV()
+        
+    }
+    
+    func setupContactSV() {
+        // TODO: Add a for loop to add in the saved contacts.
+        view.addSubview(contactSV)
+        NSLayoutConstraint.activate([
+            contactSV.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+            contactSV.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            contactSV.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
+            contactSV.heightAnchor.constraint(equalToConstant: 250)
+        ])
+        addExistingContacts()
+    }
+    
+    func addExistingContacts() {
+        var i = 0
+        while i < nameArray.count {
+            let name = nameArray[i]
+            let phone = phoneArray[i]
+            
+            let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height:33))
+            label.textAlignment = .left
+            label.text = "Name: "
+            contactSV.addSubview(label)
+            
+            let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:272, height:33))
+            nameTF.delegate = self
+            nameTF.textAlignment = .center
+            nameTF.text = name
+            nameTF.backgroundColor = .white
+            nameTF.borderStyle = .roundedRect
+            contactSV.addSubview(nameTF)
+            
+            nameTextFields.append(nameTF)
+            yContactsValue += 40
+            
+            let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
+            label2.textAlignment = .left
+            label2.text = "Contact Number: "
+            contactSV.addSubview(label2)
+            
+            let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:150, height:33))
+            numTF.delegate = self
+            numTF.text = phone
+            numTF.textAlignment = .center
+            numTF.backgroundColor = .white
+            numTF.borderStyle = .roundedRect
+            contactSV.addSubview(numTF)
+            
+            phoneNumberTextFields.append(numTF)
+            yContactsValue += 40
+            
+            contactSV.contentSize.height = CGFloat(yContactsValue)
+            
+            i += 1
+        }
+        
     }
     
     

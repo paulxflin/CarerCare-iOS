@@ -121,16 +121,12 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         }
         
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height:33))
-        //label.center = CGPoint(x:44, y:146)
         label.textAlignment = .left
         label.text = "Name: "
-//        self.view.addSubview(label)
         contactScrollView.addSubview(label)
         
         let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:272, height:33))
         nameTF.delegate = self
-        
-        //nameTF.center = CGPoint(x:118, y:152)
         nameTF.textAlignment = .center
         nameTF.text = familyName
         nameTF.backgroundColor = .white
@@ -141,20 +137,16 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         yContactsValue += 40
         
         let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
-        //label.center = CGPoint(x:44, y:146)
         label2.textAlignment = .left
         label2.text = "Contact Number: "
-//        self.view.addSubview(label2)
         contactScrollView.addSubview(label2)
         
         let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:150, height:33))
         numTF.delegate = self
-        //namelabel.center = CGPoint(x:118, y:152)
         numTF.text = phoneNumber
         numTF.textAlignment = .center
         numTF.backgroundColor = .white
         numTF.borderStyle = .roundedRect
-//        self.view.addSubview(numlabel)
         contactScrollView.addSubview(numTF)
         phoneNumberTextFields.append(numTF)
         yContactsValue += 40

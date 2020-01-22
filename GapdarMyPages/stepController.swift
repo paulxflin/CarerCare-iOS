@@ -8,6 +8,7 @@
 
 import UIKit
 import HealthKit
+import UserNotifications
 
 
 class stepController: UIViewController {
@@ -54,31 +55,62 @@ class stepController: UIViewController {
         healthStore.execute(query)
     }
     
+    func inactiveNotify() {
+        let content = UNMutableNotificationContent()
+        content.title = "Haven't moved 2 days"
+        content.subtitle = "You haven't moved for 2 days"
+        content.body = "Would you like to tell friends you're ok?"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "inactive", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+    func tooLazyNotify() {
+        let content = UNMutableNotificationContent()
+        content.title = "Less than 1000 Steps"
+        content.subtitle = "You haven't reached daily walking goal today"
+        content.body = "Remember to find time today to take a walk!"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "tooLazy", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     func nudge(){
         // TODO: Check whether user has been inactive for past two days and send off notification
         let now = Date()
         let twoDaysAgo = Date(timeIntervalSinceNow: -2*24*60*60)
-        var twoDaysSteps = 0
-        var todaySteps = 0
         getCountStepUsingStatisticsQuery(from: twoDaysAgo, to: now) { (query, statistics, error) in
             DispatchQueue.main.async {
                 if let value = statistics?.sumQuantity()?.doubleValue(for: .count()) {
-                    twoDaysSteps = Int(value)
+                    let twoDaysSteps = Int(value)
+                    print("fetched two day steps: " + String(twoDaysSteps))
+                    if twoDaysSteps < 10 {
+                        self.inactiveNotify()
+                        //Debugging Prints
+                        print("haven't moved for 2 days")
+                        print("2 Days Steps: " + String(twoDaysSteps))
+                    }
                 }
             }
         }
-        if twoDaysSteps < 10 {
-            print("haven't moved for 2 days")
-            print("2 Days Steps: " + String(twoDaysSteps))
-        }
+        
         getStepsCount(forSpecificDate: Date()) { (steps) in
             DispatchQueue.main.async(execute: {
-                todaySteps = Int(steps)
+                let todaySteps = Int(steps)
+                print("fetched today steps: " + String(todaySteps))
+                if todaySteps < 1000 {
+                    self.tooLazyNotify()
+                    //Debugging Prints
+                    print("haven't taken 1000 steps in a day")
+                    print("Today Steps: " + String(todaySteps))
+                }
             })
-        }
-        if todaySteps < 1000 {
-            print("haven't taken 1000 steps in a day")
-            print("Today Steps: " + String(todaySteps))
         }
         print("fetched")
     }

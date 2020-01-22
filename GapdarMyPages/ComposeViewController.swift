@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import MessageUI
 
-class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MFMessageComposeViewControllerDelegate {
 
+    let defaults = UserDefaults.standard
     
+    var firstName : String?
+    
+    @IBOutlet weak var signoffLabel: UILabel!
     @IBOutlet weak var msgLabel: UILabel!
     
     @IBOutlet weak var nameTF: UITextField!
@@ -37,9 +42,15 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var time : String?
     var activity : String?
     
+    var nameIndex : Int?
+    var phoneArray : [String] = []
+    var msg = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        firstName = defaults.string(forKey: "firstName") ?? "Jo"
+        signoffLabel.text! += firstName!
         
         namePV.isHidden = true
         statusPV.isHidden = true
@@ -66,15 +77,13 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timeTF.delegate = self
         activityTF.delegate = self
         
-        
-        nameOptions = ["Paul", "Karunya", "Lishen", "Joseph"]
+        nameOptions = defaults.stringArray(forKey: "nameArray") ?? ["Paul", "Karunya", "Lishen", "Joseph"]
         statusOptions = ["Unwell", "OK", "Well"]
         dateOptions = ["10/01", "11/01"]
         timeOptions = ["10am", "3pm"]
-        activityOptions = ["Coffee at the Hub", "Shop", "Walk"]
+        activityOptions = defaults.stringArray(forKey: "activityArray") ?? ["Coffee at the Hub", "Shop", "Walk"]
+        phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         
-
-        // Do any additional setup after loading the view.
     }
     
     // MARK: Actions
@@ -106,6 +115,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         var option = "";
         if (pickerView == namePV) {
             option = nameOptions[row]
+            nameIndex = row
         } else if (pickerView == statusPV) {
             option = statusOptions[row]
         } else if (pickerView == datePV) {
@@ -159,15 +169,30 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func composePressed(_ sender: Any) {
-        var msg = "";
+        msg = "";
         msg += "Hello " + name! + "\n"
         msg += "Just to let you know I am " + status! + "\n"
         msg += "How about on " + date! + "\n"
         msg += "at " + time! + "\n"
         msg += "we meet for a " + activity! + "\n"
-        msg += "All the best, Jo."
+        msg += "All the best, " + firstName! + "."
         msgLabel.text = msg
     }
     
-
+    @IBAction func sendPressed(_ sender: UIButton) {
+        let number = phoneArray[nameIndex!]
+        if MFMessageComposeViewController.canSendText()
+        {
+            let msgVC = MFMessageComposeViewController()
+            msgVC.body = msg
+            msgVC.recipients = [number]
+            msgVC.messageComposeDelegate = self
+            self.present(msgVC, animated: true, completion: nil)
+        }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

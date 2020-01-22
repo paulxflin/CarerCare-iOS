@@ -18,7 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().tintColor = .red
         // Override point for customization after application launch.
+        
+        //Background Fetch once an hour or so
+        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
         return true
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if let vc = window?.rootViewController as? stepController {
+            vc.nudge()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

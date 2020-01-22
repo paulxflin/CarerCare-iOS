@@ -46,6 +46,43 @@ class stepController: UIViewController {
         healthStore.execute(query)
     }
     
+    func getCountStepUsingStatisticsQuery(from start: Date, to end: Date, completion handler: @escaping (HKStatisticsQuery, HKStatistics?, Error?) -> Void) {
+        let type = HKSampleType.quantityType(forIdentifier: .stepCount)!
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
+        
+        let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum, completionHandler: handler)
+        healthStore.execute(query)
+    }
+    
+    func nudge(){
+        // TODO: Check whether user has been inactive for past two days and send off notification
+        let now = Date()
+        let twoDaysAgo = Date(timeIntervalSinceNow: -2*24*60*60)
+        var twoDaysSteps = 0
+        var todaySteps = 0
+        getCountStepUsingStatisticsQuery(from: twoDaysAgo, to: now) { (query, statistics, error) in
+            DispatchQueue.main.async {
+                if let value = statistics?.sumQuantity()?.doubleValue(for: .count()) {
+                    twoDaysSteps = Int(value)
+                }
+            }
+        }
+        if twoDaysSteps < 10 {
+            print("haven't moved for 2 days")
+            print("2 Days Steps: " + String(twoDaysSteps))
+        }
+        getStepsCount(forSpecificDate: Date()) { (steps) in
+            DispatchQueue.main.async(execute: {
+                todaySteps = Int(steps)
+            })
+        }
+        if todaySteps < 1000 {
+            print("haven't taken 1000 steps in a day")
+            print("Today Steps: " + String(todaySteps))
+        }
+        print("fetched")
+    }
+    
     
     @IBAction func btPressed(_ sender: Any) {
         self.getStepsCount(forSpecificDate: Date()) { (steps) in

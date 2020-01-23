@@ -86,6 +86,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             numTF.borderStyle = .roundedRect
             contactSV.addSubview(numTF)
             
+            // TODO: Add a button to make calls(God DAMMIT)
+            let button = UIButton.init(type: .roundedRect)
+            button.frame = CGRect(x:310, y:yContactsValue, width:50, height:33)
+            button.setTitle("Call", for: .normal)
+            button.addTarget(self, action: #selector(buttonPressed(_ :)), for: .touchUpInside)
+            button.tag = i
+            contactSV.addSubview(button)
+            
+            
             phoneNumberTextFields.append(numTF)
             yContactsValue += 40
             
@@ -94,6 +103,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             i += 1
         }
         
+    }
+    
+    @objc func buttonPressed(_ sender: UIButton) {
+        print(sender.tag)
+        let phone = phoneArray[sender.tag]
+        if let url = URL(string: "tel://\(phone)"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     

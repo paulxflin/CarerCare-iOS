@@ -112,6 +112,7 @@ class stepController: UIViewController {
                 }
             })
         }
+        //Debugging: Note that the Async execute makes the execution non-sequential
         print("fetched")
     }
     

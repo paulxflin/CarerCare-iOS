@@ -36,7 +36,6 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         setupContactSV()
-        
     }
     
     func setupContactSV() {
@@ -90,7 +89,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             let button = UIButton.init(type: .roundedRect)
             button.frame = CGRect(x:310, y:yContactsValue, width:50, height:33)
             button.setTitle("Call", for: .normal)
-            button.addTarget(self, action: #selector(buttonPressed(_ :)), for: .touchUpInside)
+            button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
             button.tag = i
             contactSV.addSubview(button)
             
@@ -105,12 +104,19 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         
     }
     
-    @objc func buttonPressed(_ sender: UIButton) {
-        print(sender.tag)
+    @objc func callPressed(_ sender: UIButton) {
+        // Debug: print(sender.tag)
         let phone = phoneArray[sender.tag]
-        if let url = URL(string: "tel://\(phone)"),
+        let number = String(phone.filter {!" \n\t\r".contains($0)})
+        print(number)
+        var totalCalls = defaults.integer(forKey: "totalCalls")
+        totalCalls += 1
+        defaults.set(totalCalls, forKey: "totalCalls")
+        print(defaults.integer(forKey: "totalCalls"))
+        
+        if let url = URL(string: "tel://\(number)"),
             UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url)
         }
     }
     

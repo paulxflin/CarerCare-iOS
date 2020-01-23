@@ -12,6 +12,8 @@ import UserNotifications
 
 
 class stepController: UIViewController {
+    let defaults = UserDefaults.standard
+    
     let healthStore = HKHealthStore()
     
     
@@ -81,6 +83,19 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    func noCallsNotify() {
+        let content = UNMutableNotificationContent()
+        content.title = "Haven't called anyone for a week"
+        content.subtitle = "You haven't made any calls for a week"
+        content.body = "Would you like to phone a friend?"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "noCalls", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     func nudge(){
         // TODO: Check whether user has been inactive for past two days and send off notification
         let now = Date()
@@ -111,6 +126,10 @@ class stepController: UIViewController {
                     print("Today Steps: " + String(todaySteps))
                 }
             })
+        }
+        
+        if defaults.integer(forKey: "totalCalls") == 0 {
+            noCallsNotify()
         }
         //Debugging: Note that the Async execute makes the execution non-sequential
         print("fetched")

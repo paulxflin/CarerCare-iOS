@@ -21,6 +21,12 @@
 		7BC544E7239BF695001B5EF4 /* GapdarMyPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */; };
 		7BC544F2239BF695001B5EF4 /* GapdarMyPagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */; };
 		7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */; };
+		7BFB061223DE4E9C005BCE2C /* Graphs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061123DE4E9C005BCE2C /* Graphs.storyboard */; };
+		7BFB061423DE4EDC005BCE2C /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061323DE4EDC005BCE2C /* Messages.storyboard */; };
+		7BFB061823DE4FD5005BCE2C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061723DE4FD5005BCE2C /* Settings.storyboard */; };
+		7BFB061A23DE4FEC005BCE2C /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061923DE4FEC005BCE2C /* Contacts.storyboard */; };
+		7BFB061C23DE5015005BCE2C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061B23DE5015005BCE2C /* Home.storyboard */; };
+		7BFB061E23DE56E8005BCE2C /* MenuTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061D23DE56E8005BCE2C /* MenuTabBar.storyboard */; };
 		9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11323C61CAC0078003F /* ShareController.swift */; };
 		9A1FA11A23C63E770078003F /* stepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11923C63E760078003F /* stepController.swift */; };
 		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
@@ -68,6 +74,12 @@
 		7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapdarMyPagesUITests.swift; sourceTree = "<group>"; };
 		7BC544F3239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsActvitiesSetUpViewController.swift; sourceTree = "<group>"; };
+		7BFB061123DE4E9C005BCE2C /* Graphs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graphs.storyboard; sourceTree = "<group>"; };
+		7BFB061323DE4EDC005BCE2C /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		7BFB061723DE4FD5005BCE2C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		7BFB061923DE4FEC005BCE2C /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		7BFB061B23DE5015005BCE2C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7BFB061D23DE56E8005BCE2C /* MenuTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuTabBar.storyboard; sourceTree = "<group>"; };
 		80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
 		9A1FA11323C61CAC0078003F /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		9A1FA11923C63E760078003F /* stepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepController.swift; sourceTree = "<group>"; };
@@ -138,6 +150,7 @@
 		7BC544D0239BF692001B5EF4 /* GapdarMyPages */ = {
 			isa = PBXGroup;
 			children = (
+				7BFB061023DE4E10005BCE2C /* Storyboards */,
 				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
 				9A1FA11923C63E760078003F /* stepController.swift */,
 				9A1FA11323C61CAC0078003F /* ShareController.swift */,
@@ -148,7 +161,6 @@
 				ACFFD92F23A57A60009AD624 /* PickerViewController.swift */,
 				7BC544D1239BF692001B5EF4 /* AppDelegate.swift */,
 				7BC544D3239BF692001B5EF4 /* HomeViewController.swift */,
-				7BC544D5239BF692001B5EF4 /* Main.storyboard */,
 				ACA16E9923D614BA00040709 /* SetUpViewController.swift */,
 				7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */,
 				7BC544D8239BF695001B5EF4 /* Assets.xcassets */,
@@ -175,6 +187,20 @@
 				7BC544F3239BF695001B5EF4 /* Info.plist */,
 			);
 			path = GapdarMyPagesUITests;
+			sourceTree = "<group>";
+		};
+		7BFB061023DE4E10005BCE2C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BC544D5239BF692001B5EF4 /* Main.storyboard */,
+				7BFB061123DE4E9C005BCE2C /* Graphs.storyboard */,
+				7BFB061323DE4EDC005BCE2C /* Messages.storyboard */,
+				7BFB061723DE4FD5005BCE2C /* Settings.storyboard */,
+				7BFB061923DE4FEC005BCE2C /* Contacts.storyboard */,
+				7BFB061B23DE5015005BCE2C /* Home.storyboard */,
+				7BFB061D23DE56E8005BCE2C /* MenuTabBar.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		92382A5B514D26254C9B6A09 /* Frameworks */ = {
@@ -310,9 +336,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFB061E23DE56E8005BCE2C /* MenuTabBar.storyboard in Resources */,
 				7BC544DC239BF695001B5EF4 /* LaunchScreen.storyboard in Resources */,
+				7BFB061A23DE4FEC005BCE2C /* Contacts.storyboard in Resources */,
+				7BFB061223DE4E9C005BCE2C /* Graphs.storyboard in Resources */,
+				7BFB061C23DE5015005BCE2C /* Home.storyboard in Resources */,
 				7BC544D9239BF695001B5EF4 /* Assets.xcassets in Resources */,
+				7BFB061423DE4EDC005BCE2C /* Messages.storyboard in Resources */,
 				7BC544D7239BF692001B5EF4 /* Main.storyboard in Resources */,
+				7BFB061823DE4FD5005BCE2C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 675QBW4S76;
 				INFOPLIST_FILE = GapdarMyPages/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 675QBW4S76;
 				INFOPLIST_FILE = GapdarMyPages/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3E-sc-bNN">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4624" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts-->
+        <scene sceneID="qFh-Z2-7kj">
+            <objects>
+                <viewController id="e5q-s5-fDQ" customClass="ContactsActvitiesSetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yam-So-qz9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who do you like to talk to the most?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ah-kF-k1g">
+                                <rect key="frame" x="39" y="62" width="336" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-CG-xE3">
+                                <rect key="frame" x="158" y="626" width="99" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Get Activity"/>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="Tfs-rz-LbQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Activities do you like?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-xM-fy8">
+                                <rect key="frame" x="88" y="449" width="238" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-pt-yHR">
+                                <rect key="frame" x="158" y="349" width="99" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Get Number"/>
+                                <connections>
+                                    <action selector="getNumber:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="O5T-Bz-tH4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoJ-2H-Jxk">
+                                <rect key="frame" x="308" y="768" width="56" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="c7H-dp-Eal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82550221792034251" green="1" blue="0.11126594090953446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WJl-cz-FRk" firstAttribute="trailing" secondItem="YoJ-2H-Jxk" secondAttribute="trailing" constant="50" id="JVG-Yv-wLc"/>
+                            <constraint firstItem="WJl-cz-FRk" firstAttribute="bottom" secondItem="YoJ-2H-Jxk" secondAttribute="bottom" constant="50" id="cUt-kp-tId"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WJl-cz-FRk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="icons8-contacts-40" id="C9h-aT-mq6"/>
+                    <connections>
+                        <outlet property="activityButton" destination="PCc-CG-xE3" id="5J5-AT-pSG"/>
+                        <outlet property="activityLabel" destination="5zm-xM-fy8" id="IG2-Qq-qxs"/>
+                        <outlet property="contactButton" destination="DVf-pt-yHR" id="QlA-Fd-dgB"/>
+                        <outlet property="contactLabel" destination="6Ah-kF-k1g" id="deV-ZU-BsS"/>
+                        <segue destination="y8G-TB-AAh" kind="showDetail" identifier="startTrackingSegue" id="498-fi-AhD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-pH-cq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3149.275362318841" y="-798.21428571428567"/>
+        </scene>
+        <!--Set Up View Controller-->
+        <scene sceneID="X2q-tU-Axn">
+            <objects>
+                <viewController id="u3E-sc-bNN" customClass="SetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OKD-i2-DcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-Jl-Dbm">
+                                <rect key="frame" x="244" y="605" width="92" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="e5q-s5-fDQ" kind="show" id="Pg4-24-t8g"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-Gu-buL">
+                                <rect key="frame" x="30" y="74" width="354" height="540"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-a4-6t1">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-5a-1mT">
+                                        <rect key="frame" x="0.0" y="30.333333333333329" width="354" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-gL-3oi">
+                                        <rect key="frame" x="0.0" y="70.333333333333343" width="112" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Kd-xUt">
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="354" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-RM-Mhr">
+                                        <rect key="frame" x="0.0" y="140.66666666666666" width="77" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-Kq-4K6">
+                                        <rect key="frame" x="0.0" y="171" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Wgg-UX-atW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="NHS 5 ways to wellbeing 1" translatesAutoresizingMaskIntoConstraints="NO" id="B22-P3-Ne9">
+                                        <rect key="frame" x="0.0" y="211" width="309" height="118"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Steps Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc5-4L-LeT">
+                                        <rect key="frame" x="0.0" y="339" width="186.33333333333334" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-4M-zhq">
+                                        <rect key="frame" x="0.0" y="369.33333333333331" width="354" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Check-in Call Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-mS-BSd">
+                                        <rect key="frame" x="0.0" y="409.33333333333331" width="244.33333333333334" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0id-vg-gPn">
+                                        <rect key="frame" x="0.0" y="439.66666666666663" width="354" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Persisted data: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJw-xZ-smU">
+                                        <rect key="frame" x="0.0" y="479.66666666666663" width="118.66666666666667" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-uz-eYZ">
+                                        <rect key="frame" x="0.0" y="510" width="84" height="30"/>
+                                        <state key="normal" title="Show Saved"/>
+                                        <connections>
+                                            <action selector="showPersistedPressed:" destination="u3E-sc-bNN" eventType="touchUpInside" id="tOL-gQ-uWg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0id-vg-gPn" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="0cv-Bf-snQ"/>
+                                    <constraint firstItem="LiK-5a-1mT" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="9af-2V-GUr"/>
+                                    <constraint firstAttribute="trailing" secondItem="LiK-5a-1mT" secondAttribute="trailing" id="RwE-LH-djG"/>
+                                    <constraint firstItem="hnh-Kd-xUt" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="SuU-eJ-rwK"/>
+                                    <constraint firstAttribute="trailing" secondItem="0id-vg-gPn" secondAttribute="trailing" id="XCQ-dm-vRB"/>
+                                    <constraint firstItem="ppB-4M-zhq" firstAttribute="leading" secondItem="Xa6-Gu-buL" secondAttribute="leading" id="cqo-Ei-SF2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ppB-4M-zhq" secondAttribute="trailing" id="db1-ES-sJn"/>
+                                    <constraint firstAttribute="trailing" secondItem="hnh-Kd-xUt" secondAttribute="trailing" id="eIm-eK-pFd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.79768076836362845" blue="0.81569957959145278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xa6-Gu-buL" firstAttribute="top" secondItem="Mar-Ys-IT4" secondAttribute="top" constant="30" id="bjb-kk-iYp"/>
+                            <constraint firstItem="Xa6-Gu-buL" firstAttribute="leading" secondItem="Mar-Ys-IT4" secondAttribute="leading" constant="30" id="oSR-s2-PB2"/>
+                            <constraint firstItem="Mar-Ys-IT4" firstAttribute="trailing" secondItem="Xa6-Gu-buL" secondAttribute="trailing" constant="30" id="tMY-bI-2td"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mar-Ys-IT4"/>
+                    </view>
+                    <connections>
+                        <outlet property="callsTF" destination="0id-vg-gPn" id="g9E-rL-GO1"/>
+                        <outlet property="nameTF" destination="LiK-5a-1mT" id="gFV-fM-sOd"/>
+                        <outlet property="persistLabel" destination="NJw-xZ-smU" id="YqU-RC-Otc"/>
+                        <outlet property="postcodeTF" destination="4XJ-Kq-4K6" id="VvF-Nl-osZ"/>
+                        <outlet property="refTF" destination="hnh-Kd-xUt" id="me4-fR-JVI"/>
+                        <outlet property="stepsTF" destination="ppB-4M-zhq" id="bS4-TM-PZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nb-22-hUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4142" y="-798"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="J3i-0j-iJM">
+            <objects>
+                <viewController id="y8G-TB-AAh" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3T-rS-7uF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
+                                <rect key="frame" x="22" y="85" width="374" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9">
+                                        <rect key="frame" x="24" y="143" width="326" height="188"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-5p-Ive">
+                                        <rect key="frame" x="32" y="38" width="310" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                        <state key="normal" title="Start tracking">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="lFB-hL-Vqv" kind="show" id="rdW-Ry-OUG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW">
+                                <rect key="frame" x="37" y="528" width="290" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enabling this will allow carer agencies to plan support activites in your area " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
+                                <rect key="frame" x="37" y="576" width="327" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
+                                <rect key="frame" x="294" y="665" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.91538127419208337" blue="0.68707600061399243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="D7p-hT-Xd7"/>
+                    </view>
+                    <connections>
+                        <outlet property="sharingSwitch" destination="cc8-2O-MPg" id="Ymg-6z-6F1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssZ-uI-pie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2201.449275362319" y="-797.54464285714278"/>
+        </scene>
+        <!--MenuTabBar-->
+        <scene sceneID="j3S-Kr-GPS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MenuTabBar" id="lFB-hL-Vqv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQJ-he-9Dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1434" y="-797"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NHS 5 ways to wellbeing 1" width="309" height="118"/>
+        <image name="icons8-contacts-40" width="40" height="40"/>
+    </resources>
+</document>

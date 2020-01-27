@@ -12,9 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let defaults = UserDefaults.standard
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Setting the First View Controller
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if (defaults.bool(forKey: "setup") == false) {
+            let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")
+            self.window?.rootViewController = initialVC
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
+        //Setting Tab Appearance
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().tintColor = .red
         // Override point for customization after application launch.

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3E-sc-bNN">
-    <device id="retina6_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4624" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <viewController id="e5q-s5-fDQ" customClass="ContactsActvitiesSetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yam-So-qz9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who do you like to talk to the most?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ah-kF-k1g">
@@ -53,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoJ-2H-Jxk">
-                                <rect key="frame" x="308" y="768" width="56" height="44"/>
+                                <rect key="frame" x="308" y="714" width="56" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Save"/>
@@ -85,7 +83,7 @@
         <!--Set Up View Controller-->
         <scene sceneID="X2q-tU-Axn">
             <objects>
-                <viewController id="u3E-sc-bNN" customClass="SetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Setup" id="u3E-sc-bNN" customClass="SetUpViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKD-i2-DcW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +99,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-Gu-buL">
-                                <rect key="frame" x="30" y="74" width="354" height="540"/>
+                                <rect key="frame" x="30" y="74" width="354" height="560"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-a4-6t1">
                                         <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="20.333333333333332"/>
@@ -110,29 +108,29 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-5a-1mT">
-                                        <rect key="frame" x="0.0" y="30.333333333333329" width="354" height="30"/>
+                                        <rect key="frame" x="0.0" y="30.333333333333329" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-gL-3oi">
-                                        <rect key="frame" x="0.0" y="70.333333333333343" width="112" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="74.333333333333343" width="112" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Kd-xUt">
-                                        <rect key="frame" x="0.0" y="100.66666666666666" width="354" height="30"/>
+                                        <rect key="frame" x="0.0" y="104.66666666666666" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-RM-Mhr">
-                                        <rect key="frame" x="0.0" y="140.66666666666666" width="77" height="20.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="148.66666666666666" width="77" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-Kq-4K6">
-                                        <rect key="frame" x="0.0" y="171" width="80" height="30"/>
+                                        <rect key="frame" x="0.0" y="179" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Wgg-UX-atW"/>
                                         </constraints>
@@ -140,38 +138,38 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="NHS 5 ways to wellbeing 1" translatesAutoresizingMaskIntoConstraints="NO" id="B22-P3-Ne9">
-                                        <rect key="frame" x="0.0" y="211" width="309" height="118"/>
+                                        <rect key="frame" x="0.0" y="223" width="309" height="118"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Steps Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc5-4L-LeT">
-                                        <rect key="frame" x="0.0" y="339" width="186.33333333333334" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="351" width="186.33333333333334" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-4M-zhq">
-                                        <rect key="frame" x="0.0" y="369.33333333333331" width="354" height="30"/>
+                                        <rect key="frame" x="0.0" y="381.33333333333331" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Check-in Call Target /Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-mS-BSd">
-                                        <rect key="frame" x="0.0" y="409.33333333333331" width="244.33333333333334" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="425.33333333333331" width="244.33333333333334" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0id-vg-gPn">
-                                        <rect key="frame" x="0.0" y="439.66666666666663" width="354" height="30"/>
+                                        <rect key="frame" x="0.0" y="455.66666666666663" width="354" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Persisted data: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJw-xZ-smU">
-                                        <rect key="frame" x="0.0" y="479.66666666666663" width="118.66666666666667" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="499.66666666666663" width="118.66666666666667" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-uz-eYZ">
-                                        <rect key="frame" x="0.0" y="510" width="84" height="30"/>
+                                        <rect key="frame" x="0.0" y="530" width="84" height="30"/>
                                         <state key="normal" title="Show Saved"/>
                                         <connections>
                                             <action selector="showPersistedPressed:" destination="u3E-sc-bNN" eventType="touchUpInside" id="tOL-gQ-uWg"/>
@@ -216,7 +214,7 @@
             <objects>
                 <viewController id="y8G-TB-AAh" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3T-rS-7uF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">

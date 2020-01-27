@@ -174,5 +174,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         print("It cancelled the contact picker view controller when the cancel button is pressed")
     }
 
-
+    @IBAction func resetStart(_ sender: Any) {
+        defaults.set(false, forKey: "setup")
+    }
+    
 }

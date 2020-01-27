@@ -237,6 +237,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="sy5-sa-cBp"/>
                                             <segue destination="lFB-hL-Vqv" kind="show" id="rdW-Ry-OUG"/>
                                         </connections>
                                     </button>

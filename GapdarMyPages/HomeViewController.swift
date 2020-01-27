@@ -33,7 +33,11 @@ class HomeViewController: UIViewController {
         
     }
     
-
+    @IBAction func trackingPressed(_ sender: Any) {
+        let setup = true
+        defaults.set(setup, forKey: "setup")
+    }
+    
 
 }
 

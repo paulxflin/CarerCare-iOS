@@ -21,10 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         
         if (defaults.bool(forKey: "setup") == false) {
             let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")
             self.window?.rootViewController = initialVC
+        } else {
+            let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+            self.window?.rootViewController = barVC
         }
         
         self.window?.makeKeyAndVisible()

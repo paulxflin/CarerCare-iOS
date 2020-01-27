@@ -70,10 +70,10 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
-    func tooLazyNotify() {
+    func tooLazyNotify(_ steps: Int) {
         let content = UNMutableNotificationContent()
         content.title = "Less than 1000 Steps"
-        content.subtitle = "You haven't reached daily walking goal today"
+        content.subtitle = "You haven't reached daily walking goal today, current" + String(steps)
         content.body = "Remember to find time today to take a walk!"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -120,7 +120,7 @@ class stepController: UIViewController {
                 let todaySteps = Int(steps)
                 print("fetched today steps: " + String(todaySteps))
                 if todaySteps < 1000 {
-                    self.tooLazyNotify()
+                    self.tooLazyNotify(todaySteps)
                     //Debugging Prints
                     print("haven't taken 1000 steps in a day")
                     print("Today Steps: " + String(todaySteps))

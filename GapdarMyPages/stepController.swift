@@ -96,6 +96,29 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    func weeklyNotify() {
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "It's Noon"
+        content.subtitle = "This is subtitle"
+        content.body = "I've set this alarm to go off at 12:18 Tuesday Once"
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 12
+        dateComponents.minute = 18
+        dateComponents.weekday = 3
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "weekly", content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: nil)
+        
+        
+        //Debugging: Prints the notifications currently in NotificationCenter
+        //center.getPendingNotificationRequests {(requestArray) in print(requestArray)}
+    }
+    
     func nudge(){
         // TODO: Check whether user has been inactive for past two days and send off notification
         let now = Date()
@@ -133,6 +156,7 @@ class stepController: UIViewController {
         if defaults.integer(forKey: "totalCalls") == 0 {
             noCallsNotify()
         }
+        weeklyNotify()
         //Debugging: Note that the Async execute makes the execution non-sequential
         print("fetched")
     }

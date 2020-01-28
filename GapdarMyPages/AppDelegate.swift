@@ -56,6 +56,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("I did receive a response")
+        if response.actionIdentifier == "yes" {
+            print("Chose yes")
+        } else {
+            print("Chose no")
+        }
         completionHandler()
     }
 

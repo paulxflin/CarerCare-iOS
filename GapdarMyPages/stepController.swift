@@ -11,7 +11,7 @@ import HealthKit
 import UserNotifications
 
 
-class stepController: UIViewController, UNUserNotificationCenterDelegate {
+class stepController: UIViewController {
     let defaults = UserDefaults.standard
     
     let healthStore = HKHealthStore()
@@ -26,7 +26,6 @@ class stepController: UIViewController, UNUserNotificationCenterDelegate {
         self.lbStep.text = "None"
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
-        UNUserNotificationCenter.current().delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -125,17 +124,6 @@ class stepController: UIViewController, UNUserNotificationCenterDelegate {
         
         //Debugging: Prints the notifications currently in NotificationCenter
         //center.getPendingNotificationRequests {(requestArray) in print(requestArray)}
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        print("Response method is reached")
-        if response.actionIdentifier == "no" {
-            print("Chose no")
-        } else {
-            print("Chose yes")
-        }
-        completionHandler()
     }
     
     func nudge(){

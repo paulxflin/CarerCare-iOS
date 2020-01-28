@@ -56,11 +56,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("I did receive a response")
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        
         if response.actionIdentifier == "yes" {
+            let VC = barSB.instantiateViewController(withIdentifier: "tabBar")
+            self.window?.rootViewController = VC
             print("Chose yes")
         } else {
+            let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+            self.window?.rootViewController = VC
             print("Chose no")
         }
+        
+        self.window?.makeKeyAndVisible()
+        
         completionHandler()
     }
 

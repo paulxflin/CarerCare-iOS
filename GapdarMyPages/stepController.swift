@@ -130,21 +130,6 @@ class stepController: UIViewController {
             }
         }
         
-        /* This part is commented out due to unknown bug experienced.
-        getStepsCount(forSpecificDate: Date()) { (steps) in
-            DispatchQueue.main.async(execute: {
-                let todaySteps = Int(steps)
-                print("fetched today steps: " + String(todaySteps))
-                if todaySteps < 1000 {
-                    self.tooLazyNotify(todaySteps)
-                    //Debugging Prints
-                    print("haven't taken 1000 steps in a day")
-                    print("Today Steps: " + String(todaySteps))
-                }
-            })
-        }
-        */
-        
         if defaults.integer(forKey: "totalCalls") == 0 {
             noCallsNotify()
         }

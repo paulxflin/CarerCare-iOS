@@ -11,7 +11,7 @@ import HealthKit
 import UserNotifications
 
 
-class stepController: UIViewController {
+class stepController: UIViewController, UNUserNotificationCenterDelegate {
     let defaults = UserDefaults.standard
     
     let healthStore = HKHealthStore()
@@ -26,7 +26,7 @@ class stepController: UIViewController {
         self.lbStep.text = "None"
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
-        
+        UNUserNotificationCenter.current().delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -97,26 +97,45 @@ class stepController: UIViewController {
     }
     
     func weeklyNotify() {
-        let center = UNUserNotificationCenter.current()
+        let yes = UNNotificationAction(identifier: "yes", title: "Yes", options: .foreground)
+        let no = UNNotificationAction(identifier: "no", title: "No", options: .foreground)
+        
+        let category = UNNotificationCategory(identifier: "myCategory", actions: [yes, no], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
         
         let content = UNMutableNotificationContent()
-        content.title = "It's Noon"
-        content.subtitle = "This is subtitle"
-        content.body = "I've set this alarm to go off at 12:18 Tuesday Once"
+        content.title = "Your Predicted Wellbeing Score is..."
+        content.body = "Is this accurate?"
+        content.categoryIdentifier = "myCategory"
+        content.badge = 1
         
-        var dateComponents = DateComponents()
-        dateComponents.hour = 12
-        dateComponents.minute = 18
-        dateComponents.weekday = 3
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+//        var dateComponents = DateComponents()
+//        dateComponents.hour = 20
+//        dateComponents.minute = 49
+//        // Weekday 1 - 7 corresponds to Sunday, Monday, ... , Saturday
+//        dateComponents.weekday = 3
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
         let request = UNNotificationRequest(identifier: "weekly", content: content, trigger: trigger)
-        center.add(request, withCompletionHandler: nil)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         
         //Debugging: Prints the notifications currently in NotificationCenter
         //center.getPendingNotificationRequests {(requestArray) in print(requestArray)}
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print("Response method is reached")
+        if response.actionIdentifier == "no" {
+            print("Chose no")
+        } else {
+            print("Chose yes")
+        }
+        completionHandler()
     }
     
     func nudge(){

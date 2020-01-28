@@ -72,8 +72,8 @@ class stepController: UIViewController {
     
     func tooLazyNotify(_ steps: Int) {
         let content = UNMutableNotificationContent()
-        content.title = "Less than 1000 Steps"
-        content.subtitle = "You haven't reached daily walking goal today, current" + String(steps)
+        content.title = "Less than 1000 Steps, Current: " + String(steps)
+        content.subtitle = "You haven't reached daily walking goal today"
         content.body = "Remember to find time today to take a walk!"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -115,6 +115,22 @@ class stepController: UIViewController {
             }
         }
         
+        let todayStart = Calendar.current.startOfDay(for: now)
+        getCountStepUsingStatisticsQuery(from: todayStart, to: now) { (query, statistics, error) in
+            DispatchQueue.main.async {
+                if let value = statistics?.sumQuantity()?.doubleValue(for: .count()) {
+                    let todaySteps = Int(value)
+                    print("fetched today steps: " + String(todaySteps))
+                    if todaySteps < 1000 {
+                        self.tooLazyNotify(todaySteps)
+                        print("haven't taken 1000 steps in a day")
+                        print("Today Steps: " + String(todaySteps))
+                    }
+                }
+            }
+        }
+        
+        /* This part is commented out due to unknown bug experienced.
         getStepsCount(forSpecificDate: Date()) { (steps) in
             DispatchQueue.main.async(execute: {
                 let todaySteps = Int(steps)
@@ -127,6 +143,7 @@ class stepController: UIViewController {
                 }
             })
         }
+        */
         
         if defaults.integer(forKey: "totalCalls") == 0 {
             noCallsNotify()

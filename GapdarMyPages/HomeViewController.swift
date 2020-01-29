@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let label = UILabel()
+//    let label = UILabel()
     
     let defaults = UserDefaults.standard
     
@@ -22,10 +22,12 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
-    
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        let instance = AppDelegate()
+        instance.window?.rootViewController = self
+        instance.window?.makeKeyAndVisible()
+        displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
+    }
     
 }
 

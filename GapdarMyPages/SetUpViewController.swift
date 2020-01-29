@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HealthKit
+import UserNotifications
 
 class SetUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -21,6 +23,8 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     
     let defaults = UserDefaults.standard
     
+    let healthStore = HKHealthStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTF.delegate = self
@@ -29,6 +33,13 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
         stepsTF.delegate = self
         callsTF.delegate = self
         
+        //Request Permissions for Healthkit Steps
+        let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
+        healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
+        
+        //Request Permission for Notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
+
 
         // Do any additional setup after loading the view.
     }

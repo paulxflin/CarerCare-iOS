@@ -78,8 +78,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         completionHandler()
     }
     
+    func getPredictedScore() -> Int {
+        let VC = stepController()
+        VC.getThisWeekSteps()
+        //Unfortunately there is potential that the steps isn't called in time based on current understanding.
+        let weekSteps = defaults.integer(forKey: "oneWeekSteps")
+        print(weekSteps)
+        let targetSteps = Int(defaults.string(forKey: "targetSteps") ?? "1000")!
+        let weekCalls = defaults.integer(forKey: "totalCalls")
+        let targetCalls = Int(defaults.string(forKey: "targetCalls") ?? "3")!
+        
+        let avgSteps = weekSteps/7
+        let avgCalls = weekCalls/7
+        
+        var stepsRatio : Double = Double(avgSteps)/Double(targetSteps)
+        if stepsRatio > 1 {
+            stepsRatio = 1.0
+        }
+        
+        var callsRatio : Double = Double(avgCalls)/Double(targetCalls)
+        if callsRatio > 1 {
+            callsRatio = 1.0
+        }
+        
+        let score : Double = (stepsRatio + callsRatio) / 2.0 * 10.0
+        
+        if Int(score) > 10 {
+            return 10
+        }
+        
+        return Int(score)
+    }
+    
     func presentWBAlert() {
-        let predicted = 5
+        //Call a function to calculate predicted score here
+        let predicted = getPredictedScore()
         let userMessage = "Do you think this is accurate?"
         let myAlert = UIAlertController(title: "Predicted Score: \(predicted)", message: userMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default){

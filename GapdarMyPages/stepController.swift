@@ -168,6 +168,18 @@ class stepController: UIViewController {
         print("fetched")
     }
     
+    func getThisWeekSteps(){
+        let now = Date()
+        let oneWeekAgo = Date(timeIntervalSinceNow: -7*24*60*60)
+        getCountStepUsingStatisticsQuery(from: oneWeekAgo, to: now) { (query, statistics, error) in
+            if let value = statistics?.sumQuantity()?.doubleValue(for: .count()) {
+                let oneWeekSteps = Int(value)
+                print("fetched one week steps: " + String(oneWeekSteps))
+                self.defaults.set(oneWeekSteps, forKey: "oneWeekSteps")
+            }
+        }
+    }
+    
     
     @IBAction func btPressed(_ sender: Any) {
         self.getStepsCount(forSpecificDate: Date()) { (steps) in

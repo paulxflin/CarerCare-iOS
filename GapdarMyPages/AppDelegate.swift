@@ -130,8 +130,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             i = i-1
         }
         //Set last week's steps and calls
-        callsArray[0] = defaults.integer(forKey: "oneWeekSteps")
-        stepsArray[0] = defaults.integer(forKey: "totalCalls")
+        callsArray[0] = defaults.integer(forKey: "totalCalls")
+        stepsArray[0] = defaults.integer(forKey: "oneWeekSteps")
         scoresArray[0] = defaults.integer(forKey: "score")
         
         //Store the arrays:

@@ -14,7 +14,7 @@ import Foundation
 class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     
 
-    
+    let defaults = UserDefaults.standard
     
     //@IBOutlet weak var chartView: CombinedChartView!
     @IBOutlet weak var chartView: CombinedChartView!
@@ -83,12 +83,26 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         chartView.data = data
     }
     
+    func getSubArray(_ array : [Int], _ numElems : Int) -> [Int] {
+        var finalArr = [Int](repeating: 0, count: numElems)
+        var i = 0
+        while i < numElems {
+            finalArr[i] = array[i]
+            i += 1
+        }
+        return finalArr
+    }
     
     func generateLineData() -> LineChartData
     {
         // MARK: ChartDataEntry
         var entries = [ChartDataEntry]()
-        var wellBeingValues: [Int]=[3,5,4,4,9,4,7,6,8]
+        
+        let scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
+        let n = 9
+        let wellBeingValues : [Int] = getSubArray(scoresArray, n)
+        
+        //var wellBeingValues: [Int]=[3,5,4,4,9,4,7,6,8]
         
         for index in 0..<ITEM_COUNT
         {
@@ -120,7 +134,14 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     {
         // MARK: BarChartDataEntry
         var entries1 = [BarChartDataEntry]()
-        var stepsData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]
+        
+        let stepsArray : [Int] = defaults.array(forKey: "stepsArray") as! [Int]
+        let n = 9
+        let stepsData : [Int] = getSubArray(stepsArray, n)
+        print("Steps Data: ")
+        print(stepsData)
+        
+        //var stepsData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]
         
         for index in 0..<ITEM_COUNT
         {

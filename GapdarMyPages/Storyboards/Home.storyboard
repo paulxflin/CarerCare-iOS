@@ -122,7 +122,7 @@
         <!--Home-->
         <scene sceneID="fyE-88-5f6">
             <objects>
-                <viewController storyboardIdentifier="adjust" id="5Wy-mg-o35" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="adjust" id="5Wy-mg-o35" customClass="AdjustViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHF-og-TdM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" red="0.054084421119999997" green="0.50574805700000003" blue="0.2928385751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="slider:" destination="5Wy-mg-o35" eventType="valueChanged" id="3kf-QW-gBv"/>
+                                    <action selector="slider:" destination="5Wy-mg-o35" eventType="valueChanged" id="3th-1t-gkc"/>
                                 </connections>
                             </slider>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="As needed move the Black Button above up or down the scale to rate your well-being then click save below " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RlO-xg-ITj">
@@ -251,7 +251,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="icons8-home-40" id="cs5-aO-85f"/>
                     <connections>
-                        <outlet property="scoreLabel" destination="Yeg-D9-Guf" id="tO5-kz-Ir4"/>
+                        <outlet property="scoreLabel" destination="Yeg-D9-Guf" id="VMp-tV-rfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ql8-zM-ZRF" userLabel="First Responder" sceneMemberID="firstResponder"/>

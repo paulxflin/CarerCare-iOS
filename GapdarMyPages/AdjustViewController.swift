@@ -9,11 +9,26 @@
 import UIKit
 
 class AdjustViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBAction func slider(_ sender: UISlider) {
+        scoreLabel.text = String(Int(sender.value))
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func savePressed(_ sender: Any) {
+        let score : Int = Int(scoreLabel.text!)!
+        print(score)
+        defaults.set(score, forKey: "score")
     }
     
 

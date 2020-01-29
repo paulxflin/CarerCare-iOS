@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="-4142" y="-798"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Permissions View Controller-->
         <scene sceneID="J3i-0j-iJM">
             <objects>
-                <viewController id="y8G-TB-AAh" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y8G-TB-AAh" customClass="PermissionsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3T-rS-7uF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +237,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="sy5-sa-cBp"/>
+                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
                                             <segue destination="lFB-hL-Vqv" kind="show" id="rdW-Ry-OUG"/>
                                         </connections>
                                     </button>

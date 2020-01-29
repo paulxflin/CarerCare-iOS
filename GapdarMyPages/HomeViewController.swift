@@ -34,8 +34,23 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func trackingPressed(_ sender: Any) {
+        setupHistory()
         let setup = true
         defaults.set(setup, forKey: "setup")
+        
+    }
+    
+    func setupHistory() {
+        if defaults.array(forKey: "callsArray") == nil {
+            let callsArray = [Int](repeating: 0, count: 12)
+            defaults.set(callsArray, forKey: "callsArray")
+            print(callsArray)
+        }
+        if defaults.array(forKey: "stepsArray") == nil {
+            let stepsArray = [Int](repeating: 0, count: 12)
+            defaults.set(stepsArray, forKey: "stepsArray")
+            print(stepsArray)
+        }
     }
     
 

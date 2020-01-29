@@ -148,6 +148,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             UIAlertAction in
             print("I pressed Yes to alert")
             
+            //Set predicted into model
+            self.defaults.set(predicted, forKey: "score")
+            
             //Navigate to Home page
             let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
             let VC = barSB.instantiateViewController(withIdentifier: "tabBar")

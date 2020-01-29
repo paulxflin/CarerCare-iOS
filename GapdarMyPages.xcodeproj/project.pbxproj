@@ -11,6 +11,7 @@
 		25490EFBAEFFB74069D2BD0C /* Pods_GapdarMyPages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */; };
 		69C653D5FE1D286C3D97ED29 /* Pods_GapdarMyPagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E627396618E450FD1256F9 /* Pods_GapdarMyPagesTests.framework */; };
 		7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */; };
+		7B272FDC23E1BFBE007DCA65 /* UIDesignFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B272FDB23E1BFBE007DCA65 /* UIDesignFormat.swift */; };
 		7BA155E923C7C94C00635667 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA155E823C7C94C00635667 /* ContactsViewController.swift */; };
 		7BC2FC8223C51A87009C5689 /* StepsStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */; };
 		7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544D1239BF692001B5EF4 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		3C5F6DAAEE8E4A04DB0F0B36 /* Pods_GapdarMyPages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GapdarMyPages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EBFD13E2B351905ADC2345 /* Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages-GapdarMyPagesUITests/Pods-GapdarMyPages-GapdarMyPagesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsStatisticsViewController.swift; sourceTree = "<group>"; };
+		7B272FDB23E1BFBE007DCA65 /* UIDesignFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDesignFormat.swift; sourceTree = "<group>"; };
 		7BA155E823C7C94C00635667 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsStatisticsViewController.swift; sourceTree = "<group>"; };
 		7BC544CE239BF692001B5EF4 /* GapdarMyPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GapdarMyPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */,
 				7BC544DD239BF695001B5EF4 /* Info.plist */,
 				7BC2FC8123C51A87009C5689 /* StepsStatisticsViewController.swift */,
+				7B272FDB23E1BFBE007DCA65 /* UIDesignFormat.swift */,
 			);
 			path = GapdarMyPages;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			files = (
 				ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */,
 				7BC2FC8223C51A87009C5689 /* StepsStatisticsViewController.swift in Sources */,
+				7B272FDC23E1BFBE007DCA65 /* UIDesignFormat.swift in Sources */,
 				7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */,
 				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
 				AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */,

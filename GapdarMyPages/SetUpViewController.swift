@@ -16,6 +16,7 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stepsTF: UITextField!
     @IBOutlet weak var callsTF: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var persistLabel: UILabel!
     
@@ -23,6 +24,8 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.layer.cornerRadius = 15.0 
+        view.setGradientBackground()
         nameTF.delegate = self
         refTF.delegate = self
         postcodeTF.delegate = self

@@ -227,7 +227,6 @@
                                 </state>
                                 <connections>
                                     <action selector="savePressed:" destination="5Wy-mg-o35" eventType="touchUpInside" id="eOj-Fu-Vng"/>
-                                    <segue destination="wj5-AO-bsU" kind="show" id="P6V-9Y-3nQ"/>
                                 </connections>
                             </button>
                         </subviews>

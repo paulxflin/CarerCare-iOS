@@ -23,9 +23,6 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let instance = AppDelegate()
-        instance.window?.rootViewController = self
-        instance.window?.makeKeyAndVisible()
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
     }
     

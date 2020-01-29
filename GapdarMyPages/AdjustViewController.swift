@@ -29,6 +29,12 @@ class AdjustViewController: UIViewController {
         let score : Int = Int(scoreLabel.text!)!
         print(score)
         defaults.set(score, forKey: "score")
+        
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
     }
     
 

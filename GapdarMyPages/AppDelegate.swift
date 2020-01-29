@@ -54,26 +54,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         vc.nudge()
     }
     
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        //This is the method called if notification is received while app is in foreground.
+        print("I've reached willPresent method")
+        
+        let identifier = notification.request.identifier
+        if identifier == "weekly" {
+            presentWBAlert()
+        }
+    }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("I did receive a response")
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        //Debug: This prints the notification that was clicked
+        //print(response.notification.request.identifier)
         
-        if response.actionIdentifier == "yes" {
-            let VC = barSB.instantiateViewController(withIdentifier: "tabBar")
-            self.window?.rootViewController = VC
-            print("Chose yes")
-        } else {
-            let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
-            self.window?.rootViewController = VC
-            print("Chose no")
+        let identifier = response.notification.request.identifier
+        if identifier == "weekly" {
+            presentWBAlert()
         }
         
-        self.window?.makeKeyAndVisible()
-        
         completionHandler()
+    }
+    
+    func presentWBAlert() {
+        let predicted = 5
+        let userMessage = "Do you think this is accurate?"
+        let myAlert = UIAlertController(title: "Predicted Score: \(predicted)", message: userMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default){
+            UIAlertAction in
+            print("I pressed Yes to alert")
+            
+            //Navigate to Home page
+            let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+            let VC = barSB.instantiateViewController(withIdentifier: "tabBar")
+            self.window?.rootViewController = VC
+            self.window?.makeKeyAndVisible()
+        }
+        let NoAction = UIAlertAction(title: "No", style: UIAlertAction.Style.default){
+            UIAlertAction in
+            print("I pressed No to alert")
+            
+            //Navigate to the adjustment page
+            let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+            self.window?.rootViewController = VC
+            self.window?.makeKeyAndVisible()
+        }
+        myAlert.addAction(okAction)
+        myAlert.addAction(NoAction)
+        self.window?.rootViewController?.present(myAlert, animated: true, completion: nil)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

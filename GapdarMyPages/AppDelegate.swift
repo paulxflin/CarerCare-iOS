@@ -81,9 +81,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func getPredictedScore() -> Int {
         let VC = stepController()
         VC.getThisWeekSteps()
+        
         //Unfortunately there is potential that the steps isn't called in time based on current understanding.
         let weekSteps = defaults.integer(forKey: "oneWeekSteps")
-        print(weekSteps)
+        print("The weekSteps appears to be: " + String(weekSteps))
         let targetSteps = Int(defaults.string(forKey: "targetSteps") ?? "1000")!
         let weekCalls = defaults.integer(forKey: "totalCalls")
         let targetCalls = Int(defaults.string(forKey: "targetCalls") ?? "3")!
@@ -103,11 +104,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         let score : Double = (stepsRatio + callsRatio) / 2.0 * 10.0
         
+        //This function shifts the records or steps and calls to put current week into last week
+        updateArrays()
+        
         if Int(score) > 10 {
             return 10
         }
         
         return Int(score)
+    }
+    
+    func updateArrays() {
+        // Structure: Index 0 corresponds to last week, Index 11 corresponds to 12 weeks ago
+        var callsArray : [Int] = defaults.array(forKey: "callsArray") as! [Int]
+        var stepsArray : [Int] = defaults.array(forKey: "stepsArray") as! [Int]
+        var i = 11;
+        while i > 0 {
+            callsArray[i] = callsArray[i-1]
+            stepsArray[i] = stepsArray[i-1]
+            i = i-1
+        }
+        //Set last week's steps and calls
+        callsArray[0] = defaults.integer(forKey: "oneWeekSteps")
+        stepsArray[0] = defaults.integer(forKey: "totalCalls")
+        
+        //Store the arrays:
+        defaults.set(callsArray, forKey: "callsArray")
+        defaults.set(stepsArray, forKey: "stepsArray")
+        print(callsArray)
+        print(stepsArray)
+        
+        //Clear the current accumulations for steps and calsl
+        defaults.set(0, forKey: "oneWeekSteps")
+        defaults.set(0, forKey: "totalCalls")
     }
     
     func presentWBAlert() {

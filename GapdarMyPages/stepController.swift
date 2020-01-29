@@ -164,6 +164,9 @@ class stepController: UIViewController {
             noCallsNotify()
         }
         weeklyNotify()
+        
+        //Calling this here to periodically refresh this week steps, to prevent the async bug.
+        getThisWeekSteps()
         //Debugging: Note that the Async execute makes the execution non-sequential
         print("fetched")
     }

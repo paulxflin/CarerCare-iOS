@@ -30,6 +30,11 @@ class AdjustViewController: UIViewController {
         print(score)
         defaults.set(score, forKey: "score")
         
+        //Update the scoresArray with this score.
+        var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
+        scoresArray[0] = defaults.integer(forKey: "score")
+        defaults.set(scoresArray, forKey: "scoresArray")
+        
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
         let appDelegate = UIApplication.shared.delegate

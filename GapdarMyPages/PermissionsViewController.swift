@@ -45,6 +45,11 @@ class PermissionsViewController: UIViewController {
             defaults.set(stepsArray, forKey: "stepsArray")
             print(stepsArray)
         }
+        if defaults.array(forKey: "scoresArray") == nil {
+            let scoresArray = [Int](repeating: 0, count: 12)
+            defaults.set(scoresArray, forKey: "scoresArray")
+            print(scoresArray)
+        }
     }
     
 

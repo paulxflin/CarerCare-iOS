@@ -104,6 +104,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         let score : Double = (stepsRatio + callsRatio) / 2.0 * 10.0
         
+        //Record down the predicted score, if modified will update later.
+        defaults.set(score, forKey: "score")
+        
         //This function shifts the records or steps and calls to put current week into last week
         updateArrays()
         
@@ -118,23 +121,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Structure: Index 0 corresponds to last week, Index 11 corresponds to 12 weeks ago
         var callsArray : [Int] = defaults.array(forKey: "callsArray") as! [Int]
         var stepsArray : [Int] = defaults.array(forKey: "stepsArray") as! [Int]
+        var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
         var i = 11;
         while i > 0 {
             callsArray[i] = callsArray[i-1]
             stepsArray[i] = stepsArray[i-1]
+            scoresArray[i] = scoresArray[i-1]
             i = i-1
         }
         //Set last week's steps and calls
         callsArray[0] = defaults.integer(forKey: "oneWeekSteps")
         stepsArray[0] = defaults.integer(forKey: "totalCalls")
+        scoresArray[0] = defaults.integer(forKey: "score")
         
         //Store the arrays:
         defaults.set(callsArray, forKey: "callsArray")
         defaults.set(stepsArray, forKey: "stepsArray")
+        defaults.set(scoresArray, forKey: "scoresArray")
         print(callsArray)
         print(stepsArray)
+        print(scoresArray)
         
-        //Clear the current accumulations for steps and calsl
+        //Clear the current accumulations for steps and calls, not scores because that remains
         defaults.set(0, forKey: "oneWeekSteps")
         defaults.set(0, forKey: "totalCalls")
     }
@@ -148,8 +156,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             UIAlertAction in
             print("I pressed Yes to alert")
             
-            //Set predicted into model
-            self.defaults.set(predicted, forKey: "score")
+//            //Set predicted into model
+//            self.defaults.set(predicted, forKey: "score")
             
             //Navigate to Home page
             let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)

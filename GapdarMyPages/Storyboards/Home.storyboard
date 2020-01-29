@@ -257,16 +257,6 @@
             </objects>
             <point key="canvasLocation" x="-3949.275362318841" y="-29.464285714285712"/>
         </scene>
-        <!--MenuTabBar-->
-        <scene sceneID="JvH-0I-DNz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MenuTabBar" id="wj5-AO-bsU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="MH8-qv-xhM"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-Zb-2rU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3949" y="470"/>
-        </scene>
     </scenes>
     <resources>
         <image name="icons8-home-40" width="40" height="40"/>

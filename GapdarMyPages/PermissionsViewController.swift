@@ -25,6 +25,12 @@ class PermissionsViewController: UIViewController {
         let setup = true
         defaults.set(setup, forKey: "setup")
         
+        let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = VC
+        appDelegate?.window??.makeKeyAndVisible()
+        
     }
     
     @IBAction func sharingSwitchPressed(_ sender: Any) {

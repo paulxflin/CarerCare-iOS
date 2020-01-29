@@ -238,7 +238,6 @@
                                         </state>
                                         <connections>
                                             <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
-                                            <segue destination="lFB-hL-Vqv" kind="show" id="rdW-Ry-OUG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -275,14 +274,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssZ-uI-pie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2201.449275362319" y="-797.54464285714278"/>
-        </scene>
-        <!--MenuTabBar-->
-        <scene sceneID="j3S-Kr-GPS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MenuTabBar" id="lFB-hL-Vqv" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zQJ-he-9Dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1434" y="-797"/>
         </scene>
     </scenes>
     <resources>

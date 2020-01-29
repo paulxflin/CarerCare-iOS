@@ -29,6 +29,7 @@
 		7BFB061E23DE56E8005BCE2C /* MenuTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061D23DE56E8005BCE2C /* MenuTabBar.storyboard */; };
 		9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11323C61CAC0078003F /* ShareController.swift */; };
 		9A1FA11A23C63E770078003F /* stepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11923C63E760078003F /* stepController.swift */; };
+		AC45E8A623E2247900A1EF6F /* AdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */; };
 		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
 		ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA16E9923D614BA00040709 /* SetUpViewController.swift */; };
 		ACFE509423CBCA0D004B67D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFE509323CBCA0D004B67D0 /* HealthKit.framework */; };
@@ -83,6 +84,7 @@
 		80E19F2C8D779A7C45C24317 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
 		9A1FA11323C61CAC0078003F /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		9A1FA11923C63E760078003F /* stepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepController.swift; sourceTree = "<group>"; };
+		AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdjustViewController.swift; path = GapdarMyPages/AdjustViewController.swift; sourceTree = SOURCE_ROOT; };
 		AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		ACA16E9923D614BA00040709 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GapdarMyPages.entitlements; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				7BFB061023DE4E10005BCE2C /* Storyboards */,
 				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
+				AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */,
 				9A1FA11923C63E760078003F /* stepController.swift */,
 				9A1FA11323C61CAC0078003F /* ShareController.swift */,
 				ACFFD93123A57A9D009AD624 /* MessageViewController.swift */,
@@ -477,6 +480,7 @@
 				7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */,
 				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
 				AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */,
+				AC45E8A623E2247900A1EF6F /* AdjustViewController.swift in Sources */,
 				7BA155E923C7C94C00635667 /* ContactsViewController.swift in Sources */,
 				ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */,
 				7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */,

@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="LRy-9O-O27">
             <objects>
-                <viewController storyboardIdentifier="score" id="kQv-rz-w9x" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="score" id="kQv-rz-w9x" customClass="HomeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJV-iD-DAY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,8 +27,8 @@
                                 <rect key="frame" x="20" y="90" width="374" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-hd-aQh">
-                                        <rect key="frame" x="172" y="71" width="31" height="67"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-hd-aQh">
+                                        <rect key="frame" x="150" y="71" width="75" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                         <nil key="textColor"/>
@@ -111,10 +111,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="icons8-home-40" id="Wj0-rg-Fyz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="displayedScoreLabel" destination="PfD-hd-aQh" id="hzm-bv-HqH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcK-YI-ICp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2884.057971014493" y="-28.125"/>
+            <point key="canvasLocation" x="-2884.057971014493" y="-28.532608695652176"/>
         </scene>
         <!--Home-->
         <scene sceneID="fyE-88-5f6">
@@ -223,6 +226,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="savePressed:" destination="5Wy-mg-o35" eventType="touchUpInside" id="eOj-Fu-Vng"/>
                                     <segue destination="wj5-AO-bsU" kind="showDetail" id="9Ew-va-vfI"/>
                                 </connections>
                             </button>

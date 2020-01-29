@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var sharingSwitch: UISwitch!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var displayedScoreLabel: UILabel!
     
     @IBAction func slider(_ sender: UISlider) {
         scoreLabel.text = String(Int(sender.value))
@@ -53,6 +54,11 @@ class HomeViewController: UIViewController {
         }
     }
     
-
+    @IBAction func savePressed(_ sender: Any) {
+        let score : Int = Int(scoreLabel.text!)!
+        print(score)
+        defaults.set(score, forKey: "score")
+    }
+    
 }
 

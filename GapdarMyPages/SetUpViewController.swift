@@ -21,12 +21,17 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var persistLabel: UILabel!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     let defaults = UserDefaults.standard
     
     let healthStore = HKHealthStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
+        saveButton.layer.cornerRadius = 15.0
+        
         nameTF.delegate = self
         refTF.delegate = self
         postcodeTF.delegate = self

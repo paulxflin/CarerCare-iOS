@@ -31,75 +31,36 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     
     let defaults = UserDefaults.standard
     
-    lazy var contactScrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentSize.height = 10
-        view.backgroundColor = UIColor.white
-        return view
-    }()
+    @IBOutlet weak var contactScrollView: UIScrollView!
     
-    lazy var activityScrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentSize.height = 10
-        view.backgroundColor = UIColor.white
-        return view
-    }()
+    @IBOutlet weak var activityScrollView: UIScrollView!
     
-    lazy var stackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [contactLabel, contactScrollView, contactButton, activityLabel, activityScrollView, activityButton])
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        sv.axis = .vertical
-        sv.spacing = 20
-        sv.alignment = .leading
-        sv.distribution = .equalSpacing
-        return sv
-    }()
+    
+    
+//    lazy var stackView: UIStackView = {
+//        let sv = UIStackView(arrangedSubviews: [contactLabel, contactScrollView, contactButton, activityLabel, activityScrollView, activityButton])
+//        sv.translatesAutoresizingMaskIntoConstraints = false
+//        sv.axis = .vertical
+//        sv.spacing = 20
+//        sv.alignment = .leading
+//        sv.distribution = .equalSpacing
+//        return sv
+//    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupStackView()
-        contactScrollView.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        setupContactScrollView()
-        setupActivityScrollView()
+        view.setGradientBackground()
+        contactButton.layer.cornerRadius = 15.0
+        contactScrollView.layer.cornerRadius = 15.0
+        activityButton.layer.cornerRadius = 15.0
+        activityScrollView.layer.cornerRadius = 15.0
+
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    fileprivate func setupStackView() {
-        contactLabel.translatesAutoresizingMaskIntoConstraints = false
-        contactScrollView.translatesAutoresizingMaskIntoConstraints = false
-        contactButton.translatesAutoresizingMaskIntoConstraints = false
-        activityLabel.translatesAutoresizingMaskIntoConstraints = false
-        activityScrollView.translatesAutoresizingMaskIntoConstraints = false
-        activityButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
-            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
-            
-        ])
-    }
-    
-    
-    func setupContactScrollView() {
-        contactScrollView.leftAnchor.constraint(equalTo: stackView.leftAnchor).isActive = true
-        contactScrollView.rightAnchor.constraint(equalTo: stackView.rightAnchor).isActive = true
-        contactScrollView.heightAnchor.constraint(equalToConstant: 250).isActive = true
-    }
-    
-    func setupActivityScrollView() {
-        activityScrollView.leftAnchor.constraint(equalTo: stackView.leftAnchor).isActive = true
-        activityScrollView.rightAnchor.constraint(equalTo: stackView.rightAnchor).isActive = true
-        activityScrollView.heightAnchor.constraint(equalToConstant: 130).isActive = true
-    }
-    
+
   
     
     @IBAction func getNumber(_ sender: Any) {

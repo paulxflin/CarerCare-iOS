@@ -18,85 +18,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mrT-kv-Pzv">
-                                <rect key="frame" x="20" y="89" width="374" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WDU-OL-pfR">
+                                <rect key="frame" x="20" y="89" width="374" height="677.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who do you like to talk to the most?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ah-kF-k1g">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-R9-tUD">
-                                        <rect key="frame" x="0.0" y="34.333333333333343" width="374" height="288.66666666666663"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </scrollView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2NN-1l-Ji1">
-                                <rect key="frame" x="20" y="427" width="30" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-pt-yHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="+"/>
-                                        <connections>
-                                            <action selector="getNumber:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="O5T-Bz-tH4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9wd-5s-VJQ">
-                                <rect key="frame" x="20" y="475.99999999999994" width="374" height="177.66666666666666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Activities do you like?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-xM-fy8">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-GV-dW2">
-                                        <rect key="frame" x="0.0" y="26.333333333333329" width="374" height="151.33333333333337"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </scrollView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="oZn-QV-3rW">
-                                <rect key="frame" x="20" y="668.66666666666663" width="30" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-CG-xE3">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="+"/>
-                                        <connections>
-                                            <action selector="activityButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="Tfs-rz-LbQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="c4J-wg-HD9">
-                                <rect key="frame" x="20" y="718.66666666666663" width="56" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoJ-2H-Jxk">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <action selector="saveButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="c7H-dp-Eal"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-tj-xBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="323"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who do you like to talk to the most?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ah-kF-k1g">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-R9-tUD">
+                                                <rect key="frame" x="0.0" y="34.333333333333343" width="374" height="288.66666666666663"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="288.67000000000002" id="5BN-p9-kmO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="8YV-me-XeW"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zl1-R9-tUD" firstAttribute="top" secondItem="QwQ-tj-xBc" secondAttribute="top" constant="34.329999999999998" id="svF-mL-6HO"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zl1-R9-tUD" secondAttribute="bottom" id="tY6-zE-aIE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-3O-yGi">
+                                        <rect key="frame" x="0.0" y="339" width="374" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-pt-yHR">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="eVM-lT-TNN"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="hk3-wA-eLw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="getNumber:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="O5T-Bz-tH4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-3e-RIR">
+                                        <rect key="frame" x="0.0" y="389" width="374" height="177.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Activities do you like?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-xM-fy8">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-GV-dW2">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="151.33333333333334"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="151.33000000000001" id="nKZ-zk-sPq"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="v8D-zf-zaE"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JUA-GV-dW2" firstAttribute="top" secondItem="HbH-3e-RIR" secondAttribute="top" constant="26.333333333333314" id="Pmw-kN-Upf"/>
+                                            <constraint firstAttribute="bottom" secondItem="JUA-GV-dW2" secondAttribute="bottom" constant="-2.8421709430404007e-14" id="oh6-nK-ruE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-lH-WzU">
+                                        <rect key="frame" x="0.0" y="582.66666666666663" width="374" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-CG-xE3">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="Osr-HW-4eb"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ZB8-XL-W7F"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="activityButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="Tfs-rz-LbQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-G9-DWZ">
+                                        <rect key="frame" x="0.0" y="633.66666666666663" width="374" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoJ-2H-Jxk">
+                                                <rect key="frame" x="318" y="0.0" width="56" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Kh6-eP-UoH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="Wcs-Q0-7dk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="e5q-s5-fDQ" eventType="touchUpInside" id="c7H-dp-Eal"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WJl-cz-FRk" firstAttribute="trailing" secondItem="WDU-OL-pfR" secondAttribute="trailing" constant="20" id="44T-5K-Xgo"/>
+                            <constraint firstItem="WDU-OL-pfR" firstAttribute="leading" secondItem="WJl-cz-FRk" secondAttribute="leading" constant="20" id="Kw3-Mv-ehh"/>
+                            <constraint firstItem="WJl-cz-FRk" firstAttribute="bottom" secondItem="WDU-OL-pfR" secondAttribute="bottom" constant="95.333333333333371" id="if7-PX-gMO"/>
+                            <constraint firstItem="WDU-OL-pfR" firstAttribute="top" secondItem="WJl-cz-FRk" secondAttribute="top" constant="45" id="rmI-4M-Lfw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WJl-cz-FRk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacts" image="icons8-contacts-40" id="C9h-aT-mq6"/>
@@ -265,62 +299,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
-                                <rect key="frame" x="22" y="85" width="374" height="408"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="21o-aF-tsd">
+                                <rect key="frame" x="20" y="85" width="374" height="701"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-5p-Ive">
-                                        <rect key="frame" x="75" y="8" width="201" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <state key="normal" title="Start tracking">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9">
-                                        <rect key="frame" x="24" y="212" width="326" height="188"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="408"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9">
+                                                <rect key="frame" x="25" y="212" width="324" height="188"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="324" id="B0c-pB-cmc"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="188" id="qD5-yS-mQh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-5p-Ive">
+                                                <rect key="frame" x="101" y="35" width="172" height="173"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="173" id="Qgh-jI-LD1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                                <state key="normal" title="Start tracking">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <constraints>
+                                            <constraint firstItem="6Ur-5p-Ive" firstAttribute="centerX" secondItem="6Q1-2U-eS0" secondAttribute="centerX" id="KX7-S5-Hb8"/>
+                                            <constraint firstItem="6Ur-5p-Ive" firstAttribute="leading" secondItem="6Q1-2U-eS0" secondAttribute="leading" constant="101" id="LZq-CQ-WOS"/>
+                                            <constraint firstItem="Nzj-pH-QV9" firstAttribute="bottom" secondItem="6Q1-2U-eS0" secondAttribute="bottomMargin" id="Of8-yC-U7c"/>
+                                            <constraint firstItem="6Ur-5p-Ive" firstAttribute="top" secondItem="6Q1-2U-eS0" secondAttribute="top" constant="35" id="d2L-ha-OVc"/>
+                                            <constraint firstItem="Nzj-pH-QV9" firstAttribute="top" secondItem="6Ur-5p-Ive" secondAttribute="bottom" constant="4" id="g98-JO-3dV"/>
+                                            <constraint firstItem="Nzj-pH-QV9" firstAttribute="centerX" secondItem="6Ur-5p-Ive" secondAttribute="centerX" id="qLk-HS-bPa"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="408" id="w6b-gS-2BK"/>
+                                            <constraint firstItem="Nzj-pH-QV9" firstAttribute="leading" secondItem="6Q1-2U-eS0" secondAttribute="leading" constant="25" id="xvV-bc-LfN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Kd-np3">
+                                        <rect key="frame" x="0.0" y="416" width="374" height="285"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
+                                                <rect key="frame" x="261" y="127" width="49" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
+                                                </connections>
+                                            </switch>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enabling this will allow carer agencies to plan support activites in your area " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
+                                                <rect key="frame" x="24" y="45" width="327" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW">
+                                                <rect key="frame" x="24" y="8" width="290" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SOh-cB-amW" secondAttribute="trailing" constant="60" id="1Dh-JB-Ng1"/>
+                                            <constraint firstItem="SOh-cB-amW" firstAttribute="top" secondItem="JOf-Kd-np3" secondAttribute="top" constant="8" id="CIu-sH-lT4"/>
+                                            <constraint firstItem="SOh-cB-amW" firstAttribute="leading" secondItem="JOf-Kd-np3" secondAttribute="leading" constant="24" id="Eo4-c3-ui1"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Kd-np3">
-                                <rect key="frame" x="29" y="501" width="356" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW">
-                                        <rect key="frame" x="31" y="8" width="290" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
-                                        <rect key="frame" x="261" y="127" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
-                                        </connections>
-                                    </switch>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enabling this will allow carer agencies to plan support activites in your area " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
-                                        <rect key="frame" x="21" y="73" width="327" height="74"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="21o-aF-tsd" secondAttribute="bottom" constant="76" id="PlR-7b-C3l"/>
+                            <constraint firstItem="21o-aF-tsd" firstAttribute="leading" secondItem="D7p-hT-Xd7" secondAttribute="leading" constant="20" id="TpZ-g9-8LQ"/>
+                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="trailing" secondItem="21o-aF-tsd" secondAttribute="trailing" constant="20" id="WXP-1M-mdR"/>
+                            <constraint firstItem="21o-aF-tsd" firstAttribute="top" secondItem="D7p-hT-Xd7" secondAttribute="top" constant="41" id="waX-Of-PTD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D7p-hT-Xd7"/>
                     </view>
                     <connections>

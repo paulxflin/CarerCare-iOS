@@ -9,58 +9,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Connect To Care Network-->
         <scene sceneID="LJ1-z1-3Zb">
             <objects>
-                <viewController id="oyM-Kd-omn" sceneMemberID="viewController">
+                <viewController id="oyM-Kd-omn" customClass="ConnectToCareNetwork" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUf-ke-Ffj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="2Hx-eI-kOF">
-                                <rect key="frame" x="16" y="94" width="343" height="87.5"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-pJ-312">
+                                <rect key="frame" x="16" y="219" width="343" height="208"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let your care friends know that you are okay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZO-w6-sML">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="70L-rn-gtq">
-                                        <rect key="frame" x="103.5" y="57.5" width="136" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-wi-ffW">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="Yes"/>
-                                                <connections>
-                                                    <segue destination="GUT-ep-62A" kind="show" id="0V4-Tt-ciJ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-3t-exz">
-                                                <rect key="frame" x="106" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="No"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-wi-ffW">
+                                        <rect key="frame" x="63" y="94" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icons8-checkmark-80"/>
+                                        <connections>
+                                            <segue destination="GUT-ep-62A" kind="show" id="0V4-Tt-ciJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-3t-exz">
+                                        <rect key="frame" x="219" y="94" width="60" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icons8-delete-60"/>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Let you care friends know how you are!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-Ti-FmA">
+                                        <rect key="frame" x="51" y="17" width="240" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.97632964749999995" green="0.75609174599999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2Hx-eI-kOF" firstAttribute="top" secondItem="qYB-tO-DIF" secondAttribute="top" constant="30" id="Bji-Bm-PP3"/>
-                            <constraint firstItem="2Hx-eI-kOF" firstAttribute="leading" secondItem="qYB-tO-DIF" secondAttribute="leading" constant="16" id="Xh9-AG-Pas"/>
-                            <constraint firstItem="qYB-tO-DIF" firstAttribute="trailing" secondItem="2Hx-eI-kOF" secondAttribute="trailing" constant="16" id="ekh-dD-bsy"/>
+                            <constraint firstItem="qYB-tO-DIF" firstAttribute="trailing" secondItem="fo6-pJ-312" secondAttribute="trailing" constant="16" id="K6H-hE-l9i"/>
+                            <constraint firstItem="fo6-pJ-312" firstAttribute="top" secondItem="qYB-tO-DIF" secondAttribute="top" constant="155" id="cxi-Td-Rvl"/>
+                            <constraint firstItem="qYB-tO-DIF" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fo6-pJ-312" secondAttribute="bottom" constant="191" id="e7s-eE-A5d"/>
+                            <constraint firstItem="fo6-pJ-312" firstAttribute="leading" secondItem="qYB-tO-DIF" secondAttribute="leading" constant="16" id="n8s-Xj-fJ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qYB-tO-DIF"/>
                     </view>
                     <navigationItem key="navigationItem" id="e6c-P3-jSH"/>
                     <connections>
+                        <outlet property="viewTickCross" destination="fo6-pJ-312" id="Le3-Ab-2uQ"/>
                         <segue destination="GUT-ep-62A" kind="show" id="F4J-tg-HqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2T-GC-xh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="-719"/>
+            <point key="canvasLocation" x="136.80000000000001" y="-719.19040479760122"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="JN6-uD-zcN">
@@ -397,7 +398,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-checkmark-80" width="80" height="80"/>
         <image name="icons8-composing-mail-50" width="50" height="50"/>
+        <image name="icons8-delete-60" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UCa-kV-SPi"/>

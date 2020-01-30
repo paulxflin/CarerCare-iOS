@@ -17,7 +17,12 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     let defaults = UserDefaults.standard
     
     //@IBOutlet weak var chartView: CombinedChartView!
+
+    @IBOutlet weak var callsButton: UIButton!
+    
+    @IBOutlet weak var stepsButton: UIButton!
     @IBOutlet weak var chartView: CombinedChartView!
+    
     //var stepsTakenGraph: UIView!
     //var wellBeingScoreGraph: UIView!
     let weeks = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -26,6 +31,8 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       callsButton.layer.cornerRadius = 15.0
+        stepsButton.layer.cornerRadius = 15.0
         self.navigationItem.hidesBackButton = true
         
         // MARK: General
@@ -71,7 +78,9 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         chartView.chartDescription?.enabled = false
         
         setChartData()
-        
+        chartView.layer.cornerRadius = 15.0
+        chartView.backgroundColor = .white
+        view.setGradientBackground()
     }
     
     func setChartData()

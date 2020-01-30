@@ -28,16 +28,16 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.cornerRadius = 15.0
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
-        
+        startTracking.layer.cornerRadius = startTracking.layer.bounds.height / 2
+        startTracking.layer.masksToBounds = true
         let newLayer = CAGradientLayer()
-        newLayer.frame = startTracking.frame
+        newLayer.frame = startTracking.bounds
          newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
         newLayer.locations = [0.0, 1.0]
         newLayer.startPoint = CGPoint(x:1.0, y:0.0)
         newLayer.endPoint = CGPoint(x:0.0, y:0.0)
         startTracking.layer.insertSublayer(newLayer, at: 0)
-        startTracking.layer.cornerRadius = startTracking.layer.bounds.height / 2
-        startTracking.layer.masksToBounds = true
+        
             // Do any additional setup after loading the view.
     }
     

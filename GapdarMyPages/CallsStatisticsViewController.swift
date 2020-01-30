@@ -15,6 +15,8 @@ class CallsStatisticsViewController: UIViewController, ChartViewDelegate{
     
     let defaults = UserDefaults.standard
     
+    @IBOutlet weak var stepButton: UIButton!
+    @IBOutlet weak var callButton: UIButton!
     //@IBOutlet weak var chartView: CombinedChartView!
     @IBOutlet weak var chartView: CombinedChartView!
     //var stepsTakenGraph: UIView!
@@ -25,11 +27,14 @@ class CallsStatisticsViewController: UIViewController, ChartViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        callButton.layer.cornerRadius = 15.0
+        stepButton.layer.cornerRadius = 15.0
         self.navigationItem.hidesBackButton = true
         
         // MARK: General
         chartView.delegate = self
         chartView.drawGridBackgroundEnabled = false
+        chartView.drawBordersEnabled = false
         chartView.drawBarShadowEnabled      = false
         chartView.highlightFullBarEnabled   = false
         chartView.drawOrder                 = [DrawOrder.bar.rawValue,  DrawOrder.line.rawValue]
@@ -68,7 +73,9 @@ class CallsStatisticsViewController: UIViewController, ChartViewDelegate{
         chartView.chartDescription?.enabled = false
         
         setChartData()
-        
+        chartView.backgroundColor = .white
+        chartView.layer.cornerRadius = 15.0
+        view.setGradientBackground()
     }
     
     func setChartData()
@@ -170,18 +177,11 @@ class CallsStatisticsViewController: UIViewController, ChartViewDelegate{
     
     @IBAction func zoomAll(_ sender: AnyObject)
     {
+        
         chartView.fitScreen()
     }
     
-    @IBAction func zoomIn(_ sender: AnyObject)
-    {
-        chartView.zoomToCenter(scaleX: 1.5, scaleY: 1)
-    }
     
-    @IBAction func zoomOut(_ sender: AnyObject)
-    {
-        chartView.zoomToCenter(scaleX: 2/3, scaleY: 1)
-    }
     
     
     

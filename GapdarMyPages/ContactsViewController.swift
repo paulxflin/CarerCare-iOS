@@ -21,17 +21,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     var phoneNumberTextFields: [UITextField] = []
     var nameTextFields : [UITextField] = []
     
-    lazy var contactSV: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentSize.height = 10
-        view.backgroundColor = UIColor.white
-        return view
-    }()
+    @IBOutlet weak var contactSV: UIScrollView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
@@ -41,12 +37,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     func setupContactSV() {
         // TODO: Add a for loop to add in the saved contacts.
         view.addSubview(contactSV)
-        NSLayoutConstraint.activate([
-            contactSV.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
-            contactSV.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
-            contactSV.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
-            contactSV.heightAnchor.constraint(equalToConstant: 250)
-        ])
+        
         addExistingContacts()
     }
     

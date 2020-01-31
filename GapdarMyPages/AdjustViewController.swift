@@ -19,13 +19,33 @@ class AdjustViewController: UIViewController {
         
     }
 
+    @IBOutlet weak var sliderView: UIView!
+    
+    
+    @IBOutlet weak var wellBeingLabel: UILabel!
+    
+    @IBOutlet weak var figuresView: UIView!
+    
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
+        sliderView.layer.masksToBounds = true
+        sliderView.layer.cornerRadius = 15.0
+        wellBeingLabel.layer.masksToBounds = true
+        wellBeingLabel.layer.cornerRadius = 15.0
+        figuresView.layer.masksToBounds = true
+        figuresView.layer.cornerRadius = 15.0
+        
+        saveButton.layer.cornerRadius = 15.0
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func savePressed(_ sender: Any) {
+    
         let score : Int = Int(scoreLabel.text!)!
         print(score)
         defaults.set(score, forKey: "score")

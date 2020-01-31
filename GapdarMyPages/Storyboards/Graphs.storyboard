@@ -17,51 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-iv-i8Y">
-                                <rect key="frame" x="16" y="88" width="343" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-ur-Fdk">
+                                <rect key="frame" x="17.5" y="37" width="340" height="609.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5UP-fj-sUd">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="60"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal">
-                                            <string key="title">Calls Made and
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qzr-6D-9UE">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="27"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calls vs Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esu-uI-YLo">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="27"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="RbD-OS-iAP">
+                                        <rect key="frame" x="0.0" y="40" width="340" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5UP-fj-sUd">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal">
+                                                    <string key="title">Calls Made and
 Well being</string>
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-AQ-PJE">
-                                        <rect key="frame" x="182" y="0.0" width="161" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.7660626089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <string key="title">Outdoor steps and
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-AQ-PJE">
+                                                <rect key="frame" x="179" y="0.0" width="161" height="60"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.7660626089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Outdoor steps and
 Well being</string>
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="w22-fb-Fvn" kind="show" animates="NO" id="qPp-KH-GJs"/>
-                                        </connections>
-                                    </button>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="w22-fb-Fvn" kind="show" animates="NO" id="qPp-KH-GJs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UOE-HD-YXN">
+                                        <rect key="frame" x="0.0" y="113" width="340" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calls made and Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-85-0Ld">
+                                                <rect key="frame" x="68" y="0.0" width="204.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-xP-ztU">
+                                        <rect key="frame" x="0.0" y="146.5" width="340" height="463"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zal-f8-hNR" customClass="CombinedChartView" customModule="Charts">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="463"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zal-f8-hNR" customClass="CombinedChartView" customModule="Charts">
-                                <rect key="frame" x="19" y="172" width="378" height="566"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="566" id="OR1-p9-zbp"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="378" id="bDa-aG-mhJ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Oey-iv-i8Y" firstAttribute="leading" secondItem="3Th-44-7y7" secondAttribute="leading" constant="16" id="46A-aV-vor"/>
-                            <constraint firstItem="Oey-iv-i8Y" firstAttribute="top" secondItem="3Th-44-7y7" secondAttribute="top" constant="68" id="6Uk-NR-zXi"/>
-                            <constraint firstItem="3Th-44-7y7" firstAttribute="trailing" secondItem="Oey-iv-i8Y" secondAttribute="trailing" constant="16" id="TGd-WI-k7D"/>
-                            <constraint firstItem="zal-f8-hNR" firstAttribute="top" secondItem="Oey-iv-i8Y" secondAttribute="bottom" constant="24" id="abc-gy-qbR"/>
-                            <constraint firstItem="zal-f8-hNR" firstAttribute="leading" secondItem="3Th-44-7y7" secondAttribute="leading" constant="19" id="hYQ-WG-Zkn"/>
+                            <constraint firstItem="3Th-44-7y7" firstAttribute="bottom" secondItem="b0I-ur-Fdk" secondAttribute="bottom" constant="20.5" id="DRk-JM-gdw"/>
+                            <constraint firstItem="b0I-ur-Fdk" firstAttribute="top" secondItem="3Th-44-7y7" secondAttribute="top" constant="17" id="GEj-Nr-dd6"/>
+                            <constraint firstItem="b0I-ur-Fdk" firstAttribute="leading" secondItem="3Th-44-7y7" secondAttribute="leading" constant="17.5" id="km9-hW-u7d"/>
+                            <constraint firstItem="3Th-44-7y7" firstAttribute="trailing" secondItem="b0I-ur-Fdk" secondAttribute="trailing" constant="17.5" id="neE-7k-xiK"/>
+                            <constraint firstItem="b0I-ur-Fdk" firstAttribute="centerX" secondItem="TJA-MA-nVg" secondAttribute="centerX" id="vcC-Ea-LVB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Th-44-7y7"/>
                     </view>
@@ -84,51 +112,78 @@ Well being</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-Jd-kK4">
-                                <rect key="frame" x="16" y="88" width="342" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-Xu-FvV">
+                                <rect key="frame" x="16" y="38" width="343" height="606.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lL4-oo-vei">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="60"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <string key="title">Calls Made and
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zJZ-qV-Dfh">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps vs Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTr-0Z-8u3">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-Jd-kK4">
+                                        <rect key="frame" x="0.0" y="39" width="343" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lL4-oo-vei">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Calls Made and
 Well Being </string>
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="K1X-93-nsJ" kind="show" animates="NO" id="Q8q-wi-1DX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h11-G8-UVx">
-                                        <rect key="frame" x="174" y="0.0" width="168" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.7660626089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal">
-                                            <string key="title">Outdoor Steps and 
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="K1X-93-nsJ" kind="show" animates="NO" id="Q8q-wi-1DX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h11-G8-UVx">
+                                                <rect key="frame" x="175" y="0.0" width="168" height="60"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.7660626089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal">
+                                                    <string key="title">Outdoor Steps and 
 Well being</string>
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vRa-ph-GZv">
+                                        <rect key="frame" x="0.0" y="111" width="343" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoor steps and Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz1-Sj-FhF">
+                                                <rect key="frame" x="56.5" y="0.0" width="230" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QgL-R5-1rg">
+                                        <rect key="frame" x="0.0" y="143.5" width="343" height="463"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLo-sr-9zw" customClass="CombinedChartView" customModule="Charts">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="463"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLo-sr-9zw" customClass="CombinedChartView" customModule="Charts">
-                                <rect key="frame" x="19" y="172" width="378" height="566"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="378" id="WJr-Pk-uyG"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="566" id="rcC-oM-Et1"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="u3b-Jd-kK4" firstAttribute="leading" secondItem="6aP-xJ-7HS" secondAttribute="leading" constant="16" id="ERS-8h-9MD"/>
-                            <constraint firstItem="PLo-sr-9zw" firstAttribute="leading" secondItem="6aP-xJ-7HS" secondAttribute="leading" constant="19" id="MfG-Wc-jEM"/>
-                            <constraint firstItem="u3b-Jd-kK4" firstAttribute="top" secondItem="6aP-xJ-7HS" secondAttribute="top" constant="68" id="dQC-wZ-edn"/>
-                            <constraint firstItem="6aP-xJ-7HS" firstAttribute="trailing" secondItem="u3b-Jd-kK4" secondAttribute="trailing" constant="17" id="l0e-cY-LnY"/>
-                            <constraint firstItem="PLo-sr-9zw" firstAttribute="top" secondItem="u3b-Jd-kK4" secondAttribute="bottom" constant="24" id="rSP-Mg-2Jg"/>
+                            <constraint firstItem="6aP-xJ-7HS" firstAttribute="bottom" secondItem="Gmz-Xu-FvV" secondAttribute="bottom" constant="22.5" id="TJ0-An-QJJ"/>
+                            <constraint firstItem="Gmz-Xu-FvV" firstAttribute="leading" secondItem="6aP-xJ-7HS" secondAttribute="leading" constant="16" id="WKf-uw-aZ6"/>
+                            <constraint firstItem="Gmz-Xu-FvV" firstAttribute="top" secondItem="6aP-xJ-7HS" secondAttribute="top" constant="18" id="Y7P-7e-0rn"/>
+                            <constraint firstItem="6aP-xJ-7HS" firstAttribute="trailing" secondItem="Gmz-Xu-FvV" secondAttribute="trailing" constant="16" id="yrM-is-npU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6aP-xJ-7HS"/>
                     </view>
@@ -143,11 +198,11 @@ Well being</string>
             </objects>
             <point key="canvasLocation" x="404" y="-120.08995502248877"/>
         </scene>
-        <!--Item-->
+        <!--Graphs-->
         <scene sceneID="lS4-JM-ZeK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSm-q8-VtZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-combo-chart-50" id="AZC-g1-P4W"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="icons8-combo-chart-50" id="AZC-g1-P4W"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nCe-iP-WmI">
@@ -168,7 +223,6 @@ Well being</string>
         <image name="icons8-combo-chart-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qPp-KH-GJs"/>
         <segue reference="Q8q-wi-1DX"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -75,6 +75,7 @@ class CallsStatisticsViewController: UIViewController, ChartViewDelegate{
         setChartData()
         chartView.backgroundColor = .white
         chartView.layer.cornerRadius = 15.0
+        chartView.clipsToBounds = true
         view.setGradientBackground()
     }
     

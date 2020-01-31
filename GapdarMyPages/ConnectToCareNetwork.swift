@@ -11,7 +11,8 @@ import UIKit
 
 class ConnectToCareNetwork: UIViewController {
     
-    @IBOutlet weak var viewTickCross: UIView!
+    @IBOutlet weak var viewTickCross: UIScrollView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground()

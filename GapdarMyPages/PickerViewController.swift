@@ -23,6 +23,7 @@ class PickerViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
         // Do any additional setup after loading the view.
         namePicker.isHidden = true
         self.namePicker.delegate = self

@@ -46,8 +46,20 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var phoneArray : [String] = []
     var msg = ""
     
+    @IBOutlet weak var msgView: UIView!
+    
+    @IBOutlet weak var composeButton: UIButton!
+    
+    @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.setGradientBackground()
+        msgView.backgroundColor = .white
+        msgView.layer.cornerRadius = 15.0
+        
+        sendButton.layer.cornerRadius = 15.0
+        composeButton.layer.cornerRadius = 15.0
+        msgView.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstName = defaults.string(forKey: "firstName") ?? "Jo"
         signoffLabel.text! += firstName!

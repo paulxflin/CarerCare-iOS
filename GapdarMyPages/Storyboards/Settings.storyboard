@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="lY0-qh-KtA">
             <objects>
                 <viewController id="ksv-Fr-lYN" sceneMemberID="viewController">
@@ -18,16 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUl-gc-UWO">
-                                <rect key="frame" x="172" y="105" width="30" height="30"/>
+                                <rect key="frame" x="167" y="103" width="43" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="PDF"/>
                                 <connections>
                                     <segue destination="APe-9p-x9v" kind="show" id="N6m-28-nI0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ca-83-NrU">
-                                <rect key="frame" x="172" y="274" width="30" height="30"/>
+                                <rect key="frame" x="165" y="272" width="44" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="step"/>
                                 <connections>
                                     <segue destination="G8J-jI-pp4" kind="show" id="H23-kz-ddV"/>
@@ -37,7 +39,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sdV-g5-TXZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-settings-40" id="qJ3-Ba-bC3"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-40" id="qJ3-Ba-bC3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmx-Z4-Vyc" userLabel="First Responder" sceneMemberID="firstResponder"/>

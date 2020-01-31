@@ -80,6 +80,7 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         setChartData()
         chartView.layer.cornerRadius = 15.0
         chartView.backgroundColor = .white
+        chartView.clipsToBounds = true
         view.setGradientBackground()
     }
     

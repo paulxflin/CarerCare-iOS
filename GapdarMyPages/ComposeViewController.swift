@@ -16,8 +16,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var firstName : String?
     
     @IBOutlet weak var signoffLabel: UILabel!
-    @IBOutlet weak var msgLabel: UILabel!
-    
+    @IBOutlet weak var msgTextView: UITextView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var statusTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
@@ -53,12 +52,10 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
         msgView.backgroundColor = .white
-        msgView.layer.cornerRadius = 15.0
+        msgView.layer.cornerRadius = 10.0
         
-        sendButton.layer.cornerRadius = 15.0
-        composeButton.layer.cornerRadius = 15.0
+       msgTextView.layer.cornerRadius = 10.0
         msgView.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstName = defaults.string(forKey: "firstName") ?? "Jo"
@@ -188,7 +185,8 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         msg += "at " + time! + "\n"
         msg += "we meet for a " + activity! + "\n"
         msg += "All the best, " + firstName! + "."
-        msgLabel.text = msg
+        msgTextView.text = msg
+        
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {

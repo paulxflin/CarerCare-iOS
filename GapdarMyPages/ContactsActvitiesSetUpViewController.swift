@@ -50,13 +50,8 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
-        contactButton.layer.cornerRadius = 15.0
-        contactScrollView.layer.cornerRadius = 15.0
-        activityButton.layer.cornerRadius = 15.0
-        activityScrollView.layer.cornerRadius = 15.0
-
-        
+        contactScrollView.layer.cornerRadius = 10.0
+        activityScrollView.layer.cornerRadius = 10.0
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -15,8 +15,7 @@ class ConnectToCareNetwork: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
-        viewTickCross.layer.cornerRadius = 15.0
+        viewTickCross.layer.cornerRadius = 10.0
         
         viewTickCross.backgroundColor = .white
         // Do any additional setup after loading the view, typically from a nib.

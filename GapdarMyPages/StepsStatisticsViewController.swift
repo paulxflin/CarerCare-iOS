@@ -31,22 +31,21 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       callsButton.layer.cornerRadius = 15.0
-        stepsButton.layer.cornerRadius = 15.0
+       
         self.navigationItem.hidesBackButton = true
         
         // MARK: General
         chartView.delegate = self
         chartView.drawGridBackgroundEnabled = false
-        chartView.drawBarShadowEnabled      = false
-        chartView.highlightFullBarEnabled   = false
+        chartView.leftAxis.drawAxisLineEnabled = false
+        
+        
         chartView.drawOrder                 = [DrawOrder.bar.rawValue,  DrawOrder.line.rawValue]
         
         // MARK: xAxis
         let xAxis                           = chartView.xAxis
         xAxis.labelPosition                 = .bothSided
         xAxis.axisMinimum                   = 0.0
-        xAxis.granularity                   = 1.0
        
         xAxis.centerAxisLabelsEnabled = true
         xAxis.setLabelCount( 9, force: true)
@@ -54,6 +53,7 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         // MARK: leftAxis
         let leftAxis                        = chartView.leftAxis
         leftAxis.drawGridLinesEnabled       = false
+        leftAxis.drawAxisLineEnabled = false
         leftAxis.axisMinimum                = 0.0
         
         
@@ -62,13 +62,14 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         // MARK: rightAxis
         let rightAxis                       = chartView.rightAxis
         rightAxis.drawGridLinesEnabled      = false
+        rightAxis.drawAxisLineEnabled = false
         rightAxis.axisMinimum               = 0.0
+        
         
         
         
         // MARK: legend
         let legend                          = chartView.legend
-        legend.wordWrapEnabled              = true
         legend.horizontalAlignment          = .center
         legend.verticalAlignment            = .bottom
         legend.orientation                  = .horizontal
@@ -78,10 +79,9 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         chartView.chartDescription?.enabled = false
         
         setChartData()
-        chartView.layer.cornerRadius = 15.0
+        chartView.layer.cornerRadius = 10.0
         chartView.backgroundColor = .white
         chartView.clipsToBounds = true
-        view.setGradientBackground()
     }
     
     func setChartData()
@@ -120,13 +120,13 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         }
         
         // MARK: LineChartDataSet
-        let set = LineChartDataSet(values: entries, label: "Line DataSet")
+        let set = LineChartDataSet(values: entries, label: "Well-being Score")
         set.colors = [#colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)]
         set.lineWidth = 2.5
         set.circleColors = [#colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)]
         set.circleHoleRadius = 2.5
         set.fillColor = #colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)
-        set.mode = .cubicBezier
+        //set.mode = .cubicBezier
         set.drawValuesEnabled = true
         set.valueFont = NSUIFont.systemFont(ofSize: CGFloat(10.0))
         set.valueTextColor = #colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)
@@ -160,9 +160,9 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
         }
         
         // MARK: BarChartDataSet
-        let set1            = BarChartDataSet(values: entries1, label: "Bar 1")
-        set1.colors         = [#colorLiteral(red: 0.235294117647059, green: 0.862745098039216, blue: 0.305882352941176, alpha: 1.0)]
-        set1.valueTextColor = #colorLiteral(red: 0.235294117647059, green: 0.862745098039216, blue: 0.305882352941176, alpha: 1.0)
+        let set1            = BarChartDataSet(values: entries1, label: "Outdoor Steps")
+        set1.colors         = [#colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)]
+        set1.valueTextColor = #colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)
         set1.valueFont      = NSUIFont.systemFont(ofSize: CGFloat(10.0))
         set1.axisDependency = .right
         
@@ -179,20 +179,7 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
        
         return data
     }
-    @IBAction func zoomAll(_ sender: AnyObject)
-    {
-        chartView.fitScreen()
-    }
     
-    @IBAction func zoomIn(_ sender: AnyObject)
-    {
-        chartView.zoomToCenter(scaleX: 1.5, scaleY: 1)
-    }
-    
-    @IBAction func zoomOut(_ sender: AnyObject)
-    {
-        chartView.zoomToCenter(scaleX: 2/3, scaleY: 1)
-    }
    
     
     

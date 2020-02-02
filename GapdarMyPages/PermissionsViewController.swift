@@ -28,7 +28,7 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.cornerRadius = 15.0
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
-        startTracking.layer.cornerRadius = startTracking.layer.bounds.height / 2
+        
         startTracking.layer.masksToBounds = true
         let newLayer = CAGradientLayer()
         newLayer.frame = startTracking.bounds

@@ -21,7 +21,6 @@ class ShareController: UIViewController, UIDocumentInteractionControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
     }
     
     

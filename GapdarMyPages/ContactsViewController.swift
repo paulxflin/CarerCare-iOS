@@ -27,7 +27,6 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
         contactSV.layer.cornerRadius = 15.0
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
@@ -78,9 +77,10 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             contactSV.addSubview(numTF)
             
             // TODO: Add a button to make calls(God DAMMIT)
+            let image = UIImage(named: "icons8-call-32.png") as UIImage?
             let button = UIButton.init(type: .roundedRect)
-            button.frame = CGRect(x:310, y:yContactsValue, width:50, height:33)
-            button.setTitle("Call", for: .normal)
+            button.frame = CGRect(x:310, y:yContactsValue, width:32, height:32)
+            button.setImage(image, for: .normal)
             button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
             button.tag = i
             contactSV.addSubview(button)

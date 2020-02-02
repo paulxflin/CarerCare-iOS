@@ -29,8 +29,6 @@ class SetUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
-        saveButton.layer.cornerRadius = 15.0
         
         nameTF.delegate = self
         refTF.delegate = self

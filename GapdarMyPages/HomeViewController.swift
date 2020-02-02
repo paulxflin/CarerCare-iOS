@@ -25,12 +25,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreView.layer.masksToBounds = true
-        scoreView.layer.cornerRadius = 15.0
-        wellBeingLabel.layer.cornerRadius = 15.0
+        scoreView.layer.cornerRadius = 10.0
+        wellBeingLabel.layer.cornerRadius = 10.0
         wellBeingLabel.layer.masksToBounds = true
         figuresView.layer.masksToBounds = true
-        figuresView.layer.cornerRadius = 15.0
-        view.setGradientBackground()
+        figuresView.layer.cornerRadius = 10.0
                 backgroundLabel.layer.cornerRadius = backgroundLabel.layer.bounds.height / 2
                 backgroundLabel.layer.masksToBounds = true
                 let newLayer = CAGradientLayer()

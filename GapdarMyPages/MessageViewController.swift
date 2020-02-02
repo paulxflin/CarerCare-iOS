@@ -24,9 +24,8 @@ class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageCom
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
         messageTextField.layer.masksToBounds = true
-        messageTextField.layer.cornerRadius = 15.0
+        messageTextField.layer.cornerRadius = 10.0
         //Handle the text field's user input through delegate callback
         messageTextField.delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})

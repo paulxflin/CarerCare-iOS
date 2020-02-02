@@ -31,15 +31,14 @@ class AdjustViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
         sliderView.layer.masksToBounds = true
-        sliderView.layer.cornerRadius = 15.0
+        sliderView.layer.cornerRadius = 10.0
         wellBeingLabel.layer.masksToBounds = true
-        wellBeingLabel.layer.cornerRadius = 15.0
+        wellBeingLabel.layer.cornerRadius = 10.0
         figuresView.layer.masksToBounds = true
-        figuresView.layer.cornerRadius = 15.0
+        figuresView.layer.cornerRadius = 10.0
         
-        saveButton.layer.cornerRadius = 15.0
+        
 
         // Do any additional setup after loading the view.
     }

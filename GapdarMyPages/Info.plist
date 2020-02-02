@@ -26,6 +26,10 @@
 	<string>To gather your steps data from Health.</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -42,10 +46,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Photo</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

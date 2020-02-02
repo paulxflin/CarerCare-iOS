@@ -6,3 +6,6 @@ DerivedData/
 ## Various settings
 *.pbxuser
 xcuserdata/
+
+## Mac Specific Files
+.DS_Store

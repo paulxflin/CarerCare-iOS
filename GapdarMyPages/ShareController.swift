@@ -20,7 +20,8 @@ class ShareController: UIViewController, UIDocumentInteractionControllerDelegate
     var filePath: String = ""
     
     override func viewDidLoad() {
-        super.viewDidLoad()	
+        super.viewDidLoad()
+        view.setGradientBackground()
     }
     
     

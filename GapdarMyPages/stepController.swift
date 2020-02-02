@@ -23,6 +23,7 @@ class stepController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        view.setGradientBackground()
         self.lbStep.text = "None"
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }

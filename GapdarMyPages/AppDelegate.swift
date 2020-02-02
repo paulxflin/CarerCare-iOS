@@ -40,8 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.window?.makeKeyAndVisible()
         
         //Setting Tab Appearance
-        UITabBar.appearance().barTintColor = .black
-        UITabBar.appearance().tintColor = .red
+        
         // Override point for customization after application launch.
         
         //Background Fetch as quickly as possible (3600 for once an hour)

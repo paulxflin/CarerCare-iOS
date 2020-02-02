@@ -28,6 +28,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground()
+        contactSV.layer.cornerRadius = 15.0
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []

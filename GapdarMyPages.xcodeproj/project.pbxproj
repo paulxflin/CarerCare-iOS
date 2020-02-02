@@ -23,6 +23,8 @@
 		7BC544E7239BF695001B5EF4 /* GapdarMyPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544E6239BF695001B5EF4 /* GapdarMyPagesTests.swift */; };
 		7BC544F2239BF695001B5EF4 /* GapdarMyPagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */; };
 		7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */; };
+		7BF4FC4923E71AB5007486E2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF4FC4823E71AB5007486E2 /* RoundButton.swift */; };
+		7BF4FC4B23E727FF007486E2 /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF4FC4A23E727FF007486E2 /* GradientUIView.swift */; };
 		7BFB061223DE4E9C005BCE2C /* Graphs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061123DE4E9C005BCE2C /* Graphs.storyboard */; };
 		7BFB061423DE4EDC005BCE2C /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061323DE4EDC005BCE2C /* Messages.storyboard */; };
 		7BFB061823DE4FD5005BCE2C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB061723DE4FD5005BCE2C /* Settings.storyboard */; };
@@ -80,6 +82,8 @@
 		7BC544F1239BF695001B5EF4 /* GapdarMyPagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapdarMyPagesUITests.swift; sourceTree = "<group>"; };
 		7BC544F3239BF695001B5EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC544FF239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsActvitiesSetUpViewController.swift; sourceTree = "<group>"; };
+		7BF4FC4823E71AB5007486E2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		7BF4FC4A23E727FF007486E2 /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		7BFB061123DE4E9C005BCE2C /* Graphs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graphs.storyboard; sourceTree = "<group>"; };
 		7BFB061323DE4EDC005BCE2C /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		7BFB061723DE4FD5005BCE2C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				7BC544DD239BF695001B5EF4 /* Info.plist */,
 				7B3051D323E2E04400B337E0 /* UIDesignFormat.swift */,
 				7B98F85D23E398D5008DD663 /* ConnectToCareNetwork.swift */,
+				7BF4FC4823E71AB5007486E2 /* RoundButton.swift */,
 			);
 			path = GapdarMyPages;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				7BFB061923DE4FEC005BCE2C /* Contacts.storyboard */,
 				7BFB061B23DE5015005BCE2C /* Home.storyboard */,
 				7BFB061D23DE56E8005BCE2C /* MenuTabBar.storyboard */,
+				7BF4FC4A23E727FF007486E2 /* GradientUIView.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF4FC4923E71AB5007486E2 /* RoundButton.swift in Sources */,
 				7B3051D423E2E04400B337E0 /* UIDesignFormat.swift in Sources */,
 				ACFFD93223A57A9D009AD624 /* MessageViewController.swift in Sources */,
 				7BC2FC8223C51A87009C5689 /* StepsStatisticsViewController.swift in Sources */,
@@ -498,6 +505,7 @@
 				ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */,
 				7B98F85E23E398D5008DD663 /* ConnectToCareNetwork.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,
+				7BF4FC4B23E727FF007486E2 /* GradientUIView.swift in Sources */,
 				9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */,
 				9A1FA11A23C63E770078003F /* stepController.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,

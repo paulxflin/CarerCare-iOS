@@ -13,7 +13,7 @@ import Foundation
 
 class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     
-    @IBOutlet weak var btSaveGprah: UIButton!
+    @IBOutlet weak var btSaveGraph: UIButton!
     
     let defaults = UserDefaults.standard
     
@@ -76,7 +76,7 @@ class StepsStatisticsViewController: UIViewController, ChartViewDelegate{
     }
     
     
-    @IBAction func svaeGraphPressed(_ sender: Any) {
+    @IBAction func saveGraphPressed(_ sender: Any) {
         let image = self.chartView.AsImage()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }

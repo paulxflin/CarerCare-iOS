@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="saveGraph"/>
                                 <connections>
-                                    <action selector="svaeGraphPressed:" destination="w22-fb-Fvn" eventType="touchUpInside" id="p56-DI-VyQ"/>
+                                    <action selector="saveGraphPressed:" destination="w22-fb-Fvn" eventType="touchUpInside" id="0HB-Lm-zgQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,7 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KGA-OD-uBw"/>
                     <connections>
-                        <outlet property="btSaveGprah" destination="ZBb-E0-6G7" id="7UF-fj-nhn"/>
+                        <outlet property="btSaveGraph" destination="ZBb-E0-6G7" id="E4a-Y6-why"/>
                         <outlet property="chartView" destination="PLo-sr-9zw" id="Bmh-QD-jz4"/>
                     </connections>
                 </viewController>

@@ -45,7 +45,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webLinkButPressed01))
         tapGestureRecognizer.numberOfTapsRequired = 1;
-        view.addGestureRecognizer(tapGestureRecognizer)
+        webImage.addGestureRecognizer(tapGestureRecognizer)
         webImage.image = UIImage(named: "web.png")
     }
     

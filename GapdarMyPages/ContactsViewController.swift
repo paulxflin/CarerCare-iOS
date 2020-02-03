@@ -43,7 +43,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     func setupWebLink01()
     {
-        webImage.userInteractionEnabled = true;
+        webImage.isUserInteractionEnabled = true;
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webLinkButPressed01))
         //tapGestureRecognizer.numberOfTapsRequired = 1;
         webImage.addGestureRecognizer(tapGestureRecognizer)

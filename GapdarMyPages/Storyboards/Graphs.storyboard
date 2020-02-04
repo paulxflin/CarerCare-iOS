@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rSm-q8-VtZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99N-u7-3mX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,70 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Well Being Diary-->
+        <scene sceneID="C5Y-yD-WTn">
+            <objects>
+                <viewController id="4ik-nN-3j6" customClass="WellBeingDiary" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gt3-NY-AJC" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="5NN-nY-flp">
+                                <rect key="frame" x="16" y="87" width="327" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well-being Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTu-RN-Tjt">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-1y-OSh" customClass="CombinedChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="54" width="327" height="210"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="3DK-Zf-uTk"/>
+                                            <constraint firstAttribute="height" constant="210" id="ene-ya-PdO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-lu-NAI" customClass="CombinedChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="291" width="327" height="209"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="209" id="DxW-8d-HY9"/>
+                                            <constraint firstAttribute="width" constant="327" id="UJ5-JR-znu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Adh-fF-6RJ" firstAttribute="trailing" secondItem="5NN-nY-flp" secondAttribute="trailing" constant="16" id="3Sr-a8-d6C"/>
+                            <constraint firstItem="5NN-nY-flp" firstAttribute="leading" secondItem="Adh-fF-6RJ" secondAttribute="leading" constant="16" id="RQR-s0-Ch9"/>
+                            <constraint firstItem="5NN-nY-flp" firstAttribute="top" secondItem="Adh-fF-6RJ" secondAttribute="top" constant="23" id="TTg-lf-3dg"/>
+                            <constraint firstItem="Adh-fF-6RJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5NN-nY-flp" secondAttribute="bottom" constant="9" id="i95-qD-Hfa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Adh-fF-6RJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.15686274510000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="L5v-5H-ykm"/>
+                    <connections>
+                        <outlet property="callsChartView" destination="cLF-1y-OSh" id="fBK-qZ-xfQ"/>
+                        <outlet property="stepsChartView" destination="y9o-lu-NAI" id="QrG-mq-uBF"/>
+                        <segue destination="K1X-93-nsJ" kind="show" identifier="callGraph" id="E3w-Pe-OZS"/>
+                        <segue destination="w22-fb-Fvn" kind="show" identifier="stepsCall" id="iWL-8x-bX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lom-TF-Isr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351.19999999999999" y="-1012.4437781109445"/>
+        </scene>
         <!--CallsStatistics-->
         <scene sceneID="KDk-JS-AGd">
             <objects>
@@ -18,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-ur-Fdk">
-                                <rect key="frame" x="17.5" y="37" width="340" height="609.5"/>
+                                <rect key="frame" x="17.5" y="81" width="340" height="516.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qzr-6D-9UE">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="27"/>
@@ -48,6 +112,9 @@ Well being</string>
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="callsButtonPressed:" destination="K1X-93-nsJ" eventType="touchUpInside" id="QiC-8H-CXS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-AQ-PJE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="179" y="0.0" width="161" height="60"/>
@@ -65,7 +132,7 @@ Well being</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="w22-fb-Fvn" kind="show" animates="NO" id="qPp-KH-GJs"/>
+                                                    <action selector="outdoorButtonPressed:" destination="K1X-93-nsJ" eventType="touchUpInside" id="zVd-IM-C4J"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -82,10 +149,10 @@ Well being</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-xP-ztU">
-                                        <rect key="frame" x="0.0" y="146.5" width="340" height="463"/>
+                                        <rect key="frame" x="0.0" y="146.5" width="340" height="370"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zal-f8-hNR" customClass="CombinedChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="463"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="370"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -115,23 +182,26 @@ Well being</string>
                     <connections>
                         <outlet property="callButton" destination="5UP-fj-sUd" id="XzB-wM-0ew"/>
                         <outlet property="chartView" destination="zal-f8-hNR" id="VHm-BY-qZl"/>
+                        <outlet property="graphTitleLabel" destination="xfE-85-0Ld" id="HNo-ui-Pjt"/>
                         <outlet property="stepButton" destination="WZu-AQ-PJE" id="g5e-W3-MSO"/>
+                        <outlet property="titleLabel" destination="esu-uI-YLo" id="Iff-0Q-0mi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD9-kR-FE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703.20000000000005" y="-120.08995502248877"/>
+            <point key="canvasLocation" x="-778" y="-183"/>
         </scene>
         <!--Steps Statistics View Controller-->
         <scene sceneID="BbD-f5-BKF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-mC-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="w22-fb-Fvn" customClass="StepsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Har-Wg-HDK" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-Xu-FvV">
-                                <rect key="frame" x="16" y="38" width="343" height="606.5"/>
+                                <rect key="frame" x="16" y="82" width="343" height="513.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zJZ-qV-Dfh">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
@@ -163,7 +233,7 @@ Well Being </string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="K1X-93-nsJ" kind="show" animates="NO" id="Q8q-wi-1DX"/>
+                                                    <action selector="callsButtonPressed:" destination="w22-fb-Fvn" eventType="touchUpInside" id="oJB-u6-ukD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h11-G8-UVx" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
@@ -180,6 +250,9 @@ Well being</string>
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="outdoorButtonPressed:" destination="w22-fb-Fvn" eventType="touchUpInside" id="Tml-sF-sWy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -195,10 +268,10 @@ Well being</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QgL-R5-1rg">
-                                        <rect key="frame" x="0.0" y="143.5" width="343" height="463"/>
+                                        <rect key="frame" x="0.0" y="143.5" width="343" height="370"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLo-sr-9zw" customClass="CombinedChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="463"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="370"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -225,40 +298,36 @@ Well being</string>
                     </view>
                     <navigationItem key="navigationItem" id="KGA-OD-uBw"/>
                     <connections>
-                        <outlet property="callsButton" destination="lL4-oo-vei" id="6y5-bL-2Zp"/>
-                        <outlet property="chartView" destination="PLo-sr-9zw" id="Bmh-QD-jz4"/>
-                        <outlet property="stepsButton" destination="h11-G8-UVx" id="f7F-uw-HVA"/>
+                        <outlet property="chartView" destination="PLo-sr-9zw" id="vxV-ZO-E2X"/>
+                        <outlet property="graphTitleLabel" destination="Zz1-Sj-FhF" id="y7t-n4-vrt"/>
+                        <outlet property="titleLabel" destination="GTr-0Z-8u3" id="bkT-Mh-x6Q"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-mC-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="-120.08995502248877"/>
+            <point key="canvasLocation" x="1050" y="-183"/>
         </scene>
         <!--Graphs-->
-        <scene sceneID="lS4-JM-ZeK">
+        <scene sceneID="JD9-n6-RUe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSm-q8-VtZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Graphs" image="icons8-combo-chart-40" id="AZC-g1-P4W"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="99N-u7-3mX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Graphs" image="icons8-combo-chart-40" id="ddq-xQ-dWV"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nCe-iP-WmI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gdR-eY-kQb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="K1X-93-nsJ" kind="relationship" relationship="rootViewController" id="iuF-ak-Fb6"/>
+                        <segue destination="4ik-nN-3j6" kind="relationship" relationship="rootViewController" id="baD-5f-GJq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e3n-1w-CRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SE6-UP-9wM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1842" y="-120"/>
+            <point key="canvasLocation" x="-679" y="-1012"/>
         </scene>
     </scenes>
     <resources>
         <image name="icons8-combo-chart-40" width="40" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Q8q-wi-1DX"/>
-    </inferredMetricsTieBreakers>
 </document>

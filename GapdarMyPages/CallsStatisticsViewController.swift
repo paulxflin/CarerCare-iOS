@@ -31,11 +31,14 @@ class CallsStatisticsViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         //self.navigationItem.hidesBackButton = true
         Graph(chartView: chartView, type: "callsArray").setChartData()
         chartView.backgroundColor = .white
         chartView.layer.cornerRadius = 10.0
         chartView.clipsToBounds = true
+        
+        
     }
 
     

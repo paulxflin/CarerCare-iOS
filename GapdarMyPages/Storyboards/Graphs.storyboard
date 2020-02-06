@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="5NN-nY-flp">
-                                <rect key="frame" x="16" y="87" width="327" height="525"/>
+                                <rect key="frame" x="16" y="87" width="343" height="525"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Su4-5F-sd1">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well-being Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTu-RN-Tjt">
-                                                <rect key="frame" x="0.0" y="0.0" width="251" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="2eF-Hv-MFr"/>
                                                 </constraints>
@@ -33,19 +33,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZR-j8-3d2">
-                                                <rect key="frame" x="278" y="0.0" width="49" height="27"/>
+                                                <rect key="frame" x="290" y="0.0" width="53" height="27"/>
                                                 <state key="normal" image="icons8-share-24"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="baf-OR-tQW">
-                                        <rect key="frame" x="0.0" y="54" width="327" height="471"/>
+                                        <rect key="frame" x="0.0" y="54" width="343" height="471"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dnS-lo-2ly">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="222"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-1y-OSh" customClass="CombinedChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="222"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="327" id="3DK-Zf-uTk"/>
@@ -58,10 +58,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dEM-10-Ocf">
-                                                <rect key="frame" x="0.0" y="249" width="327" height="222"/>
+                                                <rect key="frame" x="0.0" y="249" width="343" height="222"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-lu-NAI" customClass="CombinedChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="222"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="222" id="T8s-4c-eQy"/>
@@ -115,13 +115,13 @@
                                 <rect key="frame" x="17.5" y="81" width="340" height="516.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-yz-sqq">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="116.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="97"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qzr-6D-9UE">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="29"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calls vs Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esu-uI-YLo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="35.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="29"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -129,10 +129,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="RbD-OS-iAP">
-                                                <rect key="frame" x="0.0" y="40.5" width="340" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="34" width="340" height="29"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5UP-fj-sUd" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="35.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="29"/>
                                                         <color key="backgroundColor" white="0.52086046009999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal">
@@ -150,7 +150,7 @@ Well being</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-AQ-PJE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                        <rect key="frame" x="179" y="0.0" width="161" height="35.5"/>
+                                                        <rect key="frame" x="179" y="0.0" width="161" height="29"/>
                                                         <color key="backgroundColor" red="0.10196078431372549" green="0.60392156862745094" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,10 +171,10 @@ Well being</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UOE-HD-YXN">
-                                                <rect key="frame" x="0.0" y="81" width="340" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="68" width="340" height="29"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PIx-1b-x7Y">
-                                                        <rect key="frame" x="0.0" y="7.5" width="304.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="4.5" width="304.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calls made and Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-85-0Ld">
                                                                 <rect key="frame" x="50" y="0.0" width="204.5" height="20.5"/>
@@ -185,7 +185,7 @@ Well being</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-wl-fYE">
-                                                        <rect key="frame" x="304.5" y="6" width="35.5" height="24"/>
+                                                        <rect key="frame" x="304.5" y="2.5" width="35.5" height="24"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNy-VZ-8M9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="24"/>
@@ -197,13 +197,24 @@ Well being</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-xP-ztU">
-                                        <rect key="frame" x="0.0" y="121.5" width="340" height="395"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-xP-ztU">
+                                        <rect key="frame" x="0.0" y="102" width="340" height="389"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zal-f8-hNR" customClass="CombinedChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="395"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="389"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-US-3XE">
+                                        <rect key="frame" x="0.0" y="496" width="340" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UH-Ra-DVy">
+                                                <rect key="frame" x="149" y="0.0" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -238,12 +249,11 @@ Well being</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD9-kR-FE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-183"/>
+            <point key="canvasLocation" x="-356" y="-183.05847076461771"/>
         </scene>
         <!--Steps Statistics View Controller-->
         <scene sceneID="BbD-f5-BKF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-mC-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="w22-fb-Fvn" customClass="StepsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Har-Wg-HDK" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -371,6 +381,7 @@ Well being</string>
                         <outlet property="titleLabel" destination="GTr-0Z-8u3" id="bkT-Mh-x6Q"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-mC-evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048.8" y="-183.05847076461771"/>
         </scene>

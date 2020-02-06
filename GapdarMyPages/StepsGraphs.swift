@@ -154,13 +154,13 @@ class Graph: ChartViewDelegate{
         // MARK: BarChartDataSet
        let set1            = BarChartDataSet(values: entries1, label: axisLabel)
         if (type == "callsArray"){
-            set1.colors         = [#colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)]
-            set1.valueTextColor = #colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)
+            set1.colors         = [#colorLiteral(red: 0.5208604336, green: 0.5208604336, blue: 0.5208604336, alpha: 1)]
+            set1.valueTextColor = #colorLiteral(red: 0.5208604336, green: 0.5208604336, blue: 0.5208604336, alpha: 1)
             
         }
         else{
-            set1.colors         = [#colorLiteral(red: 0.5208604336, green: 0.5208604336, blue: 0.5208604336, alpha: 1)]
-            set1.valueTextColor = #colorLiteral(red: 0.5208604336, green: 0.5208604336, blue: 0.5208604336, alpha: 1)
+            set1.colors         = [#colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)]
+            set1.valueTextColor = #colorLiteral(red: 0.1019607843, green: 0.6039215686, blue: 0.662745098, alpha: 1)
         }
         set1.valueFont      = NSUIFont.systemFont(ofSize: CGFloat(10.0))
         set1.axisDependency = .right

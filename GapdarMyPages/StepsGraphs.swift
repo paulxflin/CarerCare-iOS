@@ -70,7 +70,7 @@ class Graph: ChartViewDelegate{
     
     func setChartData()
     {
-        print("omg i am actually in a different class and this works")
+        //print("omg i am actually in a different class and this works")
         let data = CombinedChartData()
         data.lineData = generateLineData()
         data.barData = generateBarData()
@@ -92,16 +92,15 @@ class Graph: ChartViewDelegate{
     {
         // MARK: ChartDataEntry
         var entries = [ChartDataEntry]()
-        
         let scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
         let n = 9
         let wellBeingValues : [Int] = getSubArray(scoresArray, n)
         
         //var wellBeingValues: [Int]=[3,5,4,4,9,4,7,6,8]
         
-        for index in 0..<ITEM_COUNT
+        for index in 1..<ITEM_COUNT+1
         {
-            entries.append(ChartDataEntry(x: Double(index) + 0.5, y: Double(wellBeingValues[index])))
+            entries.append(ChartDataEntry(x: Double(index-1) + 0.5, y: Double(wellBeingValues[index-1])))
         }
         
         // MARK: LineChartDataSet
@@ -138,9 +137,9 @@ class Graph: ChartViewDelegate{
         
         //var stepsData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]
         
-        for index in 0..<ITEM_COUNT
+        for index in 1..<ITEM_COUNT+1
         {
-            entries1.append(BarChartDataEntry(x: Double(index) + 0.5, y: Double(stepsData[index])))
+            entries1.append(BarChartDataEntry(x: Double(index-1) + 0.5, y: Double(stepsData[index-1])))
             
         }
         var axisLabel : String

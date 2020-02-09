@@ -16,6 +16,7 @@ class CallsStatisticsViewController: UIViewController{
     @IBOutlet weak var titleLabel: UILabel!
     
 
+    
     @IBOutlet weak var graphTitleLabel: UILabel!
     let defaults = UserDefaults.standard
     

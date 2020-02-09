@@ -687,17 +687,17 @@
         <scene sceneID="CZd-6k-bPR">
             <objects>
                 <viewController id="Hod-BO-zPo" customClass="ContactHistory" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nF3-6f-vd1">
+                    <view key="view" contentMode="scaleToFill" id="nF3-6f-vd1" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-0w-MIK">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-0w-MIK">
                                 <rect key="frame" x="16" y="76" width="343" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Network Contact History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0G-hV-YoO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-77-AaW">
@@ -719,6 +719,11 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="473" id="dsy-AD-Wx6"/>
+                                            <constraint firstAttribute="width" constant="343" id="wxv-2Z-RT7"/>
+                                        </constraints>
                                     </scrollView>
                                 </subviews>
                             </stackView>
@@ -731,6 +736,14 @@
                             <constraint firstItem="GAo-5J-TI6" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ADJ-0w-MIK" secondAttribute="bottom" constant="34" id="oaY-cV-6qi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GAo-5J-TI6"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.15686274510000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="historyScroller" destination="iCO-77-AaW" id="nNR-fF-qUg"/>

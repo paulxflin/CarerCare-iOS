@@ -16,30 +16,35 @@ class ContactHistory:UIViewController{
     override func viewDidLoad() {
         historyScroller.layer.masksToBounds = true
         historyScroller.layer.cornerRadius = 10.0
+        placeInformation()
         
         
         
     }
     
     func placeInformation(){
+        var yposition = 60
         for x in 1...5{
-            var yposition = 50
+            print(x)
+            
+            
+            
             let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 66, height:33))
             nameLabel.textAlignment = .left
-            nameLabel.text = "Name"
-            self.historyScroller.addSubview(nameLabel)
+            nameLabel.text = "Name: "
+            historyScroller.addSubview(nameLabel)
             
-            let callLabel = UILabel(frame:CGRect(x:264, y:yposition, width: 50, height:33))
+            let callLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
             
             callLabel.textAlignment = .left
             callLabel.text = "0"
-            self.historyScroller.addSubview(callLabel)
+            historyScroller.addSubview(callLabel)
             
             
-            let messageLabel = UILabel(frame:CGRect(x:200, y:yposition, width: 50, height:33))
+            let messageLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
             messageLabel.textAlignment = .left
             messageLabel.text = "0"
-            self.historyScroller.addSubview(messageLabel)
+            historyScroller.addSubview(messageLabel)
             
             yposition += 40
         }

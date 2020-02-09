@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
     
@@ -46,10 +47,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btSendJSONPressed(_ sender: Any) {
-        let Dictionary = ["postcode": defaults.string(forKey: "postcode") , "score": defaults.string(forKey: "score") , "errorRate": "errorRate_example"]
+        let Dictionary = ["SupportCode": defaults.string(forKey: "reference") , "WellBeingScore": defaults.string(forKey: "score") , "WeeklySteps": defaults.string(forKey: "oneWeekSteps") , "WeeklyCalls": defaults.string(forKey: "totalCalls") , "ErrorRate": "errorRate_example" ,  "PostCode": defaults.string(forKey: "postcode")]
+        
+        
+        
         let JSON = self.foundationToJSON(object: Dictionary)
         let Foundation = self.JSONToFoundation(object: JSON)
         print(Foundation)
+    
+        Alamofire.request("http://", method: .post, parameters: Dictionary as Parameters, encoding: JSONEncoding.default, headers: [:])
+        
+        
     }
 }
 

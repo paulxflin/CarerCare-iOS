@@ -1,4 +1,4 @@
-framework module Pods_GapdarMyPages_GapdarMyPagesUITests {
+module Pods_GapdarMyPages_GapdarMyPagesUITests {
   umbrella header "Pods-GapdarMyPages-GapdarMyPagesUITests-umbrella.h"
 
   export *

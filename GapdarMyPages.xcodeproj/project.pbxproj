@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		64C2D0E8EF783470F7366A6A /* libPods-GapdarMyPages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4A9CCF5052FB0B7DCCE603 /* libPods-GapdarMyPages.a */; };
 		751857F58CECABEBF2E2ED9F /* libPods-GapdarMyPages-GapdarMyPagesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C26AE900FA43CED9A409BF /* libPods-GapdarMyPages-GapdarMyPagesUITests.a */; };
+		7B00605623FAD49A0019D8E3 /* SetUpCareNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00605523FAD49A0019D8E3 /* SetUpCareNetwork.swift */; };
+		7B00605823FAE02C0019D8E3 /* SetUpPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00605723FAE02C0019D8E3 /* SetUpPage2.swift */; };
 		7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */; };
 		7B3051D423E2E04400B337E0 /* UIDesignFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3051D323E2E04400B337E0 /* UIDesignFormat.swift */; };
 		7B780AEF23EC7FA000C82D52 /* rotateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780AEE23EC7FA000C82D52 /* rotateLabel.swift */; };
@@ -70,6 +72,8 @@
 		3DAAC94DF316BD9CD315EEF7 /* Pods-GapdarMyPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.release.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.release.xcconfig"; sourceTree = "<group>"; };
 		533B549C30EEA3150F8FC45E /* Pods-GapdarMyPages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GapdarMyPages.debug.xcconfig"; path = "Target Support Files/Pods-GapdarMyPages/Pods-GapdarMyPages.debug.xcconfig"; sourceTree = "<group>"; };
 		681B572A5152542DF85EFAEA /* libPods-GapdarMyPagesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GapdarMyPagesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B00605523FAD49A0019D8E3 /* SetUpCareNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpCareNetwork.swift; sourceTree = "<group>"; };
+		7B00605723FAE02C0019D8E3 /* SetUpPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpPage2.swift; sourceTree = "<group>"; };
 		7B19BC2923B7F4C800D6767D /* CallsStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsStatisticsViewController.swift; sourceTree = "<group>"; };
 		7B3051D323E2E04400B337E0 /* UIDesignFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDesignFormat.swift; sourceTree = "<group>"; };
 		7B780AEE23EC7FA000C82D52 /* rotateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rotateLabel.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				7B780AEE23EC7FA000C82D52 /* rotateLabel.swift */,
 				7B780AF223EC96A800C82D52 /* ActivitySupportMessage.swift */,
 				7B780AF423EC9CA600C82D52 /* ContactHistory.swift */,
+				7B00605523FAD49A0019D8E3 /* SetUpCareNetwork.swift */,
+				7B00605723FAE02C0019D8E3 /* SetUpPage2.swift */,
 			);
 			path = GapdarMyPages;
 			sourceTree = "<group>";
@@ -476,6 +482,7 @@
 				7BFDE29723E9E0D9009437E5 /* StepsGraphs.swift in Sources */,
 				7B780AF523EC9CA600C82D52 /* ContactHistory.swift in Sources */,
 				7BC544D4239BF692001B5EF4 /* HomeViewController.swift in Sources */,
+				7B00605623FAD49A0019D8E3 /* SetUpCareNetwork.swift in Sources */,
 				7BC544D2239BF692001B5EF4 /* AppDelegate.swift in Sources */,
 				AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */,
 				AC45E8A823E2272900A1EF6F /* PermissionsViewController.swift in Sources */,
@@ -493,6 +500,7 @@
 				9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */,
 				9A1FA11A23C63E770078003F /* stepController.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,
+				7B00605823FAE02C0019D8E3 /* SetUpPage2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

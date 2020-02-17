@@ -32,16 +32,16 @@ class Graph: ChartViewDelegate{
         
         // MARK: xAxis
         let xAxis                           = chartView.xAxis
-        xAxis.labelPosition                 = .bothSided
+        xAxis.labelPosition                 = .bottom
         xAxis.axisMinimum                   = 0.0
-        
+        xAxis.drawGridLinesEnabled = false
         xAxis.centerAxisLabelsEnabled = true
         xAxis.setLabelCount( 9, force: true)
         
         // MARK: leftAxis
         let leftAxis                        = chartView.leftAxis
         leftAxis.drawGridLinesEnabled       = false
-        leftAxis.drawAxisLineEnabled = false
+        leftAxis.drawAxisLineEnabled = true
         leftAxis.axisMinimum                = 0.0
         
     
@@ -49,7 +49,7 @@ class Graph: ChartViewDelegate{
         // MARK: rightAxis
         let rightAxis                       = chartView.rightAxis
         rightAxis.drawGridLinesEnabled      = false
-        rightAxis.drawAxisLineEnabled = false
+        rightAxis.drawAxisLineEnabled = true
         rightAxis.axisMinimum               = 0.0
         
 

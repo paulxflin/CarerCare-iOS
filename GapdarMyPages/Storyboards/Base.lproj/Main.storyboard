@@ -880,7 +880,7 @@
                                                 <constraints>
                                                     <constraint firstItem="Nzj-pH-QV9" firstAttribute="centerX" secondItem="6Q1-2U-eS0" secondAttribute="centerX" id="5SH-N4-t3b"/>
                                                     <constraint firstAttribute="width" constant="335" id="MYF-Mk-fqH"/>
-                                                    <constraint firstAttribute="height" constant="329" id="OcS-Dr-K8F"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="329" id="OcS-Dr-K8F"/>
                                                     <constraint firstItem="6Ur-5p-Ive" firstAttribute="centerX" secondItem="6Q1-2U-eS0" secondAttribute="centerX" id="cMr-Ha-5sQ"/>
                                                     <constraint firstItem="6Ur-5p-Ive" firstAttribute="top" secondItem="6Q1-2U-eS0" secondAttribute="top" constant="20" id="hIp-Zk-AHv"/>
                                                     <constraint firstItem="Nzj-pH-QV9" firstAttribute="top" secondItem="6Ur-5p-Ive" secondAttribute="bottom" constant="8" id="xJd-NY-tR1"/>
@@ -901,11 +901,12 @@
                                                             <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
                                                         </connections>
                                                     </switch>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enabling this will allow carer agencies to plan support activites in your area " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
-                                                        <rect key="frame" x="24" y="45" width="327" height="74"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
+                                                        <rect key="frame" x="24" y="45" width="229" height="184"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">Click the toggle to consent to the creation of a map that enables you and other app users to understand what support activities help people in your area. By consenting you will not be sharing personally identifiable data. All data used to create the map will be anonymised to protect your privacy.</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW">
@@ -918,7 +919,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="249" id="O0r-ua-nDH"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="249" id="O0r-ua-nDH"/>
                                                     <constraint firstAttribute="width" constant="335" id="RqC-SZ-0bc"/>
                                                 </constraints>
                                             </view>
@@ -931,7 +932,7 @@
                         <constraints>
                             <constraint firstItem="D7p-hT-Xd7" firstAttribute="trailing" secondItem="L0x-to-jBw" secondAttribute="trailing" constant="20" id="3O8-q7-yOb"/>
                             <constraint firstItem="L0x-to-jBw" firstAttribute="top" secondItem="D7p-hT-Xd7" secondAttribute="top" id="De6-jm-hiW"/>
-                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L0x-to-jBw" secondAttribute="bottom" constant="20" id="gaP-mF-83S"/>
+                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="bottom" secondItem="L0x-to-jBw" secondAttribute="bottom" constant="20" id="gaP-mF-83S"/>
                             <constraint firstItem="L0x-to-jBw" firstAttribute="leading" secondItem="D7p-hT-Xd7" secondAttribute="leading" constant="20" id="mcv-kN-r7Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D7p-hT-Xd7"/>

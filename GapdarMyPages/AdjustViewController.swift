@@ -14,6 +14,7 @@ class AdjustViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var instructionsView: UIView!
     @IBAction func slider(_ sender: UISlider) {
         scoreLabel.text = String(Int(sender.value))
         
@@ -37,6 +38,10 @@ class AdjustViewController: UIViewController {
         wellBeingLabel.layer.cornerRadius = 10.0
         figuresView.layer.masksToBounds = true
         figuresView.layer.cornerRadius = 10.0
+        
+        instructionsView.layer.masksToBounds = true
+        
+        instructionsView.layer.cornerRadius = 10.0
         
         
 

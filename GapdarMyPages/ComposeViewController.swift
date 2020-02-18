@@ -86,6 +86,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timeTF.delegate = self
         activityTF.delegate = self
         
+        self.view.bringSubviewToFront(namePV)
+        self.view.bringSubviewToFront(statusPV)
+        self.view.bringSubviewToFront(datePV)
+        self.view.bringSubviewToFront(timePV)
+        self.view.bringSubviewToFront(activityPV)
+        
         nameOptions = defaults.stringArray(forKey: "nameArray") ?? ["Paul", "Karunya", "Lishen", "Joseph"]
         statusOptions = ["Unwell", "OK", "Well"]
         dateOptions = ["10/01", "11/01"]

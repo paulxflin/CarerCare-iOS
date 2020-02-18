@@ -14,6 +14,7 @@ class AdjustViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var scoreSlider: UISlider!
     @IBOutlet weak var instructionsView: UIView!
     @IBAction func slider(_ sender: UISlider) {
         scoreLabel.text = String(Int(sender.value))
@@ -42,6 +43,9 @@ class AdjustViewController: UIViewController {
         instructionsView.layer.masksToBounds = true
         
         instructionsView.layer.cornerRadius = 10.0
+        let predictedScore = defaults.integer(forKey: "score")
+        scoreSlider.value = Float(predictedScore)
+        scoreLabel.text = String(predictedScore)
         
         
 

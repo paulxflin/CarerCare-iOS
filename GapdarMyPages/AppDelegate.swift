@@ -88,8 +88,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let weekCalls = defaults.integer(forKey: "totalCalls")
         let targetCalls = Int(defaults.string(forKey: "targetCalls") ?? "3")!
         
-        let avgSteps = weekSteps/7
-        let avgCalls = weekCalls/7
+        let avgSteps = Double(weekSteps)/7
+        let avgCalls = Double(weekCalls)/7
         
         var stepsRatio : Double = Double(avgSteps)/Double(targetSteps)
         if stepsRatio > 1 {
@@ -148,7 +148,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func presentWBAlert() {
         //Call a function to calculate predicted score here
-        let predicted = getPredictedScore()
+        _ = getPredictedScore()
+        
+        let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+        self.window?.rootViewController = VC
+        self.window?.makeKeyAndVisible()
+        
+        /*
         let userMessage = "Do you think this is accurate?"
         let myAlert = UIAlertController(title: "Predicted Score: \(predicted)", message: userMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default){
@@ -177,6 +184,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         myAlert.addAction(okAction)
         myAlert.addAction(NoAction)
         self.window?.rootViewController?.present(myAlert, animated: true, completion: nil)
+        */
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

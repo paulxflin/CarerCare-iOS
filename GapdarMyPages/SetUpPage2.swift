@@ -13,7 +13,7 @@ import ContactsUI
 class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
     var yActivityValue = 10
     var activityTextFields : [UITextField] = []
-    var activityString : [String] = []
+    var activityArray : [String] = []
     
     
     let defaults = UserDefaults.standard
@@ -60,10 +60,10 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         for activity in activityTextFields{
-            activityString.append(activity.text ?? "-")
+            activityArray.append(activity.text ?? "-")
         }
         
-        defaults.set(activityString, forKey: "activityArray")
+        defaults.set(activityArray, forKey: "activityArray")
         
         defaults.set(SupportCodeTextField.text, forKey: "reference")
         

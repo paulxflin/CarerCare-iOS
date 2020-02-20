@@ -84,9 +84,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //Unfortunately there is potential that the steps isn't called in time based on current understanding.
         let weekSteps = defaults.integer(forKey: "oneWeekSteps")
         print("The weekSteps appears to be: " + String(weekSteps))
-        let targetSteps = Int(defaults.string(forKey: "targetSteps") ?? "1000")!
+        let targetSteps = Int(defaults.string(forKey: "targetSteps") ?? "1000") ?? 1000
         let weekCalls = defaults.integer(forKey: "totalCalls")
-        let targetCalls = Int(defaults.string(forKey: "targetCalls") ?? "3")!
+        let targetCalls = Int(defaults.string(forKey: "targetCalls") ?? "3") ?? 3
         
         let avgSteps = Double(weekSteps)/7
         let avgCalls = Double(weekCalls)/7

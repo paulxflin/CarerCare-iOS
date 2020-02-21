@@ -20,6 +20,7 @@ class CallsStatisticsViewController: UIViewController{
     @IBOutlet weak var graphTitleLabel: UILabel!
     let defaults = UserDefaults.standard
     
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var stepButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     //@IBOutlet weak var chartView: CombinedChartView!
@@ -42,7 +43,10 @@ class CallsStatisticsViewController: UIViewController{
         
     }
 
-    
+    @IBAction func saveGraphPressed(_ sender: Any) {
+        let image = self.chartView.AsImage()
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
     
     @IBAction func outdoorButtonPressed(_ sender: Any) {
         titleLabel.text = "Steps vs Well-being"
@@ -56,3 +60,11 @@ class CallsStatisticsViewController: UIViewController{
     }
 }
 
+extension UIView
+{
+    func AsImage() -> UIImage
+    {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image{UIGraphicsRendererContext in layer.render(in: UIGraphicsRendererContext.cgContext)}
+    }
+}

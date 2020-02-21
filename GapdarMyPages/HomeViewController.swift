@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class HomeViewController: UIViewController {
     //    let label = UILabel()
     
     @IBOutlet weak var figuresView: UIView!
+    
+    @IBOutlet weak var btSendJSON: UIButton!
+    
     
     let defaults = UserDefaults.standard
     
@@ -45,6 +49,38 @@ class HomeViewController: UIViewController {
         
 
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
+    }
+    
+    func foundationToJSON(object:Any) -> Data {
+        if !JSONSerialization.isValidJSONObject(object)
+        {
+            print("invalid01")
+            return Data.init()
+        }
+        return try! JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+    }
+    
+    func JSONToFoundation(object:Data) -> Any {
+        if JSONSerialization.isValidJSONObject(object)
+        {
+            print("invalid02")
+            return NSNull.init()
+        }
+        return try! JSONSerialization.jsonObject(with: object, options:.mutableContainers)
+    }
+    
+    @IBAction func btSendJSONPressed(_ sender: Any) {
+        let Dictionary = ["SupportCode": defaults.string(forKey: "reference") , "WellBeingScore": defaults.string(forKey: "score") , "WeeklySteps": defaults.string(forKey: "oneWeekSteps") , "WeeklyCalls": defaults.string(forKey: "totalCalls") , "ErrorRate": "errorRate_example" ,  "PostCode": defaults.string(forKey: "postcode")]
+        
+        
+        
+        let JSON = self.foundationToJSON(object: Dictionary)
+        let Foundation = self.JSONToFoundation(object: JSON)
+        print(Foundation)
+        
+        Alamofire.request("http://", method: .post, parameters: Dictionary as Parameters, encoding: JSONEncoding.default, headers: [:])
+        
+        
     }
     
 }

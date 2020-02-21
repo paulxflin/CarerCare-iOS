@@ -39,6 +39,7 @@
 		7BFDE29923E9E6B7009437E5 /* WellBeingDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFDE29823E9E6B7009437E5 /* WellBeingDiary.swift */; };
 		9A1FA11423C61CAD0078003F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11323C61CAC0078003F /* ShareController.swift */; };
 		9A1FA11A23C63E770078003F /* stepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1FA11923C63E760078003F /* stepController.swift */; };
+		9A830E2D240076A9006A0261 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A830E2C240076A9006A0261 /* web.png */; };
 		AC45E8A623E2247900A1EF6F /* AdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */; };
 		AC45E8A823E2272900A1EF6F /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45E8A723E2272900A1EF6F /* PermissionsViewController.swift */; };
 		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
@@ -111,6 +112,7 @@
 		8C4A9CCF5052FB0B7DCCE603 /* libPods-GapdarMyPages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GapdarMyPages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1FA11323C61CAC0078003F /* ShareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		9A1FA11923C63E760078003F /* stepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepController.swift; sourceTree = "<group>"; };
+		9A830E2C240076A9006A0261 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
 		A7C26AE900FA43CED9A409BF /* libPods-GapdarMyPages-GapdarMyPagesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GapdarMyPages-GapdarMyPagesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdjustViewController.swift; path = GapdarMyPages/AdjustViewController.swift; sourceTree = SOURCE_ROOT; };
 		AC45E8A723E2272900A1EF6F /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		7BC544D0239BF692001B5EF4 /* GapdarMyPages */ = {
 			isa = PBXGroup;
 			children = (
+				9A830E2C240076A9006A0261 /* web.png */,
 				7BFB061023DE4E10005BCE2C /* Storyboards */,
 				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
 				AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */,
@@ -373,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A830E2D240076A9006A0261 /* web.png in Resources */,
 				7BFB061E23DE56E8005BCE2C /* MenuTabBar.storyboard in Resources */,
 				7BC544DC239BF695001B5EF4 /* LaunchScreen.storyboard in Resources */,
 				7BFB061A23DE4FEC005BCE2C /* Contacts.storyboard in Resources */,

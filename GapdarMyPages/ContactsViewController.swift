@@ -23,6 +23,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @IBOutlet weak var contactSV: UIScrollView!
     
+    @IBOutlet weak var weblink01: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,6 +33,21 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         setupContactSV()
+        setupWebLink01()
+    }
+    
+    func setupWebLink01()
+    {
+        weblink01.isUserInteractionEnabled = true;
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webLinkButPressed01))
+        weblink01.addGestureRecognizer(tapGestureRecognizer)
+        weblink01.image = UIImage(named: "web.png")
+    }
+    
+    @objc func webLinkButPressed01()
+    {
+        guard let url = URL(string: "https://google.com") else {return}
+        UIApplication.shared.open(url)
     }
     
     func setupContactSV() {

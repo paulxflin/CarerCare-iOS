@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99N-u7-3mX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99N-u7-3mX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -190,6 +190,9 @@ Well being</string>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNy-VZ-8M9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="24"/>
                                                                 <state key="normal" image="icons8-share-24"/>
+                                                                <connections>
+                                                                    <action selector="saveGraphPressed:" destination="K1X-93-nsJ" eventType="touchUpInside" id="SzR-Tv-0eW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -272,6 +275,7 @@ Well being</string>
                         <outlet property="callButton" destination="5UP-fj-sUd" id="XzB-wM-0ew"/>
                         <outlet property="chartView" destination="zal-f8-hNR" id="VHm-BY-qZl"/>
                         <outlet property="graphTitleLabel" destination="xfE-85-0Ld" id="HNo-ui-Pjt"/>
+                        <outlet property="shareButton" destination="xNy-VZ-8M9" id="hCo-5s-sJ6"/>
                         <outlet property="stepButton" destination="WZu-AQ-PJE" id="g5e-W3-MSO"/>
                         <outlet property="titleLabel" destination="esu-uI-YLo" id="Iff-0Q-0mi"/>
                     </connections>
@@ -289,16 +293,16 @@ Well being</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-Xu-FvV">
-                                <rect key="frame" x="20" y="82" width="342" height="525"/>
+                                <rect key="frame" x="20" y="82" width="335" height="525"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Wa1-4T-pdQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="166.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zJZ-qV-Dfh">
-                                                <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="51.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps vs Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTr-0Z-8u3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="51.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -306,10 +310,10 @@ Well being</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-Jd-kK4">
-                                                <rect key="frame" x="0.0" y="57.5" width="342" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="57.5" width="335" height="51.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lL4-oo-vei" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="51.5"/>
                                                         <color key="backgroundColor" white="0.52086046010277776" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -328,7 +332,7 @@ Well Being </string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h11-G8-UVx" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                        <rect key="frame" x="174" y="0.0" width="168" height="51.5"/>
+                                                        <rect key="frame" x="171.5" y="0.0" width="163.5" height="51.5"/>
                                                         <color key="backgroundColor" red="0.1019607843" green="0.60392156860000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal">
@@ -348,13 +352,13 @@ Well being</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vRa-ph-GZv">
-                                                <rect key="frame" x="0.0" y="115" width="342" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="115" width="335" height="51.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-mD-8BM">
-                                                        <rect key="frame" x="0.0" y="15.5" width="309.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="15.5" width="303.5" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoor steps and Well-being" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz1-Sj-FhF">
-                                                                <rect key="frame" x="40" y="0.0" width="230" height="20.5"/>
+                                                                <rect key="frame" x="36.5" y="0.0" width="230" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -362,11 +366,14 @@ Well being</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Ev-F0-bT0">
-                                                        <rect key="frame" x="309.5" y="14" width="32.5" height="24"/>
+                                                        <rect key="frame" x="303.5" y="14" width="31.5" height="24"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-Yy-Fms">
-                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="31.5" height="24"/>
                                                                 <state key="normal" image="icons8-share-24"/>
+                                                                <connections>
+                                                                    <action selector="saveGraphPressed:" destination="w22-fb-Fvn" eventType="touchUpInside" id="GXx-TG-vPp"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -375,10 +382,10 @@ Well being</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QgL-R5-1rg">
-                                        <rect key="frame" x="0.0" y="171.5" width="342" height="328"/>
+                                        <rect key="frame" x="0.0" y="171.5" width="335" height="328"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLo-sr-9zw" customClass="CombinedChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="342" height="328"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="328"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="315" id="Bbu-We-6nI"/>
@@ -388,10 +395,10 @@ Well being</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-lY-4Vb">
-                                        <rect key="frame" x="0.0" y="504.5" width="342" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="504.5" width="335" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of weeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmd-Xw-7bb">
-                                                <rect key="frame" x="104" y="0.0" width="134" height="20.5"/>
+                                                <rect key="frame" x="100.5" y="0.0" width="134" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -448,6 +455,7 @@ Well being</string>
                     <connections>
                         <outlet property="chartView" destination="PLo-sr-9zw" id="vxV-ZO-E2X"/>
                         <outlet property="graphTitleLabel" destination="Zz1-Sj-FhF" id="y7t-n4-vrt"/>
+                        <outlet property="shareButton" destination="hFF-Yy-Fms" id="yeF-fy-KVI"/>
                         <outlet property="titleLabel" destination="GTr-0Z-8u3" id="bkT-Mh-x6Q"/>
                     </connections>
                 </viewController>

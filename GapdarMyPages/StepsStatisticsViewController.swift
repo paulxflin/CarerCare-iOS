@@ -17,6 +17,7 @@ class StepsStatisticsViewController:UIViewController{
     @IBOutlet weak var graphTitleLabel: UILabel!
     
     @IBOutlet weak var chartView: CombinedChartView!
+    @IBOutlet weak var shareButton: UIButton!
     
     
     
@@ -45,5 +46,10 @@ class StepsStatisticsViewController:UIViewController{
         Graph(chartView: chartView, type: "stepsArray").setChartData()
     }
     
+    
+    @IBAction func saveGraphPressed(_ sender: Any) {
+        let image = self.chartView.AsImage()
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
 }
 

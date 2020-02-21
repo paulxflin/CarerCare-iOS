@@ -19,5 +19,6 @@ target 'GapdarMyPages' do
   
   pod 'Charts', '~> 3.2.1'
   
+  pod 'Alamofire'
 
 end

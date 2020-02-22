@@ -183,6 +183,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
+    // Beware nil unwrapping during compose breaks app
     @IBAction func composePressed(_ sender: Any) {
         msg = "";
         msg += "Hello " + name! + "\n"

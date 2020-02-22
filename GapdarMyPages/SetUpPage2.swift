@@ -33,6 +33,10 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         activityScrollView.layer.cornerRadius = 10.0
+        postcodeTextField.delegate = self
+        stepsPerDayTextField.delegate = self
+        contactsPerDayTextField.delegate = self
+        SupportCodeTextField.delegate = self
         
     }
     

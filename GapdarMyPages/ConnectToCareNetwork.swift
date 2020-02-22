@@ -11,13 +11,15 @@ import UIKit
 
 class ConnectToCareNetwork: UIViewController {
     
-    @IBOutlet weak var viewTickCross: UIScrollView!
+
    
+    @IBOutlet weak var viewTickCros: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewTickCross.layer.cornerRadius = 10.0
+        viewTickCros.layer.masksToBounds = true
+        viewTickCros.layer.cornerRadius = 10.0
         
-        viewTickCross.backgroundColor = .white
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 }

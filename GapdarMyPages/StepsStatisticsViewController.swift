@@ -19,6 +19,7 @@ class StepsStatisticsViewController:UIViewController{
     @IBOutlet weak var chartView: CombinedChartView!
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var changingLabel: rotateLabel!
     
     
     override func viewDidLoad() {
@@ -37,12 +38,14 @@ class StepsStatisticsViewController:UIViewController{
     @IBAction func callsButtonPressed(_ sender: Any) {
         titleLabel.text = "Calls vs Well-being"
         graphTitleLabel.text = "Calls made and Well-being"
+        changingLabel.text = "Number of Calls"
         Graph(chartView: chartView, type: "callsArray").setChartData()
     }
     
     @IBAction func outdoorButtonPressed(_ sender: Any) {
         titleLabel.text = "Steps vs Well-being"
         graphTitleLabel.text = "Outdoor steps and Well-being"
+        changingLabel.text = "Number of Steps"
         Graph(chartView: chartView, type: "stepsArray").setChartData()
     }
     

@@ -16,6 +16,7 @@ class CallsStatisticsViewController: UIViewController{
     @IBOutlet weak var titleLabel: UILabel!
     
 
+    @IBOutlet weak var changingAxisLabel: rotateLabel!
     
     @IBOutlet weak var graphTitleLabel: UILabel!
     let defaults = UserDefaults.standard
@@ -50,12 +51,14 @@ class CallsStatisticsViewController: UIViewController{
     
     @IBAction func outdoorButtonPressed(_ sender: Any) {
         titleLabel.text = "Steps vs Well-being"
+        changingAxisLabel.text = "Number of Steps"
         graphTitleLabel.text = "Outdoor steps and Well-being"
         Graph(chartView: chartView, type: "stepsArray").setChartData()
     }
     @IBAction func callsButtonPressed(_ sender: Any) {
         titleLabel.text = "Calls vs Well-being"
         graphTitleLabel.text = "Calls made and Well-being"
+        changingAxisLabel.text = "Number of Calls"
         Graph(chartView: chartView, type: "callsArray").setChartData()
     }
 }

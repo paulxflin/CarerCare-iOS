@@ -42,6 +42,12 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     }
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        let heightOfCanvas = contactsScrollView.frame.height
+        let widthOfCanvas = contactsScrollView.frame.width
+        
+    
+        
+        print("the height is",heightOfCanvas)
         var familyName = ""
         var phoneNumber = ""
         for data in contact.phoneNumbers{
@@ -51,36 +57,36 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
             
         }
         
-        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height:33))
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(heightOfCanvas/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactsScrollView.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:272, height:33))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(widthOfCanvas - 80)), height:Int(heightOfCanvas/8)))
         nameTF.delegate = self
-        nameTF.textAlignment = .center
+        nameTF.textAlignment = .left
         nameTF.text = familyName
         nameTF.backgroundColor = .white
         nameTF.borderStyle = .roundedRect
         contactsScrollView.addSubview(nameTF)
         
         nameTextFields.append(nameTF)
-        yContactsValue += 40
+        yContactsValue += Int(heightOfCanvas/8) + 10
         
-        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(heightOfCanvas/8)))
         label2.textAlignment = .left
         label2.text = "Contact Number: "
         contactsScrollView.addSubview(label2)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:150, height:33))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(widthOfCanvas - 160), height:Int(heightOfCanvas/8)))
         numTF.delegate = self
         numTF.text = phoneNumber
-        numTF.textAlignment = .center
+        numTF.textAlignment = .left
         numTF.backgroundColor = .white
         numTF.borderStyle = .roundedRect
         contactsScrollView.addSubview(numTF)
         phoneNumberTextFields.append(numTF)
-        yContactsValue += 40
+        yContactsValue += Int(heightOfCanvas/8) + 10
         
         contactsScrollView.contentSize.height = CGFloat(yContactsValue)
     }

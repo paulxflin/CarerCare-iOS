@@ -132,7 +132,7 @@ class Graph: ChartViewDelegate{
         let stepsArray : [Int] = defaults.array(forKey: type) as! [Int]
         let n = 9
         let stepsData : [Int] = getSubArray(stepsArray, n)
-        print("Steps Data: ")
+        print(type + " Data: ")
         print(stepsData)
         
         //var stepsData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]

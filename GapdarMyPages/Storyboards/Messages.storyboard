@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wp-rn-AUe">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wp-rn-AUe">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="01Q-Vm-Fnv">
-                                <rect key="frame" x="16" y="84" width="343" height="205"/>
+                                <rect key="frame" x="16" y="64" width="343" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarerFriendly Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-JI-dK3">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
@@ -112,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="JRE-am-72U">
-                                <rect key="frame" x="18" y="81" width="339" height="479.5"/>
+                                <rect key="frame" x="18" y="61" width="339" height="494"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-Wf-JbP">
                                         <rect key="frame" x="0.0" y="0.0" width="339" height="25.5"/>
@@ -225,10 +224,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5mM-vv-llE">
-                                        <rect key="frame" x="0.0" y="368" width="339" height="111.5"/>
+                                        <rect key="frame" x="0.0" y="368" width="339" height="126"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PC-g8-Ebd" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="77.5" y="0.0" width="184" height="26.5"/>
+                                                <rect key="frame" x="77.5" y="0.0" width="184" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="  Pre-composed Message  "/>
@@ -242,7 +241,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-ld-VPQ" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="99" y="28.5" width="141" height="26.5"/>
+                                                <rect key="frame" x="99" y="32" width="141" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="  Start Notifications  "/>
@@ -256,7 +255,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-cR-iPt">
-                                                <rect key="frame" x="81.5" y="57" width="176" height="26"/>
+                                                <rect key="frame" x="81.5" y="64" width="176" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Activity Support Message"/>
                                                 <connections>
@@ -264,7 +263,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-we-0nd">
-                                                <rect key="frame" x="114" y="85" width="111" height="26.5"/>
+                                                <rect key="frame" x="114" y="96" width="111" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Network History"/>
                                                 <connections>
@@ -333,7 +332,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-oI-X8P">
-                                <rect key="frame" x="20" y="74" width="335" height="535"/>
+                                <rect key="frame" x="20" y="54" width="335" height="535"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9O-sr-uFV">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
@@ -538,7 +537,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-pm-bJ0">
-                                <rect key="frame" x="18" y="77" width="338" height="516"/>
+                                <rect key="frame" x="18" y="13" width="338" height="516"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nze-SD-Loa">
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="27"/>
@@ -625,15 +624,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-dE-sth">
+                                <rect key="frame" x="0.0" y="392" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOm-2z-pqJ">
+                                <rect key="frame" x="0.0" y="392" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zu5-pm-bJ0" firstAttribute="leading" secondItem="6Pw-kD-2JJ" secondAttribute="leading" constant="18" id="2iD-0v-iQy"/>
-                            <constraint firstItem="6Pw-kD-2JJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zu5-pm-bJ0" secondAttribute="bottom" constant="25" id="MbD-st-ZMy"/>
-                            <constraint firstItem="6Pw-kD-2JJ" firstAttribute="trailing" secondItem="zu5-pm-bJ0" secondAttribute="trailing" constant="19" id="bEw-rX-oku"/>
-                            <constraint firstItem="zu5-pm-bJ0" firstAttribute="top" secondItem="6Pw-kD-2JJ" secondAttribute="top" constant="13" id="czn-Ag-Sdu"/>
+                            <constraint firstItem="zu5-pm-bJ0" firstAttribute="leading" secondItem="ccf-bB-chb" secondAttribute="leading" constant="18" id="2iD-0v-iQy"/>
+                            <constraint firstItem="ePq-IF-IGk" firstAttribute="bottom" secondItem="VOm-2z-pqJ" secondAttribute="bottom" constant="10" id="8RN-CD-5wq"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zu5-pm-bJ0" secondAttribute="bottom" constant="25" id="MbD-st-ZMy"/>
+                            <constraint firstItem="DZC-dE-sth" firstAttribute="leading" secondItem="ePq-IF-IGk" secondAttribute="leading" id="Vtb-7y-t3z"/>
+                            <constraint firstItem="DZC-dE-sth" firstAttribute="trailing" secondItem="ePq-IF-IGk" secondAttribute="trailing" id="YTw-2q-j5a"/>
+                            <constraint firstItem="ePq-IF-IGk" firstAttribute="bottom" secondItem="DZC-dE-sth" secondAttribute="bottom" constant="10" id="auS-ZI-Poa"/>
+                            <constraint firstAttribute="trailing" secondItem="zu5-pm-bJ0" secondAttribute="trailing" constant="19" id="bEw-rX-oku"/>
+                            <constraint firstItem="VOm-2z-pqJ" firstAttribute="trailing" secondItem="ePq-IF-IGk" secondAttribute="trailing" id="byZ-4N-9RW"/>
+                            <constraint firstItem="zu5-pm-bJ0" firstAttribute="top" secondItem="ccf-bB-chb" secondAttribute="top" constant="13" id="czn-Ag-Sdu"/>
+                            <constraint firstItem="VOm-2z-pqJ" firstAttribute="leading" secondItem="ePq-IF-IGk" secondAttribute="leading" id="pdA-in-2bW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Pw-kD-2JJ"/>
+                        <viewLayoutGuide key="safeArea" id="ePq-IF-IGk"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                 <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -644,6 +657,10 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="activityPV" destination="DZC-dE-sth" id="VQj-ep-l8a"/>
+                        <outlet property="activityTF" destination="jQX-cP-TdC" id="RYu-Fd-tRj"/>
+                        <outlet property="choicePV" destination="VOm-2z-pqJ" id="v9J-Y2-6hb"/>
+                        <outlet property="choiceTF" destination="WlE-ku-zJr" id="KSI-HY-k8v"/>
                         <outlet property="messageView" destination="wtP-Ih-6ZJ" id="1Ha-0l-4Xe"/>
                     </connections>
                 </viewController>
@@ -660,7 +677,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Bv-7e-cTm">
-                                <rect key="frame" x="40" y="114" width="295" height="30"/>
+                                <rect key="frame" x="40" y="94" width="295" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -708,7 +725,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-0w-MIK">
-                                <rect key="frame" x="16" y="76" width="343" height="508"/>
+                                <rect key="frame" x="16" y="56" width="343" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Network Contact History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0G-hV-YoO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
@@ -777,7 +794,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94n-gi-jY3">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

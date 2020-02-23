@@ -45,6 +45,8 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var phoneArray : [String] = []
     var msg = ""
     
+    var activityRow = -1
+    
     @IBOutlet weak var msgView: UIView!
     
     @IBOutlet weak var composeButton: UIButton!
@@ -163,6 +165,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         } else if (pickerView == activityPV) {
             activity = activityOptions[row]
             activityTF.text = activity
+            activityRow = row
             activityPV.isHidden = true
         }
         
@@ -208,8 +211,23 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    //This part is reached after the apple message view is closed.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
+        
+        print("activityRow: " + String(activityRow))
+        updateActivityCount(activityRow)
+        print("I have reached the didFinish method for message")
+    }
+    
+    func updateActivityCount(_ row: Int) {
+        var activityCountArray = defaults.array(forKey: "activityCountArray") ?? [0, 0, 0]
+        var num : Int = activityCountArray[row] as? Int ?? 0
+        num += 1
+        activityCountArray[row] = num
+        defaults.set(activityCountArray, forKey: "activityCountArray")
+        print("activityCountArray: ")
+        print(activityCountArray)
     }
     
 }

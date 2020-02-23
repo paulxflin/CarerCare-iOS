@@ -129,17 +129,17 @@ class Graph: ChartViewDelegate{
         // MARK: BarChartDataEntry
         var entries1 = [BarChartDataEntry]()
         
-        let stepsArray : [Int] = defaults.array(forKey: type) as! [Int]
+        let array : [Int] = defaults.array(forKey: type) as! [Int]
         let n = 9
-        let stepsData : [Int] = getSubArray(stepsArray, n)
+        let arrayData : [Int] = getSubArray(array, n)
         print(type + " Data: ")
-        print(stepsData)
+        print(arrayData)
         
-        //var stepsData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]
+        //var sampleData: [Int] = [500,1000,1234,2000,1500,750,2000,1300,2100]
         
         for index in 1..<ITEM_COUNT+1
         {
-            entries1.append(BarChartDataEntry(x: Double(index-1) + 0.5, y: Double(stepsData[index-1])))
+            entries1.append(BarChartDataEntry(x: Double(index-1) + 0.5, y: Double(arrayData[index-1])))
             
         }
         var axisLabel : String

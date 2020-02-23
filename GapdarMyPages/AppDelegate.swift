@@ -60,6 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let identifier = notification.request.identifier
         if identifier == "weekly" {
             presentWBAlert()
+        } else if identifier == "tooLazy" || identifier == "inactive" {
+            presentNudge()
         }
     }
     
@@ -72,6 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let identifier = response.notification.request.identifier
         if identifier == "weekly" {
             presentWBAlert()
+        } else if identifier == "tooLazy" || identifier == "inactive" {
+            presentNudge()
         }
         
         completionHandler()
@@ -144,6 +148,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //Clear the current accumulations for steps and calls, not scores because that remains
         defaults.set(0, forKey: "oneWeekSteps")
         defaults.set(0, forKey: "totalCalls")
+    }
+    
+    func presentNudge() {
+        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+        let nudgeVC = messagesSB.instantiateViewController(withIdentifier: "nudge")
+        self.window?.rootViewController = nudgeVC
+        self.window?.makeKeyAndVisible()
     }
     
     func presentWBAlert() {

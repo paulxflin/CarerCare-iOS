@@ -25,7 +25,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-dK-cAT">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-dK-cAT">
                                         <rect key="frame" x="0.0" y="49" width="343" height="155"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="155" id="4TC-aM-oa7"/>
@@ -36,7 +36,7 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vo-NX-dfM">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vo-NX-dfM">
                                         <rect key="frame" x="0.0" y="226" width="343" height="164"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="164" id="KqB-Ys-j3B"/>
@@ -47,7 +47,7 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="If you consent to this, click Save" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-T8-H86">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If you consent to this, click Save" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-T8-H86">
                                         <rect key="frame" x="0.0" y="412" width="343" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="SLu-9J-4Sg"/>
@@ -299,7 +299,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-fO-VoP">
                                                 <rect key="frame" x="0.0" y="35" width="343" height="153"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Set up your primary care network text message template on the next three screens. " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptz-mN-gup">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Set up your primary care network text message template on the next three screens. " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptz-mN-gup">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="72.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="72.5" id="3lW-gT-mB4"/>
@@ -309,7 +309,7 @@
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Do this initially with your carer support worker. Once saved you can change these at any time." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YWT-ty-Mak">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Do this initially with your carer support worker. Once saved you can change these at any time." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YWT-ty-Mak">
                                                         <rect key="frame" x="0.0" y="80.5" width="343" height="72.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="NCV-G7-8iZ"/>
@@ -528,7 +528,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lvr-8T-Oi2">
                                         <rect key="frame" x="0.0" y="275.5" width="343" height="290"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your carer support worker will let you know what level of activity is good for your well-being." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SSg-sV-aA1">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Your carer support worker will let you know what level of activity is good for your well-being." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SSg-sV-aA1">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="OOH-do-99T"/>
@@ -684,7 +684,7 @@
                                                             <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
                                                         </connections>
                                                     </button>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9">
                                                         <rect key="frame" x="5" y="201" width="325" height="108"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -721,7 +721,7 @@
                                                             <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
                                                         </connections>
                                                     </switch>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
                                                         <rect key="frame" x="24" y="45" width="229" height="184"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <string key="text">Click the toggle to consent to the creation of a map that enables you and other app users to understand what support activities help people in your area. By consenting you will not be sharing personally identifiable data. All data used to create the map will be anonymised to protect your privacy.</string>

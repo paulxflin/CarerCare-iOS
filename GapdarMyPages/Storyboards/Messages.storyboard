@@ -556,7 +556,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtP-Ih-6ZJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="400"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You appear to be actively interested in" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TD1-Pu-3tN">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You appear to be actively interested in" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TD1-Pu-3tN">
                                                         <rect key="frame" x="8" y="8" width="327" height="69"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -568,7 +568,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Are you interested to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-1T-qN9">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Are you interested to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-1T-qN9">
                                                         <rect key="frame" x="8" y="124" width="322" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -580,7 +580,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Click send if you want carer support workers to help you do this or click cancel if you do not" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-TV-KXh">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Click send if you want carer support workers to help you do this or click cancel if you do not" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-TV-KXh">
                                                         <rect key="frame" x="13" y="299" width="327" height="93"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>

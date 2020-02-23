@@ -228,6 +228,17 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         defaults.set(activityCountArray, forKey: "activityCountArray")
         print("activityCountArray: ")
         print(activityCountArray)
+        
+        if num == 2 {
+            let passedActivity = activity!
+            defaults.set(passedActivity, forKey: "passedActivity")
+            let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+            let asmVC = messagesSB.instantiateViewController(withIdentifier: "asm")
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = asmVC
+            appDelegate?.window??.makeKeyAndVisible()
+        }
+        
     }
     
 }

@@ -45,6 +45,9 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         activityTF.delegate = self
         choiceTF.delegate = self
         
+        activity = defaults.string(forKey: "passedActivity") ?? ""
+        activityTF.text = activity!
+        
         activityOptions = defaults.stringArray(forKey: "activityArray") ?? ["Coffee at the Hub", "Shop", "Walk"]
         choiceOptions = ["Yes", "No"]
         
@@ -102,6 +105,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         let phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         let number = phoneArray[2] //Arbitrarily determined by Joseph 3rd contact is carer
         
+        // Beware nil unwrapping during compose breaks app
         var msg : String = ""
         msg += "Name: " + firstName! + "\n"
         msg += "Activity: " + activity! + "\n"
@@ -117,7 +121,27 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        returnHome()
+    }
+    
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
+        //checks whether message has been sent (0: cancelled, 1: sent, 2: failed)
+        if result.rawValue == 1 {
+            returnHome()
+        }
+        
     }
+    
+    func returnHome() {
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
+    
 }

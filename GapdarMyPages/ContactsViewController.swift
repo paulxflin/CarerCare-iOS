@@ -184,6 +184,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
 
     @IBAction func resetStart(_ sender: Any) {
         defaults.set(false, forKey: "setup")
+        let activityCountArray = [0, 0, 0]
+        defaults.set(activityCountArray, forKey: "activityCountArray")
     }
     
 }

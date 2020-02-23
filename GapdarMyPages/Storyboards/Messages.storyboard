@@ -531,7 +531,7 @@
         <!--Activity Support Message-->
         <scene sceneID="Ave-Cn-xvY">
             <objects>
-                <viewController id="MqF-3B-ZGS" customClass="ActivitySupportMessage" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="asm" id="MqF-3B-ZGS" customClass="ActivitySupportMessage" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccf-bB-chb" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,6 +608,9 @@
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelPressed:" destination="MqF-3B-ZGS" eventType="touchUpInside" id="qy2-Md-JDJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkL-r1-0rw" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="278" y="0.0" width="60" height="39"/>

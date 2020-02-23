@@ -18,8 +18,15 @@ class ConnectToCareNetwork: UIViewController {
         super.viewDidLoad()
         viewTickCros.layer.masksToBounds = true
         viewTickCros.layer.cornerRadius = 10.0
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func crossPressed(_ sender: UIButton) {
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
 }

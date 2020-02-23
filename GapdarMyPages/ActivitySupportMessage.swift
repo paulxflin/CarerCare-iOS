@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MessageUI
 
-class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MFMessageComposeViewControllerDelegate {
     
     let defaults = UserDefaults.standard
+    
+    var firstName : String?
     
     @IBOutlet weak var activityTF: UITextField!
     @IBOutlet weak var choiceTF: UITextField!
@@ -45,6 +48,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         activityOptions = defaults.stringArray(forKey: "activityArray") ?? ["Coffee at the Hub", "Shop", "Walk"]
         choiceOptions = ["Yes", "No"]
         
+        firstName = defaults.string(forKey: "firstName") ?? "Jo"
     }
     
     // MARK: Actions
@@ -94,6 +98,26 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
+    @IBAction func sendPressed(_ sender: UIButton) {
+        let phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
+        let number = phoneArray[2] //Arbitrarily determined by Joseph 3rd contact is carer
+        
+        var msg : String = ""
+        msg += "Name: " + firstName! + "\n"
+        msg += "Activity: " + activity! + "\n"
+        msg += "Interested in Joining A Group: " + choice!
+        
+        if MFMessageComposeViewController.canSendText()
+        {
+            let msgVC = MFMessageComposeViewController()
+            msgVC.body = msg
+            msgVC.recipients = [number]
+            msgVC.messageComposeDelegate = self
+            self.present(msgVC, animated: true, completion: nil)
+        }
+    }
     
-    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

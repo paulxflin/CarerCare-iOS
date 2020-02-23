@@ -619,6 +619,9 @@
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sendPressed:" destination="MqF-3B-ZGS" eventType="touchUpInside" id="3Xs-QX-Pzg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

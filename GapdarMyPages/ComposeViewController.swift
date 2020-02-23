@@ -57,7 +57,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         msgView.backgroundColor = .white
         msgView.layer.cornerRadius = 10.0
         
-       msgTextView.layer.cornerRadius = 10.0
+        msgTextView.layer.cornerRadius = 10.0
         msgView.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstName = defaults.string(forKey: "firstName") ?? "Jo"
@@ -188,7 +188,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // Beware nil unwrapping during compose breaks app
     @IBAction func composePressed(_ sender: Any) {
-        msg = "";
+        msg = ""
         msg += "Hello " + name! + "\n"
         msg += "Just to let you know I am " + status! + "\n"
         msg += "How about on " + date! + "\n"

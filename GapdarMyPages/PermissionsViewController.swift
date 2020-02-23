@@ -82,12 +82,13 @@ class PermissionsViewController: UIViewController {
         
         let activityArray = defaults.array(forKey: "activityArray")
         let size = activityArray?.count
-        if defaults.array(forKey: "activityCountArray") == nil {
-            let activityCountArray = [Int](repeating: 0, count: size ?? 0)
+        var activityCountArray = defaults.array(forKey: "activityCountArray")
+        if activityCountArray == nil {
+            activityCountArray = [Int](repeating: 0, count: size ?? 0)
             defaults.set(activityCountArray, forKey: "activityCountArray")
-            print("activity count array")
-            print(activityCountArray)
         }
+        print("activity count array")
+        print(activityCountArray ?? "This array doesn't exist")
     }
     
 

@@ -189,12 +189,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // Beware nil unwrapping during compose breaks app
     @IBAction func composePressed(_ sender: Any) {
         msg = ""
-        msg += "Hello " + name! + "\n"
-        msg += "Just to let you know I am " + status! + "\n"
-        msg += "How about on " + date! + "\n"
-        msg += "at " + time! + "\n"
-        msg += "we meet for a " + activity! + "\n"
-        msg += "All the best, " + firstName! + "."
+        msg += "Hello " + (name ?? "") + "\n"
+        msg += "Just to let you know I am " + (status ?? "") + "\n"
+        msg += "How about on " + (date ?? "") + "\n"
+        msg += "at " + (time ?? "") + "\n"
+        msg += "we meet for a " + (activity ?? "") + "\n"
+        msg += "All the best, " + (firstName ?? "") + "."
         msgTextView.text = msg
         
     }

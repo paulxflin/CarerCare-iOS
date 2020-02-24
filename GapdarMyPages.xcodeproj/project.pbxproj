@@ -43,6 +43,7 @@
 		AC45E8A623E2247900A1EF6F /* AdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */; };
 		AC45E8A823E2272900A1EF6F /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45E8A723E2272900A1EF6F /* PermissionsViewController.swift */; };
 		AC50F14A23C5F8E8003BF5B3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */; };
+		AC70C0C42404842D00353A7A /* NewSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C0C32404842D00353A7A /* NewSetUpVC.swift */; };
 		ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA16E9923D614BA00040709 /* SetUpViewController.swift */; };
 		ACFE509423CBCA0D004B67D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFE509323CBCA0D004B67D0 /* HealthKit.framework */; };
 		ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFD92F23A57A60009AD624 /* PickerViewController.swift */; };
@@ -117,6 +118,7 @@
 		AC45E8A523E2247900A1EF6F /* AdjustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdjustViewController.swift; path = GapdarMyPages/AdjustViewController.swift; sourceTree = SOURCE_ROOT; };
 		AC45E8A723E2272900A1EF6F /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
 		AC50F14923C5F8E8003BF5B3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		AC70C0C32404842D00353A7A /* NewSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewSetUpVC.swift; path = GapdarMyPages/NewSetUpVC.swift; sourceTree = SOURCE_ROOT; };
 		ACA16E9923D614BA00040709 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GapdarMyPages.entitlements; sourceTree = "<group>"; };
 		ACFE509323CBCA0D004B67D0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 				7BC544D3239BF692001B5EF4 /* HomeViewController.swift */,
 				7BC544DD239BF695001B5EF4 /* Info.plist */,
 				ACFFD93123A57A9D009AD624 /* MessageViewController.swift */,
+				AC70C0C32404842D00353A7A /* NewSetUpVC.swift */,
 				7B00605523FAD49A0019D8E3 /* SetUpCareNetwork.swift */,
 				7B00605723FAE02C0019D8E3 /* SetUpPage2.swift */,
 				ACA16E9923D614BA00040709 /* SetUpViewController.swift */,
@@ -498,6 +501,7 @@
 				ACA16E9A23D614BA00040709 /* SetUpViewController.swift in Sources */,
 				7B19BC2A23B7F4C800D6767D /* CallsStatisticsViewController.swift in Sources */,
 				ACFFD93023A57A60009AD624 /* PickerViewController.swift in Sources */,
+				AC70C0C42404842D00353A7A /* NewSetUpVC.swift in Sources */,
 				7B98F85E23E398D5008DD663 /* ConnectToCareNetwork.swift in Sources */,
 				7BC54500239C0E9D001B5EF4 /* ContactsActvitiesSetUpViewController.swift in Sources */,
 				7BF4FC4B23E727FF007486E2 /* GradientUIView.swift in Sources */,

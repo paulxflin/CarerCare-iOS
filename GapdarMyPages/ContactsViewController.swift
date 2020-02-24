@@ -141,6 +141,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @objc func messagePressed(_ sender: UIButton) {
         print("message pressed")
+        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+        let composeVC = messagesSB.instantiateViewController(withIdentifier: "compose")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = composeVC
+        appDelegate?.window??.makeKeyAndVisible()
     }
     
     

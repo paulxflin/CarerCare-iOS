@@ -309,7 +309,7 @@
         <!--Compose View Controller-->
         <scene sceneID="cL3-we-DL0">
             <objects>
-                <viewController id="WoI-fW-rdI" customClass="ComposeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="compose" id="WoI-fW-rdI" customClass="ComposeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wjf-W3-HiJ" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

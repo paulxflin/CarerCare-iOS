@@ -107,7 +107,7 @@
         <!--CallsStatistics-->
         <scene sceneID="KDk-JS-AGd">
             <objects>
-                <viewController title="CallsStatistics" id="K1X-93-nsJ" customClass="CallsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="callsStats" title="CallsStatistics" id="K1X-93-nsJ" customClass="CallsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TJA-MA-nVg" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +288,7 @@ Well being</string>
         <!--Steps Statistics View Controller-->
         <scene sceneID="BbD-f5-BKF">
             <objects>
-                <viewController id="w22-fb-Fvn" customClass="StepsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stepsStats" id="w22-fb-Fvn" customClass="StepsStatisticsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Har-Wg-HDK" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

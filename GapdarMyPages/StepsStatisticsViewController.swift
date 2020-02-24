@@ -31,8 +31,11 @@ class StepsStatisticsViewController:UIViewController{
         chartView.clipsToBounds = true
     }
     
-    
-
+    func getStepsGraphImage() -> Data {
+        let image = self.chartView.AsImage()
+        let imageData : Data = image.pngData()!
+        return imageData
+    }
     
   
     @IBAction func callsButtonPressed(_ sender: Any) {

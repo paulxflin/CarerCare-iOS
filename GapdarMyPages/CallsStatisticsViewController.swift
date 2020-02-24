@@ -43,6 +43,12 @@ class CallsStatisticsViewController: UIViewController{
         
         
     }
+    
+    func getCallsGraphImage() -> Data{
+        let image = self.chartView.AsImage()
+        let imageData : Data = image.pngData()!
+        return imageData
+    }
 
     @IBAction func saveGraphPressed(_ sender: Any) {
         let image = self.chartView.AsImage()

@@ -227,6 +227,15 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
+    
     //This part is reached after the apple message view is closed.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)

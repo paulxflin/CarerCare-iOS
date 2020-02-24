@@ -17,6 +17,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     var yContactsValue = 10
     var phoneArray : [String] = []
     var nameArray : [String] = []
+    var networkCallsArray : [Int] = []
     
     var phoneNumberTextFields: [UITextField] = []
     var nameTextFields : [UITextField] = []
@@ -34,6 +35,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
+        
+        //Create array to track number of calls made per person.
+        if defaults.array(forKey: "networkCallsArray") == nil {
+            networkCallsArray = [Int](repeating: 0, count: nameArray.count)
+            defaults.set(networkCallsArray, forKey: "networkCallsArray")
+            print(networkCallsArray)
+        }
+        networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+        
         setupContactSV()
         setupWebLink01()
     }
@@ -130,10 +140,16 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         let phone = phoneArray[sender.tag]
         let number = String(phone.filter {!" \n\t\r".contains($0)})
         print(number)
+        
         var totalCalls = defaults.integer(forKey: "totalCalls")
         totalCalls += 1
         defaults.set(totalCalls, forKey: "totalCalls")
         print(defaults.integer(forKey: "totalCalls"))
+        
+        networkCallsArray[sender.tag] += 1
+        defaults.set(networkCallsArray, forKey: "networkCallsArray")
+        print("No. Calls per person")
+        print(defaults.array(forKey: "networkCallsArray") as! [Int])
         
         if let url = URL(string: "tel://\(number)"),
             UIApplication.shared.canOpenURL(url) {
@@ -179,6 +195,9 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         defaults.set(nameArray, forKey: "nameArray")
         phoneArray.append(phoneNumber)
         defaults.set(phoneArray, forKey: "phoneArray")
+        
+        networkCallsArray.append(0)
+        defaults.set(networkCallsArray, forKey: "networkCallsArray")
         
         
         let heightOfCanvas = contactSV.frame.height
@@ -249,6 +268,9 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
 
     @IBAction func resetStart(_ sender: Any) {
         defaults.set(false, forKey: "setup")
+        defaults.set(0, forKey: "totalCalls")
+        defaults.set(nil, forKey: "networkCallsArray")
+        defaults.set(nil, forKey: "networkMessagesArray")
         let activityCountArray = [0, 0, 0]
         defaults.set(activityCountArray, forKey: "activityCountArray")
     }

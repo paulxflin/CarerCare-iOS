@@ -23,8 +23,23 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @IBOutlet weak var contactSV: UIScrollView!
     
-    @IBOutlet weak var weblink01: UIImageView!
+    @IBOutlet weak var weblink01: UIButton!
     
+    @IBOutlet weak var weblink02: UIButton!
+    
+    @IBOutlet weak var weblink03: UIButton!
+  
+    @IBOutlet weak var weblink04: UIButton!
+    
+    @IBOutlet weak var weblink05: UIButton!
+    
+    @IBOutlet weak var weblink06: UIButton!
+    
+    @IBOutlet weak var weblink07: UIButton!
+    
+    @IBOutlet weak var weblink08: UIButton!
+    
+    @IBOutlet weak var weblink09: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,22 +48,54 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         setupContactSV()
-        setupWebLink01()
     }
     
-    func setupWebLink01()
-    {
-        weblink01.isUserInteractionEnabled = true;
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webLinkButPressed01))
-        weblink01.addGestureRecognizer(tapGestureRecognizer)
-        weblink01.image = UIImage(named: "web.png")
-    }
-    
-    @objc func webLinkButPressed01()
-    {
-        guard let url = URL(string: "https://google.com") else {return}
+    @IBAction func weblinkButPressed01(_ sender: Any) {
+        guard let url = URL(string: "https://www.torfaen.gov.uk/en/HealthSocialCare/Keeping-Active-and-Getting-Out/Torfaen-Community-Connectors/Torfaen-Community-Connectors.aspx") else {return}
         UIApplication.shared.open(url)
     }
+    
+    @IBAction func weblinkButPressed02(_ sender: Any) {
+        guard let url = URL(string: "https://carers.org") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed03(_ sender: Any) {
+        guard let url = URL(string: "https://www.dewis.wales") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed04(_ sender: Any) {
+        guard let url = URL(string: "https://www.wales.nhs.uk/ourservices/directory/LocalHealthBoards/866") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed05(_ sender: Any) {
+        guard let url = URL(string: "https://www.ageconnectswales.org.uk") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed06(_ sender: Any) {
+        guard let url = URL(string: "https://www.ffrindimi.co.uk") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed07(_ sender: Any) {
+        guard let url = URL(string: "whatsapp://") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed08(_ sender: Any) {
+        guard let url = URL(string: "https://www.alzheimers.org.uk") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    @IBAction func weblinkButPressed09(_ sender: Any) {
+        guard let url = URL(string: "headspace://") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    
     
     func setupContactSV() {
         // TODO: Add a for loop to add in the saved contacts.

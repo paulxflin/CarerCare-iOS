@@ -70,13 +70,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btSendJSONPressed(_ sender: Any) {
-        let Dictionary = ["SupportCode": defaults.string(forKey: "reference") , "WellBeingScore": defaults.string(forKey: "score") , "WeeklySteps": defaults.string(forKey: "oneWeekSteps") , "WeeklyCalls": defaults.string(forKey: "totalCalls") , "ErrorRate": "errorRate_example" ,  "PostCode": defaults.string(forKey: "postcode")]
-        
+        //order of json does not matter, All String Data
+        //double quotes for strings don't usually show up, but it is there.
+        let Dictionary : [String: String] = ["supportCode": defaults.string(forKey: "reference")! , "wellBeingScore": defaults.string(forKey: "score")! , "weeklySteps": defaults.string(forKey: "oneWeekSteps")! , "weeklyCalls": defaults.string(forKey: "totalCalls")! , "errorRate": "errorRate_example" ,  "postCode": defaults.string(forKey: "postcode")! , "date" : "01012020"]
         
         
         let JSON = self.foundationToJSON(object: Dictionary)
         let Foundation = self.JSONToFoundation(object: JSON)
         print(Foundation)
+        debugPrint(Foundation)
+        
         
         Alamofire.request("http://", method: .post, parameters: Dictionary as Parameters, encoding: JSONEncoding.default, headers: [:])
         

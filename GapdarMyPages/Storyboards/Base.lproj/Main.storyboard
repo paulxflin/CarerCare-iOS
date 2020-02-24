@@ -398,6 +398,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="noThanksPressed:" destination="lF4-Pr-ocM" eventType="touchUpInside" id="uLc-vW-D33"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-dp-j4F" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                         <rect key="frame" x="289.5" y="0.0" width="53.5" height="36"/>
@@ -586,6 +589,9 @@
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="noThanksPressed:" destination="1dO-2B-eGa" eventType="touchUpInside" id="WfA-zg-g0d"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-dd-FE8" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="291" y="0.0" width="52" height="36"/>

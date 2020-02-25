@@ -159,6 +159,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2E52CB240558E40005B3DB /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				7B3051D323E2E04400B337E0 /* UIDesignFormat.swift */,
+				7B0F471A2404800E008C7AA2 /* TextFontScreen.swift */,
+				7BF4FC4823E71AB5007486E2 /* RoundButton.swift */,
+				7B780AEE23EC7FA000C82D52 /* rotateLabel.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
 		7BC544C5239BF692001B5EF4 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +195,7 @@
 		7BC544D0239BF692001B5EF4 /* GapdarMyPages */ = {
 			isa = PBXGroup;
 			children = (
+				7B2E52CB240558E40005B3DB /* IBDesignables */,
 				9A830E2C240076A9006A0261 /* web.png */,
 				7BFB061023DE4E10005BCE2C /* Storyboards */,
 				ACFE509223CBCA0D004B67D0 /* GapdarMyPages.entitlements */,
@@ -212,11 +224,7 @@
 				AC45E8A723E2272900A1EF6F /* PermissionsViewController.swift */,
 				ACFFD92F23A57A60009AD624 /* PickerViewController.swift */,
 				7BC544DA239BF695001B5EF4 /* LaunchScreen.storyboard */,
-				7B780AEE23EC7FA000C82D52 /* rotateLabel.swift */,
-				7BF4FC4823E71AB5007486E2 /* RoundButton.swift */,
-				7B3051D323E2E04400B337E0 /* UIDesignFormat.swift */,
 				7BFDE29823E9E6B7009437E5 /* WellBeingDiary.swift */,
-				7B0F471A2404800E008C7AA2 /* TextFontScreen.swift */,
 			);
 			path = GapdarMyPages;
 			sourceTree = "<group>";

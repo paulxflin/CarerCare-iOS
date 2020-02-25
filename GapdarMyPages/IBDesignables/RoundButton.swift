@@ -31,12 +31,30 @@ class RoundButton: UIButton{
     
     @IBInspectable var circleButton: Bool = false{
         didSet{
-            if (circleButton) == true{
-                let height = self.frame.height
             
+            if (circleButton == true){
+            let height = self.frame.height
+            let width = self.frame.width
+                
+            if (height != width){
                 self.frame.size = CGSize(width: height, height: height)
                 self.layer.cornerRadius = height/2
+                self.clipsToBounds = true
             }
+            
+            
+            let height2 = self.frame.height
+            let width2 = self.frame.width
+                
+            if (width2 != height2){
+                self.frame.size = CGSize(width: width2, height: width2)
+                    
+                self.layer.cornerRadius = width2/2
+                self.clipsToBounds = true
+            }
+            }
+                
+            
         }
     }
     

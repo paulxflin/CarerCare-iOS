@@ -391,6 +391,9 @@
                                                         <real key="value" value="0.029499999999999998"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="addMoreContacts:" destination="lF4-Pr-ocM" eventType="touchUpInside" id="PTy-6k-8D9"/>
@@ -545,6 +548,9 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="textSize">
                                                         <real key="value" value="0.029499999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -718,81 +724,156 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Up Well-being Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-XT-9C2">
-                                <rect key="frame" x="20" y="20" width="279" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Kd-np3">
-                                <rect key="frame" x="20" y="281" width="284" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DYO-1T-lty">
+                                <rect key="frame" x="16" y="20" width="288" height="473.5"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
-                                        <rect key="frame" x="261" y="127" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
-                                        </connections>
-                                    </switch>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF">
-                                        <rect key="frame" x="24" y="103" width="229" height="126"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Click the toggle to consent to the creation of a map that enables you and other app users to understand what support activities help people in your area. By consenting you will not be sharing personally identifiable data. All data used to create the map will be anonymised to protect your privacy.</string>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW">
-                                        <rect key="frame" x="24" y="8" width="290" height="33.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Up Well-being Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-XT-9C2" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.0395"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-S4-URt">
+                                        <rect key="frame" x="0.0" y="30.5" width="288" height="222.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="222.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-yK-Kcu">
+                                                        <rect key="frame" x="0.0" y="8" width="288" height="207.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-pU-BiJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="207.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-5p-Ive" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                        <rect key="frame" x="74" y="0.0" width="140.5" height="140.5"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140.5" id="bBv-H1-Q9u"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140.5" id="z24-ef-koh"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                                                        <state key="normal" title="Start tracking">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                                <real key="value" value="0.044499999999999998"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.5" y="140.5" width="287.5" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                                <real key="value" value="0.029499999999999998"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="205" id="uF6-fp-5qJ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MSr-yK-Kcu" firstAttribute="leading" secondItem="6Q1-2U-eS0" secondAttribute="leading" id="5Ap-he-ASr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MSr-yK-Kcu" secondAttribute="bottom" constant="7" id="9Rd-Zs-sha"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MSr-yK-Kcu" secondAttribute="trailing" id="KLd-1p-foF"/>
+                                                    <constraint firstItem="MSr-yK-Kcu" firstAttribute="top" secondItem="6Q1-2U-eS0" secondAttribute="top" constant="8" id="rqH-OG-zaX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J7l-4x-mNR">
+                                        <rect key="frame" x="0.0" y="261" width="288" height="212.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Kd-np3">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="212.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CFX-nl-kjg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="209"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellbeing Score sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-cB-amW" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                        <real key="value" value="0.035499999999999997"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nNg-hv-rKQ">
+                                                                <rect key="frame" x="0.0" y="20.5" width="288" height="157.5"/>
+                                                                <subviews>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-mT-xQF" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="157.5"/>
+                                                                        <string key="text">Click the toggle to consent to the creation of a map that enables you and other app users to understand what support activities help people in your area. By consenting you will not be sharing personally identifiable data. All data used to create the map will be anonymised to protect your privacy.</string>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                                <real key="value" value="0.022499999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Ltr-ET-AnC">
+                                                                <rect key="frame" x="0.0" y="178" width="288" height="31"/>
+                                                                <subviews>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-2O-MPg">
+                                                                        <rect key="frame" x="239" y="0.0" width="51" height="31"/>
+                                                                        <connections>
+                                                                            <action selector="sharingSwitchPressed:" destination="y8G-TB-AAh" eventType="valueChanged" id="4Vs-0E-VAw"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="CFX-nl-kjg" secondAttribute="bottom" constant="3.5" id="D9o-If-FN9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CFX-nl-kjg" secondAttribute="trailing" id="h0f-Il-JqS"/>
+                                                    <constraint firstItem="CFX-nl-kjg" firstAttribute="top" secondItem="JOf-Kd-np3" secondAttribute="top" id="htP-mv-rRp"/>
+                                                    <constraint firstItem="CFX-nl-kjg" firstAttribute="leading" secondItem="JOf-Kd-np3" secondAttribute="leading" id="iCI-CH-MB7"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="177" id="X3p-LM-2A8"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q1-2U-eS0">
-                                <rect key="frame" x="20" y="55" width="284" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="When you click the above button, the App will enable you to keep a weekly record and share your wellbeing activities" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nzj-pH-QV9" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="160" width="275" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
-                                                <real key="value" value="0.029499999999999998"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-5p-Ive" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="72" y="9" width="129" height="122"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                        <state key="normal" title="Start tracking">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
-                                                <real key="value" value="0.044499999999999998"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="trailing" secondItem="DYO-1T-lty" secondAttribute="trailing" constant="16" id="DQc-0R-N0h"/>
+                            <constraint firstItem="DYO-1T-lty" firstAttribute="top" secondItem="D7p-hT-Xd7" secondAttribute="top" id="UMv-ec-bdv"/>
+                            <constraint firstItem="DYO-1T-lty" firstAttribute="leading" secondItem="D7p-hT-Xd7" secondAttribute="leading" constant="16" id="d6S-BU-0E2"/>
+                            <constraint firstItem="D7p-hT-Xd7" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="DYO-1T-lty" secondAttribute="bottom" constant="22" id="ema-kA-R55"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D7p-hT-Xd7"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">

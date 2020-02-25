@@ -50,7 +50,7 @@
                                                                 </constraints>
                                                                 <state key="normal" image="icons8-checkmark-80"/>
                                                                 <connections>
-                                                                    <segue destination="GUT-ep-62A" kind="show" identifier="tickToMessageSender" id="ytj-Cx-tTp"/>
+                                                                    <segue destination="WoI-fW-rdI" kind="show" id="XPO-VN-Chh"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-3t-exz">
@@ -114,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="JRE-am-72U">
-                                <rect key="frame" x="18" y="61" width="339" height="494"/>
+                                <rect key="frame" x="18" y="17" width="339" height="494"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-Wf-JbP">
                                         <rect key="frame" x="0.0" y="0.0" width="339" height="25.5"/>
@@ -550,7 +550,7 @@
             <objects>
                 <viewController storyboardIdentifier="asm" id="MqF-3B-ZGS" customClass="ActivitySupportMessage" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccf-bB-chb" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-pm-bJ0">
@@ -648,11 +648,11 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-dE-sth">
-                                <rect key="frame" x="0.0" y="392" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="421" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOm-2z-pqJ">
-                                <rect key="frame" x="0.0" y="392" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="421" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                         </subviews>
@@ -696,16 +696,16 @@
             <objects>
                 <viewController id="Gt4-D8-viz" customClass="PickerViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTD-Mk-sCI" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Bv-7e-cTm">
-                                <rect key="frame" x="40" y="94" width="295" height="34"/>
+                                <rect key="frame" x="40" y="50" width="295" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybn-TU-shO">
-                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="215.5" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                         </subviews>
@@ -744,11 +744,11 @@
             <objects>
                 <viewController id="Hod-BO-zPo" customClass="ContactHistory" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nF3-6f-vd1" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-0w-MIK">
-                                <rect key="frame" x="16" y="56" width="343" height="508"/>
+                                <rect key="frame" x="16" y="12" width="343" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Network Contact History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0G-hV-YoO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
@@ -802,6 +802,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="icons8-composing-mail-50" id="BMt-qL-STw"/>
+                    <navigationItem key="navigationItem" id="D6k-VR-bJ9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="historyScroller" destination="iCO-77-AaW" id="nNR-fF-qUg"/>
@@ -839,4 +840,7 @@
         <image name="icons8-messaging-50" width="50" height="50"/>
         <image name="icons8-phone-50" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XPO-VN-Chh"/>
+    </inferredMetricsTieBreakers>
 </document>

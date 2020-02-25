@@ -56,7 +56,7 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
     
     @IBAction func sharePressed(_ sender: UIButton) {
         let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
-        let composeVC = messagesSB.instantiateViewController(withIdentifier: "compose")
+        let composeVC = messagesSB.instantiateViewController(withIdentifier: "nudge")
         let appDelegate = UIApplication.shared.delegate
         appDelegate?.window??.rootViewController = composeVC
         appDelegate?.window??.makeKeyAndVisible()

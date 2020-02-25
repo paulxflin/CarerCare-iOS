@@ -107,9 +107,9 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         
         // Beware nil unwrapping during compose breaks app
         var msg : String = ""
-        msg += "Name: " + firstName! + "\n"
-        msg += "Activity: " + activity! + "\n"
-        msg += "Interested in Joining A Group: " + choice!
+        msg += "Name: " + (firstName ?? "") + "\n"
+        msg += "Activity: " + (activity ?? "") + "\n"
+        msg += "Interested in Joining A Group: " + (choice ?? "Yes")
         
         if MFMessageComposeViewController.canSendText()
         {

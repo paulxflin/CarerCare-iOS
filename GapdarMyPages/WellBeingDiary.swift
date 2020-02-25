@@ -53,4 +53,13 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
         print("it is being clicked")
         self.performSegue(withIdentifier: "stepsCall", sender: self)
     }
+    
+    @IBAction func sharePressed(_ sender: UIButton) {
+        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+        let composeVC = messagesSB.instantiateViewController(withIdentifier: "nudge")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = composeVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
 }

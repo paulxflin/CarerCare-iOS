@@ -34,6 +34,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZR-j8-3d2">
                                                 <rect key="frame" x="291.5" y="0.0" width="53.5" height="27"/>
                                                 <state key="normal" image="icons8-share-24"/>
+                                                <connections>
+                                                    <action selector="sharePressed:" destination="4ik-nN-3j6" eventType="touchUpInside" id="6zg-gh-tMS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

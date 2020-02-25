@@ -127,4 +127,13 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         return true
     }
     
+    @IBAction func noThanksPressed(_ sender: UIButton) {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = initialVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
+    
 }

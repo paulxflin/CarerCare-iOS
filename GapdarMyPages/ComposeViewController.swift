@@ -46,6 +46,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var msg = ""
     
     var activityRow = -1
+    var nameRow = -1
     
     @IBOutlet weak var msgView: UIView!
     
@@ -101,6 +102,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         activityOptions = defaults.stringArray(forKey: "activityArray") ?? ["Coffee at the Hub", "Shop", "Walk"]
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         
+        if defaults.array(forKey: "networkMessagesArray") == nil {
+            let networkMessagesArray = [Int](repeating: 0, count: nameOptions.count)
+            defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
+            print(networkMessagesArray)
+        }
+        
     }
     
     // MARK: Actions
@@ -149,6 +156,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if (pickerView == namePV) {
             name = nameOptions[row]
             nameTF.text = name
+            nameRow = row
             namePV.isHidden = true
         } else if (pickerView == statusPV) {
             status = statusOptions[row]
@@ -189,12 +197,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // Beware nil unwrapping during compose breaks app
     @IBAction func composePressed(_ sender: Any) {
         msg = ""
-        msg += "Hello " + name! + "\n"
-        msg += "Just to let you know I am " + status! + "\n"
-        msg += "How about on " + date! + "\n"
-        msg += "at " + time! + "\n"
-        msg += "we meet for a " + activity! + "\n"
-        msg += "All the best, " + firstName! + "."
+        msg += "Hello " + (name ?? "") + "\n"
+        msg += "Just to let you know I am " + (status ?? "") + "\n"
+        msg += "How about on " + (date ?? "") + "\n"
+        msg += "at " + (time ?? "") + "\n"
+        msg += "we meet for a " + (activity ?? "") + "\n"
+        msg += "All the best, " + (firstName ?? "") + "."
         msgTextView.text = msg
         
     }
@@ -227,13 +235,39 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
+    
     //This part is reached after the apple message view is closed.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
         
         print("activityRow: " + String(activityRow))
-        updateActivityCount(activityRow)
+        if activityRow != -1 {
+            updateActivityCount(activityRow)
+        }
+        
+        print("nameRow: " + String(nameRow))
+        if nameRow != -1 {
+            updateNetworkMessagesCount(nameRow)
+        }
+        
         print("I have reached the didFinish method for message")
+    }
+    
+    func updateNetworkMessagesCount(_ row: Int)
+    {
+        var networkMessagesArray : [Int] = defaults.array(forKey: "networkMessagesArray") as! [Int]? ?? [0, 0, 0]
+        networkMessagesArray[row] += 1
+        defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
+        print("networkMessagesArray")
+        print(defaults.array(forKey: "networkMessagesArray") as! [Int])
     }
     
     func updateActivityCount(_ row: Int) {

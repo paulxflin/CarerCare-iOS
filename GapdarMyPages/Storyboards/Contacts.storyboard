@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YsM-mW-eFQ">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YsM-mW-eFQ">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,8 +22,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-sZ-5Zn">
-                                <rect key="frame" x="16" y="103" width="70" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-sZ-5Zn">
+                                <rect key="frame" x="16" y="103" width="69.333333333333329" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,8 +36,8 @@
                                     <constraint firstAttribute="height" constant="250" id="dch-J7-bsJ"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guz-Su-Y8n" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                <rect key="frame" x="16" y="363" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guz-Su-Y8n" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                <rect key="frame" x="16" y="393.33333333333331" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="N90-c3-QTe"/>
@@ -57,11 +56,11 @@
                                     <action selector="getNumber:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="ake-Et-nKa"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-PQ-S9J">
-                                <rect key="frame" x="16" y="508.33333333333331" width="355" height="210.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-PQ-S9J">
+                                <rect key="frame" x="16" y="510.33333333333331" width="355" height="208.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="b60-VI-j9i">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="130.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="128.33333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Networks that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfy-dQ-9DJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="251.33333333333334" height="20.333333333333332"/>
@@ -70,37 +69,36 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vsH-LO-vhY">
-                                                <rect key="frame" x="0.0" y="27.333333333333314" width="224" height="48"/>
+                                                <rect key="frame" x="0.0" y="27.333333333333314" width="224" height="46"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-tg-2hm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="48"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="46"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="51" id="CIz-Oo-yuh"/>
-                                                            <constraint firstAttribute="height" constant="48" id="S5c-yQ-55x"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink01.png"/>
+                                                        <state key="normal" image="weblink01"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed01:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="7Ha-6D-Wp2"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRV-B8-R9l">
-                                                        <rect key="frame" x="63" y="0.0" width="103" height="48"/>
+                                                        <rect key="frame" x="63" y="0.0" width="103" height="46"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="103" id="faW-ZA-7W7"/>
                                                             <constraint firstAttribute="height" constant="46" id="iBu-8N-b8e"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink02.png"/>
+                                                        <state key="normal" image="weblink02"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed02:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="PKr-Kh-bEU"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzU-ME-YiO">
-                                                        <rect key="frame" x="178" y="0.0" width="46" height="48"/>
+                                                        <rect key="frame" x="178" y="0.0" width="46" height="46"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="46" id="ZYA-zg-r4w"/>
                                                             <constraint firstAttribute="width" constant="46" id="zti-As-zGw"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink03.png"/>
+                                                        <state key="normal" image="weblink03"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed03:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="0ob-PZ-zKn"/>
                                                         </connections>
@@ -108,7 +106,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="31S-Na-xcs">
-                                                <rect key="frame" x="0.0" y="82.333333333333314" width="256" height="48"/>
+                                                <rect key="frame" x="0.0" y="80.333333333333314" width="256" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G5-z4-O9i">
                                                         <rect key="frame" x="0.0" y="0.0" width="149" height="48"/>
@@ -116,7 +114,7 @@
                                                             <constraint firstAttribute="width" constant="149" id="K67-MU-JS4"/>
                                                             <constraint firstAttribute="height" constant="48" id="xsa-Te-Sh7"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink04.png"/>
+                                                        <state key="normal" image="weblink04"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed04:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="ZTq-K7-k5G"/>
                                                         </connections>
@@ -125,9 +123,8 @@
                                                         <rect key="frame" x="157" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="58p-bu-TqV"/>
-                                                            <constraint firstAttribute="height" constant="48" id="IGp-hL-F73"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink05.png"/>
+                                                        <state key="normal" image="weblink05"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed05:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="tTH-1I-ZPb"/>
                                                         </connections>
@@ -136,9 +133,8 @@
                                                         <rect key="frame" x="213" y="0.0" width="43" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="43" id="4ho-DF-le4"/>
-                                                            <constraint firstAttribute="height" constant="49" id="P72-zk-ufP"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink06.png"/>
+                                                        <state key="normal" image="weblink06"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed06:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="i0l-oM-3nb"/>
                                                         </connections>
@@ -148,7 +144,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-TL-kAf">
-                                        <rect key="frame" x="0.0" y="133.33333333333331" width="355" height="77.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="131.33333333333331" width="355" height="77.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps &amp; Digital Services that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jml-th-Hzz">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="20.333333333333332"/>
@@ -165,7 +161,7 @@
                                                             <constraint firstAttribute="width" constant="60" id="Wx0-Hs-Ql4"/>
                                                             <constraint firstAttribute="height" constant="49" id="arX-e7-fuc"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink07.png"/>
+                                                        <state key="normal" image="weblink07"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed07:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="RyK-MQ-9nW"/>
                                                         </connections>
@@ -176,7 +172,7 @@
                                                             <constraint firstAttribute="height" constant="49" id="9fV-5f-Gi6"/>
                                                             <constraint firstAttribute="width" constant="51" id="ZIT-vM-Iex"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink08.png"/>
+                                                        <state key="normal" image="weblink08"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed08:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="Thw-UY-kfc"/>
                                                         </connections>
@@ -187,7 +183,7 @@
                                                             <constraint firstAttribute="width" constant="224" id="eDh-zJ-GEE"/>
                                                             <constraint firstAttribute="height" constant="49" id="xje-kA-8TN"/>
                                                         </constraints>
-                                                        <state key="normal" image="weblink09.png"/>
+                                                        <state key="normal" image="weblink09"/>
                                                         <connections>
                                                             <action selector="weblinkButPressed09:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="6Xi-Ma-ShP"/>
                                                         </connections>
@@ -216,10 +212,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ic8-PQ-S9J" firstAttribute="leading" secondItem="guz-Su-Y8n" secondAttribute="leading" id="4hr-VU-2Pq"/>
                             <constraint firstItem="GKf-Z5-0nd" firstAttribute="trailing" secondItem="khu-NZ-PMp" secondAttribute="trailing" constant="16" id="67C-a6-dNd"/>
                             <constraint firstItem="khu-NZ-PMp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="BdL-iQ-BcK"/>
                             <constraint firstItem="guz-Su-Y8n" firstAttribute="leading" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="I1X-0w-jxe"/>
                             <constraint firstItem="A1J-Df-tCr" firstAttribute="leading" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="JJT-MD-4Mt"/>
+                            <constraint firstItem="Ic8-PQ-S9J" firstAttribute="leading" secondItem="8hn-sZ-5Zn" secondAttribute="leading" id="KvV-8S-PO8"/>
                             <constraint firstItem="8hn-sZ-5Zn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="O4z-xV-Ove"/>
                             <constraint firstItem="8hn-sZ-5Zn" firstAttribute="top" secondItem="A1J-Df-tCr" secondAttribute="bottom" constant="10" id="QfQ-RY-VxS"/>
                             <constraint firstItem="GKf-Z5-0nd" firstAttribute="trailing" secondItem="A1J-Df-tCr" secondAttribute="trailing" constant="16" id="aEF-vP-ziJ"/>
@@ -260,14 +258,14 @@
     </scenes>
     <resources>
         <image name="icons8-contacts-40" width="40" height="40"/>
-        <image name="weblink01.png" width="212" height="161"/>
-        <image name="weblink02.png" width="315" height="157"/>
-        <image name="weblink03.png" width="163" height="156"/>
-        <image name="weblink04.png" width="487" height="153"/>
-        <image name="weblink05.png" width="171" height="159"/>
-        <image name="weblink06.png" width="130" height="164"/>
-        <image name="weblink07.png" width="185" height="156"/>
-        <image name="weblink08.png" width="157" height="159"/>
-        <image name="weblink09.png" width="551" height="158"/>
+        <image name="weblink01" width="212" height="161"/>
+        <image name="weblink02" width="315" height="157"/>
+        <image name="weblink03" width="163" height="156"/>
+        <image name="weblink04" width="487" height="153"/>
+        <image name="weblink05" width="171" height="159"/>
+        <image name="weblink06" width="130" height="164"/>
+        <image name="weblink07" width="185" height="156"/>
+        <image name="weblink08" width="157" height="159"/>
+        <image name="weblink09" width="551" height="158"/>
     </resources>
 </document>

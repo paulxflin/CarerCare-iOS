@@ -56,7 +56,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     @IBAction func weblinkButPressed02(_ sender: Any) {
-        guard let url = URL(string: "https://carers.org") else {return}
+        guard let url = URL(string: "https://www.ctsew.org.uk/care-services") else {return}
         UIApplication.shared.open(url)
     }
     
@@ -66,12 +66,12 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     @IBAction func weblinkButPressed04(_ sender: Any) {
-        guard let url = URL(string: "https://www.wales.nhs.uk/ourservices/directory/LocalHealthBoards/866") else {return}
+        guard let url = URL(string: "https://www.wales.nhs.uk/sitesplus/866/page/81903") else {return}
         UIApplication.shared.open(url)
     }
     
     @IBAction func weblinkButPressed05(_ sender: Any) {
-        guard let url = URL(string: "https://www.ageconnectswales.org.uk") else {return}
+        guard let url = URL(string: "https://www.ageconnectstorfaen.org.uk/services") else {return}
         UIApplication.shared.open(url)
     }
     
@@ -82,7 +82,16 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @IBAction func weblinkButPressed07(_ sender: Any) {
         guard let url = URL(string: "whatsapp://") else {return}
-        UIApplication.shared.open(url)
+        guard let urlAppStore = URL(string: "https://itunes.apple.com/app/id310633997") else {return}
+        if UIApplication.shared.canOpenURL(url)
+        {
+            UIApplication.shared.open(url)
+        }
+        else
+        {
+            UIApplication.shared.open(urlAppStore)
+        }
+        
     }
     
     @IBAction func weblinkButPressed08(_ sender: Any) {
@@ -92,7 +101,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @IBAction func weblinkButPressed09(_ sender: Any) {
         guard let url = URL(string: "headspace://") else {return}
-        UIApplication.shared.open(url)
+        guard let urlAppStore = URL(string: "https://itunes.apple.com/app/id493145008") else {return}
+        if UIApplication.shared.canOpenURL(url)
+        {
+            UIApplication.shared.open(url)
+        }
+        else
+        {
+            UIApplication.shared.open(urlAppStore)
+        }
     }
     
     

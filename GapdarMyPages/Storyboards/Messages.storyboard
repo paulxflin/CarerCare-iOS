@@ -121,13 +121,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="big-3u-Hrx">
-                                <rect key="frame" x="15.5" y="37" width="295.5" height="438"/>
+                                <rect key="frame" x="15" y="37" width="290" height="438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-Wf-JbP">
-                                        <rect key="frame" x="0.0" y="0.0" width="295.5" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="25.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE4-rW-pTl" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -143,7 +143,7 @@
                                         </constraints>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Put your message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-CO-1De">
-                                        <rect key="frame" x="0.0" y="30.5" width="295.5" height="143"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="290" height="143"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="339" id="M3Y-KU-qDH"/>
@@ -153,10 +153,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="sSD-oF-bcS">
-                                        <rect key="frame" x="0.0" y="178.5" width="295.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="290" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awn-xz-jil" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Cancel"/>
@@ -170,7 +170,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWE-Tu-Sgh" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="157.5" y="0.0" width="138" height="25"/>
+                                                <rect key="frame" x="152" y="0.0" width="138" height="25"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="138" id="8fA-1L-pC1"/>
@@ -192,10 +192,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jO-58-F6r">
-                                        <rect key="frame" x="0.0" y="208.5" width="295.5" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="208.5" width="290" height="21.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Selected Person:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgy-gf-hpH" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Selected Person:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgy-gf-hpH" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="246.5" height="21.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="295.5" id="gKm-kb-ev8"/>
                                                 </constraints>
@@ -208,8 +208,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-2T-0Ar">
-                                                <rect key="frame" x="295.5" y="0.0" width="0.0" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-2T-0Ar">
+                                                <rect key="frame" x="246.5" y="0.0" width="43.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -217,10 +217,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="t7w-zi-9yA">
-                                        <rect key="frame" x="0.0" y="235" width="295.5" height="29"/>
+                                        <rect key="frame" x="0.0" y="235" width="290" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-9L-6tP" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148.5" height="29"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Choose Person"/>
@@ -237,7 +237,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-yG-J24" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="198.5" y="0.0" width="97" height="29"/>
+                                                <rect key="frame" x="195.5" y="0.0" width="94.5" height="29"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="Update"/>
@@ -256,10 +256,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5mM-vv-llE">
-                                        <rect key="frame" x="0.0" y="269" width="295.5" height="169"/>
+                                        <rect key="frame" x="0.0" y="269" width="290" height="169"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PC-g8-Ebd" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="58" y="0.0" width="179" height="41"/>
+                                                <rect key="frame" x="55.5" y="0.0" width="179" height="41"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="  Pre-composed Message  "/>
@@ -276,7 +276,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-ld-VPQ" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="78.5" y="43" width="138" height="40.5"/>
+                                                <rect key="frame" x="76" y="43" width="138" height="40.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="  Start Notifications  "/>
@@ -293,7 +293,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-cR-iPt" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="61.5" y="85.5" width="172" height="41"/>
+                                                <rect key="frame" x="59" y="85.5" width="172" height="41"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Activity Support Message"/>
                                                 <userDefinedRuntimeAttributes>
@@ -309,7 +309,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-we-0nd" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="93.5" y="128.5" width="108" height="40.5"/>
+                                                <rect key="frame" x="91" y="128.5" width="108" height="40.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Network History"/>
                                                 <userDefinedRuntimeAttributes>
@@ -389,7 +389,7 @@
                                 <rect key="frame" x="20" y="74" width="280" height="386"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9O-sr-uFV" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -400,7 +400,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-Rr-A8d">
-                                        <rect key="frame" x="0.0" y="23" width="280" height="189"/>
+                                        <rect key="frame" x="0.0" y="33" width="280" height="189"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-VD-ZHY">
                                                 <rect key="frame" x="11" y="5" width="258" height="182"/>
@@ -409,7 +409,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="258" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-pN-kru" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -420,7 +420,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBn-BA-207">
-                                                                <rect key="frame" x="40.5" y="0.0" width="217.5" height="30"/>
+                                                                <rect key="frame" x="51" y="0.0" width="207" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -430,7 +430,7 @@
                                                         <rect key="frame" x="0.0" y="31" width="258" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just to let you know I am " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-3U-Eeo" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="193.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -441,7 +441,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hu-eh-dHL">
-                                                                <rect key="frame" x="149" y="0.0" width="109" height="30"/>
+                                                                <rect key="frame" x="201.5" y="0.0" width="56.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -451,7 +451,7 @@
                                                         <rect key="frame" x="0.0" y="62" width="258" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How about on " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPA-qJ-Ye5" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="111" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -462,7 +462,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDs-KN-nI8">
-                                                                <rect key="frame" x="88.5" y="0.0" width="169.5" height="30"/>
+                                                                <rect key="frame" x="119" y="0.0" width="139" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -472,7 +472,7 @@
                                                         <rect key="frame" x="0.0" y="93" width="258" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnE-ki-QAu" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -483,7 +483,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN7-T7-hq9">
-                                                                <rect key="frame" x="66" y="0.0" width="192" height="30"/>
+                                                                <rect key="frame" x="70" y="0.0" width="188" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -493,7 +493,7 @@
                                                         <rect key="frame" x="0.0" y="124" width="258" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we meet for a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZh-5E-onM" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -504,7 +504,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hlb-rT-ake">
-                                                                <rect key="frame" x="83.5" y="0.0" width="174.5" height="30"/>
+                                                                <rect key="frame" x="112" y="0.0" width="146" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -541,10 +541,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Dj8-sX-Aiy">
-                                        <rect key="frame" x="0.0" y="217" width="280" height="29"/>
+                                        <rect key="frame" x="0.0" y="227" width="280" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znw-6i-hcb" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="58" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Compose"/>
@@ -563,7 +563,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Message:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-aN-3kM" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="251" width="280" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="268" width="280" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -574,10 +574,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-Tj-JIK">
-                                        <rect key="frame" x="0.0" y="286.5" width="280" height="99.5"/>
+                                        <rect key="frame" x="0.0" y="323" width="280" height="63"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-Nr-Gje" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="89" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Send Message"/>
@@ -594,7 +594,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWb-Ox-uAZ" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="61" height="29"/>
+                                                <rect key="frame" x="216" y="0.0" width="64" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Cancel"/>

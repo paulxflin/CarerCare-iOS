@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YsM-mW-eFQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YsM-mW-eFQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khu-NZ-PMp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khu-NZ-PMp">
                                 <rect key="frame" x="16" y="109.5" width="343" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -119,6 +119,148 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS3-cS-EF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-682.39999999999998" y="-30.134932533733135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nmd-Jr-y59">
+            <objects>
+                <viewController id="vBs-q9-1Iw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6X4-kr-lOV" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-vd-Uv5">
+                                <rect key="frame" x="15" y="30" width="345" height="339"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-Nx-ubg">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Support Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-9W-EQ0" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.0315"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-RY-Mz0">
+                                        <rect key="frame" x="0.0" y="34.5" width="345" height="197"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODk-XO-wXm">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="197"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-ot-baF">
+                                                        <rect key="frame" x="8" y="8" width="329" height="138.5"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I am interested in this activity:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-Mg-gSB" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="329" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                        <real key="value" value="0.024500000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-TT-l38">
+                                                                <rect key="frame" x="0.0" y="44" width="329" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I would like to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-gQ-tsA" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="83" width="329" height="55.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                        <real key="value" value="0.024500000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="h9d-ot-baF" firstAttribute="top" secondItem="ODk-XO-wXm" secondAttribute="top" constant="8" id="Kfi-t2-sFB"/>
+                                                    <constraint firstItem="h9d-ot-baF" firstAttribute="leading" secondItem="ODk-XO-wXm" secondAttribute="leading" constant="8" id="bwN-EU-h8i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="h9d-ot-baF" secondAttribute="trailing" constant="8" id="o1R-U8-cRS"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Click send if you want carer support workers to help you do this or click cancel if you do not" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ez4-cV-b11" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="241.5" width="345" height="55.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.024500000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="211" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vw-Ydx">
+                                        <rect key="frame" x="0.0" y="307" width="345" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-Xe-kc8" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtF-b8-czy" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="266" y="0.0" width="79" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title=" Send "/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OhZ-vd-Uv5" firstAttribute="leading" secondItem="qTX-Zo-7eD" secondAttribute="leading" constant="15" id="21u-Iz-fCC"/>
+                            <constraint firstItem="qTX-Zo-7eD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OhZ-vd-Uv5" secondAttribute="bottom" constant="133.5" id="8vo-Ob-J8R"/>
+                            <constraint firstItem="qTX-Zo-7eD" firstAttribute="trailing" secondItem="OhZ-vd-Uv5" secondAttribute="trailing" constant="15" id="B8p-CD-1Aq"/>
+                            <constraint firstItem="OhZ-vd-Uv5" firstAttribute="top" secondItem="qTX-Zo-7eD" secondAttribute="top" constant="10" id="Vdv-ZS-k6Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTX-Zo-7eD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.15686274510000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PO-fU-Hqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-30.134932533733135"/>
         </scene>
     </scenes>
     <resources>

@@ -17,159 +17,205 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="1Rt-3X-0KS">
-                                <rect key="frame" x="16" y="43" width="343" height="282.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4eT-ha-lMO">
+                                <rect key="frame" x="15" y="30" width="290" height="398.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarerCare: Weekly Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-cf-9eZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarerCare: Weekly Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-cf-9eZ" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="18"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.0315"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your past weeks wellbeing score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-St-mn5">
-                                        <rect key="frame" x="0.0" y="45" width="343" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your past weeks wellbeing score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-St-mn5" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="23" width="290" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.029499999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXv-Xn-glQ">
-                                        <rect key="frame" x="0.0" y="90.5" width="343" height="192"/>
+                                        <rect key="frame" x="0.0" y="45" width="290" height="153"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xo-Yq-CQK">
-                                                <rect key="frame" x="85" y="8" width="173" height="173"/>
+                                                <rect key="frame" x="75" y="6.5" width="140" height="140"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="173" id="R2l-De-ntN"/>
-                                                    <constraint firstAttribute="height" constant="173" id="dXe-9M-F18"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="CYt-G3-yAS"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="OOi-0M-E4K"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-hd-aQh">
-                                                <rect key="frame" x="85" y="8" width="173" height="173"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="173" id="oRQ-6f-dMW"/>
-                                                    <constraint firstAttribute="height" constant="173" id="uKq-UU-i9j"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HL-oT-jHp">
-                                                <rect key="frame" x="262" y="81" width="73" height="30"/>
+                                                <rect key="frame" x="204" y="46" width="73" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="sendJSON"/>
                                                 <connections>
                                                     <action selector="btSendJSONPressed:" destination="kQv-rz-w9x" eventType="touchUpInside" id="9zx-0D-FoU"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-hd-aQh" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="75" y="6.5" width="140" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Ax9-5p-Ze5"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="UVo-au-X81"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.14999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="7Xo-Yq-CQK" firstAttribute="centerX" secondItem="ZXv-Xn-glQ" secondAttribute="centerX" id="0S3-IF-GhH"/>
-                                            <constraint firstItem="7Xo-Yq-CQK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZXv-Xn-glQ" secondAttribute="leading" constant="85" id="AIO-Ub-7hM"/>
-                                            <constraint firstItem="7Xo-Yq-CQK" firstAttribute="top" secondItem="ZXv-Xn-glQ" secondAttribute="top" constant="8" id="IWV-Af-OBG"/>
-                                            <constraint firstItem="PfD-hd-aQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZXv-Xn-glQ" secondAttribute="leading" constant="85" id="SaA-MN-wfY"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Xo-Yq-CQK" secondAttribute="trailing" constant="85" id="Y4R-6i-erT"/>
-                                            <constraint firstItem="PfD-hd-aQh" firstAttribute="top" secondItem="ZXv-Xn-glQ" secondAttribute="top" constant="8" id="YW5-O3-mQU"/>
-                                            <constraint firstAttribute="width" constant="343" id="ZOL-Ep-HzX"/>
-                                            <constraint firstAttribute="height" constant="192" id="jRm-7R-fCe"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PfD-hd-aQh" secondAttribute="trailing" constant="85" id="oGQ-3H-PQI"/>
-                                            <constraint firstItem="PfD-hd-aQh" firstAttribute="centerX" secondItem="ZXv-Xn-glQ" secondAttribute="centerX" id="vG4-9H-liO"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="Dp2-2L-We5"/>
+                                            <constraint firstItem="7Xo-Yq-CQK" firstAttribute="centerX" secondItem="ZXv-Xn-glQ" secondAttribute="centerX" id="WVl-zO-isn"/>
+                                            <constraint firstItem="PfD-hd-aQh" firstAttribute="centerX" secondItem="ZXv-Xn-glQ" secondAttribute="centerX" id="X25-ct-fga"/>
+                                            <constraint firstItem="PfD-hd-aQh" firstAttribute="centerY" secondItem="ZXv-Xn-glQ" secondAttribute="centerY" id="cak-hJ-8Zk"/>
+                                            <constraint firstItem="7Xo-Yq-CQK" firstAttribute="centerY" secondItem="ZXv-Xn-glQ" secondAttribute="centerY" id="xzx-ce-axe"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Well Being Activity this Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRL-Uk-cJY" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="203" width="290" height="17"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.029499999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Yd-dK0">
+                                        <rect key="frame" x="0.0" y="225" width="290" height="173.5"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-walking-50" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-oh-KI4">
+                                                <rect key="frame" x="-14" y="-10" width="82" height="83"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ9-f1-4pk" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="19" width="50" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-Fq-B7s" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="246" y="18" width="75" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-phone-50" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-rs-9tF">
+                                                <rect key="frame" x="0.0" y="61" width="67" height="66"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38r-kg-xCp" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="246" y="74" width="75" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-messaging-50" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-Ob-3sg">
+                                                <rect key="frame" x="8" y="124" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np3-kt-B48" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="129" width="38" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-y8-0wt" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="155" width="94" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-ea-ios" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="79" width="46" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqy-3h-MVa" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="246" y="140" width="75" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="173.5" id="hsx-Te-Wbv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WcC-9q-aLz">
-                                <rect key="frame" x="16" y="182" width="271.5" height="25.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Well Being Activity this Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRL-Uk-cJY">
-                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="25.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Yd-dK0">
-                                <rect key="frame" x="16" y="200" width="343" height="189"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-walking-50" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-oh-KI4">
-                                        <rect key="frame" x="-14" y="-10" width="82" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ9-f1-4pk">
-                                        <rect key="frame" x="90" y="19" width="50" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-Fq-B7s">
-                                        <rect key="frame" x="259" y="19" width="75" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-phone-50" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-rs-9tF">
-                                        <rect key="frame" x="0.0" y="61" width="67" height="66"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38r-kg-xCp">
-                                        <rect key="frame" x="259" y="79" width="75" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-messaging-50" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-Ob-3sg">
-                                        <rect key="frame" x="8" y="124" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np3-kt-B48">
-                                        <rect key="frame" x="90" y="129" width="38" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-y8-0wt">
-                                        <rect key="frame" x="90" y="155" width="94" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqy-3h-MVa">
-                                        <rect key="frame" x="259" y="141" width="75" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-ea-ios">
-                                        <rect key="frame" x="90" y="79" width="46" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="189" id="0g1-7d-T1J"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="3eU-tu-Fwq"/>
-                                    <constraint firstAttribute="width" constant="343" id="Rmc-bp-uY4"/>
-                                    <constraint firstAttribute="height" constant="189" id="kHV-sI-ekE"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i7g-1J-z5i" firstAttribute="trailing" secondItem="4eT-ha-lMO" secondAttribute="trailing" constant="15" id="0B1-Rt-QYx"/>
+                            <constraint firstItem="4eT-ha-lMO" firstAttribute="top" secondItem="i7g-1J-z5i" secondAttribute="top" constant="10" id="IvP-zh-OBV"/>
+                            <constraint firstItem="4eT-ha-lMO" firstAttribute="leading" secondItem="i7g-1J-z5i" secondAttribute="leading" constant="15" id="jZ5-Uu-E9E"/>
+                            <constraint firstItem="i7g-1J-z5i" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4eT-ha-lMO" secondAttribute="bottom" constant="2" id="sw7-VD-qd8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i7g-1J-z5i"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -193,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcK-YI-ICp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2885.5999999999999" y="-29.23538230884558"/>
+            <point key="canvasLocation" x="-2885.625" y="-30"/>
         </scene>
         <!--Home-->
         <scene sceneID="fyE-88-5f6">
@@ -212,7 +258,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-aq-206">
                                                 <rect key="frame" x="20" y="8" width="335" height="733.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-3y-HOX">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-3y-HOX">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="279"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate well-being score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-Ph-Hi0">
@@ -221,7 +267,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-KU-SFU">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-KU-SFU">
                                                                 <rect key="frame" x="0.0" y="55" width="335" height="224"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-D9-Guf">
@@ -230,7 +276,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="As needed move the Black Button above up or down the scale to rate your well-being then click save below " translatesAutoresizingMaskIntoConstraints="NO" id="RlO-xg-ITj" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As needed move the Black Button above up or down the scale to rate your well-being then click save below " translatesAutoresizingMaskIntoConstraints="NO" id="RlO-xg-ITj" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
                                                                         <rect key="frame" x="29" y="96" width="277" height="120"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -279,8 +325,8 @@
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Mc-Wkp">
-                                                        <rect key="frame" x="0.0" y="297" width="335" height="137"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Mc-Wkp">
+                                                        <rect key="frame" x="0.0" y="297" width="335" height="145.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On the scale:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-ai-JRa" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="114" height="24"/>
@@ -325,10 +371,10 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="So3-x6-zdi">
-                                                        <rect key="frame" x="0.0" y="452" width="335" height="25.5"/>
+                                                        <rect key="frame" x="0.0" y="460.5" width="335" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Well Being Activity this Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U53-1A-prQ" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <nil key="textColor"/>
@@ -374,18 +420,6 @@
                                                                         <rect key="frame" x="3" y="129" width="60" height="60"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-7s-gY1" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                        <rect key="frame" x="75" y="129" width="36" height="24"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
-                                                                                <real key="value" value="0.024500000000000001"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEN-F1-9wA" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                                                         <rect key="frame" x="75" y="156" width="89" height="24"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,32 +439,41 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="amO-fU-Lzj">
-                                                                        <rect key="frame" x="60" y="38" width="250" height="50"/>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="icons8-walking-50" translatesAutoresizingMaskIntoConstraints="NO" id="YV7-Zz-Gc8">
+                                                                        <rect key="frame" x="13" y="8" width="50" height="50"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <subviews>
-                                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icons8-walking-50" translatesAutoresizingMaskIntoConstraints="NO" id="YV7-Zz-Gc8">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                            </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CU-PK-z86" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                                <rect key="frame" x="118" y="0.0" width="50" height="50"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
-                                                                                        <real key="value" value="0.024500000000000001"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-Pf-986">
-                                                                                <rect key="frame" x="236" y="0.0" width="14" height="50"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                    </stackView>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CU-PK-z86" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                        <rect key="frame" x="71" y="23" width="29" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                                <real key="value" value="0.024500000000000001"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-Pf-986">
+                                                                        <rect key="frame" x="254" y="8" width="14" height="50"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-7s-gY1" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                        <rect key="frame" x="71" y="137" width="36" height="19"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                                <real key="value" value="0.024500000000000001"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -516,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ql8-zM-ZRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3949.5999999999999" y="-30.134932533733135"/>
+            <point key="canvasLocation" x="-3949.6875" y="-31.25"/>
         </scene>
     </scenes>
     <resources>

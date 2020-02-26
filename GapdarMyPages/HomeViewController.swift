@@ -51,6 +51,14 @@ class HomeViewController: UIViewController {
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
     }
     
+    override func viewWillLayoutSubviews() {
+        let height = displayedScoreLabel.frame.height
+        displayedScoreLabel.frame.size = CGSize(width: height, height: height)
+        displayedScoreLabel.layer.cornerRadius = height/2
+        backgroundLabel.frame.size = CGSize(width: height, height: height)
+        backgroundLabel.layer.cornerRadius = height/2
+    }
+    
     func foundationToJSON(object:Any) -> Data {
         if !JSONSerialization.isValidJSONObject(object)
         {

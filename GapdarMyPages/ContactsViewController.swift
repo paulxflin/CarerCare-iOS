@@ -23,10 +23,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     @IBOutlet weak var contactSV: UIScrollView!
     
-    @IBOutlet weak var weblink01: UIButton!
     
+    @IBOutlet weak var weblink01: RoundButton!
+    
+
     @IBOutlet weak var weblink02: UIButton!
     
+  
     @IBOutlet weak var weblink03: UIButton!
     
     @IBOutlet weak var weblink04: UIButton!
@@ -215,14 +218,14 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         //label.center = CGPoint(x:44, y:146)
         label.textAlignment = .center
         label.text = "Name: "
-        self.view.addSubview(label)
+        contactSV.addSubview(label)
         
         let namelabel = UITextField(frame: CGRect(x:118, y:yContactsValue, width:272, height:33))
         //namelabel.center = CGPoint(x:118, y:152)
         namelabel.textAlignment = .center
         namelabel.text = familyName
         namelabel.backgroundColor = .white
-        self.view.addSubview(namelabel)
+        contactSV.addSubview(namelabel)
         
         yContactsValue += 40
         
@@ -230,14 +233,14 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         //label.center = CGPoint(x:44, y:146)
         label2.textAlignment = .center
         label2.text = "Contact Number: "
-        self.view.addSubview(label2)
+        contactSV.addSubview(label2)
         
         let numlabel = UITextField(frame: CGRect(x:200, y:yContactsValue, width:150, height:33))
         //namelabel.center = CGPoint(x:118, y:152)
         
         numlabel.text = phoneNumber
         numlabel.backgroundColor = .white
-        self.view.addSubview(numlabel)
+        contactSV.addSubview(numlabel)
         
         yContactsValue += 40
     }

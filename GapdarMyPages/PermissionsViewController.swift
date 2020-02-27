@@ -124,4 +124,11 @@ class PermissionsViewController: UIViewController {
     }
     */
 
+    @IBAction func privacyLinkPressed(_ sender: Any) {
+        
+        guard let url = URL(string: "https://www.torfaen.gov.uk/en/AboutTheCouncil/DataProtectionFreedomofInformation/DataProtection/Privacy-Notice/PrivacyNotice.aspx") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    
 }

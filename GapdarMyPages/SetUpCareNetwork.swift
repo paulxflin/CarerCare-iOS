@@ -129,13 +129,14 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         }
         placeContactOnScreen(name: familyName, phone: phoneNumber)
         if defaults.array(forKey: "networkCallsArray") != nil {
-          callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
-        messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
+            callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+            messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
         }
         
         
         callsArray.append(0)
         messagesArray.append(0)
+        //Two set empty arrays may be redundant
         defaults.set([], forKey: "networkCallsArray")
         defaults.set([], forKey: "networkMessagesArray")
         defaults.set(callsArray, forKey: "networkCallsArray")

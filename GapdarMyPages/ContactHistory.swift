@@ -19,15 +19,27 @@ class ContactHistory:UIViewController{
     var networkCallsArray : [Int] = []
     var networkMessagesArray : [Int] = []
     
+    var callLabelArray : [UILabel]  = []
+    var messageLabelArray : [UILabel]  = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         historyScroller.layer.masksToBounds = true
         historyScroller.layer.cornerRadius = 10.0
         
         getInfo()
+        callLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
+        messageLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
  
         print("0..............hi")
-        placeInformation()
+        placeInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("willAppear reached")
+        getInfo()
+        updateTF()
     }
     
     func getInfo(){
@@ -49,7 +61,19 @@ class ContactHistory:UIViewController{
         
     }
     
-    func placeInformation(){
+    func updateTF() {
+        var i = 0
+        while i < nameArray.count {
+            let callLabel = callLabelArray[i]
+            callLabel.text = String(networkCallsArray[i])
+            
+            let messageLabel = messageLabelArray[i]
+            messageLabel.text = String(networkMessagesArray[i])
+            i += 1
+        }
+    }
+    
+    func placeInfo(){
         var yposition = 60
         
         var i = 0
@@ -67,12 +91,14 @@ class ContactHistory:UIViewController{
             callLabel.textAlignment = .left
             callLabel.text = String(networkCallsArray[i])
             historyScroller.addSubview(callLabel)
+            callLabelArray[i] = callLabel
             
             
             let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
             messageLabel.textAlignment = .left
             messageLabel.text = String(networkMessagesArray[i])
             historyScroller.addSubview(messageLabel)
+            messageLabelArray[i] = messageLabel
             
             yposition += 40
             

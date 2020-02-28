@@ -59,6 +59,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
+        // Note this is already setup during the settings phase
+        callsArray = defaults.array(forKey: "networkCallsArray") as? [Int] ?? []
         print(phoneArray)
         print(nameArray)
         setupContactSV()
@@ -156,6 +158,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         totalCalls += 1
         defaults.set(totalCalls, forKey: "totalCalls")
         print(defaults.integer(forKey: "totalCalls"))
+        
+        callsArray[sender.tag] += 1
+        print("callsArray")
+        print(callsArray)
+        defaults.set(callsArray, forKey: "networkCallsArray")
         
         if let url = URL(string: "tel://\(number)"),
             UIApplication.shared.canOpenURL(url) {

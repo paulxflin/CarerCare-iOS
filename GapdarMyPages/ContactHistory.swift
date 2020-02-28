@@ -51,25 +51,25 @@ class ContactHistory:UIViewController{
     
     func placeInformation(){
         var yposition = 60
-        
+        let widthScreen = Int(self.view.frame.width - 32)
         var i = 0
         while i < nameArray.count{
             print(i)
             
             
             
-            let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 130, height:33))
+            let nameLabel = UILabel(frame:CGRect(x:10, y:yposition, width: 130, height:33))
             nameLabel.textAlignment = .left
             nameLabel.text = nameArray[i]
             historyScroller.addSubview(nameLabel)
             
-            let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
+            let callLabel = UILabel(frame:CGRect(x:Int(widthScreen/2), y:yposition, width: 50, height:33))
             callLabel.textAlignment = .left
             callLabel.text = String(networkCallsArray[i])
             historyScroller.addSubview(callLabel)
             
             
-            let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
+            let messageLabel = UILabel(frame:CGRect(x:widthScreen - 60, y:yposition, width: 50, height:33))
             messageLabel.textAlignment = .left
             messageLabel.text = String(networkMessagesArray[i])
             historyScroller.addSubview(messageLabel)

@@ -321,7 +321,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-Mc-Wkp">
-                                                        <rect key="frame" x="0.0" y="297" width="335" height="145.5"/>
+                                                        <rect key="frame" x="0.0" y="297" width="335" height="126"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On the scale:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-ai-JRa" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="114" height="24"/>
@@ -366,10 +366,10 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="So3-x6-zdi">
-                                                        <rect key="frame" x="0.0" y="460.5" width="335" height="17"/>
+                                                        <rect key="frame" x="0.0" y="441" width="335" height="25.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Well Being Activity this Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U53-1A-prQ" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <nil key="textColor"/>
@@ -383,7 +383,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v1I-7i-ti6">
-                                                        <rect key="frame" x="0.0" y="495.5" width="335" height="189"/>
+                                                        <rect key="frame" x="0.0" y="484.5" width="335" height="189"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-pU-wLh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="189"/>
@@ -479,10 +479,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-AN-ZVP">
-                                                        <rect key="frame" x="0.0" y="702.5" width="335" height="31"/>
+                                                        <rect key="frame" x="0.0" y="691.5" width="335" height="42"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-f5-6Ag" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="303" y="0.0" width="32" height="31"/>
+                                                                <rect key="frame" x="281" y="0.0" width="54" height="42"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <state key="normal" title="Save">

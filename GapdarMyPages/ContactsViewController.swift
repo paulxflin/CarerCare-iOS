@@ -305,4 +305,10 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }

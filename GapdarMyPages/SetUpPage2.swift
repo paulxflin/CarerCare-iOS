@@ -71,6 +71,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         
         let widthOfCanvas = activityScrollView.frame.width
         let heightOfCanvas = activityScrollView.frame.height
+        print(heightOfCanvas)
         let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:Int(heightOfCanvas/4)))
         //label.center = CGPoint(x:44, y:146)
         label.textAlignment = .left

@@ -232,13 +232,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     func placeContactOnScreen(name: String, phone: String, i: Int){
         
         let widthOfCanvas = contactSV.frame.width
-        
-        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: 33))
+        print(widthOfCanvas)
+        let heightOfCanvas = contactSV.frame.height
+        print(heightOfCanvas)
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: 30))
         label.textAlignment = .left
         label.text = "Name: "
         contactSV.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(widthOfCanvas - 80)), height:33))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(310 - 80)), height:30))
         nameTF.delegate = self
         nameTF.textAlignment = .left
         nameTF.text = name
@@ -249,12 +251,12 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
 
         yContactsValue += 30 + 10
         
-        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:30))
         label2.textAlignment = .left
         label2.text = "Contact Number: "
         contactSV.addSubview(label2)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(widthOfCanvas - 160), height:33))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(270 - 160), height:30))
         numTF.delegate = self
         numTF.text = phone
         numTF.textAlignment = .left
@@ -264,7 +266,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         
         let image = UIImage(named: "icons8-call-32.png") as UIImage?
         let button = UIButton.init(type: .roundedRect)
-        button.frame = CGRect(x:310, y:yContactsValue, width:32, height:32)
+        button.frame = CGRect(x:275, y:yContactsValue, width:32, height:32)
         button.setImage(image, for: .normal)
         button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
         button.tag = i
@@ -273,7 +275,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         // Adding a message button
         let image2 = UIImage(named: "icons8-messaging-50.png") as UIImage?
         let button2 = UIButton.init(type: .roundedRect)
-        button2.frame = CGRect(x:335, y:yContactsValue, width:32, height:32)
+        button2.frame = CGRect(x:300, y:yContactsValue, width:32, height:32)
         button2.setImage(image2, for: .normal)
         button2.addTarget(self, action: #selector(messagePressed(_ :)), for: .touchUpInside)
         button2.tag = i

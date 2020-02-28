@@ -500,9 +500,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-xy-kMp">
-                                <rect key="frame" x="0.0" y="410" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-xy-kMp">
+                                <rect key="frame" x="0.0" y="392" width="375" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="dateTimePickerChanged:" destination="WoI-fW-rdI" eventType="valueChanged" id="fdi-uG-xnt"/>
@@ -511,6 +510,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="H6O-xy-kMp" firstAttribute="leading" secondItem="HSz-aa-oFM" secondAttribute="leading" id="0e2-G1-m8c"/>
                             <constraint firstItem="HSz-aa-oFM" firstAttribute="bottom" secondItem="dq8-bg-vmv" secondAttribute="bottom" constant="10" id="2JZ-38-hOs"/>
                             <constraint firstItem="HSz-aa-oFM" firstAttribute="bottom" secondItem="brc-hY-D7s" secondAttribute="bottom" constant="10" id="2jM-0q-miw"/>
                             <constraint firstItem="caW-ga-5u2" firstAttribute="leading" secondItem="HSz-aa-oFM" secondAttribute="leading" id="5nu-ku-0ee"/>
@@ -522,10 +522,12 @@
                             <constraint firstItem="dq8-bg-vmv" firstAttribute="leading" secondItem="HSz-aa-oFM" secondAttribute="leading" id="OQO-tK-fnu"/>
                             <constraint firstItem="dq8-bg-vmv" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="RU0-iH-dmA"/>
                             <constraint firstItem="HSz-aa-oFM" firstAttribute="bottom" secondItem="1jE-gN-Uu5" secondAttribute="bottom" constant="10" id="SUh-JL-vVN"/>
+                            <constraint firstItem="H6O-xy-kMp" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="Sc5-9k-DEH"/>
                             <constraint firstItem="IBj-yx-Vuu" firstAttribute="leading" secondItem="HSz-aa-oFM" secondAttribute="leading" id="ZS7-F1-m7b"/>
                             <constraint firstItem="HSz-aa-oFM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bEy-oI-X8P" secondAttribute="bottom" constant="9" id="ab9-Fb-d6F"/>
                             <constraint firstItem="1jE-gN-Uu5" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="fyB-iz-l2t"/>
                             <constraint firstItem="brc-hY-D7s" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="quY-0c-oUC"/>
+                            <constraint firstItem="HSz-aa-oFM" firstAttribute="bottom" secondItem="H6O-xy-kMp" secondAttribute="bottom" constant="10" id="reG-65-5dr"/>
                             <constraint firstItem="caW-ga-5u2" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="s38-rX-y9k"/>
                             <constraint firstItem="IBj-yx-Vuu" firstAttribute="trailing" secondItem="HSz-aa-oFM" secondAttribute="trailing" id="s5U-kB-wXi"/>
                             <constraint firstItem="HSz-aa-oFM" firstAttribute="trailing" secondItem="bEy-oI-X8P" secondAttribute="trailing" constant="20" id="sSa-Tk-gfQ"/>

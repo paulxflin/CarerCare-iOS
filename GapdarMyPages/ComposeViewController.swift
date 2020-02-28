@@ -219,7 +219,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             msgVC.recipients = [number]
             msgVC.messageComposeDelegate = self
             
-            //Note: It's Important to present the VC to render the graph UIImages to add to attachment. 
+            //Note: It's Important to present the VC to render the graph UIImages to add to attachment.
             let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
             let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
             self.present(callsVC, animated: true, completion: nil)

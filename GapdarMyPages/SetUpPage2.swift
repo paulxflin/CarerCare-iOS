@@ -38,27 +38,54 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         contactsPerDayTextField.delegate = self
         SupportCodeTextField.delegate = self
         
+        postcodeTextField.text = defaults.string(forKey: "postcode")
+        stepsPerDayTextField.text = defaults.string(forKey: "targetSteps")
+        contactsPerDayTextField.text = defaults.string(forKey: "targetCalls")
+        SupportCodeTextField.text = defaults.string(forKey: "reference")
+        setActivityScroller()
+        
+        
+        
+    }
+    
+    func setActivityScroller(){
+        let activityStringArray = defaults.stringArray(forKey: "activityArray") ?? []
+        
+        var i = 0
+        while i < activityStringArray.count {
+            let activity = activityStringArray[i]
+            
+            
+            placeActivityOnScreen(activity: activity)
+            
+            i += 1
+        }
     }
     
     @IBAction func getActivitiesButtonPressed(_ sender: Any) {
-        let heightOfCanvas = activityScrollView.frame.height
+        placeActivityOnScreen(activity: "")
+        
+    }
+    
+    func placeActivityOnScreen(activity: String){
+        
         let widthOfCanvas = activityScrollView.frame.width
         
-        let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:Int(heightOfCanvas/5)))
+        let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:33))
         //label.center = CGPoint(x:44, y:146)
         label.textAlignment = .left
         label.text = "Activity: "
         activityScrollView.addSubview(label)
         
-        let activityTF = UITextField(frame: CGRect(x:80, y:yActivityValue, width:(Int(widthOfCanvas - 84)), height:Int(heightOfCanvas/5)))
+        let activityTF = UITextField(frame: CGRect(x:80, y:yActivityValue, width:(Int(widthOfCanvas - 84)), height:33))
         activityTF.delegate = self
         activityTF.backgroundColor = .white
         activityTF.textAlignment = .left
         activityTF.borderStyle = .roundedRect
-        
+        activityTF.text = activity
         activityScrollView.addSubview(activityTF)
         activityTextFields.append(activityTF)
-        yActivityValue += Int(heightOfCanvas/5)  + 10
+        yActivityValue += 40
         
         activityScrollView.contentSize.height = CGFloat(yActivityValue)
         

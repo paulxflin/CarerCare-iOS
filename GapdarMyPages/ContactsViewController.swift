@@ -17,9 +17,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     var yContactsValue = 10
     var phoneArray : [String] = []
     var nameArray : [String] = []
-    
+    var i = 0
     var phoneNumberTextFields: [UITextField] = []
     var nameTextFields : [UITextField] = []
+    var callsArray : [Int] = []
+    var messagesArray : [Int] = []
     
     @IBOutlet weak var contactSV: UIScrollView!
     
@@ -46,10 +48,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var subviews = self.contactSV.subviews
+        subviews.removeAll()
+        
         contactSV.layer.cornerRadius = 15.0
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
+        print(phoneArray)
+        print(nameArray)
         setupContactSV()
     }
     
@@ -125,54 +132,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     func addExistingContacts() {
-        var i = 0
+        
         while i < nameArray.count {
             let name = nameArray[i]
             let phone = phoneArray[i]
-            
-            let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height:33))
-            label.textAlignment = .left
-            label.text = "Name: "
-            contactSV.addSubview(label)
-            
-            let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:272, height:33))
-            nameTF.delegate = self
-            nameTF.textAlignment = .center
-            nameTF.text = name
-            nameTF.backgroundColor = .white
-            nameTF.borderStyle = .roundedRect
-            contactSV.addSubview(nameTF)
-            
-            nameTextFields.append(nameTF)
-            yContactsValue += 40
-            
-            let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
-            label2.textAlignment = .left
-            label2.text = "Contact Number: "
-            contactSV.addSubview(label2)
-            
-            let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:150, height:33))
-            numTF.delegate = self
-            numTF.text = phone
-            numTF.textAlignment = .center
-            numTF.backgroundColor = .white
-            numTF.borderStyle = .roundedRect
-            contactSV.addSubview(numTF)
-            
-            // TODO: Add a button to make calls(God DAMMIT)
-            let image = UIImage(named: "icons8-call-32.png") as UIImage?
-            let button = UIButton.init(type: .roundedRect)
-            button.frame = CGRect(x:310, y:yContactsValue, width:32, height:32)
-            button.setImage(image, for: .normal)
-            button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
-            button.tag = i
-            contactSV.addSubview(button)
-            
-            
-            phoneNumberTextFields.append(numTF)
-            yContactsValue += 40
-            
-            contactSV.contentSize.height = CGFloat(yContactsValue)
+            placeContactOnScreen(name: name, phone: phone, i: i)
             
             i += 1
         }
@@ -214,35 +178,34 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             phoneNumber = phoneNo.stringValue
             
         }
-        let label = UILabel(frame: CGRect(x:44, y:yContactsValue, width:66, height:33))
-        //label.center = CGPoint(x:44, y:146)
-        label.textAlignment = .center
-        label.text = "Name: "
-        contactSV.addSubview(label)
+        i += 1
+        defaults.set([], forKey: "phoneArray")
+        defaults.set([], forKey: "nameArray")
+        //empties
         
-        let namelabel = UITextField(frame: CGRect(x:118, y:yContactsValue, width:272, height:33))
-        //namelabel.center = CGPoint(x:118, y:152)
-        namelabel.textAlignment = .center
-        namelabel.text = familyName
-        namelabel.backgroundColor = .white
-        contactSV.addSubview(namelabel)
+        print(phoneArray)
+        print(nameArray)
+        phoneArray.append(phoneNumber)
+        nameArray.append(familyName)
         
-        yContactsValue += 40
+        defaults.set(phoneArray, forKey: "phoneArray")
+        defaults.set(nameArray, forKey: "nameArray")
+        print(phoneArray)
+        print(nameArray)
+        placeContactOnScreen(name: familyName, phone: phoneNumber, i:i)
         
-        let label2 = UILabel(frame: CGRect(x:44, y:yContactsValue, width:166, height:33))
-        //label.center = CGPoint(x:44, y:146)
-        label2.textAlignment = .center
-        label2.text = "Contact Number: "
-        contactSV.addSubview(label2)
+        if defaults.array(forKey: "networkCallsArray") != nil {
+            callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+            messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
+        }
         
-        let numlabel = UITextField(frame: CGRect(x:200, y:yContactsValue, width:150, height:33))
-        //namelabel.center = CGPoint(x:118, y:152)
         
-        numlabel.text = phoneNumber
-        numlabel.backgroundColor = .white
-        contactSV.addSubview(numlabel)
-        
-        yContactsValue += 40
+        callsArray.append(0)
+        messagesArray.append(0)
+        defaults.set([], forKey: "networkCallsArray")
+        defaults.set([], forKey: "networkMessagesArray")
+        defaults.set(callsArray, forKey: "networkCallsArray")
+        defaults.set(messagesArray, forKey: "networkMessagesArray")
     }
     
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
@@ -253,6 +216,54 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         defaults.set(false, forKey: "setup")
         let activityCountArray = [0, 0, 0]
         defaults.set(activityCountArray, forKey: "activityCountArray")
+    }
+    
+    
+    func placeContactOnScreen(name: String, phone: String, i: Int){
+        
+        let widthOfCanvas = contactSV.frame.width
+        
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: 33))
+        label.textAlignment = .left
+        label.text = "Name: "
+        contactSV.addSubview(label)
+        
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(widthOfCanvas - 80)), height:33))
+        nameTF.delegate = self
+        nameTF.textAlignment = .left
+        nameTF.text = name
+        nameTF.backgroundColor = .white
+        nameTF.borderStyle = .roundedRect
+        contactSV.addSubview(nameTF)
+        
+
+        yContactsValue += 30 + 10
+        
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:33))
+        label2.textAlignment = .left
+        label2.text = "Contact Number: "
+        contactSV.addSubview(label2)
+        
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(widthOfCanvas - 160), height:33))
+        numTF.delegate = self
+        numTF.text = phone
+        numTF.textAlignment = .left
+        numTF.backgroundColor = .white
+        numTF.borderStyle = .roundedRect
+        contactSV.addSubview(numTF)
+        
+        let image = UIImage(named: "icons8-call-32.png") as UIImage?
+        let button = UIButton.init(type: .roundedRect)
+        button.frame = CGRect(x:310, y:yContactsValue, width:32, height:32)
+        button.setImage(image, for: .normal)
+        button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
+        button.tag = i
+        contactSV.addSubview(button)
+        
+
+        yContactsValue += 40
+        contactSV.contentSize.height = CGFloat(yContactsValue)
+        
     }
     
 }

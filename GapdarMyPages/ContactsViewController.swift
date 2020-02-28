@@ -230,19 +230,22 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     func placeContactOnScreen(name: String, phone: String, i: Int){
-        
+        let swidth = self.view.frame.width - 30
+        print(swidth)
         let widthOfCanvas = contactSV.frame.width
         print("this is width:")
-        print(widthOfCanvas)
+        let width = contactSV.contentSize.height
+        let height = contactSV.contentSize.width
+        print(widthOfCanvas, width)
         let heightOfCanvas = contactSV.frame.height
         print("this is height:")
-        print(heightOfCanvas)
+        print(heightOfCanvas, height)
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(169/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactSV.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(345 - 80)), height:Int(169/8)))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(169/8)))
         nameTF.delegate = self
         nameTF.textAlignment = .left
         nameTF.text = name
@@ -258,7 +261,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         label2.text = "Contact Number: "
         contactSV.addSubview(label2)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(295 - 160), height:Int(169/8)))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(swidth - 45 - 160), height:Int(169/8)))
         numTF.delegate = self
         numTF.text = phone
         numTF.textAlignment = .left

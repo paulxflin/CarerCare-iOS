@@ -220,21 +220,26 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             msgVC.messageComposeDelegate = self
             
             //Note: It's Important to present the VC to render the graph UIImages to add to attachment.
-            let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
-            let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
-            self.present(callsVC, animated: true, completion: nil)
-            let callsData : Data = callsVC.getCallsGraphImage()
-            msgVC.addAttachmentData(callsData, typeIdentifier: "public.data", filename: "callsGraph.png")
-            
-            self.dismiss(animated: true) {
-                let stepsVC : StepsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "stepsStats") as! StepsStatisticsViewController
-                self.present(stepsVC, animated: true, completion: nil)
-                let stepsData : Data = stepsVC.getStepsGraphImage()
-                msgVC.addAttachmentData(stepsData, typeIdentifier: "public.data", filename: "stepsGraph.png")
+            if attachSwitch.isOn {
+                let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
+                let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
+                self.present(callsVC, animated: true, completion: nil)
+                let callsData : Data = callsVC.getCallsGraphImage()
+                msgVC.addAttachmentData(callsData, typeIdentifier: "public.data", filename: "callsGraph.png")
+                
                 self.dismiss(animated: true) {
-                    self.present(msgVC, animated: true, completion: nil)
+                    let stepsVC : StepsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "stepsStats") as! StepsStatisticsViewController
+                    self.present(stepsVC, animated: true, completion: nil)
+                    let stepsData : Data = stepsVC.getStepsGraphImage()
+                    msgVC.addAttachmentData(stepsData, typeIdentifier: "public.data", filename: "stepsGraph.png")
+                    self.dismiss(animated: true) {
+                        self.present(msgVC, animated: true, completion: nil)
+                    }
                 }
+            } else {
+                self.present(msgVC, animated: true, completion: nil)
             }
+            
         }
     }
     

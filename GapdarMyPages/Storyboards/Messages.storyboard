@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="48" width="343" height="157"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-1u-slg">
-                                                <rect key="frame" x="28.5" y="0.0" width="286" height="151"/>
+                                                <rect key="frame" x="28.5" y="0.0" width="286" height="231"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Let you care friends know how you are!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-Ti-FmA">
                                                         <rect key="frame" x="0.0" y="0.0" width="286" height="71"/>
@@ -41,10 +41,10 @@
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-qq-Q4b">
-                                                        <rect key="frame" x="0.0" y="71" width="286" height="80"/>
+                                                        <rect key="frame" x="0.0" y="71" width="286" height="160"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-wi-ffW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="160"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="126" id="qcm-7r-BTe"/>
                                                                 </constraints>
@@ -54,7 +54,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-3t-exz">
-                                                                <rect key="frame" x="226" y="0.0" width="60" height="80"/>
+                                                                <rect key="frame" x="226" y="0.0" width="60" height="160"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="pda-7k-Z2u"/>
                                                                 </constraints>
@@ -426,7 +426,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-Xs-Qjv">
-                                                <rect key="frame" x="261" y="250" width="51" height="31"/>
+                                                <rect key="frame" x="222" y="250" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </switch>
                                         </subviews>
@@ -500,9 +500,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-xy-kMp">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-xy-kMp">
                                 <rect key="frame" x="0.0" y="410" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="dateTimePickerChanged:" destination="WoI-fW-rdI" eventType="valueChanged" id="fdi-uG-xnt"/>
                                 </connections>

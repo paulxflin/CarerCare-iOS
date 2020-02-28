@@ -75,6 +75,9 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timePV.isHidden = true
         activityPV.isHidden = true
         
+        dateTimePicker.backgroundColor = UIColor .white
+        dateTimePicker.isHidden = true
+        
         self.namePV.delegate = self
         self.statusPV.delegate = self
         self.datePV.delegate = self
@@ -134,6 +137,14 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let selectedTime : String? = strArr.count > 1 ? String(strArr[1]).trimmingCharacters(in: .whitespacesAndNewlines) : nil
         print("This is the selectedTime")
         print(selectedTime ?? "missing selected time")
+        
+        date = selectedDate
+        dateTF.text = selectedDate
+        
+        time = selectedTime
+        timeTF.text = selectedTime
+        
+        dateTimePicker.isHidden = true
     }
     
     //Number of Columns of Data
@@ -187,13 +198,13 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             statusTF.text = status
             statusPV.isHidden = true
         } else if (pickerView == datePV) {
-            date = dateOptions[row]
-            dateTF.text = date
-            datePV.isHidden = true
+//            date = dateOptions[row]
+//            dateTF.text = date
+//            datePV.isHidden = true
         } else if (pickerView == timePV) {
-            time = timeOptions[row]
-            timeTF.text = time
-            timePV.isHidden = true
+//            time = timeOptions[row]
+//            timeTF.text = time
+//            timePV.isHidden = true
         } else if (pickerView == activityPV) {
             activity = activityOptions[row]
             activityTF.text = activity
@@ -209,9 +220,11 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         } else if (textField == statusTF) {
             statusPV.isHidden = false
         } else if (textField == dateTF) {
-            datePV.isHidden = false
+            //datePV.isHidden = false
+            dateTimePicker.isHidden = false
         } else if (textField == timeTF) {
-            timePV.isHidden = false
+            //timePV.isHidden = false
+            dateTimePicker.isHidden = false
         } else if (textField == activityTF) {
             activityPV.isHidden = false
         }

@@ -179,6 +179,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             
         }
         i += 1
+        //adds new contacts to phoneArray
         defaults.set([], forKey: "phoneArray")
         defaults.set([], forKey: "nameArray")
         //empties
@@ -199,7 +200,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
         }
         
-        
+        //adds network array to all of the new contacts
         callsArray.append(0)
         messagesArray.append(0)
         defaults.set([], forKey: "networkCallsArray")

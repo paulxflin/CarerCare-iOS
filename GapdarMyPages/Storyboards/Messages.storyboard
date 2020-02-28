@@ -146,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="30.5" width="290" height="143"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="339" id="M3Y-KU-qDH"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="M3Y-KU-qDH"/>
                                             <constraint firstAttribute="height" constant="143" id="Qza-VL-fne"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -366,27 +366,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brc-hY-D7s">
-                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="254" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-bg-vmv">
-                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="254" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-yx-Vuu">
-                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="254" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jE-gN-Uu5">
-                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="254" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caW-ga-5u2">
-                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="254" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-u5-Qd8">
-                                <rect key="frame" x="20" y="74" width="280" height="386"/>
+                                <rect key="frame" x="20" y="30" width="280" height="430"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9O-sr-uFV" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="18"/>
@@ -574,7 +574,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-Tj-JIK">
-                                        <rect key="frame" x="0.0" y="286.5" width="280" height="99.5"/>
+                                        <rect key="frame" x="0.0" y="286.5" width="280" height="143.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-Nr-Gje" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="29"/>
@@ -1008,6 +1008,6 @@
         <image name="icons8-phone-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XPO-VN-Chh"/>
+        <segue reference="isr-dX-h5I"/>
     </inferredMetricsTieBreakers>
 </document>

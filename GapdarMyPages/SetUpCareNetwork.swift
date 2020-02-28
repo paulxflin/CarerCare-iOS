@@ -31,7 +31,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     
     override func viewDidLoad() {
         
-        setupContactSV()
+        
         
         super.viewDidLoad()
         contactsScrollView.layer.cornerRadius = 10.0

@@ -51,6 +51,10 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         var subviews = self.contactSV.subviews
         subviews.removeAll()
         
+        //Make sure the layouts are initialised correctly
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+        
         contactSV.layer.cornerRadius = 15.0
         // Do any additional setup after loading the view, typically from a nib.
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
@@ -240,14 +244,23 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         let heightOfCanvas = contactSV.frame.height
         print("this is height:")
         print(heightOfCanvas, height)
-        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(169/8)))
+        
+        
+        let tempHeight = heightOfCanvas * 3 / 4
+        print("this is the tempHeight")
+        print(tempHeight)
+        
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(tempHeight/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactSV.addSubview(label)
         
+
         let heightOfAll = Int(30)
         
         let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:heightOfAll))
+
+
         nameTF.delegate = self
         nameTF.textAlignment = .left
         nameTF.text = name
@@ -265,13 +278,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         let buttonDimension = heightOfAll
         
         let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:heightOfAll))
-        numTF.delegate = self
-        numTF.text = phone
-        numTF.textAlignment = .left
-        numTF.backgroundColor = .white
-        numTF.borderStyle = .roundedRect
-        contactSV.addSubview(numTF)
-        
+
         
         
         let image = UIImage(named: "icons8-call-32.png") as UIImage?
@@ -292,7 +299,9 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         contactSV.addSubview(button2)
         
 
+
         yContactsValue += heightOfAll + 5
+
         contactSV.contentSize.height = CGFloat(yContactsValue)
         
     }

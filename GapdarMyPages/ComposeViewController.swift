@@ -15,8 +15,9 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var firstName : String?
     
+    @IBOutlet weak var dateTimePicker: UIDatePicker!
+    
     @IBOutlet weak var signoffLabel: UILabel!
-    @IBOutlet weak var msgTextView: UITextView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var statusTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
@@ -50,15 +51,14 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var msgView: UIView!
     
-    @IBOutlet weak var composeButton: UIButton!
+    @IBOutlet weak var attachSwitch: UISwitch!
     
     @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         msgView.backgroundColor = .white
         msgView.layer.cornerRadius = 10.0
-        
-        msgTextView.layer.cornerRadius = 10.0
         msgView.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstName = defaults.string(forKey: "firstName") ?? "Jo"
@@ -69,6 +69,9 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         datePV.isHidden = true
         timePV.isHidden = true
         activityPV.isHidden = true
+        
+        dateTimePicker.backgroundColor = UIColor .white
+        dateTimePicker.isHidden = true
         
         self.namePV.delegate = self
         self.statusPV.delegate = self
@@ -111,6 +114,33 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     // MARK: Actions
+    
+    
+    @IBAction func dateTimePickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: dateTimePicker.date)
+        print("This is the strDate")
+        print(strDate)
+        let strArr = strDate.split(separator: ",")
+        let selectedDate : String = String(strArr[0])
+        print("This is the selectedDate")
+        print(selectedDate)
+        let selectedTime : String? = strArr.count > 1 ? String(strArr[1]).trimmingCharacters(in: .whitespacesAndNewlines) : nil
+        print("This is the selectedTime")
+        print(selectedTime ?? "missing selected time")
+        
+        date = selectedDate
+        dateTF.text = selectedDate
+        
+        time = selectedTime
+        timeTF.text = selectedTime
+        
+        dateTimePicker.isHidden = true
+    }
     
     //Number of Columns of Data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -163,13 +193,13 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             statusTF.text = status
             statusPV.isHidden = true
         } else if (pickerView == datePV) {
-            date = dateOptions[row]
-            dateTF.text = date
-            datePV.isHidden = true
+//            date = dateOptions[row]
+//            dateTF.text = date
+//            datePV.isHidden = true
         } else if (pickerView == timePV) {
-            time = timeOptions[row]
-            timeTF.text = time
-            timePV.isHidden = true
+//            time = timeOptions[row]
+//            timeTF.text = time
+//            timePV.isHidden = true
         } else if (pickerView == activityPV) {
             activity = activityOptions[row]
             activityTF.text = activity
@@ -185,17 +215,18 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         } else if (textField == statusTF) {
             statusPV.isHidden = false
         } else if (textField == dateTF) {
-            datePV.isHidden = false
+            //datePV.isHidden = false
+            dateTimePicker.isHidden = false
         } else if (textField == timeTF) {
-            timePV.isHidden = false
+            //timePV.isHidden = false
+            dateTimePicker.isHidden = false
         } else if (textField == activityTF) {
             activityPV.isHidden = false
         }
         return false
     }
     
-    // Beware nil unwrapping during compose breaks app
-    @IBAction func composePressed(_ sender: Any) {
+    func composeMsg() {
         msg = ""
         msg += "Hello " + (name ?? "") + "\n"
         msg += "Just to let you know I am " + (status ?? "") + "\n"
@@ -203,11 +234,10 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         msg += "at " + (time ?? "") + "\n"
         msg += "we meet for a " + (activity ?? "") + "\n"
         msg += "All the best, " + (firstName ?? "") + "."
-        msgTextView.text = msg
-        
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        composeMsg()
         let number = phoneArray[nameIndex!]
         if MFMessageComposeViewController.canSendText()
         {
@@ -216,22 +246,27 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             msgVC.recipients = [number]
             msgVC.messageComposeDelegate = self
             
-            //Note: It's Important to present the VC to render the graph UIImages to add to attachment. 
-            let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
-            let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
-            self.present(callsVC, animated: true, completion: nil)
-            let callsData : Data = callsVC.getCallsGraphImage()
-            msgVC.addAttachmentData(callsData, typeIdentifier: "public.data", filename: "callsGraph.png")
-            
-            self.dismiss(animated: true) {
-                let stepsVC : StepsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "stepsStats") as! StepsStatisticsViewController
-                self.present(stepsVC, animated: true, completion: nil)
-                let stepsData : Data = stepsVC.getStepsGraphImage()
-                msgVC.addAttachmentData(stepsData, typeIdentifier: "public.data", filename: "stepsGraph.png")
+            //Note: It's Important to present the VC to render the graph UIImages to add to attachment.
+            if attachSwitch.isOn {
+                let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
+                let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
+                self.present(callsVC, animated: true, completion: nil)
+                let callsData : Data = callsVC.getCallsGraphImage()
+                msgVC.addAttachmentData(callsData, typeIdentifier: "public.data", filename: "callsGraph.png")
+                
                 self.dismiss(animated: true) {
-                    self.present(msgVC, animated: true, completion: nil)
+                    let stepsVC : StepsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "stepsStats") as! StepsStatisticsViewController
+                    self.present(stepsVC, animated: true, completion: nil)
+                    let stepsData : Data = stepsVC.getStepsGraphImage()
+                    msgVC.addAttachmentData(stepsData, typeIdentifier: "public.data", filename: "stepsGraph.png")
+                    self.dismiss(animated: true) {
+                        self.present(msgVC, animated: true, completion: nil)
+                    }
                 }
+            } else {
+                self.present(msgVC, animated: true, completion: nil)
             }
+            
         }
     }
     

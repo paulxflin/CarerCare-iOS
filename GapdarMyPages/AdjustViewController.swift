@@ -12,6 +12,9 @@ class AdjustViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var callsLabel: UILabel!
+    @IBOutlet weak var messagesLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var scoreSlider: UISlider!
@@ -50,6 +53,9 @@ class AdjustViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+        stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
+        callsLabel.text = String(defaults.integer(forKey: "totalCalls"))
+        messagesLabel.text = String(defaults.integer(forKey: "totalMessages"))
     }
     
     @IBAction func savePressed(_ sender: Any) {

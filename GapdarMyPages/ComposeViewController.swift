@@ -303,6 +303,9 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
         print("networkMessagesArray")
         print(defaults.array(forKey: "networkMessagesArray") as! [Int])
+        
+        let totalMessages = defaults.integer(forKey: "totalMessages") + 1
+        defaults.set(totalMessages, forKey: "totalMessages")
     }
     
     func updateActivityCount(_ row: Int) {

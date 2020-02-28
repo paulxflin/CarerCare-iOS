@@ -237,6 +237,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         defaults.set(false, forKey: "setup")
         let activityCountArray = [0, 0, 0]
         defaults.set(activityCountArray, forKey: "activityCountArray")
+        defaults.set(0, forKey: "totalCalls")
+        defaults.set(0, forKey: "totalMessages")
     }
     
     

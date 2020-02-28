@@ -18,7 +18,6 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     
     @IBOutlet weak var signoffLabel: UILabel!
-    @IBOutlet weak var msgTextView: UITextView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var statusTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
@@ -54,16 +53,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var attachSwitch: UISwitch!
     
-    @IBOutlet weak var composeButton: UIButton!
-    
     @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         msgView.backgroundColor = .white
         msgView.layer.cornerRadius = 10.0
-        
-        msgTextView.layer.cornerRadius = 10.0
         msgView.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstName = defaults.string(forKey: "firstName") ?? "Jo"
@@ -231,8 +226,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
-    // Beware nil unwrapping during compose breaks app
-    @IBAction func composePressed(_ sender: Any) {
+    func composeMsg() {
         msg = ""
         msg += "Hello " + (name ?? "") + "\n"
         msg += "Just to let you know I am " + (status ?? "") + "\n"
@@ -240,11 +234,10 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         msg += "at " + (time ?? "") + "\n"
         msg += "we meet for a " + (activity ?? "") + "\n"
         msg += "All the best, " + (firstName ?? "") + "."
-        msgTextView.text = msg
-        
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        composeMsg()
         let number = phoneArray[nameIndex!]
         if MFMessageComposeViewController.canSendText()
         {

@@ -50,9 +50,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var msgView: UIView!
     
+    @IBOutlet weak var attachSwitch: UISwitch!
+    
     @IBOutlet weak var composeButton: UIButton!
     
     @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         msgView.backgroundColor = .white

@@ -19,8 +19,9 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     var phoneNumberTextFields: [UITextField] = []
     var phoneNumberString : [String] = []
     var nameString : [String] = []
-    
-    
+    var callsArray : [Int] = []
+    var messagesArray : [Int] = []
+   
     
     @IBOutlet weak var contactsScrollView: UIScrollView!
     
@@ -29,44 +30,66 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     
     
     override func viewDidLoad() {
+        
+        
+        
         super.viewDidLoad()
         contactsScrollView.layer.cornerRadius = 10.0
         nameField.delegate = self
+        nameField.text = defaults.string(forKey: "firstName")
+        
+        //empty this out
+        defaults.set([], forKey: "phoneArray")
+        defaults.set([], forKey: "nameArray")
+        defaults.set([], forKey: "networkCallsArray")
+        defaults.set([], forKey: "networkMessagesArray")
+        
+    }
+    
+    func setupContactSV() {
+        // TODO: Add a for loop to add in the saved contacts.
+        //view.addSubview(contactSV)
+        
+        addExistingContacts()
+    }
+    
+    func addExistingContacts() {
+        let phoneNumberStringArray = defaults.stringArray(forKey: "phoneArray") ?? []
+        let nameStringArray = defaults.stringArray(forKey: "nameArray") ?? []
+        var i = 0
+        print(contactsScrollView.frame.height)
+        while i < nameStringArray.count {
+            let name = nameStringArray[i]
+            let phone = phoneNumberStringArray[i]
+            
+            placeContactOnScreen(name: name, phone: phone)
+            
+            i += 1
+        }
         
     }
     
     @IBAction func addMoreContacts(_ sender: Any) {
+        print(contactsScrollView.frame.height)
         let picker = CNContactPickerViewController()
         picker.delegate = self
         present(picker, animated: true, completion: nil)
         
     }
     
-    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        let heightOfCanvas = contactsScrollView.frame.height
+    func placeContactOnScreen(name: String, phone: String){
+        
         let widthOfCanvas = contactsScrollView.frame.width
-        
-    
-        
-        print("the height is",heightOfCanvas)
-        var familyName = ""
-        var phoneNumber = ""
-        for data in contact.phoneNumbers{
-            let phoneNo = data.value
-            familyName = contact.givenName + " "+contact.familyName
-            phoneNumber = phoneNo.stringValue
-            
-        }
-        
+        let heightOfCanvas = contactsScrollView.frame.height
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(heightOfCanvas/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactsScrollView.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(widthOfCanvas - 80)), height:Int(heightOfCanvas/8)))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(widthOfCanvas - 80)), height: Int(heightOfCanvas/8)))
         nameTF.delegate = self
         nameTF.textAlignment = .left
-        nameTF.text = familyName
+        nameTF.text = name
         nameTF.backgroundColor = .white
         nameTF.borderStyle = .roundedRect
         contactsScrollView.addSubview(nameTF)
@@ -81,15 +104,43 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
         let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(widthOfCanvas - 160), height:Int(heightOfCanvas/8)))
         numTF.delegate = self
-        numTF.text = phoneNumber
+        numTF.text = phone
         numTF.textAlignment = .left
         numTF.backgroundColor = .white
         numTF.borderStyle = .roundedRect
         contactsScrollView.addSubview(numTF)
         phoneNumberTextFields.append(numTF)
-        yContactsValue += Int(heightOfCanvas/8) + 10
+        yContactsValue += Int(heightOfCanvas/8)
+        
         
         contactsScrollView.contentSize.height = CGFloat(yContactsValue)
+        
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        
+        var familyName = ""
+        var phoneNumber = ""
+        for data in contact.phoneNumbers{
+            let phoneNo = data.value
+            familyName = contact.givenName + " "+contact.familyName
+            phoneNumber = phoneNo.stringValue
+            
+        }
+        placeContactOnScreen(name: familyName, phone: phoneNumber)
+        if defaults.array(forKey: "networkCallsArray") != nil {
+          callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+        messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
+        }
+        
+        
+        callsArray.append(0)
+        messagesArray.append(0)
+        defaults.set([], forKey: "networkCallsArray")
+        defaults.set([], forKey: "networkMessagesArray")
+        defaults.set(callsArray, forKey: "networkCallsArray")
+        defaults.set(messagesArray, forKey: "networkMessagesArray")
+        
     }
     
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
@@ -97,19 +148,17 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     }
     
     
-    
-
-    
-    
     @IBAction func saveButtonPressed(_ sender: Any) {
         for phoneNumber in phoneNumberTextFields{
             phoneNumberString.append(phoneNumber.text ?? "-")
+            
         }
         
         for name in nameTextFields{
             nameString.append(name.text ?? "-")
         }
-        
+        print(phoneNumberString)
+        print(nameString)
       
         defaults.set(phoneNumberString, forKey: "phoneArray")
         defaults.set(nameString, forKey: "nameArray")

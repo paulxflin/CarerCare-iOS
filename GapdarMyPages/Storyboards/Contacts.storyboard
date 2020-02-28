@@ -1,105 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YsM-mW-eFQ">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDR-m2-gVH">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts-->
-        <scene sceneID="Lqh-cy-nMm">
+        <!--Contacts View Controller-->
+        <scene sceneID="fsu-hA-MU9">
             <objects>
-                <viewController id="YsM-mW-eFQ" customClass="ContactsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oLV-RR-bSE" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="kiA-Fl-iq4" customClass="ContactsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gbw-or-KQW" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Carer Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1J-Df-tCr">
-                                <rect key="frame" x="16" y="42" width="343" height="27"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-sZ-5Zn">
-                                <rect key="frame" x="16" y="79" width="70" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Carer Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpn-xG-U35" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                <rect key="frame" x="15" y="74.5" width="129" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khu-NZ-PMp">
-                                <rect key="frame" x="16" y="109.5" width="343" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="Kfa-dD-Z1T"/>
-                                    <constraint firstAttribute="height" constant="250" id="dch-J7-bsJ"/>
-                                </constraints>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guz-Su-Y8n" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                <rect key="frame" x="16" y="369.5" width="30" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="N90-c3-QTe"/>
-                                    <constraint firstAttribute="width" constant="30" id="PSg-kL-que"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="0.0315"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getNumber:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="ake-Et-nKa"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-5o-Wbg">
-                                <rect key="frame" x="103" y="430.5" width="169" height="83.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-aJ-7U0" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                <rect key="frame" x="15" y="96" width="60.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="0.029499999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-5Q-8u7">
+                                <rect key="frame" x="15" y="80" width="290" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="08b-cp-s1j"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="eBT-9P-ykc"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="O9o-FU-wGO">
+                                <rect key="frame" x="15" y="207" width="30" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnN-Yz-48Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="169" height="30"/>
-                                        <state key="normal" title="Reset Demo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-CR-0DE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ax5-am-jOK"/>
+                                            <constraint firstAttribute="width" constant="30" id="nfT-mK-vsX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getNumber:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="Dh2-SX-ZQR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fHY-Cl-qij">
+                                <rect key="frame" x="15" y="240" width="290" height="233"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb0-XH-qFW">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="30"/>
+                                        <state key="normal" title="Reset Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetStart:" destination="YsM-mW-eFQ" eventType="touchUpInside" id="Piw-HG-NYs"/>
+                                            <action selector="resetStart:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="zpL-EF-Rdh"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lt-P8-KBm">
-                                        <rect key="frame" x="0.0" y="38" width="169" height="45.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mE2-N0-E4v">
+                                        <rect key="frame" x="0.0" y="33" width="290" height="124"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Networks that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVR-vy-ezb" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.0275"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-kq-Psr">
+                                                <rect key="frame" x="0.0" y="23" width="224" height="46"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulP-QM-DgP" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="51" id="gyh-Yn-JUx"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink01"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed01:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="rVf-tR-JWX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-UI-5V1">
+                                                        <rect key="frame" x="63" y="0.0" width="103" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="103" id="1qk-oQ-8xb"/>
+                                                            <constraint firstAttribute="height" constant="46" id="bcn-WP-v68"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink02"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed02:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="8II-Be-Pu7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-L9-8ps">
+                                                        <rect key="frame" x="178" y="0.0" width="46" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="46" id="FpQ-pi-fgz"/>
+                                                            <constraint firstAttribute="width" constant="46" id="Mcn-gc-Rjs"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink03"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed03:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="VDU-bt-krb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzn-NR-f6E">
+                                                <rect key="frame" x="0.0" y="76" width="256" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-TF-5mF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="149" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="qNM-GB-0zI"/>
+                                                            <constraint firstAttribute="width" constant="149" id="veF-i4-opp"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink04"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed04:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="N10-zf-uxg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vet-YR-Hcs">
+                                                        <rect key="frame" x="157" y="0.0" width="48" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="48" id="T6B-as-Aks"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink05"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed05:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="ZUl-SF-JE6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-v8-P4r">
+                                                        <rect key="frame" x="213" y="0.0" width="43" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="43" id="VRA-Q6-ySA"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink06"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed06:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="jHm-tX-UBW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-z3-XlO">
+                                        <rect key="frame" x="0.0" y="160" width="290" height="73"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps &amp; Digital Services that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-s3-iRm" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.0275"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-Kx-GJs">
+                                                <rect key="frame" x="0.0" y="24" width="290" height="49"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZN-BX-bs6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="aGV-C9-HfX"/>
+                                                            <constraint firstAttribute="height" constant="49" id="pZ4-AT-FYv"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink07"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed07:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="9Mj-rY-YEz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGZ-HN-wQJ">
+                                                        <rect key="frame" x="70" y="0.0" width="51" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="49" id="IK5-dg-U2x"/>
+                                                            <constraint firstAttribute="width" constant="51" id="p0h-58-Cmw"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink08"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed08:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="Ogk-fL-LRU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUH-ki-fVi">
+                                                        <rect key="frame" x="131" y="0.0" width="159" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="49" id="QuI-21-NDF"/>
+                                                            <constraint firstAttribute="width" constant="159" id="Wuw-ot-gEy"/>
+                                                        </constraints>
+                                                        <state key="normal" image="weblink09"/>
+                                                        <connections>
+                                                            <action selector="weblinkButPressed09:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="3DH-Lb-7HA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="mLk-oC-BjE"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOF-9M-IIf">
-                                <rect key="frame" x="16" y="457" width="115" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GKf-Z5-0nd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ITK-5o-Wbg" secondAttribute="bottom" constant="104" id="0X0-H6-4XM"/>
-                            <constraint firstItem="GKf-Z5-0nd" firstAttribute="trailing" secondItem="khu-NZ-PMp" secondAttribute="trailing" constant="16" id="67C-a6-dNd"/>
-                            <constraint firstItem="khu-NZ-PMp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="BdL-iQ-BcK"/>
-                            <constraint firstItem="guz-Su-Y8n" firstAttribute="leading" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="I1X-0w-jxe"/>
-                            <constraint firstItem="A1J-Df-tCr" firstAttribute="leading" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="JJT-MD-4Mt"/>
-                            <constraint firstItem="8hn-sZ-5Zn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="16" id="O4z-xV-Ove"/>
-                            <constraint firstItem="8hn-sZ-5Zn" firstAttribute="top" secondItem="A1J-Df-tCr" secondAttribute="bottom" constant="10" id="QfQ-RY-VxS"/>
-                            <constraint firstItem="ITK-5o-Wbg" firstAttribute="leading" secondItem="GKf-Z5-0nd" secondAttribute="leading" constant="103" id="WNL-GS-Sxs"/>
-                            <constraint firstItem="GKf-Z5-0nd" firstAttribute="trailing" secondItem="A1J-Df-tCr" secondAttribute="trailing" constant="16" id="aEF-vP-ziJ"/>
-                            <constraint firstItem="ITK-5o-Wbg" firstAttribute="centerX" secondItem="khu-NZ-PMp" secondAttribute="centerX" id="dxO-Uv-NUg"/>
-                            <constraint firstItem="ITK-5o-Wbg" firstAttribute="top" secondItem="khu-NZ-PMp" secondAttribute="bottom" constant="71" id="e9X-J0-9xg"/>
-                            <constraint firstItem="A1J-Df-tCr" firstAttribute="top" secondItem="GKf-Z5-0nd" secondAttribute="top" constant="22" id="iYk-x3-wmv"/>
-                            <constraint firstItem="guz-Su-Y8n" firstAttribute="top" secondItem="khu-NZ-PMp" secondAttribute="bottom" constant="10" id="mXO-dU-vX8"/>
-                            <constraint firstItem="khu-NZ-PMp" firstAttribute="top" secondItem="8hn-sZ-5Zn" secondAttribute="bottom" constant="10" id="yJF-iw-DNw"/>
+                            <constraint firstItem="O9o-FU-wGO" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="2T5-At-z1B"/>
+                            <constraint firstItem="fHY-Cl-qij" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="CRd-oH-lgi"/>
+                            <constraint firstItem="vXK-aJ-7U0" firstAttribute="top" secondItem="Lpn-xG-U35" secondAttribute="bottom" constant="3" id="ISb-y8-fFb"/>
+                            <constraint firstItem="fHY-Cl-qij" firstAttribute="top" secondItem="O9o-FU-wGO" secondAttribute="bottom" constant="3" id="MUZ-MG-NVN"/>
+                            <constraint firstItem="Lpn-xG-U35" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="WQb-wT-ZHB"/>
+                            <constraint firstAttribute="trailing" secondItem="fHY-Cl-qij" secondAttribute="trailing" constant="15" id="XIn-1g-HW2"/>
+                            <constraint firstItem="0LH-5Q-8u7" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="adW-FP-lhH"/>
+                            <constraint firstItem="k2K-FI-Fqn" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fHY-Cl-qij" secondAttribute="bottom" constant="39" id="d7c-up-TjT"/>
+                            <constraint firstItem="k2K-FI-Fqn" firstAttribute="trailing" secondItem="0LH-5Q-8u7" secondAttribute="trailing" constant="15" id="eUJ-aj-Toi"/>
+                            <constraint firstItem="O9o-FU-wGO" firstAttribute="top" secondItem="0LH-5Q-8u7" secondAttribute="bottom" constant="3" id="ho5-2s-pso"/>
+                            <constraint firstItem="vXK-aJ-7U0" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="j9G-tE-uEk"/>
+                            <constraint firstItem="Lpn-xG-U35" firstAttribute="top" secondItem="k2K-FI-Fqn" secondAttribute="top" constant="10" id="z00-If-ZAf"/>
+                            <constraint firstItem="0LH-5Q-8u7" firstAttribute="top" secondItem="vXK-aJ-7U0" secondAttribute="bottom" constant="3" id="zPM-Xn-MZn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GKf-Z5-0nd"/>
+                        <viewLayoutGuide key="safeArea" id="k2K-FI-Fqn"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                 <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,19 +259,197 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="icons8-contacts-40" id="vOe-FA-mtY"/>
+                    <navigationItem key="navigationItem" id="5p1-Zo-rZy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="contactSV" destination="khu-NZ-PMp" id="SBV-cN-bRv"/>
-                        <outlet property="weblink01" destination="SOF-9M-IIf" id="QMU-em-kSN"/>
+                        <outlet property="contactSV" destination="0LH-5Q-8u7" id="bNj-LY-ieK"/>
+                        <outlet property="weblink01" destination="ulP-QM-DgP" id="AcB-oA-5Y2"/>
+                        <outlet property="weblink02" destination="aLJ-UI-5V1" id="bM7-kG-vco"/>
+                        <outlet property="weblink03" destination="4VT-L9-8ps" id="1Yt-Mb-dGy"/>
+                        <outlet property="weblink04" destination="ceP-TF-5mF" id="sqf-HK-AcO"/>
+                        <outlet property="weblink05" destination="vet-YR-Hcs" id="Hfg-Ih-ilL"/>
+                        <outlet property="weblink06" destination="qcI-v8-P4r" id="kbn-X9-tyE"/>
+                        <outlet property="weblink07" destination="2ZN-BX-bs6" id="9L1-Yw-doO"/>
+                        <outlet property="weblink08" destination="WGZ-HN-wQJ" id="m3x-ZH-VuJ"/>
+                        <outlet property="weblink09" destination="CUH-ki-fVi" id="6G1-6y-IjK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XS3-cS-EF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cju-9a-Wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682.39999999999998" y="-30.134932533733135"/>
+            <point key="canvasLocation" x="541.875" y="667.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nmd-Jr-y59">
+            <objects>
+                <viewController id="vBs-q9-1Iw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6X4-kr-lOV" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-vd-Uv5">
+                                <rect key="frame" x="15" y="30" width="290" height="316.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-Nx-ubg">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="27"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Support Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-9W-EQ0" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="27"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.0315"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-RY-Mz0">
+                                        <rect key="frame" x="0.0" y="37" width="290" height="197"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODk-XO-wXm">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="197"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-ot-baF">
+                                                        <rect key="frame" x="8" y="8" width="274" height="147"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="I am interested in this activity:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-Mg-gSB" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                        <real key="value" value="0.024500000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-TT-l38">
+                                                                <rect key="frame" x="0.0" y="58" width="274" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="I would like to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-gQ-tsA" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="97" width="274" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                                        <real key="value" value="0.024500000000000001"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="h9d-ot-baF" firstAttribute="top" secondItem="ODk-XO-wXm" secondAttribute="top" constant="8" id="Kfi-t2-sFB"/>
+                                                    <constraint firstItem="h9d-ot-baF" firstAttribute="leading" secondItem="ODk-XO-wXm" secondAttribute="leading" constant="8" id="bwN-EU-h8i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="h9d-ot-baF" secondAttribute="trailing" constant="8" id="o1R-U8-cRS"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Click send if you want carer support workers to help you do this or click cancel if you do not" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ez4-cV-b11" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="244" width="290" height="23.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                <real key="value" value="0.024500000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="211" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vw-Ydx">
+                                        <rect key="frame" x="0.0" y="277.5" width="290" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-Xe-kc8" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="39"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtF-b8-czy" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                                <rect key="frame" x="268.5" y="0.0" width="21.5" height="39"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title=" Send "/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.024500000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OhZ-vd-Uv5" firstAttribute="leading" secondItem="qTX-Zo-7eD" secondAttribute="leading" constant="15" id="21u-Iz-fCC"/>
+                            <constraint firstItem="qTX-Zo-7eD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OhZ-vd-Uv5" secondAttribute="bottom" constant="133.5" id="8vo-Ob-J8R"/>
+                            <constraint firstItem="qTX-Zo-7eD" firstAttribute="trailing" secondItem="OhZ-vd-Uv5" secondAttribute="trailing" constant="15" id="B8p-CD-1Aq"/>
+                            <constraint firstItem="OhZ-vd-Uv5" firstAttribute="top" secondItem="qTX-Zo-7eD" secondAttribute="top" constant="10" id="Vdv-ZS-k6Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTX-Zo-7eD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.64313725489999995" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.15686274510000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PO-fU-Hqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-30.134932533733135"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="Pnm-sU-qRd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eDR-m2-gVH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="icons8-contacts-40" id="saV-bC-PW6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0mD-fy-VYJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kiA-Fl-iq4" kind="relationship" relationship="rootViewController" id="Efc-oI-q5C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57N-M5-mrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.625" y="667.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="icons8-contacts-40" width="40" height="40"/>
+        <image name="weblink01" width="212" height="161"/>
+        <image name="weblink02" width="315" height="157"/>
+        <image name="weblink03" width="163" height="156"/>
+        <image name="weblink04" width="487" height="153"/>
+        <image name="weblink05" width="171" height="159"/>
+        <image name="weblink06" width="130" height="164"/>
+        <image name="weblink07" width="185" height="156"/>
+        <image name="weblink08" width="157" height="159"/>
+        <image name="weblink09" width="551" height="158"/>
     </resources>
 </document>

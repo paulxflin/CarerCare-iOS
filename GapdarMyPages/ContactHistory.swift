@@ -20,9 +20,17 @@ class ContactHistory:UIViewController{
     var networkMessagesArray : [Int] = []
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         historyScroller.layer.masksToBounds = true
         historyScroller.layer.cornerRadius = 10.0
         
+        getInfo()
+ 
+        print("0..............hi")
+        placeInformation()
+    }
+    
+    func getInfo(){
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         
         if defaults.array(forKey: "networkCallsArray") == nil {
@@ -39,7 +47,6 @@ class ContactHistory:UIViewController{
         }
         networkMessagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
         
-        placeInformation()
     }
     
     func placeInformation(){

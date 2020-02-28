@@ -38,10 +38,26 @@ class PermissionsViewController: UIViewController {
         newLayer.endPoint = CGPoint(x:0.0, y:0.0)
         startTracking.layer.insertSublayer(newLayer, at: 0)
         
+        
+        
+        
             // Do any additional setup after loading the view.
     }
     
     
+    override func viewWillLayoutSubviews() {
+        startTracking.layer.masksToBounds = true
+        let width = startTracking.frame.width
+        
+        startTracking.frame.size = CGSize(width: width, height:  width )
+        let height = startTracking.frame.height
+        
+        
+        print("width:", width, "height", height)
+        startTracking.layer.cornerRadius = width/2
+
+
+    }
     
     @IBAction func trackingPressed(_ sender: Any) {
         setupHistory()
@@ -58,6 +74,12 @@ class PermissionsViewController: UIViewController {
     
     @IBAction func sharingSwitchPressed(_ sender: Any) {
         defaults.set(sharingSwitch.isOn, forKey: "allowShare")
+        
+        let height = startTracking.frame.height
+        
+        let width = startTracking.frame.width
+        
+        print("width:", width, "height", height)
         //Debugging
         //print(defaults.bool(forKey: "allowShare"))
         
@@ -102,4 +124,11 @@ class PermissionsViewController: UIViewController {
     }
     */
 
+    @IBAction func privacyLinkPressed(_ sender: Any) {
+        
+        guard let url = URL(string: "https://www.torfaen.gov.uk/en/AboutTheCouncil/DataProtectionFreedomofInformation/DataProtection/Privacy-Notice/PrivacyNotice.aspx") else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    
 }

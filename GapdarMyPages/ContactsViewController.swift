@@ -159,6 +159,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         }
     }
     
+    @objc func messagePressed(_ sender: UIButton) {
+        print("message pressed")
+        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+        let composeVC = messagesSB.instantiateViewController(withIdentifier: "compose")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = composeVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
     
     @IBAction func getNumber(_ sender: Any) {
         let picker = CNContactPickerViewController()
@@ -260,6 +269,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
         button.tag = i
         contactSV.addSubview(button)
+        
+        // Adding a message button
+        let image2 = UIImage(named: "icons8-messaging-50.png") as UIImage?
+        let button2 = UIButton.init(type: .roundedRect)
+        button2.frame = CGRect(x:335, y:yContactsValue, width:32, height:32)
+        button2.setImage(image2, for: .normal)
+        button2.addTarget(self, action: #selector(messagePressed(_ :)), for: .touchUpInside)
+        button2.tag = i
+        contactSV.addSubview(button2)
         
 
         yContactsValue += 40

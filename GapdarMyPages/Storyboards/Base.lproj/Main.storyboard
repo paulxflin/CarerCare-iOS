@@ -759,18 +759,18 @@
                                                         <rect key="frame" x="68.5" y="8" width="151" height="151"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="151" id="Ju4-hv-M3C"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="aXI-DO-9bd"/>
+                                                            <constraint firstAttribute="height" constant="151" id="Ju4-hv-M3C"/>
+                                                            <constraint firstAttribute="width" constant="151" id="aXI-DO-9bd"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                                         <state key="normal" title="Start tracking">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="textSize">
-                                                                <real key="value" value="0.041500000000000002"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="75.5"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="trackingPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="ebD-M5-GnZ"/>

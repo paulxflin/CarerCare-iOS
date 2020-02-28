@@ -71,13 +71,13 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         
         let widthOfCanvas = activityScrollView.frame.width
         let heightOfCanvas = activityScrollView.frame.height
-        let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:Int(heightOfCanvas/50)))
+        let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:Int(heightOfCanvas/4)))
         //label.center = CGPoint(x:44, y:146)
         label.textAlignment = .left
         label.text = "Activity: "
         activityScrollView.addSubview(label)
         
-        let activityTF = UITextField(frame: CGRect(x:80, y:yActivityValue, width:(Int(widthOfCanvas - 84)), height:Int(heightOfCanvas/50)))
+        let activityTF = UITextField(frame: CGRect(x:80, y:yActivityValue, width:(Int(widthOfCanvas - 84)), height:Int(heightOfCanvas/4)))
         activityTF.delegate = self
         activityTF.backgroundColor = .white
         activityTF.textAlignment = .left
@@ -85,7 +85,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         activityTF.text = activity
         activityScrollView.addSubview(activityTF)
         activityTextFields.append(activityTF)
-        yActivityValue += Int(heightOfCanvas/50) + 10
+        yActivityValue += Int(heightOfCanvas/4) + 10
         
         activityScrollView.contentSize.height = CGFloat(yActivityValue)
         

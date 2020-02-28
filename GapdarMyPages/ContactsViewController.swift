@@ -232,8 +232,10 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     func placeContactOnScreen(name: String, phone: String, i: Int){
         
         let widthOfCanvas = contactSV.frame.width
+        print("this is width:")
         print(widthOfCanvas)
         let heightOfCanvas = contactSV.frame.height
+        print("this is height:")
         print(heightOfCanvas)
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: 30))
         label.textAlignment = .left

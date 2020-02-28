@@ -225,9 +225,12 @@
                     <connections>
                         <outlet property="backgroundLabel" destination="7Xo-Yq-CQK" id="43M-9l-7TR"/>
                         <outlet property="btSendJSON" destination="1HL-oT-jHp" id="7Ny-7x-OHR"/>
+                        <outlet property="callsLabel" destination="38r-kg-xCp" id="HXo-Ot-vpq"/>
                         <outlet property="displayedScoreLabel" destination="PfD-hd-aQh" id="hzm-bv-HqH"/>
                         <outlet property="figuresView" destination="7mo-Yd-dK0" id="ry4-LT-egQ"/>
+                        <outlet property="messagesLabel" destination="hqy-3h-MVa" id="fZq-e4-EAT"/>
                         <outlet property="scoreView" destination="ZXv-Xn-glQ" id="U2e-R9-faT"/>
+                        <outlet property="stepsLabel" destination="UOB-Fq-B7s" id="liP-Iy-Gww"/>
                         <outlet property="wellBeingLabel" destination="hRL-Uk-cJY" id="k5s-Nz-ofb"/>
                     </connections>
                 </viewController>

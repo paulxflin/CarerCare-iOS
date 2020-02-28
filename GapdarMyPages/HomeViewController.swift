@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var scoreView: UIView!
     //    let label = UILabel()
+    @IBOutlet weak var stepsLabel: rotateLabel!
+    @IBOutlet weak var callsLabel: rotateLabel!
+    @IBOutlet weak var messagesLabel: rotateLabel!
+    
     
     @IBOutlet weak var figuresView: UIView!
     
@@ -45,10 +49,12 @@ class HomeViewController: UIViewController {
                 backgroundLabel.layer.addSublayer(newLayer)        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // viewWillAppear is called every single time a view is presented, unlike viewDidLoad which is only called once when view is added to memory
     override func viewWillAppear(_ animated: Bool) {
-        
-
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
+        stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
+        callsLabel.text = String(defaults.integer(forKey: "totalCalls"))
+        messagesLabel.text = String(defaults.integer(forKey: "totalMessages"))
     }
     
     override func viewWillLayoutSubviews() {

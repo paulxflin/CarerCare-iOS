@@ -260,8 +260,9 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         label2.textAlignment = .left
         label2.text = "Contact Number: "
         contactSV.addSubview(label2)
+        let buttonDimension = Int (169/8)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(swidth - 45 - 160), height:Int(169/8)))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:Int(169/8)))
         numTF.delegate = self
         numTF.text = phone
         numTF.textAlignment = .left
@@ -269,9 +270,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         numTF.borderStyle = .roundedRect
         contactSV.addSubview(numTF)
         
+        
+        
         let image = UIImage(named: "icons8-call-32.png") as UIImage?
         let button = UIButton.init(type: .roundedRect)
-        button.frame = CGRect(x:295, y:yContactsValue, width:Int(169/8), height:Int(169/8))
+        button.frame = CGRect(x:Int(Int(swidth ) - 2 * buttonDimension - 5), y:yContactsValue, width:buttonDimension, height:buttonDimension)
         button.setImage(image, for: .normal)
         button.addTarget(self, action: #selector(callPressed(_ :)), for: .touchUpInside)
         button.tag = i
@@ -280,7 +283,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         // Adding a message button
         let image2 = UIImage(named: "icons8-messaging-50.png") as UIImage?
         let button2 = UIButton.init(type: .roundedRect)
-        button2.frame = CGRect(x:315, y:yContactsValue, width:Int(169/8), height:Int(169/8))
+        button2.frame = CGRect(x:Int(Int(swidth ) - buttonDimension), y:yContactsValue, width:buttonDimension, height:buttonDimension)
         button2.setImage(image2, for: .normal)
         button2.addTarget(self, action: #selector(messagePressed(_ :)), for: .touchUpInside)
         button2.tag = i

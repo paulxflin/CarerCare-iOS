@@ -15,6 +15,8 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var firstName : String?
     
+    @IBOutlet weak var dateTimePicker: UIDatePicker!
+    
     @IBOutlet weak var signoffLabel: UILabel!
     @IBOutlet weak var msgTextView: UITextView!
     @IBOutlet weak var nameTF: UITextField!
@@ -114,6 +116,25 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     // MARK: Actions
+    
+    
+    @IBAction func dateTimePickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: dateTimePicker.date)
+        print("This is the strDate")
+        print(strDate)
+        let strArr = strDate.split(separator: ",")
+        let selectedDate : String = String(strArr[0])
+        print("This is the selectedDate")
+        print(selectedDate)
+        let selectedTime : String? = strArr.count > 1 ? String(strArr[1]).trimmingCharacters(in: .whitespacesAndNewlines) : nil
+        print("This is the selectedTime")
+        print(selectedTime ?? "missing selected time")
+    }
     
     //Number of Columns of Data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

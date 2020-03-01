@@ -86,16 +86,33 @@ class HomeViewController: UIViewController {
     @IBAction func btSendJSONPressed(_ sender: Any) {
         //order of json does not matter, All String Data
         //double quotes for strings don't usually show up, but it is there.
-        let Dictionary : [String: String] = ["supportCode": defaults.string(forKey: "reference")! , "wellBeingScore": defaults.string(forKey: "score")! , "weeklySteps": defaults.string(forKey: "oneWeekSteps")! , "weeklyCalls": defaults.string(forKey: "totalCalls")! , "errorRate": "errorRate_example" ,  "postCode": defaults.string(forKey: "postcode")! , "date" : "01012020"]
+        
+        //let Dictionary : [String: String] = ["supportCode": defaults.string(forKey: "reference")! , "wellBeingScore": defaults.string(forKey: "score")! , "weeklySteps": defaults.string(forKey: "oneWeekSteps")! , "weeklyCalls": defaults.string(forKey: "totalCalls")! , "errorRate": "errorRate_example" ,  "postCode": defaults.string(forKey: "postcode")! , "date" : "01032020"]
         
         
-        let JSON = self.foundationToJSON(object: Dictionary)
-        let Foundation = self.JSONToFoundation(object: JSON)
-        print(Foundation)
-        debugPrint(Foundation)
+        //let JSON = self.foundationToJSON(object: Dictionary)
+        //let Foundation = self.JSONToFoundation(object: JSON)
+        //print(Foundation)
+        //debugPrint(Foundation)
         
         
-        Alamofire.request("http://", method: .post, parameters: Dictionary as Parameters, encoding: JSONEncoding.default, headers: [:])
+        let sampleParams : [String : String] = [
+            "postCode" : defaults.string(forKey: "postcode") ?? "EC3R",
+            "wellBeingScore" : defaults.string(forKey: "score") ?? "6",
+            "weeklySteps" : defaults.string(forKey: "oneWeekSteps") ?? "1300",
+            "weeklyCalls" : defaults.string(forKey: "totalCalls") ?? "22",
+            "errorRate" : "10",
+            "supportCode" : defaults.string(forKey: "reference") ?? "apptest",
+            "date" : "01032020"
+        ]
+ 
+        
+        
+        Alamofire.request("http://178.79.172.202:8080/androidData", method: .post, parameters: sampleParams, encoding: JSONEncoding.default).responseJSON { response in
+            print(response)
+        }
+        
+//        Alamofire.request(.POST, )
         
         
     }

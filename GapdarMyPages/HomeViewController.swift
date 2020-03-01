@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var figuresView: UIView!
     
-    @IBOutlet weak var btSendJSON: UIButton!
+//    @IBOutlet weak var btSendJSON: UIButton!
     
     
     let defaults = UserDefaults.standard
@@ -117,9 +117,9 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func btSendJSONPressed(_ sender: Any) {
-        sendDataToDB()
-    }
+//    @IBAction func btSendJSONPressed(_ sender: Any) {
+//        sendDataToDB()
+//    }
     
 }
 

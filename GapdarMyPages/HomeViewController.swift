@@ -101,7 +101,7 @@ class HomeViewController: UIViewController {
             "wellBeingScore" : defaults.string(forKey: "score") ?? "6",
             "weeklySteps" : defaults.string(forKey: "oneWeekSteps") ?? "1300",
             "weeklyCalls" : defaults.string(forKey: "totalCalls") ?? "22",
-            "errorRate" : "10",
+            "errorRate" : defaults.string(forKey: "errorRate") ?? "10",
             "supportCode" : defaults.string(forKey: "reference") ?? "apptest",
             "date" : "01032020"
         ]

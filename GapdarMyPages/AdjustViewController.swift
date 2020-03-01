@@ -62,6 +62,18 @@ class AdjustViewController: UIViewController {
     
         let score : Int = Int(scoreLabel.text!)!
         print(score)
+        
+        //Small bit to calculate error rate, store in errorRate var.
+        let predictedScore = defaults.integer(forKey: "score")
+        if score != 0 {
+            let error : Double = Double(abs(predictedScore - score)) / Double(score) * 100
+            let intError = Int(error)
+            defaults.set(intError, forKey: "errorRate")
+        } else {
+            let intError = abs(predictedScore - score) * 10 //assuming in case 0 is rated, divide by 10.
+            defaults.set(intError, forKey: "errorRate")
+        }
+        
         defaults.set(score, forKey: "score")
         
         //Update the scoresArray with this score.

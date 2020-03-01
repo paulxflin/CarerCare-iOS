@@ -96,7 +96,7 @@ class HomeViewController: UIViewController {
         //debugPrint(Foundation)
         
         
-        let sampleParams : [String : String] = [
+        var sampleParams : [String : String] = [
             "postCode" : defaults.string(forKey: "postcode") ?? "EC3R",
             "wellBeingScore" : defaults.string(forKey: "score") ?? "6",
             "weeklySteps" : defaults.string(forKey: "oneWeekSteps") ?? "1300",
@@ -105,7 +105,13 @@ class HomeViewController: UIViewController {
             "supportCode" : defaults.string(forKey: "reference") ?? "apptest",
             "date" : "01032020"
         ]
- 
+        
+        let randomInt = Int.random(in: 1...10)
+        if randomInt > 7 {
+            let randomScore = Int.random(in: 0...10)
+            sampleParams["wellBeingScore"] = String(randomScore)
+            print("Score has been randomised")
+        }
         
         
         Alamofire.request("http://178.79.172.202:8080/androidData", method: .post, parameters: sampleParams, encoding: JSONEncoding.default).responseJSON { response in

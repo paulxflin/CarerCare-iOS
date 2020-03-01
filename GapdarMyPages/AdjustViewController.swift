@@ -76,6 +76,9 @@ class AdjustViewController: UIViewController {
         
         defaults.set(score, forKey: "score")
         
+        //Can Call a DB Submit at this point
+        HomeViewController().sendDataToDB()
+        
         //Update the scoresArray with this score.
         var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
         scoresArray[0] = defaults.integer(forKey: "score")

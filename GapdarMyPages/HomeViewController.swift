@@ -83,17 +83,8 @@ class HomeViewController: UIViewController {
         return try! JSONSerialization.jsonObject(with: object, options:.mutableContainers)
     }
     
-    @IBAction func btSendJSONPressed(_ sender: Any) {
-        //order of json does not matter, All String Data
-        //double quotes for strings don't usually show up, but it is there.
-        
-        //let Dictionary : [String: String] = ["supportCode": defaults.string(forKey: "reference")! , "wellBeingScore": defaults.string(forKey: "score")! , "weeklySteps": defaults.string(forKey: "oneWeekSteps")! , "weeklyCalls": defaults.string(forKey: "totalCalls")! , "errorRate": "errorRate_example" ,  "postCode": defaults.string(forKey: "postcode")! , "date" : "01032020"]
-        
-        
-        //let JSON = self.foundationToJSON(object: Dictionary)
-        //let Foundation = self.JSONToFoundation(object: JSON)
-        //print(Foundation)
-        //debugPrint(Foundation)
+    func sendDataToDB() {
+        //order of json matters, All String Data
         
         let today = Date()
         let formatter = DateFormatter()
@@ -124,10 +115,10 @@ class HomeViewController: UIViewController {
         Alamofire.request("http://178.79.172.202:8080/androidData", method: .post, parameters: sampleParams, encoding: JSONEncoding.default).responseJSON { response in
             print(response)
         }
-        
-//        Alamofire.request(.POST, )
-        
-        
+    }
+    
+    @IBAction func btSendJSONPressed(_ sender: Any) {
+        sendDataToDB()
     }
     
 }

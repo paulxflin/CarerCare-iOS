@@ -103,7 +103,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func sendPressed(_ sender: UIButton) {
         let phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
-        let number = phoneArray[2] //Arbitrarily determined by Joseph 3rd contact is carer
+        let number = phoneArray[0] //Arbitrarily determined by Joseph 1st contact is carer
         
         // Beware nil unwrapping during compose breaks app
         var msg : String = ""

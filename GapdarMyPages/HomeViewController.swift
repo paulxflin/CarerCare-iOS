@@ -95,6 +95,13 @@ class HomeViewController: UIViewController {
         //print(Foundation)
         //debugPrint(Foundation)
         
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "ddMMyyyy" //this your string date format
+        let date = formatter.string(from: today)
+        print("The resulting date is")
+        print(date)
+        
         
         var sampleParams : [String : String] = [
             "postCode" : defaults.string(forKey: "postcode") ?? "EC3R",
@@ -103,7 +110,7 @@ class HomeViewController: UIViewController {
             "weeklyCalls" : defaults.string(forKey: "totalCalls") ?? "22",
             "errorRate" : defaults.string(forKey: "errorRate") ?? "10",
             "supportCode" : defaults.string(forKey: "reference") ?? "apptest",
-            "date" : "01032020"
+            "date" : date
         ]
         
         let randomInt = Int.random(in: 1...10)

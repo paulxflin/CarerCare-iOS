@@ -45,14 +45,16 @@ class ContactHistory:UIViewController{
     func getInfo(){
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         
-        if defaults.array(forKey: "networkCallsArray") == nil {
+        //Potential Error Hiding
+        if defaults.array(forKey: "networkCallsArray") == nil || defaults.array(forKey: "networkCallsArray")!.count == 0 {
             networkCallsArray = [Int](repeating: 0, count: nameArray.count)
             defaults.set(networkCallsArray, forKey: "networkCallsArray")
             print(networkCallsArray)
         }
         networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
         
-        if defaults.array(forKey: "networkMessagesArray") == nil {
+        //Potential Error Hiding
+        if defaults.array(forKey: "networkMessagesArray") == nil || defaults.array(forKey: "networkMessagesArray")!.count == 0 {
             networkMessagesArray = [Int](repeating: 0, count: nameArray.count)
             defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
             print(networkMessagesArray)
@@ -89,6 +91,9 @@ class ContactHistory:UIViewController{
             
             let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
             callLabel.textAlignment = .left
+            print("Debugging temp")
+            print(networkCallsArray)
+            print(i)
             callLabel.text = String(networkCallsArray[i])
             historyScroller.addSubview(callLabel)
             callLabelArray[i] = callLabel

@@ -31,6 +31,10 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     @IBOutlet weak var SupportCodeTextField: UITextField!
     
     override func viewDidLoad() {
+        //Make sure the layouts are initialised correctly
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+        
         super.viewDidLoad()
         activityScrollView.layer.cornerRadius = 10.0
         postcodeTextField.delegate = self
@@ -43,7 +47,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         contactsPerDayTextField.text = defaults.string(forKey: "targetCalls")
         SupportCodeTextField.text = defaults.string(forKey: "reference")
         
-        
+        setActivityScroller()
         
         
     }

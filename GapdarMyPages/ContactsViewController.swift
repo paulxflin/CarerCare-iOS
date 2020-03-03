@@ -248,20 +248,19 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         let widthOfCanvas = contactSV.frame.width
         print("this is width:")
         let width = contactSV.contentSize.height
-        let height = contactSV.contentSize.width
+        let height = contactSV.frame.height
         print(widthOfCanvas, width)
-        let heightOfCanvas = contactSV.frame.height
+        let heightOfCanvas = self.view.frame.height
         print("this is height:")
         print(heightOfCanvas, height)
+        let tempHeight = heightOfCanvas * 0.30
+        print(tempHeight,heightOfCanvas * 1 / 4 )
         
-        
-        let tempHeight = heightOfCanvas * 3 / 4
-        print("this is the tempHeight")
-        print(tempHeight)
+       
         
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(tempHeight/8)))
         label.textAlignment = .left
-        label.text = "Name: "
+    label.text = "Name: "
         contactSV.addSubview(label)
         
         let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(tempHeight/8)))

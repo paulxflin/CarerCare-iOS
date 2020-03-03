@@ -45,14 +45,14 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         //empty this out
         defaults.set([], forKey: "phoneArray")
         defaults.set([], forKey: "nameArray")
-        defaults.set([], forKey: "networkCallsArray")
-        defaults.set([], forKey: "networkMessagesArray")
+//        defaults.set([], forKey: "networkCallsArray")
+//        defaults.set([], forKey: "networkMessagesArray")
         
     }
     
     func setupContactSV() {
         // TODO: Add a for loop to add in the saved contacts.
-        //view.addSubview(contactSV)
+//        view.addSubview(contactsScrollView)
         
         addExistingContacts()
     }
@@ -141,8 +141,8 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         callsArray.append(0)
         messagesArray.append(0)
         //Two set empty arrays may be redundant
-        defaults.set([], forKey: "networkCallsArray")
-        defaults.set([], forKey: "networkMessagesArray")
+//        defaults.set([], forKey: "networkCallsArray")
+//        defaults.set([], forKey: "networkMessagesArray")
         defaults.set(callsArray, forKey: "networkCallsArray")
         defaults.set(messagesArray, forKey: "networkMessagesArray")
         

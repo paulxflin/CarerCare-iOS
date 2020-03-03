@@ -198,7 +198,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             phoneNumber = phoneNo.stringValue
             
         }
-        i += 1
+        
 //        //adds new contacts to phoneArray
 //        defaults.set([], forKey: "phoneArray")
 //        defaults.set([], forKey: "nameArray")
@@ -214,6 +214,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         print(phoneArray)
         print(nameArray)
         placeContactOnScreen(name: familyName, phone: phoneNumber, i:i)
+        i += 1
         
         if defaults.array(forKey: "networkCallsArray") != nil {
             callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]

@@ -22,25 +22,28 @@ class ContactHistory:UIViewController{
     var callLabelArray : [UILabel]  = []
     var messageLabelArray : [UILabel]  = []
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        historyScroller.layer.masksToBounds = true
-        historyScroller.layer.cornerRadius = 10.0
-        
-        getInfo()
-        callLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
-        messageLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
- 
-        print("0..............hi")
-        placeInfo()
-    }
+    var yposition : Int = 60
     
     override func viewWillAppear(_ animated: Bool) {
         print("willAppear reached")
         getInfo()
         updateTF()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        historyScroller.layer.masksToBounds = true
+        historyScroller.layer.cornerRadius = 10.0
+        
+//        getInfo()
+//        callLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
+//        messageLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
+//
+//        print("0..............hi")
+//        placeInfo()
+    }
+    
+    
     
     func getInfo(){
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
@@ -64,6 +67,9 @@ class ContactHistory:UIViewController{
     }
     
     func updateTF() {
+        if callLabelArray.count < nameArray.count {
+            updateLabel(callLabelArray.count)
+        }
         var i = 0
         while i < nameArray.count {
             let callLabel = callLabelArray[i]
@@ -75,15 +81,9 @@ class ContactHistory:UIViewController{
         }
     }
     
-    func placeInfo(){
-        var yposition = 60
-        
-        var i = 0
-        while i < nameArray.count{
-            print(i)
-            
-            
-            
+    func updateLabel(_ start : Int) {
+        var i = start
+        while i < nameArray.count {
             let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 130, height:33))
             nameLabel.textAlignment = .left
             nameLabel.text = nameArray[i]
@@ -91,24 +91,56 @@ class ContactHistory:UIViewController{
             
             let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
             callLabel.textAlignment = .left
-            print("Debugging temp")
-            print(networkCallsArray)
-            print(i)
             callLabel.text = String(networkCallsArray[i])
             historyScroller.addSubview(callLabel)
-            callLabelArray[i] = callLabel
+            callLabelArray.append(callLabel)
             
             
             let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
             messageLabel.textAlignment = .left
             messageLabel.text = String(networkMessagesArray[i])
             historyScroller.addSubview(messageLabel)
-            messageLabelArray[i] = messageLabel
+            messageLabelArray.append(messageLabel)
             
             yposition += 40
             
             i += 1
         }
+    }
+    
+//    func placeInfo(){
+////        var yposition = 60
+//        var i = 0
+//        while i < nameArray.count{
+//            print(i)
+//
+//            let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 130, height:33))
+//            nameLabel.textAlignment = .left
+//            nameLabel.text = nameArray[i]
+//            historyScroller.addSubview(nameLabel)
+//
+//            let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
+//            callLabel.textAlignment = .left
+//            print("Debugging temp")
+//            print(networkCallsArray)
+//            print(i)
+//            callLabel.text = String(networkCallsArray[i])
+//            historyScroller.addSubview(callLabel)
+//            callLabelArray[i] = callLabel
+//
+//
+//            let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
+//            messageLabel.textAlignment = .left
+//            messageLabel.text = String(networkMessagesArray[i])
+//            historyScroller.addSubview(messageLabel)
+//            messageLabelArray[i] = messageLabel
+//
+//            yposition += 40
+//
+//            i += 1
+//        }
+        
+        
         
         
         
@@ -142,7 +174,7 @@ class ContactHistory:UIViewController{
 //        self.view.addSubview(numlabel)
 //
 //        yContactsValue += 40
-//    
-    }
+//
+//    }
     
 }

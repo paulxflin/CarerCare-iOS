@@ -47,7 +47,7 @@
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="O9o-FU-wGO">
-                                <rect key="frame" x="15" y="187" width="30" height="30.000000000000028"/>
+                                <rect key="frame" x="15" y="187" width="30" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-CR-0DE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -137,7 +137,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzn-NR-f6E">
-                                                <rect key="frame" x="0.0" y="129" width="256" height="48"/>
+                                                <rect key="frame" x="0.0" y="129.00000000000006" width="256" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-TF-5mF">
                                                         <rect key="frame" x="0.0" y="0.0" width="149" height="48"/>
@@ -175,7 +175,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-z3-XlO">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="79.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="180.00000000000006" width="384" height="79.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps &amp; Digital Services that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-s3-iRm" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="344.66666666666669" height="22.666666666666668"/>
@@ -189,7 +189,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-Kx-GJs">
-                                                <rect key="frame" x="0.0" y="30.666666666666686" width="290" height="49"/>
+                                                <rect key="frame" x="0.0" y="30.666666666666629" width="290" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZN-BX-bs6">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="49"/>

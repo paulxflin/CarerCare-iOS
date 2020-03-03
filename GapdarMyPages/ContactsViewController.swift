@@ -233,13 +233,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         print("It cancelled the contact picker view controller when the cancel button is pressed")
     }
     
-    @IBAction func resetStart(_ sender: Any) {
-        defaults.set(false, forKey: "setup")
-        let activityCountArray = [0, 0, 0]
-        defaults.set(activityCountArray, forKey: "activityCountArray")
-        defaults.set(0, forKey: "totalCalls")
-        defaults.set(0, forKey: "totalMessages")
-    }
+//    @IBAction func resetStart(_ sender: Any) {
+//        defaults.set(false, forKey: "setup")
+//        let activityCountArray = [0, 0, 0]
+//        defaults.set(activityCountArray, forKey: "activityCountArray")
+//        defaults.set(0, forKey: "totalCalls")
+//        defaults.set(0, forKey: "totalMessages")
+//    }
     
     
     func placeContactOnScreen(name: String, phone: String, i: Int){

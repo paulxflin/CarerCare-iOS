@@ -886,7 +886,7 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="-719.19040479760122"/>
         </scene>
-        <!--Messages-->
+        <!--Contact-->
         <scene sceneID="CZd-6k-bPR">
             <objects>
                 <viewController id="Hod-BO-zPo" customClass="ContactHistory" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
@@ -895,10 +895,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-0w-MIK">
-                                <rect key="frame" x="16" y="12" width="382" height="365"/>
+                                <rect key="frame" x="16" y="12" width="382" height="365.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Network Contact History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0G-hV-YoO" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27.333333333333332"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -909,13 +909,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-77-AaW">
-                                        <rect key="frame" x="0.0" y="35" width="382" height="330"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="382" height="330"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="MGp-eg-W3Y">
                                                 <rect key="frame" x="8" y="8" width="280.33333333333331" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxd-OD-jzR" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="50"/>
+                                                        <rect key="frame" x="-0.0128658159743055" y="-0.023251743148023252" width="90.359064965281945" height="50.046503486296047"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -963,7 +963,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="icons8-composing-mail-50" id="BMt-qL-STw"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="icons8-composing-mail-50" id="BMt-qL-STw"/>
                     <navigationItem key="navigationItem" id="D6k-VR-bJ9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

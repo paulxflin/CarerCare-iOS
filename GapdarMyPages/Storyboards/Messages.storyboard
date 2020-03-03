@@ -974,11 +974,11 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="-1720.3898050974515"/>
         </scene>
-        <!--Messages-->
+        <!--Contact-->
         <scene sceneID="p3Z-Vh-n8U">
             <objects>
                 <navigationController storyboardIdentifier="nudge" automaticallyAdjustsScrollViewInsets="NO" id="6wp-rn-AUe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="icons8-composing-mail-50" id="SVC-om-QAA"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="icons8-composing-mail-50" id="SVC-om-QAA"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94n-gi-jY3">

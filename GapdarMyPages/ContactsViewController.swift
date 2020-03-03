@@ -199,13 +199,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             
         }
         i += 1
-        //adds new contacts to phoneArray
-        defaults.set([], forKey: "phoneArray")
-        defaults.set([], forKey: "nameArray")
-        //empties
-        
-        print(phoneArray)
-        print(nameArray)
+//        //adds new contacts to phoneArray
+//        defaults.set([], forKey: "phoneArray")
+//        defaults.set([], forKey: "nameArray")
+//        //empties
+//
+//        print(phoneArray)
+//        print(nameArray)
         phoneArray.append(phoneNumber)
         nameArray.append(familyName)
         
@@ -223,8 +223,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         //adds network array to all of the new contacts
         callsArray.append(0)
         messagesArray.append(0)
-        defaults.set([], forKey: "networkCallsArray")
-        defaults.set([], forKey: "networkMessagesArray")
+//        defaults.set([], forKey: "networkCallsArray")
+//        defaults.set([], forKey: "networkMessagesArray")
         defaults.set(callsArray, forKey: "networkCallsArray")
         defaults.set(messagesArray, forKey: "networkMessagesArray")
     }
@@ -244,27 +244,19 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     func placeContactOnScreen(name: String, phone: String, i: Int){
         let swidth = self.view.frame.width - 30
+        print("this is swidth")
         print(swidth)
-        let widthOfCanvas = contactSV.frame.width
-        print("this is width:")
-        let width = contactSV.contentSize.height
-        let height = contactSV.contentSize.width
-        print(widthOfCanvas, width)
-        let heightOfCanvas = contactSV.frame.height
-        print("this is height:")
-        print(heightOfCanvas, height)
+
+        let adjustedHeight = swidth * 0.57
+        print("this is the adjustedHeight")
+        print(adjustedHeight)
         
-        
-        let tempHeight = heightOfCanvas * 3 / 4
-        print("this is the tempHeight")
-        print(tempHeight)
-        
-        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(tempHeight/8)))
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(adjustedHeight/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactSV.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(tempHeight/8)))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(adjustedHeight/8)))
         nameTF.delegate = self
         nameTF.textAlignment = .left
         nameTF.text = name
@@ -273,15 +265,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         contactSV.addSubview(nameTF)
         
 
-        yContactsValue += Int(tempHeight/8) + 5
+        yContactsValue += Int(adjustedHeight/8) + 5
         
-        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(tempHeight/8)))
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(adjustedHeight/8)))
         label2.textAlignment = .left
         label2.text = "Contact Number: "
         contactSV.addSubview(label2)
-        let buttonDimension = Int (tempHeight/8)
+        let buttonDimension = Int (adjustedHeight/8)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:Int(tempHeight/8)))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:Int(adjustedHeight/8)))
         numTF.delegate = self
         numTF.text = phone
         numTF.textAlignment = .left
@@ -309,7 +301,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         contactSV.addSubview(button2)
         
 
-        yContactsValue += Int(tempHeight/8) + 5
+        yContactsValue += Int(adjustedHeight/8) + 5
         contactSV.contentSize.height = CGFloat(yContactsValue)
         
     }

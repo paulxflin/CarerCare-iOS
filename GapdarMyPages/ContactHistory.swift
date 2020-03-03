@@ -106,6 +106,7 @@ class ContactHistory:UIViewController{
             
             i += 1
         }
+        historyScroller.contentSize.height = CGFloat(yposition)
     }
     
 //    func placeInfo(){

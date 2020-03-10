@@ -21,6 +21,8 @@ class PermissionsViewController: UIViewController {
     
     @IBOutlet weak var sharingSwitch: UISwitch!
     
+    var tracking = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground()
@@ -32,9 +34,10 @@ class PermissionsViewController: UIViewController {
         startTracking.layer.masksToBounds = true
         let newLayer = CAGradientLayer()
         newLayer.frame = startTracking.bounds
+        //newLayer.colors = [UIColor(red: 16/255.0, green: 94/255.0, blue: 103/255.0, alpha: 1.0).cgColor, UIColor(red: 26/255.0, green: 154/255.0, blue: 169/255.0, alpha: 1.0).cgColor]
          newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
         newLayer.locations = [0.0, 1.0]
-        newLayer.startPoint = CGPoint(x:1.0, y:0.0)
+        newLayer.startPoint = CGPoint(x:0.0, y:1.0)
         newLayer.endPoint = CGPoint(x:0.0, y:0.0)
         startTracking.layer.insertSublayer(newLayer, at: 0)
         

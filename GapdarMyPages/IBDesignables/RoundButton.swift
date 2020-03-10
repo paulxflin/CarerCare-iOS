@@ -26,6 +26,22 @@ class RoundButton: UIButton{
             self.titleLabel!.font = newFont
             //let newSize = self.sizeThatFits(CGSize(width: self.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
             //self.frame.size = CGSize(width: max(newSize.width,self.frame.size.width), height: newSize.height)
+        
+        }
+    }
+    
+    @IBInspectable var imageSize: CGFloat = 0{
+        didSet{
+            let bounds = UIScreen.main.bounds
+            
+            self.imageSize = bounds.size.height * imageSize
+            //let fontName = self.titleLabel!.font.fontName
+            //self.frame.size =
+            //let newFont = UIFont(name: fontName, size: bounds.size.height * textSize )
+            //self.titleLabel!.font = newFont
+            //let newSize = self.sizeThatFits(CGSize(width: self.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
+            //self.frame.size = CGSize(width: max(newSize.width,self.frame.size.width), height: newSize.height)
+            
         }
     }
     

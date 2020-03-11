@@ -15,6 +15,10 @@ class ContactHistory:UIViewController{
     
     @IBOutlet weak var historyScroller: UIScrollView!
     
+    @IBOutlet weak var messageImage: UIImageView!
+    
+    @IBOutlet weak var callsImage: UIImageView!
+    
     var nameArray : [String] = []
     var networkCallsArray : [Int] = []
     var networkMessagesArray : [Int] = []
@@ -25,6 +29,10 @@ class ContactHistory:UIViewController{
     var yposition : Int = 60
     
     override func viewWillAppear(_ animated: Bool) {
+        let width = self.view.frame.width - 30
+        messageImage.frame = CGRect(x: width - 50, y:8, width:50, height:50)
+        
+        callsImage.frame = CGRect(x: width - 110, y:8, width:50, height:50)
         print("willAppear reached")
         getInfo()
         updateTF()
@@ -32,6 +40,7 @@ class ContactHistory:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         historyScroller.layer.masksToBounds = true
         historyScroller.layer.cornerRadius = 10.0
         
@@ -83,20 +92,21 @@ class ContactHistory:UIViewController{
     
     func updateLabel(_ start : Int) {
         var i = start
+        let width = self.view.frame.width - 30
         while i < nameArray.count {
-            let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 130, height:33))
+            let nameLabel = UILabel(frame:CGRect(x:15, y:yposition, width: 130, height:33))
             nameLabel.textAlignment = .left
             nameLabel.text = nameArray[i]
             historyScroller.addSubview(nameLabel)
             
-            let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
+            let callLabel = UILabel(frame:CGRect(x:Int(width - 91), y:yposition, width: 50, height:33))
             callLabel.textAlignment = .left
             callLabel.text = String(networkCallsArray[i])
             historyScroller.addSubview(callLabel)
             callLabelArray.append(callLabel)
             
             
-            let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
+            let messageLabel = UILabel(frame:CGRect(x:Int(width - 33), y:yposition, width: 50, height:33))
             messageLabel.textAlignment = .left
             messageLabel.text = String(networkMessagesArray[i])
             historyScroller.addSubview(messageLabel)

@@ -84,7 +84,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     func placeContactOnScreen(name: String, phone: String){
         
         let widthOfCanvas = contactsScrollView.frame.width
-        let heightOfCanvas = contactsScrollView.frame.height
+        let heightOfCanvas = self.view.frame.height * 0.25
         let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(heightOfCanvas/8)))
         label.textAlignment = .left
         label.text = "Name: "
@@ -99,7 +99,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         contactsScrollView.addSubview(nameTF)
         
         nameTextFields.append(nameTF)
-        yContactsValue += Int(heightOfCanvas/8) + 10
+        yContactsValue += Int(heightOfCanvas/8) + 5
         
         let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(heightOfCanvas/8)))
         label2.textAlignment = .left
@@ -114,7 +114,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         numTF.borderStyle = .roundedRect
         contactsScrollView.addSubview(numTF)
         phoneNumberTextFields.append(numTF)
-        yContactsValue += Int(heightOfCanvas/8)
+        yContactsValue += Int(heightOfCanvas/8) + 5
         
         
         contactsScrollView.contentSize.height = CGFloat(yContactsValue)

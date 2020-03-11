@@ -74,7 +74,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     func placeActivityOnScreen(activity: String){
         
         let widthOfCanvas = activityScrollView.frame.width
-        let heightOfCanvas = activityScrollView.frame.height
+        let heightOfCanvas = self.view.frame.height * 0.15
         print(heightOfCanvas)
         let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:Int(heightOfCanvas/4)))
         //label.center = CGPoint(x:44, y:146)
@@ -90,7 +90,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         activityTF.text = activity
         activityScrollView.addSubview(activityTF)
         activityTextFields.append(activityTF)
-        yActivityValue += Int(heightOfCanvas/4) + 10
+        yActivityValue += Int(heightOfCanvas/4) + 5
         
         activityScrollView.contentSize.height = CGFloat(yActivityValue)
         

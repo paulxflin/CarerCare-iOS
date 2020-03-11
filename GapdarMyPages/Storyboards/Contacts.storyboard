@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDR-m2-gVH">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="kiA-Fl-iq4" customClass="ContactsViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gbw-or-KQW" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Carer Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpn-xG-U35" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                <rect key="frame" x="15" y="69" width="138.5" height="19.5"/>
+                                <rect key="frame" x="15" y="69" width="197.66666666666666" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-aJ-7U0" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                <rect key="frame" x="15" y="90" width="69.5" height="0.0"/>
+                                <rect key="frame" x="15" y="98.666666666666671" width="92.333333333333329" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,11 +39,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-5Q-8u7">
-                                <rect key="frame" x="15" y="108" width="290" height="88.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-5Q-8u7">
+                                <rect key="frame" x="15" y="126.66666666666669" width="384" height="184"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88.5" id="T5E-h5-F3K"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="zvJ-m8-uSc"/>
                                 </constraints>
                             </scrollView>
@@ -51,8 +50,8 @@
                                 <rect key="frame" x="145" y="225" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-CR-0DE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                <rect key="frame" x="15" y="196.5" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-CR-0DE" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
+                                <rect key="frame" x="15" y="310.66666666666669" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ax5-am-jOK"/>
@@ -71,11 +70,11 @@
                                     <action selector="getNumber:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="Dh2-SX-ZQR"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4sO-Qs-jBV">
-                                <rect key="frame" x="15" y="234.5" width="290" height="209"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4sO-Qs-jBV">
+                                <rect key="frame" x="15" y="343.66666666666663" width="384" height="272.66666666666663"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Click on the logos below to access local Internet resources on the internet &amp; Apps" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-LA-QvY" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click on the logos below to access local Internet resources on the internet &amp; Apps" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-LA-QvY" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="327.33333333333331" height="54"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -85,8 +84,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Local Networks that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeM-cs-KxR" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="52" width="251.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Networks that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeM-cs-KxR" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.999999999999993" width="280" height="21.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -96,25 +95,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-kq-Psr">
-                                        <rect key="frame" x="0.0" y="74.5" width="224" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-kq-Psr">
+                                        <rect key="frame" x="0.0" y="79.666666666666629" width="285" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulP-QM-DgP" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="55"/>
                                                 <state key="normal" image="weblink01"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed01:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="rVf-tR-JWX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-UI-5V1">
-                                                <rect key="frame" x="56" y="0.0" width="112" height="36"/>
+                                                <rect key="frame" x="70" y="0.0" width="145" height="55"/>
                                                 <state key="normal" image="weblink02"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed02:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="8II-Be-Pu7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-L9-8ps">
-                                                <rect key="frame" x="176" y="0.0" width="48" height="36"/>
+                                                <rect key="frame" x="223" y="0.0" width="62" height="55"/>
                                                 <state key="normal" image="weblink03"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed03:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="VDU-bt-krb"/>
@@ -122,25 +121,25 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzn-NR-f6E">
-                                        <rect key="frame" x="0.0" y="112.5" width="208" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzn-NR-f6E">
+                                        <rect key="frame" x="0.0" y="136.66666666666663" width="264.33333333333331" height="55.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-TF-5mF">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="55.333333333333336"/>
                                                 <state key="normal" image="weblink04"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed04:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="N10-zf-uxg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vet-YR-Hcs">
-                                                <rect key="frame" x="104" y="0.0" width="48" height="36"/>
+                                                <rect key="frame" x="132.33333333333334" y="0.0" width="62" height="55.333333333333336"/>
                                                 <state key="normal" image="weblink05"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed05:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="ZUl-SF-JE6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-v8-P4r">
-                                                <rect key="frame" x="160" y="0.0" width="48" height="36"/>
+                                                <rect key="frame" x="202.33333333333334" y="0.0" width="62.000000000000028" height="55.333333333333336"/>
                                                 <state key="normal" image="weblink06"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed06:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="jHm-tX-UBW"/>
@@ -148,8 +147,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Apps &amp; Digital Services that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-s3-iRm" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150.5" width="290" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps &amp; Digital Services that work for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdA-s3-iRm" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193.99999999999994" width="348" height="21.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -159,25 +158,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-Hd-qMw">
-                                        <rect key="frame" x="0.0" y="173" width="269" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-Hd-qMw">
+                                        <rect key="frame" x="0.0" y="217.66666666666669" width="343" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZN-BX-bs6">
-                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="55"/>
                                                 <state key="normal" image="weblink07"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed07:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="9Mj-rY-YEz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGZ-HN-wQJ">
-                                                <rect key="frame" x="61" y="0.0" width="56" height="36"/>
+                                                <rect key="frame" x="76.333333333333343" y="0.0" width="72.333333333333343" height="55"/>
                                                 <state key="normal" image="weblink08"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed08:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="Ogk-fL-LRU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUH-ki-fVi">
-                                                <rect key="frame" x="125" y="0.0" width="144" height="36"/>
+                                                <rect key="frame" x="156.66666666666663" y="0.0" width="186.33333333333337" height="55"/>
                                                 <state key="normal" image="weblink09"/>
                                                 <connections>
                                                     <action selector="weblinkButPressed09:" destination="kiA-Fl-iq4" eventType="touchUpInside" id="3DH-Lb-7HA"/>
@@ -202,6 +201,7 @@
                             <constraint firstItem="qcI-v8-P4r" firstAttribute="width" secondItem="gbw-or-KQW" secondAttribute="width" multiplier="0.15" id="W7c-bg-oCu"/>
                             <constraint firstItem="CUH-ki-fVi" firstAttribute="width" secondItem="gbw-or-KQW" secondAttribute="width" multiplier="0.45" id="Woj-4L-ASq"/>
                             <constraint firstItem="0LH-5Q-8u7" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="YJP-tJ-wq6"/>
+                            <constraint firstItem="0LH-5Q-8u7" firstAttribute="height" secondItem="gbw-or-KQW" secondAttribute="height" multiplier="0.25" id="agl-qI-CUj"/>
                             <constraint firstItem="TeW-CR-0DE" firstAttribute="leading" secondItem="k2K-FI-Fqn" secondAttribute="leading" constant="15" id="b9F-FA-l7I"/>
                             <constraint firstItem="0LH-5Q-8u7" firstAttribute="top" secondItem="vXK-aJ-7U0" secondAttribute="bottom" constant="2" id="cGO-dX-RZm"/>
                             <constraint firstItem="k2K-FI-Fqn" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4sO-Qs-jBV" secondAttribute="bottom" constant="8.5" id="d9x-VH-qRx"/>
@@ -250,17 +250,17 @@
             <objects>
                 <viewController id="vBs-q9-1Iw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6X4-kr-lOV" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-vd-Uv5">
-                                <rect key="frame" x="15" y="30" width="290" height="316.5"/>
+                                <rect key="frame" x="15" y="30" width="384" height="347.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ynx-Nx-ubg">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="27.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Support Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haa-9W-EQ0" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="290" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="27.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -273,16 +273,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-RY-Mz0">
-                                        <rect key="frame" x="0.0" y="37" width="290" height="197"/>
+                                        <rect key="frame" x="0.0" y="37.333333333333314" width="384" height="197"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODk-XO-wXm">
-                                                <rect key="frame" x="0.0" y="0.0" width="290" height="197"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="197"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-ot-baF">
-                                                        <rect key="frame" x="8" y="8" width="274" height="147"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h9d-ot-baF">
+                                                        <rect key="frame" x="8" y="8" width="368" height="144"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="I am interested in this activity:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-Mg-gSB" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I am interested in this activity:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-Mg-gSB" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="37.666666666666664"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -291,13 +291,13 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-TT-l38">
-                                                                <rect key="frame" x="0.0" y="58" width="274" height="31"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-TT-l38">
+                                                                <rect key="frame" x="0.0" y="45.666666666666671" width="368" height="31"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="I would like to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-gQ-tsA" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="97" width="274" height="50"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I would like to join the corresponding activites online group to learn what is happening locally" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-gQ-tsA" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="84.666666666666671" width="368" height="59.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -319,7 +319,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Click send if you want carer support workers to help you do this or click cancel if you do not" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ez4-cV-b11" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="244" width="290" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="244.33333333333334" width="384" height="59.333333333333343"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -330,10 +330,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="211" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vw-Ydx">
-                                        <rect key="frame" x="0.0" y="277.5" width="290" height="39"/>
+                                        <rect key="frame" x="0.0" y="313.66666666666669" width="384" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-Xe-kc8" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65.333333333333329" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Cancel"/>
@@ -347,7 +347,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtF-b8-czy" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                <rect key="frame" x="268.5" y="0.0" width="21.5" height="39"/>
+                                                <rect key="frame" x="276.33333333333331" y="0.0" width="107.66666666666669" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title=" Send "/>
@@ -394,7 +394,7 @@
                     <tabBarItem key="tabBarItem" title="Network" image="icons8-contacts-40" id="saV-bC-PW6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0mD-fy-VYJ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -21,7 +21,7 @@ class PermissionsViewController: UIViewController {
     
     @IBOutlet weak var sharingSwitch: UISwitch!
     
-    
+    let newLayer = CAGradientLayer()
     
     var tracking = false
     
@@ -33,7 +33,7 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
             // Do any additional setup after loading the view.
-        setTrackingButton(isTracking: tracking)
+        
 
     }
     
@@ -41,6 +41,9 @@ class PermissionsViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         let width = startTracking.frame.width
         startTracking.layer.cornerRadius = width/2
+        setTrackingButton(isTracking: tracking)
+        startTracking.layer.insertSublayer(newLayer, at: 0)
+        startTracking.setNeedsDisplay()
     }
     
     @IBAction func trackingPressed(_ sender: Any) {
@@ -51,7 +54,8 @@ class PermissionsViewController: UIViewController {
             tracking = false
         }
         setTrackingButton(isTracking: tracking)
-        
+        startTracking.layer.insertSublayer(newLayer, at: 0)
+        startTracking.setNeedsDisplay()
         
     }
     
@@ -113,7 +117,7 @@ class PermissionsViewController: UIViewController {
     func setTrackingButton(isTracking: Bool){
         startTracking.layer.sublayers?[0].removeFromSuperlayer()
         
-        let newLayer = CAGradientLayer()
+        
         newLayer.frame = startTracking.bounds
         if tracking{
             startTracking.setTitle("Stop tracking", for: .normal)
@@ -130,8 +134,7 @@ class PermissionsViewController: UIViewController {
         newLayer.endPoint = CGPoint(x:0.0, y:1.0)
         
         startTracking.layer.masksToBounds = true
-        startTracking.layer.insertSublayer(newLayer, at: 0)
-        startTracking.setNeedsDisplay()
+        
     }
     
 

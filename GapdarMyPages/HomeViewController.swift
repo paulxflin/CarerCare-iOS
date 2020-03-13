@@ -92,6 +92,7 @@ class HomeViewController: UIViewController {
         let date = formatter.string(from: today)
         print("The resulting date is")
         print(date)
+        defaults.set(date, forKey: "lastUpdateDate")
         
         
         var sampleParams : [String : String] = [

@@ -234,6 +234,23 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         msg += "at " + (time ?? "") + "\n"
         msg += "let's talk about " + (activity ?? "") + "\n"
         msg += "All the best, " + (firstName ?? "") + "."
+        
+        if attachSwitch.isOn {
+            // Carer Support Ref, PostCode, StepsHistory, CallsHistory, ScoreHistory, Last Recorded Date
+            let jsonParams : [String : Any] = [
+                "supportCode" : defaults.string(forKey: "reference") ?? "apptest",
+                "postCode" : defaults.string(forKey: "postcode") ?? "EC3R",
+                "stepsHistory" : defaults.array(forKey: "stepsArray") as! [Int],
+                "callsHistory" : defaults.array(forKey: "callsArray") as! [Int],
+                "scoreHistory" : defaults.array(forKey: "scoresArray") as! [Int],
+                "date" : defaults.string(forKey: "lastUpdateDate") ?? "01012020"
+            ]
+            let data = try? JSONSerialization.data(withJSONObject: jsonParams, options: JSONSerialization.WritingOptions())
+            let stringJson = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print(String(stringJson!))
+            
+            msg += "\n\n" + String(stringJson ?? "Json Unavailable")
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {

@@ -317,7 +317,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         print("activityCountArray: ")
         print(activityCountArray)
         
-        if num == 2 {
+        if num >= 2 && num <= 4 {
             let passedActivity = activity!
             defaults.set(passedActivity, forKey: "passedActivity")
             let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)

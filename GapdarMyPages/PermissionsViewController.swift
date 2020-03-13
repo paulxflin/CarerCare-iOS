@@ -42,8 +42,7 @@ class PermissionsViewController: UIViewController {
         let width = startTracking.frame.width
         startTracking.layer.cornerRadius = width/2
         setTrackingButton(isTracking: tracking)
-        startTracking.layer.insertSublayer(newLayer, at: 0)
-        startTracking.setNeedsDisplay()
+        
     }
     
     @IBAction func trackingPressed(_ sender: Any) {
@@ -54,8 +53,7 @@ class PermissionsViewController: UIViewController {
             tracking = false
         }
         setTrackingButton(isTracking: tracking)
-        startTracking.layer.insertSublayer(newLayer, at: 0)
-        startTracking.setNeedsDisplay()
+        
         
     }
     
@@ -134,6 +132,8 @@ class PermissionsViewController: UIViewController {
         newLayer.endPoint = CGPoint(x:0.0, y:1.0)
         
         startTracking.layer.masksToBounds = true
+        startTracking.layer.insertSublayer(newLayer, at: 0)
+        startTracking.setNeedsDisplay()
         
     }
     

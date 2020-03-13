@@ -247,17 +247,17 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         let swidth = self.view.frame.width - 30
         print("this is swidth")
         print(swidth)
-
+        let height = self.view.frame.height * 0.25
         let adjustedHeight = swidth * 0.57
         print("this is the adjustedHeight")
         print(adjustedHeight)
         
-        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(adjustedHeight/8)))
+        let label = UILabel(frame: CGRect(x:10, y:yContactsValue, width:66, height: Int(height/8)))
         label.textAlignment = .left
         label.text = "Name: "
         contactSV.addSubview(label)
         
-        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(adjustedHeight/8)))
+        let nameTF = UITextField(frame: CGRect(x:74, y:yContactsValue, width:(Int(swidth - 80)), height:Int(height/8)))
         nameTF.delegate = self
         nameTF.textAlignment = .left
         nameTF.text = name
@@ -266,15 +266,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         contactSV.addSubview(nameTF)
         
 
-        yContactsValue += Int(adjustedHeight/8) + 5
+        yContactsValue += Int(height/8) + 5
         
-        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(adjustedHeight/8)))
+        let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(height/8)))
         label2.textAlignment = .left
         label2.text = "Contact Number: "
         contactSV.addSubview(label2)
-        let buttonDimension = Int (adjustedHeight/8)
+        let buttonDimension = Int (height/8)
         
-        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:Int(adjustedHeight/8)))
+        let numTF = UITextField(frame: CGRect(x:156, y:yContactsValue, width:Int(Int(swidth ) - 2 * buttonDimension - 5 - 160), height:Int(height/8)))
         numTF.delegate = self
         numTF.text = phone
         numTF.textAlignment = .left
@@ -302,7 +302,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         contactSV.addSubview(button2)
         
 
-        yContactsValue += Int(adjustedHeight/8) + 5
+        yContactsValue += Int(height/8) + 5
         contactSV.contentSize.height = CGFloat(yContactsValue)
         
     }

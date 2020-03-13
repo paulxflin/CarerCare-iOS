@@ -21,6 +21,10 @@ class PermissionsViewController: UIViewController {
     
     @IBOutlet weak var sharingSwitch: UISwitch!
     
+    let newLayer = CAGradientLayer()
+    
+    var tracking = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground()
@@ -28,38 +32,34 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.cornerRadius = 15.0
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
-        
-        startTracking.layer.masksToBounds = true
-        let newLayer = CAGradientLayer()
-        newLayer.frame = startTracking.bounds
-         newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
-        newLayer.locations = [0.0, 1.0]
-        newLayer.startPoint = CGPoint(x:1.0, y:0.0)
-        newLayer.endPoint = CGPoint(x:0.0, y:0.0)
-        startTracking.layer.insertSublayer(newLayer, at: 0)
-        
-        
-        
-        
             // Do any additional setup after loading the view.
+        
+
     }
     
     
     override func viewWillLayoutSubviews() {
-        startTracking.layer.masksToBounds = true
         let width = startTracking.frame.width
-        
-        startTracking.frame.size = CGSize(width: width, height:  width )
-        let height = startTracking.frame.height
-        
-        
-        print("width:", width, "height", height)
         startTracking.layer.cornerRadius = width/2
-
-
+        setTrackingButton(isTracking: tracking)
+        
     }
     
     @IBAction func trackingPressed(_ sender: Any) {
+        if !tracking{
+            tracking = true
+        }
+        else{
+            tracking = false
+        }
+        setTrackingButton(isTracking: tracking)
+        
+        
+    }
+    
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        //MOVED FUNCTIONALITY FROM PREVIOUS TRACKINGPRESSED INTO SAVEBUTTONPRESSED
         setupHistory()
         let setup = true
         defaults.set(setup, forKey: "setup")
@@ -69,7 +69,6 @@ class PermissionsViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate
         appDelegate?.window??.rootViewController = VC
         appDelegate?.window??.makeKeyAndVisible()
-        
     }
     
     @IBAction func sharingSwitchPressed(_ sender: Any) {
@@ -111,6 +110,31 @@ class PermissionsViewController: UIViewController {
         }
         print("activity count array")
         print(activityCountArray ?? "This array doesn't exist")
+    }
+    
+    func setTrackingButton(isTracking: Bool){
+        startTracking.layer.sublayers?[0].removeFromSuperlayer()
+        
+        
+        newLayer.frame = startTracking.bounds
+        if tracking{
+            startTracking.setTitle("Stop tracking", for: .normal)
+            newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
+            
+        }
+        else{
+            startTracking.setTitle("Start tracking", for: .normal)
+            newLayer.colors = [UIColor(red: 16/255.0, green: 94/255.0, blue: 103/255.0, alpha: 1.0).cgColor, UIColor(red: 26/255.0, green: 154/255.0, blue: 169/255.0, alpha: 1.0).cgColor]
+            
+        }
+        newLayer.locations = [0.0, 1.0]
+        newLayer.startPoint = CGPoint(x:0.0, y:0.0)
+        newLayer.endPoint = CGPoint(x:0.0, y:1.0)
+        
+        startTracking.layer.masksToBounds = true
+        startTracking.layer.insertSublayer(newLayer, at: 0)
+        startTracking.setNeedsDisplay()
+        
     }
     
 

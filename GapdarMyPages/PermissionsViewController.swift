@@ -21,6 +21,8 @@ class PermissionsViewController: UIViewController {
     
     @IBOutlet weak var sharingSwitch: UISwitch!
     
+    @IBOutlet weak var saveBT: RoundButton!
+    
     let newLayer = CAGradientLayer()
     
     var tracking = false
@@ -33,7 +35,9 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
             // Do any additional setup after loading the view.
-        
+        if !tracking {
+            saveBT.isEnabled = false
+        }
 
     }
     
@@ -52,6 +56,7 @@ class PermissionsViewController: UIViewController {
         else{
             tracking = false
         }
+        saveBT.isEnabled = tracking
         setTrackingButton(isTracking: tracking)
         
         

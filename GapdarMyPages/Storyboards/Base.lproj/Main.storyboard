@@ -897,6 +897,9 @@
                                                                 <real key="value" value="0.024500000000000001"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="noThanksPressed:" destination="y8G-TB-AAh" eventType="touchUpInside" id="Iyb-Ze-Kdu"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75A-Bz-rBS" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                         <rect key="frame" x="248" y="0.0" width="42" height="30"/>

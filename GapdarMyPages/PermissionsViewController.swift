@@ -192,5 +192,13 @@ class PermissionsViewController: UIViewController {
         UIApplication.shared.open(url)
     }
     
+    @IBAction func noThanksPressed(_ sender: UIButton) {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = initialVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
     
 }

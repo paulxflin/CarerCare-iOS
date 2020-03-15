@@ -43,8 +43,8 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         nameField.text = defaults.string(forKey: "firstName")
         
         //empty this out
-        defaults.set([], forKey: "phoneArray")
-        defaults.set([], forKey: "nameArray")
+        //defaults.set([], forKey: "phoneArray")
+        //defaults.set([], forKey: "nameArray")
 //        defaults.set([], forKey: "networkCallsArray")
 //        defaults.set([], forKey: "networkMessagesArray")
         

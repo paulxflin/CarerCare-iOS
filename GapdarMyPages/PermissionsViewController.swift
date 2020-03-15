@@ -110,6 +110,10 @@ class PermissionsViewController: UIViewController {
         }
         print("activity count array")
         print(activityCountArray ?? "This array doesn't exist")
+        
+        //Do a quick update of weekly Steps Here. 
+        let VC = stepController()
+        VC.getThisWeekSteps()
     }
     
     func setTrackingButton(isTracking: Bool){

@@ -153,9 +153,20 @@ class AdjustViewController: UIViewController {
         print(stepsArray)
         print(scoresArray)
         
-        //Clear the current accumulations for steps and calls, not scores because that remains
+        //Clear the current accumulations for steps, calls, and messages, not scores because that remains
         defaults.set(0, forKey: "oneWeekSteps")
         defaults.set(0, forKey: "totalCalls")
+        defaults.set(0, forKey: "totalMessages")
+        
+        //Clear Network Calls and Msgs
+        var networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+        networkCallsArray = [Int](repeating: 0, count: networkCallsArray.count)
+        defaults.set(networkCallsArray, forKey: "networkCallsArray")
+        
+        var networkMessagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
+        networkMessagesArray = [Int](repeating: 0, count: networkMessagesArray.count)
+        defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
+        
     }
     
 

@@ -27,6 +27,9 @@ class PermissionsViewController: UIViewController {
     
     var tracking = false
     
+    var willResetHistory = false
+    var trackingChanged = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradientBackground()
@@ -35,6 +38,7 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.borderWidth = 5.0
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
             // Do any additional setup after loading the view.
+        tracking = defaults.bool(forKey: "tracking") // Returns false if tracking doesn't exist
         if !tracking {
             saveBT.isEnabled = false
         }
@@ -52,10 +56,13 @@ class PermissionsViewController: UIViewController {
     @IBAction func trackingPressed(_ sender: Any) {
         if !tracking{
             tracking = true
+            trackingChanged = true
         }
         else{
             tracking = false
+            willResetHistory = true
         }
+        defaults.set(tracking, forKey: "tracking")
         saveBT.isEnabled = tracking
         setTrackingButton(isTracking: tracking)
         
@@ -69,8 +76,12 @@ class PermissionsViewController: UIViewController {
         let setup = true
         defaults.set(setup, forKey: "setup")
         
-        let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        var VC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        if trackingChanged {
+            let homeSB : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            VC = homeSB.instantiateViewController(withIdentifier: "adjust")
+        }
         let appDelegate = UIApplication.shared.delegate
         appDelegate?.window??.rootViewController = VC
         appDelegate?.window??.makeKeyAndVisible()

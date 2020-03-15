@@ -101,17 +101,17 @@ class PermissionsViewController: UIViewController {
     }
     
     func setupHistory() {
-        if defaults.array(forKey: "callsArray") == nil {
+        if defaults.array(forKey: "callsArray") == nil || willResetHistory {
             let callsArray = [Int](repeating: 0, count: 12)
             defaults.set(callsArray, forKey: "callsArray")
             print(callsArray)
         }
-        if defaults.array(forKey: "stepsArray") == nil {
+        if defaults.array(forKey: "stepsArray") == nil || willResetHistory{
             let stepsArray = [Int](repeating: 0, count: 12)
             defaults.set(stepsArray, forKey: "stepsArray")
             print(stepsArray)
         }
-        if defaults.array(forKey: "scoresArray") == nil {
+        if defaults.array(forKey: "scoresArray") == nil || willResetHistory {
             let scoresArray = [Int](repeating: 0, count: 12)
             defaults.set(scoresArray, forKey: "scoresArray")
             print(scoresArray)
@@ -120,12 +120,30 @@ class PermissionsViewController: UIViewController {
         let activityArray = defaults.array(forKey: "activityArray")
         let size = activityArray?.count
         var activityCountArray = defaults.array(forKey: "activityCountArray")
-        if activityCountArray == nil {
+        
+        if activityCountArray == nil || willResetHistory {
             activityCountArray = [Int](repeating: 0, count: size ?? 0)
             defaults.set(activityCountArray, forKey: "activityCountArray")
         }
         print("activity count array")
         print(activityCountArray ?? "This array doesn't exist")
+        
+        //Reset more stored data here
+        if willResetHistory {
+            //Clear the current accumulations for steps, calls, and messages
+            defaults.set(0, forKey: "oneWeekSteps")
+            defaults.set(0, forKey: "totalCalls")
+            defaults.set(0, forKey: "totalMessages")
+            
+            //Clear Network Calls and Msgs
+            var networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
+            networkCallsArray = [Int](repeating: 0, count: networkCallsArray.count)
+            defaults.set(networkCallsArray, forKey: "networkCallsArray")
+            
+            var networkMessagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
+            networkMessagesArray = [Int](repeating: 0, count: networkMessagesArray.count)
+            defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
+        }
         
         //Do a quick update of weekly Steps Here. 
         let VC = stepController()

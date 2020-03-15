@@ -47,16 +47,13 @@ class AdjustViewController: UIViewController {
         
         instructionsView.layer.cornerRadius = 10.0
         
-        let predictedScore = getPredictedScore()
-        scoreSlider.value = Float(predictedScore)
-        scoreLabel.text = String(predictedScore)
-        
-        
-
-        // Do any additional setup after loading the view.
         stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
         callsLabel.text = String(defaults.integer(forKey: "totalCalls"))
         messagesLabel.text = String(defaults.integer(forKey: "totalMessages"))
+        
+        let predictedScore = getPredictedScore()
+        scoreSlider.value = Float(predictedScore)
+        scoreLabel.text = String(predictedScore)
     }
     
     @IBAction func savePressed(_ sender: Any) {

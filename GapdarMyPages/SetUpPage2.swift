@@ -32,47 +32,52 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     
     override func viewDidLoad() {
         //Make sure the layouts are initialised correctly
+        super.viewDidLoad()
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
         
-        super.viewDidLoad()
+        
         activityScrollView.layer.cornerRadius = 10.0
         postcodeTextField.delegate = self
         stepsPerDayTextField.delegate = self
         contactsPerDayTextField.delegate = self
         SupportCodeTextField.delegate = self
         
-        postcodeTextField.text = defaults.string(forKey: "postcode")
-        stepsPerDayTextField.text = defaults.string(forKey: "targetSteps")
-        contactsPerDayTextField.text = defaults.string(forKey: "targetCalls")
-        SupportCodeTextField.text = defaults.string(forKey: "reference")
-        
+        fillFieldsWithPreviousData()
         setActivityScroller()
         
         
     }
     
+    
+    //Gets the data previously filled and places the text in the text fields (Karunya)
+    func fillFieldsWithPreviousData(){
+        postcodeTextField.text = defaults.string(forKey: "postcode")
+        stepsPerDayTextField.text = defaults.string(forKey: "targetSteps")
+        contactsPerDayTextField.text = defaults.string(forKey: "targetCalls")
+        SupportCodeTextField.text = defaults.string(forKey: "reference")
+    }
+    
+    //places previous activities on scroller (Karunya)
     func setActivityScroller(){
         let activityStringArray = defaults.stringArray(forKey: "activityArray") ?? []
         
         var i = 0
         while i < activityStringArray.count {
             let activity = activityStringArray[i]
-            
-            
             placeActivityOnScreen(activity: activity)
-            
             i += 1
         }
     }
     
+    
     @IBAction func getActivitiesButtonPressed(_ sender: Any) {
         placeActivityOnScreen(activity: "")
-        
     }
     
+    
+    //places the activities on the screen (Karunya)
     func placeActivityOnScreen(activity: String){
-        
         let widthOfCanvas = activityScrollView.frame.width
         let heightOfCanvas = self.view.frame.height * 0.15
         print(heightOfCanvas)

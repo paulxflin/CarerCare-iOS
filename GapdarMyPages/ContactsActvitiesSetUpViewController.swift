@@ -57,7 +57,7 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     
 
   
-    
+    //Allows to add a new number from their contacts (Karunya)
     @IBAction func getNumber(_ sender: Any) {
         let picker = CNContactPickerViewController()
         picker.delegate = self
@@ -65,7 +65,8 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         
     }
    
-    
+    //Gets the users name and surname iteratively in the phone (Karunya)
+    //once they select it, the name is placed on the screen
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         var familyName = ""
         var phoneNumber = ""
@@ -115,9 +116,7 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     }
     
     
-    
-    
-    
+    //Allows you to add an activity when + button pressed (Karunya)
     @IBAction func activityButtonPressed(_ sender: Any) {
         let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:33))
         //label.center = CGPoint(x:44, y:146)

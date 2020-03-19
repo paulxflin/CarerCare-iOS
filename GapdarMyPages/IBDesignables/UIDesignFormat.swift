@@ -4,13 +4,13 @@
 //
 //  Created by localadmin on 29/01/2020.
 //  Copyright © 2020 localadmin. All rights reserved.
-//
+//  Karunya
 
 import Foundation
 import UIKit
 
 extension UIView{
-    
+    //Allows each page to be given a gradient background
     func setGradientBackground(){
         let newLayer = CAGradientLayer()
         newLayer.frame = bounds

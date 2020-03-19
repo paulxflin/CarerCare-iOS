@@ -4,13 +4,14 @@
 //
 //  Created by localadmin on 06/02/2020.
 //  Copyright © 2020 localadmin. All rights reserved.
-//
+//  Karunya
 
 import UIKit
 
 
 @IBDesignable
 class rotateLabel: UILabel{
+    //allows label to be rotated
     @IBInspectable var rotation: CGFloat = 0{
         didSet{
             let radians = CGFloat(CGFloat(Double.pi)*CGFloat(rotation)/CGFloat(180.0))
@@ -18,6 +19,8 @@ class rotateLabel: UILabel{
         }
     }
     
+    
+    //Dynamically changes the size the text on the label
     @IBInspectable var textSize: CGFloat = 0{
         didSet{
             let bounds = UIScreen.main.bounds
@@ -26,8 +29,6 @@ class rotateLabel: UILabel{
             self.font = newFont
             let newSize = self.sizeThatFits(CGSize(width: self.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
             self.frame.size = CGSize(width: max(newSize.width,self.frame.size.width), height: newSize.height)
-            
-            
         }
     }
     

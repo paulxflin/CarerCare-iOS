@@ -2,8 +2,8 @@
 //  StepsGraphs.swift
 //  GapdarMyPages
 //
-//  Created by localadmin on 04/02/2020.
-//  Copyright © 2020 localadmin. All rights reserved.
+//  Created by Karunya on 04/02/2020.
+//  Copyright © 2020 Karunya. All rights reserved.
 //
 
 import UIKit
@@ -11,49 +11,56 @@ import Charts
 import Foundation
 
 class Graph: ChartViewDelegate{
+    
     var chartView: CombinedChartView
+    
     var type: String
     
     let defaults = UserDefaults.standard
+    
     let weeks = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    
     let ITEM_COUNT = 9
     
     
     init(chartView: CombinedChartView, type: String){
         self.chartView = chartView
         self.type = type
-        
         chartView.delegate = self
+        setChartDecorSettings()
+    }
+    
+    //Alocates settings on the graphs: position the axis, enable/disable gridlines (Karunya)
+    func setChartDecorSettings(){
         chartView.drawGridBackgroundEnabled = false
         chartView.leftAxis.drawAxisLineEnabled = false
+        chartView.drawOrder = [DrawOrder.bar.rawValue,  DrawOrder.line.rawValue]
         
-        
-        chartView.drawOrder                 = [DrawOrder.bar.rawValue,  DrawOrder.line.rawValue]
         
         // MARK: xAxis
         let xAxis                           = chartView.xAxis
         xAxis.labelPosition                 = .bottom
         xAxis.axisMinimum                   = 0.0
-        xAxis.drawGridLinesEnabled = false
-        xAxis.centerAxisLabelsEnabled = true
+        xAxis.drawGridLinesEnabled          = false  //(grid is the squares in the middle)
+        xAxis.centerAxisLabelsEnabled       = true  //axis is the lines on the side
         xAxis.setLabelCount( 9, force: true)
         
         // MARK: leftAxis
         let leftAxis                        = chartView.leftAxis
         leftAxis.drawGridLinesEnabled       = false
-        leftAxis.drawAxisLineEnabled = true
+        leftAxis.drawAxisLineEnabled        = true
         leftAxis.axisMinimum                = 0.0
         
-    
+        
         
         // MARK: rightAxis
         let rightAxis                       = chartView.rightAxis
         rightAxis.drawGridLinesEnabled      = false
-        rightAxis.drawAxisLineEnabled = true
+        rightAxis.drawAxisLineEnabled       = true
         rightAxis.axisMinimum               = 0.0
         
-
         
+        //Places the text correctly
         // MARK: legend
         let legend                          = chartView.legend
         legend.horizontalAlignment          = .center
@@ -63,20 +70,20 @@ class Graph: ChartViewDelegate{
         
         // MARK: description
         chartView.chartDescription?.enabled = false
-        
-        
-        
     }
     
+    
+    //calls the functions to place data on graphs (Karunya)
     func setChartData()
     {
-        //print("omg i am actually in a different class and this works")
         let data = CombinedChartData()
         data.lineData = generateLineData()
         data.barData = generateBarData()
         chartView.xAxis.axisMaximum = data.xMax + 0.25
         chartView.data = data
     }
+    
+    
     
     func getSubArray(_ array : [Int], _ numElems : Int) -> [Int] {
         var finalArr = [Int](repeating: 0, count: numElems)
@@ -88,6 +95,8 @@ class Graph: ChartViewDelegate{
         return finalArr
     }
     
+    
+    //Generates line graphs (Karunya)
     func generateLineData() -> LineChartData
     {
         // MARK: ChartDataEntry
@@ -98,11 +107,14 @@ class Graph: ChartViewDelegate{
         
         //var wellBeingValues: [Int]=[3,5,4,4,9,4,7,6,8]
         
+        //Calculates the x, y position for the graphs
         for index in 1..<ITEM_COUNT+1
         {
             entries.append(ChartDataEntry(x: Double(index-1) + 0.5, y: Double(wellBeingValues[index-1])))
         }
         
+        
+        //Line Data colours
         // MARK: LineChartDataSet
         let set = LineChartDataSet(values: entries, label: "Well-being Score")
         set.colors = [#colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)]
@@ -123,7 +135,7 @@ class Graph: ChartViewDelegate{
         return data
     }
     
-    
+    //Generates bar graphs (Karunya)
     func generateBarData() -> BarChartData
     {
         // MARK: BarChartDataEntry
@@ -168,11 +180,9 @@ class Graph: ChartViewDelegate{
         
         // MARK: BarChartData
         
-        let barWidth = 0.46
         
-        // x2 dataset
-        // (0.45 + 0.02) * 2 + 0.06 = 1.00 -> interval per "group"
         let data = BarChartData(dataSet: set1)
+        let barWidth = 0.46
         data.barWidth = barWidth
         
         return data

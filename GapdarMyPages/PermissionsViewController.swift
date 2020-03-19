@@ -32,20 +32,27 @@ class PermissionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradientBackground()
-        viewTracking.layer.cornerRadius = 15.0
-        viewScoreShare.layer.cornerRadius = 15.0
-        viewScoreShare.layer.borderWidth = 5.0
-        viewScoreShare.layer.borderColor = UIColor.white.cgColor
+        setUI()
             // Do any additional setup after loading the view.
         tracking = defaults.bool(forKey: "tracking") // Returns false if tracking doesn't exist
         if !tracking {
             saveBT.isEnabled = false
         }
+        
 
     }
     
     
+    //sets ui (Karunya)
+    func setUI(){
+        view.setGradientBackground()
+        viewTracking.layer.cornerRadius = 15.0
+        viewScoreShare.layer.cornerRadius = 15.0
+        viewScoreShare.layer.borderWidth = 5.0
+        viewScoreShare.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    //Ensures the buttton is circular (Karunya)
     override func viewWillLayoutSubviews() {
         let width = startTracking.frame.width
         startTracking.layer.cornerRadius = width/2
@@ -53,6 +60,8 @@ class PermissionsViewController: UIViewController {
         
     }
     
+    
+    //Changes the tracking button to stop or to start (Karunya and Paul)
     @IBAction func trackingPressed(_ sender: Any) {
         if !tracking{
             tracking = true
@@ -86,6 +95,7 @@ class PermissionsViewController: UIViewController {
         appDelegate?.window??.rootViewController = VC
         appDelegate?.window??.makeKeyAndVisible()
     }
+    
     
     @IBAction func sharingSwitchPressed(_ sender: Any) {
         defaults.set(sharingSwitch.isOn, forKey: "allowShare")
@@ -150,10 +160,10 @@ class PermissionsViewController: UIViewController {
         VC.getThisWeekSteps()
     }
     
+    
+    //sets tracking button colour to blue or green (Karunya)
     func setTrackingButton(isTracking: Bool){
         startTracking.layer.sublayers?[0].removeFromSuperlayer()
-        
-        
         newLayer.frame = startTracking.bounds
         if tracking{
             startTracking.setTitle("Stop tracking", for: .normal)

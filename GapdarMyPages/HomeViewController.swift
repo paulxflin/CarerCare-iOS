@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
     
 //    @IBOutlet weak var btSendJSON: UIButton!
     
-    
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var displayedScoreLabel: UILabel!
@@ -30,23 +29,33 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var wellBeingLabel: UILabel!
     
     @IBOutlet weak var backgroundLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+               // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func setUI(){
         scoreView.layer.masksToBounds = true
         scoreView.layer.cornerRadius = 10.0
+        
         wellBeingLabel.layer.cornerRadius = 10.0
         wellBeingLabel.layer.masksToBounds = true
+        
         figuresView.layer.masksToBounds = true
         figuresView.layer.cornerRadius = 10.0
-                backgroundLabel.layer.cornerRadius = backgroundLabel.layer.bounds.height / 2
-                backgroundLabel.layer.masksToBounds = true
-                let newLayer = CAGradientLayer()
-                newLayer.frame = backgroundLabel.bounds
-                newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
-                newLayer.locations = [0.0, 1.0]
-                newLayer.startPoint = CGPoint(x:1.0, y:0.0)
-                newLayer.endPoint = CGPoint(x:0.0, y:0.0)
-                backgroundLabel.layer.addSublayer(newLayer)        // Do any additional setup after loading the view, typically from a nib.
+        
+        backgroundLabel.layer.cornerRadius = backgroundLabel.layer.bounds.height / 2
+        backgroundLabel.layer.masksToBounds = true
+        
+        let newLayer = CAGradientLayer()
+        newLayer.frame = backgroundLabel.bounds
+        newLayer.colors = [UIColor(red: 164/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1.0).cgColor, UIColor(red: 17/255.0, green: 40/255.0, blue: 123/255.0, alpha: 1.0).cgColor]
+        newLayer.locations = [0.0, 1.0]
+        newLayer.startPoint = CGPoint(x:1.0, y:0.0)
+        newLayer.endPoint = CGPoint(x:0.0, y:0.0)
+        backgroundLabel.layer.addSublayer(newLayer)
     }
     
     // viewWillAppear is called every single time a view is presented, unlike viewDidLoad which is only called once when view is added to memory

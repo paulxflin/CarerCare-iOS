@@ -2,8 +2,8 @@
 //  WellBeingDiary.swift
 //  GapdarMyPages
 //
-//  Created by localadmin on 04/02/2020.
-//  Copyright © 2020 localadmin. All rights reserved.
+//  Created by Karunya on 04/02/2020.
+//  Copyright © 2020 Karunya. All rights reserved.
 //
 
 import Foundation
@@ -14,24 +14,16 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
 
     @IBOutlet weak var callsChartView: CombinedChartView!
     
-    
-
     @IBOutlet weak var stepsChartView: CombinedChartView!
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callsChartView.isUserInteractionEnabled = true
-        let gesture = UITapGestureRecognizer(target:self, action: #selector(self.callCallsPage))
-        gesture.delegate = self
-        callsChartView.addGestureRecognizer(gesture)
-        gesture.numberOfTapsRequired = 1
-        stepsChartView.isUserInteractionEnabled = true
-        let stepGesture = UITapGestureRecognizer(target:self, action: #selector(self.callStepsPage))
-        stepGesture.delegate = self
-        stepsChartView.addGestureRecognizer(stepGesture)
-        stepGesture.numberOfTapsRequired = 1
+        setTapRecogniser()
+        setUI()
+    }
+    
+    //Calls the function to draw the graphs and to make it more aesthetic (Karunya)
+    func setUI(){
         Graph(chartView: callsChartView, type: "callsArray").setChartData()
         callsChartView.layer.cornerRadius = 10.0
         callsChartView.backgroundColor = .white
@@ -44,15 +36,34 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
         
     }
     
+    //Allows code to detect if one of the graphs on the well-being diary page was clicked (Karunya)
+    func setTapRecogniser(){
+        callsChartView.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target:self, action: #selector(self.callCallsPage))
+        gesture.delegate = self
+        callsChartView.addGestureRecognizer(gesture)
+        gesture.numberOfTapsRequired = 1
+        
+        stepsChartView.isUserInteractionEnabled = true
+        let stepGesture = UITapGestureRecognizer(target:self, action: #selector(self.callStepsPage))
+        stepGesture.delegate = self
+        stepsChartView.addGestureRecognizer(stepGesture)
+        stepGesture.numberOfTapsRequired = 1
+        
+    }
+    
+    //Changes page to the callsGraph page (Karunya)
     @objc func callCallsPage(_sender:UITapGestureRecognizer){
         print("it is being clicked")
         self.performSegue(withIdentifier: "callGraph", sender: self)
     }
     
+    //Changes page to the stepsCall page (Karunya)
     @objc func callStepsPage(_sender:UITapGestureRecognizer){
         print("it is being clicked")
         self.performSegue(withIdentifier: "stepsCall", sender: self)
     }
+    
     
     @IBAction func sharePressed(_ sender: UIButton) {
         let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
@@ -61,6 +72,7 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
         appDelegate?.window??.rootViewController = composeVC
         appDelegate?.window??.makeKeyAndVisible()
     }
+    
     
     func getDiaryImage() -> Data {
         var image : UIImage?

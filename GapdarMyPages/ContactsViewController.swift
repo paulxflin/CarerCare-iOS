@@ -129,7 +129,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     
-    
+    //places contacts that are already on the screen (Karunya)
     func setupContactSV() {
         // TODO: Add a for loop to add in the saved contacts.
         view.addSubview(contactSV)
@@ -137,6 +137,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         addExistingContacts()
     }
     
+    
+    //Goes through previously added contacts (Karunya)
     func addExistingContacts() {
         
         while i < nameArray.count {
@@ -149,37 +151,9 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         
     }
     
-    @objc func callPressed(_ sender: UIButton) {
-        // Debug: print(sender.tag)
-        let phone = phoneArray[sender.tag]
-        let number = String(phone.filter {!" \n\t\r".contains($0)})
-        print(number)
-        var totalCalls = defaults.integer(forKey: "totalCalls")
-        totalCalls += 1
-        defaults.set(totalCalls, forKey: "totalCalls")
-        print(defaults.integer(forKey: "totalCalls"))
-        
-        callsArray[sender.tag] += 1
-        print("callsArray")
-        print(callsArray)
-        defaults.set(callsArray, forKey: "networkCallsArray")
-        
-        if let url = URL(string: "tel://\(number)"),
-            UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        }
-    }
+
     
-    @objc func messagePressed(_ sender: UIButton) {
-        print("message pressed")
-        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
-        let composeVC = messagesSB.instantiateViewController(withIdentifier: "compose")
-        let appDelegate = UIApplication.shared.delegate
-        appDelegate?.window??.rootViewController = composeVC
-        appDelegate?.window??.makeKeyAndVisible()
-    }
-    
-    
+    //Allows user to get another contact (Karunya)
     @IBAction func getNumber(_ sender: Any) {
         let picker = CNContactPickerViewController()
         picker.delegate = self
@@ -188,7 +162,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     
-    
+    //Gets the contact and places it on the screen (Karunya)
+    //Appends the new contact to the defaults storage
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         var familyName = ""
         var phoneNumber = ""
@@ -199,13 +174,6 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             
         }
         
-//        //adds new contacts to phoneArray
-//        defaults.set([], forKey: "phoneArray")
-//        defaults.set([], forKey: "nameArray")
-//        //empties
-//
-//        print(phoneArray)
-//        print(nameArray)
         phoneArray.append(phoneNumber)
         nameArray.append(familyName)
         
@@ -216,6 +184,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         placeContactOnScreen(name: familyName, phone: phoneNumber, i:i)
         i += 1
         
+        
+        //retrieves network calls array
         if defaults.array(forKey: "networkCallsArray") != nil {
             callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
             messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
@@ -224,25 +194,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         //adds network array to all of the new contacts
         callsArray.append(0)
         messagesArray.append(0)
-//        defaults.set([], forKey: "networkCallsArray")
-//        defaults.set([], forKey: "networkMessagesArray")
         defaults.set(callsArray, forKey: "networkCallsArray")
         defaults.set(messagesArray, forKey: "networkMessagesArray")
     }
     
-    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
-        print("It cancelled the contact picker view controller when the cancel button is pressed")
-    }
-    
-//    @IBAction func resetStart(_ sender: Any) {
-//        defaults.set(false, forKey: "setup")
-//        let activityCountArray = [0, 0, 0]
-//        defaults.set(activityCountArray, forKey: "activityCountArray")
-//        defaults.set(0, forKey: "totalCalls")
-//        defaults.set(0, forKey: "totalMessages")
-//    }
     
     
+    //UI For placing the contacts on the screen (Karunya)
     func placeContactOnScreen(name: String, phone: String, i: Int){
         let swidth = self.view.frame.width - 30
         print("this is swidth")
@@ -266,7 +224,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         nameTF.tag = i
         contactSV.addSubview(nameTF)
         
-
+        
         yContactsValue += Int(height/8) + 5
         
         let label2 = UILabel(frame: CGRect(x:10, y:yContactsValue, width:166, height:Int(height/8)))
@@ -304,11 +262,61 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         button2.tag = i
         contactSV.addSubview(button2)
         
-
+        
         yContactsValue += Int(height/8) + 5
         contactSV.contentSize.height = CGFloat(yContactsValue)
         
     }
+    
+    
+    
+    @objc func callPressed(_ sender: UIButton) {
+        // Debug: print(sender.tag)
+        let phone = phoneArray[sender.tag]
+        let number = String(phone.filter {!" \n\t\r".contains($0)})
+        print(number)
+        var totalCalls = defaults.integer(forKey: "totalCalls")
+        totalCalls += 1
+        defaults.set(totalCalls, forKey: "totalCalls")
+        print(defaults.integer(forKey: "totalCalls"))
+        
+        callsArray[sender.tag] += 1
+        print("callsArray")
+        print(callsArray)
+        defaults.set(callsArray, forKey: "networkCallsArray")
+        
+        if let url = URL(string: "tel://\(number)"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @objc func messagePressed(_ sender: UIButton) {
+        print("message pressed")
+        let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
+        let composeVC = messagesSB.instantiateViewController(withIdentifier: "compose")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = composeVC
+        appDelegate?.window??.makeKeyAndVisible()
+    }
+    
+    
+    
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        print("It cancelled the contact picker view controller when the cancel button is pressed")
+    }
+    
+//    @IBAction func resetStart(_ sender: Any) {
+//        defaults.set(false, forKey: "setup")
+//        let activityCountArray = [0, 0, 0]
+//        defaults.set(activityCountArray, forKey: "activityCountArray")
+//        defaults.set(0, forKey: "totalCalls")
+//        defaults.set(0, forKey: "totalMessages")
+//    }
+    
+    
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard

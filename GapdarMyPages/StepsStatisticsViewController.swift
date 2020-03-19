@@ -31,6 +31,12 @@ class StepsStatisticsViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.hidesBackButton = true
+        setUI()
+        
+    }
+    
+    //sets the ui (Karunya)
+    func setUI(){
         Graph(chartView: chartView, type: "stepsArray").setChartData()
         chartView.backgroundColor = .white
         chartView.layer.cornerRadius = 10.0
@@ -44,7 +50,7 @@ class StepsStatisticsViewController:UIViewController{
     }
     
   
- 
+    //swaps graph (Karunya)
     @IBAction func callsButtonPressed(_ sender: Any) {
         titleLabel.text = "Calls vs Well-being"
         graphTitleLabel.text = "Calls made and Well-being"
@@ -52,7 +58,7 @@ class StepsStatisticsViewController:UIViewController{
         Graph(chartView: chartView, type: "callsArray").setChartData()
     }
     
- 
+ //Swaps graph (Karunya)
     @IBAction func outdoorButtonPressed(_ sender: Any) {
         titleLabel.text = "Steps vs Well-being"
         graphTitleLabel.text = "Outdoor steps and Well-being"

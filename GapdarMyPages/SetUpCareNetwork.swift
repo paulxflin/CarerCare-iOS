@@ -30,33 +30,24 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     
     
     override func viewDidLoad() {
-        
-        //Make sure the layouts are initialised correctly
+        super.viewDidLoad()        //Make sure the layouts are initialised correctly
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
-        
         setupContactSV()
-        
-        super.viewDidLoad()
         contactsScrollView.layer.cornerRadius = 10.0
         nameField.delegate = self
         nameField.text = defaults.string(forKey: "firstName")
-        
-        //empty this out
-        //defaults.set([], forKey: "phoneArray")
-        //defaults.set([], forKey: "nameArray")
-//        defaults.set([], forKey: "networkCallsArray")
-//        defaults.set([], forKey: "networkMessagesArray")
         
     }
     
     func setupContactSV() {
         // TODO: Add a for loop to add in the saved contacts.
 //        view.addSubview(contactsScrollView)
-        
         addExistingContacts()
     }
     
+    
+    //places existing contacts (Karunya)
     func addExistingContacts() {
         let phoneNumberStringArray = defaults.stringArray(forKey: "phoneArray") ?? []
         let nameStringArray = defaults.stringArray(forKey: "nameArray") ?? []
@@ -73,6 +64,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
     }
     
+    
     @IBAction func addMoreContacts(_ sender: Any) {
         print(contactsScrollView.frame.height)
         let picker = CNContactPickerViewController()
@@ -81,6 +73,8 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
     }
     
+    
+    //UI for placing contacts on the screen (Karunya)
     func placeContactOnScreen(name: String, phone: String){
         
         let widthOfCanvas = contactsScrollView.frame.width
@@ -121,6 +115,8 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
     }
     
+    
+    //User picks contact (Karunya)
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         
         var familyName = ""

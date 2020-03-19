@@ -4,13 +4,14 @@
 //
 //  Created by localadmin on 24/02/2020.
 //  Copyright © 2020 localadmin. All rights reserved.
-//
+//  Karunya
 
 import Foundation
 import  UIKit
 
 @IBDesignable
 class TextFontScreen: UITextView{
+    //this enables the text to change dynamically, i.e. text gets larger as screen gets larger
     @IBInspectable var textSize: CGFloat = 0{
         didSet{
             let bounds = UIScreen.main.bounds

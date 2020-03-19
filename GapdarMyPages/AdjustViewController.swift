@@ -36,16 +36,7 @@ class AdjustViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sliderView.layer.masksToBounds = true
-        sliderView.layer.cornerRadius = 10.0
-        wellBeingLabel.layer.masksToBounds = true
-        wellBeingLabel.layer.cornerRadius = 10.0
-        figuresView.layer.masksToBounds = true
-        figuresView.layer.cornerRadius = 10.0
-        
-        instructionsView.layer.masksToBounds = true
-        
-        instructionsView.layer.cornerRadius = 10.0
+        setUI()
         
         stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
         callsLabel.text = String(defaults.integer(forKey: "totalCalls"))
@@ -54,6 +45,18 @@ class AdjustViewController: UIViewController {
         let predictedScore = getPredictedScore()
         scoreSlider.value = Float(predictedScore)
         scoreLabel.text = String(predictedScore)
+    }
+    
+    //decorate UI (Karunya)
+    func setUI(){
+        sliderView.layer.masksToBounds = true
+        sliderView.layer.cornerRadius = 10.0
+        wellBeingLabel.layer.masksToBounds = true
+        wellBeingLabel.layer.cornerRadius = 10.0
+        figuresView.layer.masksToBounds = true
+        figuresView.layer.cornerRadius = 10.0
+        instructionsView.layer.masksToBounds = true
+        instructionsView.layer.cornerRadius = 10.0
     }
     
     @IBAction func savePressed(_ sender: Any) {

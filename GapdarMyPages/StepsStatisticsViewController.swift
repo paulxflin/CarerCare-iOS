@@ -38,7 +38,7 @@ class StepsStatisticsViewController:UIViewController{
     }
     
     func getStepsGraphImage() -> Data {
-        let image = self.chartView.AsImage()
+        let image = screenshotImage()
         let imageData : Data = image.pngData()!
         return imageData
     }
@@ -63,8 +63,23 @@ class StepsStatisticsViewController:UIViewController{
     
    
     @IBAction func saveGraphPressed(_ sender: Any) {
-        let image = self.chartView.AsImage()
+        let image = screenshotImage()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
+    func screenshotImage() -> UIImage {
+        var image : UIImage?
+        //To get a strict screenshot of keyView: UIApplication.shared.keyWindow!.layer
+        //The current version gets an image of the ViewController
+        let layer = self.view.layer
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        layer.render(in: context!)
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        //Use Screenshot (and if that doesn't exist use graph drawing)
+        return image ?? self.chartView.AsImage()
     }
 }
 

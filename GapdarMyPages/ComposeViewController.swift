@@ -266,6 +266,17 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             //Note: It's Important to present the VC to render the graph UIImages to add to attachment.
             if attachSwitch.isOn {
                 let graphsSB : UIStoryboard = UIStoryboard(name: "Graphs", bundle: nil)
+                let diaryVC : WellBeingDiary = graphsSB.instantiateViewController(withIdentifier: "diary") as! WellBeingDiary
+                self.present(diaryVC, animated: true, completion: nil)
+                let diaryData : Data = diaryVC.getDiaryImage()
+                msgVC.addAttachmentData(diaryData, typeIdentifier: "public.data", filename: "diary.png")
+                
+                self.dismiss(animated: true) {
+                    self.present(msgVC, animated: true, completion: nil)
+                }
+                
+                //The commented out section here gets the two graphs separately with their axises
+                /*
                 let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
                 self.present(callsVC, animated: true, completion: nil)
                 let callsData : Data = callsVC.getCallsGraphImage()
@@ -280,6 +291,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         self.present(msgVC, animated: true, completion: nil)
                     }
                 }
+                */
             } else {
                 self.present(msgVC, animated: true, completion: nil)
             }

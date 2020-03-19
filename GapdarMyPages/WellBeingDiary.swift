@@ -62,4 +62,19 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
         appDelegate?.window??.makeKeyAndVisible()
     }
     
+    func getDiaryImage() -> Data {
+        var image : UIImage?
+        //To get a strict screenshot of keyView: UIApplication.shared.keyWindow!.layer
+        //The current version gets an image of the ViewController
+        let layer = self.view.layer
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        layer.render(in: context!)
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let imageData : Data = image!.pngData()!
+        return imageData
+    }
+    
 }

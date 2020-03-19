@@ -310,19 +310,20 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     //This part is reached after the apple message view is closed.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        self.dismiss(animated: true, completion: nil)
-        
-        print("activityRow: " + String(activityRow))
-        if activityRow != -1 {
-            updateActivityCount(activityRow)
+        self.dismiss(animated: true) {
+            //checks whether message has been sent (0: cancelled, 1: sent, 2: failed)
+            if result.rawValue == 1 {
+                print("nameRow: " + String(self.nameRow))
+                if self.nameRow != -1 {
+                    self.updateNetworkMessagesCount(self.nameRow)
+                }
+                
+                print("activityRow: " + String(self.activityRow))
+                if self.activityRow != -1 {
+                    self.updateActivityCount(self.activityRow)
+                }
+            }
         }
-        
-        print("nameRow: " + String(nameRow))
-        if nameRow != -1 {
-            updateNetworkMessagesCount(nameRow)
-        }
-        
-        print("I have reached the didFinish method for message")
     }
     
     func updateNetworkMessagesCount(_ row: Int)
@@ -354,8 +355,18 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let appDelegate = UIApplication.shared.delegate
             appDelegate?.window??.rootViewController = asmVC
             appDelegate?.window??.makeKeyAndVisible()
+        } else {
+            returnHome()
         }
         
+    }
+    
+    func returnHome() {
+        let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
+        let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = barVC
+        appDelegate?.window??.makeKeyAndVisible()
     }
     
 }

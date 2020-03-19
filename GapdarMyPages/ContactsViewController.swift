@@ -263,6 +263,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         nameTF.text = name
         nameTF.backgroundColor = .white
         nameTF.borderStyle = .roundedRect
+        nameTF.tag = i
         contactSV.addSubview(nameTF)
         
 
@@ -280,6 +281,8 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         numTF.textAlignment = .left
         numTF.backgroundColor = .white
         numTF.borderStyle = .roundedRect
+        //Note 100 here is an arbitrary large number to differentiate nameTF and numTF.
+        numTF.tag = i + 100
         contactSV.addSubview(numTF)
         
         
@@ -311,6 +314,20 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         // Hide the keyboard
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //Modify the phoneArray or nameArray here
+        let tag = textField.tag
+        if tag < 100 {
+            //modify nameArray
+            nameArray[tag] = textField.text!
+            defaults.set(nameArray, forKey: "nameArray")
+        }
+        else {
+            phoneArray[tag-100] = textField.text!
+            defaults.set(phoneArray, forKey: "phoneArray")
+        }
     }
     
 }

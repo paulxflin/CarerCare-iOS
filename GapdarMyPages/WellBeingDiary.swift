@@ -73,7 +73,7 @@ class WellBeingDiary:UIViewController, UIGestureRecognizerDelegate{
         appDelegate?.window??.makeKeyAndVisible()
     }
     
-    
+    // Get Screenshot of the WBDiary (Paul)
     func getDiaryImage() -> Data {
         var image : UIImage?
         //To get a strict screenshot of keyView: UIApplication.shared.keyWindow!.layer

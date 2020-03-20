@@ -4,7 +4,7 @@
 //
 //  Created by localadmin on 17/02/2020.
 //  Copyright © 2020 localadmin. All rights reserved.
-//
+//  Contributors: Paul
 
 import Foundation
 import UIKit
@@ -28,9 +28,9 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     @IBOutlet weak var nameField: UITextField!
     
     
-    
+    //Make sure the layouts are initialised correctly, and existing data is added (Paul)
     override func viewDidLoad() {
-        super.viewDidLoad()        //Make sure the layouts are initialised correctly
+        super.viewDidLoad()
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
         setupContactSV()
@@ -64,7 +64,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
     }
     
-    
+    // Calls a the phone contacts view to select a contact to add (Paul)
     @IBAction func addMoreContacts(_ sender: Any) {
         print(contactsScrollView.frame.height)
         let picker = CNContactPickerViewController()
@@ -170,13 +170,13 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
         
     }
     
-    
+    // Hide the keyboard after return is pressed (Paul)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard
         textField.resignFirstResponder()
         return true
     }
     
+    // Navigate back to first page (Paul)
     @IBAction func noThanksPressed(_ sender: UIButton) {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")

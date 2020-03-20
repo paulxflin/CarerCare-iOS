@@ -51,18 +51,20 @@ class CallsStatisticsViewController: UIViewController{
     }
     
 
+    // Get screenshot as PNG (Paul)
     func getCallsGraphImage() -> Data{
         let image = screenshotImage()
         let imageData : Data = image.pngData()!
         return imageData
     }
 
+    // Saves screenshot to phone images (Paul)
     @IBAction func saveGraphPressed(_ sender: Any) {
         let image = screenshotImage()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
     
-    
+    // Gets Screenshot (Paul)
     func screenshotImage() -> UIImage {
         var image : UIImage?
         //To get a strict screenshot of keyView: UIApplication.shared.keyWindow!.layer

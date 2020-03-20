@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="64" width="288" height="205"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarerFriendly Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-JI-dK3" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="27"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-5X-kzE">
-                                        <rect key="frame" x="0.0" y="39" width="288" height="166"/>
+                                        <rect key="frame" x="0.0" y="48" width="288" height="157"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-1u-slg">
                                                 <rect key="frame" x="1" y="0.0" width="286" height="113"/>
@@ -361,31 +361,31 @@
             <objects>
                 <viewController storyboardIdentifier="compose" id="WoI-fW-rdI" customClass="ComposeViewController" customModule="GapdarMyPages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wjf-W3-HiJ" customClass="GradientUIView" customModule="GapdarMyPages" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brc-hY-D7s">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-bg-vmv">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBj-yx-Vuu">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jE-gN-Uu5">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caW-ga-5u2">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-u5-Qd8">
-                                <rect key="frame" x="20" y="10" width="280" height="430"/>
+                                <rect key="frame" x="20" y="54" width="280" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9O-sr-uFV" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="28"/>
@@ -399,10 +399,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-Rr-A8d">
-                                        <rect key="frame" x="0.0" y="33" width="280" height="348"/>
+                                        <rect key="frame" x="0.0" y="33" width="280" height="330"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-VD-ZHY">
-                                                <rect key="frame" x="11" y="5" width="258" height="341"/>
+                                                <rect key="frame" x="11" y="5" width="258" height="323"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-Pz-tIX">
                                                         <rect key="frame" x="0.0" y="0.0" width="258" height="34"/>
@@ -510,10 +510,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qd4-jf-Z6V">
-                                                        <rect key="frame" x="0.0" y="220" width="258" height="80"/>
+                                                        <rect key="frame" x="0.0" y="220" width="258" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All the best, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDi-VS-Jbt" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="258" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="258" height="62"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -526,7 +526,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sor-lV-4Yv">
-                                                        <rect key="frame" x="0.0" y="310" width="258" height="31"/>
+                                                        <rect key="frame" x="0.0" y="292" width="258" height="31"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include Wellbeing Diary: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj9-7s-3M8" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="208" height="31"/>
@@ -559,7 +559,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-Tj-JIK">
-                                        <rect key="frame" x="0.0" y="386" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="368" width="280" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6p-Nr-Gje" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="38"/>
@@ -600,7 +600,7 @@
                                 </subviews>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-xy-kMp">
-                                <rect key="frame" x="0.0" y="234" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="205" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="dateTimePickerChanged:" destination="WoI-fW-rdI" eventType="valueChanged" id="fdi-uG-xnt"/>
@@ -980,7 +980,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94n-gi-jY3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1001,6 +1001,6 @@
         <image name="icons8-phone-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="isr-dX-h5I"/>
+        <segue reference="XPO-VN-Chh"/>
     </inferredMetricsTieBreakers>
 </document>

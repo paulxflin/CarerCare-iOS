@@ -17,11 +17,11 @@ class NewSetUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Request Permissions for Healthkit Steps
+        //Request Permissions for Healthkit Steps (Paul)
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
         
-        //Request Permission for Notifications
+        //Request Permission for Notifications (Paul)
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
 
         // Do any additional setup after loading the view.

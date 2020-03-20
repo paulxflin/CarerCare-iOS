@@ -43,6 +43,7 @@ class StepsStatisticsViewController:UIViewController{
         chartView.clipsToBounds = true
     }
     
+    // Get Screenshot as PNG Data (Paul)
     func getStepsGraphImage() -> Data {
         let image = screenshotImage()
         let imageData : Data = image.pngData()!
@@ -67,12 +68,13 @@ class StepsStatisticsViewController:UIViewController{
     }
     
     
-   
+    // Saves screenshot to phone images (Paul)
     @IBAction func saveGraphPressed(_ sender: Any) {
         let image = screenshotImage()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
     
+    // Gets Screenshot (Paul)
     func screenshotImage() -> UIImage {
         var image : UIImage?
         //To get a strict screenshot of keyView: UIApplication.shared.keyWindow!.layer

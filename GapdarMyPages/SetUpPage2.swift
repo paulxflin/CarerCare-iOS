@@ -70,7 +70,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         }
     }
     
-    
+    // Links UI to add a blank activity textfield onto screen (Paul)
     @IBAction func getActivitiesButtonPressed(_ sender: Any) {
         placeActivityOnScreen(activity: "")
     }
@@ -101,6 +101,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         
     }
     
+    // Save the textfield data (Paul)
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         for activity in activityTextFields{
@@ -127,6 +128,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         return true
     }
     
+    // Limits the postcode textfield to 4 characters (Paul)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == postcodeTextField {
             let maxLength = 4
@@ -138,6 +140,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         return true
     }
     
+    // Navigate back to first page (Paul)
     @IBAction func noThanksPressed(_ sender: UIButton) {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")

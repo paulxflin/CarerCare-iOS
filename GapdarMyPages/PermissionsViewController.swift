@@ -30,6 +30,7 @@ class PermissionsViewController: UIViewController {
     var willResetHistory = false
     var trackingChanged = false
     
+    //Set up state of "Start tracking" button based on saved state (Paul)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -78,7 +79,7 @@ class PermissionsViewController: UIViewController {
         
     }
     
-    
+    // Navigate to rate WB page or home page (Paul)
     @IBAction func saveButtonPressed(_ sender: Any) {
         //MOVED FUNCTIONALITY FROM PREVIOUS TRACKINGPRESSED INTO SAVEBUTTONPRESSED
         setupHistory()
@@ -96,7 +97,7 @@ class PermissionsViewController: UIViewController {
         appDelegate?.window??.makeKeyAndVisible()
     }
     
-    
+    //Saves whether sharing is allowed (Paul)
     @IBAction func sharingSwitchPressed(_ sender: Any) {
         defaults.set(sharingSwitch.isOn, forKey: "allowShare")
         
@@ -110,6 +111,7 @@ class PermissionsViewController: UIViewController {
         
     }
     
+    // setup or clear arrays storing data as appropriate (Paul)
     func setupHistory() {
         if defaults.array(forKey: "callsArray") == nil || willResetHistory {
             let callsArray = [Int](repeating: 0, count: 12)

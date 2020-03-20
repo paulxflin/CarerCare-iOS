@@ -77,8 +77,10 @@ class AdjustViewController: UIViewController {
         
         defaults.set(score, forKey: "score")
         
-        //Can Call a DB Submit at this point
-        HomeViewController().sendDataToDB()
+        //Can Call a DB Submit at this point if share is enabled (Paul)
+        if defaults.bool(forKey: "allowShare") {
+            HomeViewController().sendDataToDB()
+        }
         
         //Update the scoresArray with this score.
         var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]

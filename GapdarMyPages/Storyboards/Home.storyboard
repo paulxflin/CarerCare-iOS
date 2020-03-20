@@ -244,9 +244,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-aq-206">
-                                                <rect key="frame" x="20" y="8" width="335" height="679"/>
+                                                <rect key="frame" x="20" y="8" width="335" height="701.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-3y-HOX">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-3y-HOX">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="279"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate well-being score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-Ph-Hi0">
@@ -255,7 +255,7 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-KU-SFU">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-KU-SFU">
                                                                 <rect key="frame" x="0.0" y="55" width="335" height="224"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-D9-Guf">
@@ -264,7 +264,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As needed move the Black Button above up or down the scale to rate your well-being then click save below " translatesAutoresizingMaskIntoConstraints="NO" id="RlO-xg-ITj" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="As needed move the Black Button above up or down the scale to rate your well-being then click save below " translatesAutoresizingMaskIntoConstraints="NO" id="RlO-xg-ITj" customClass="TextFontScreen" customModule="GapdarMyPages" customModuleProvider="target">
                                                                         <rect key="frame" x="29" y="96" width="277" height="120"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -359,10 +359,10 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="So3-x6-zdi">
-                                                        <rect key="frame" x="0.0" y="425" width="335" height="16"/>
+                                                        <rect key="frame" x="0.0" y="425" width="335" height="25.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Activity Since Last Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U53-1A-prQ" customClass="rotateLabel" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="16"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <nil key="textColor"/>
@@ -376,7 +376,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v1I-7i-ti6">
-                                                        <rect key="frame" x="0.0" y="451" width="335" height="189"/>
+                                                        <rect key="frame" x="0.0" y="460.5" width="335" height="189"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-pU-wLh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="189"/>
@@ -472,10 +472,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-AN-ZVP">
-                                                        <rect key="frame" x="0.0" y="650" width="335" height="29"/>
+                                                        <rect key="frame" x="0.0" y="659.5" width="335" height="42"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-f5-6Ag" customClass="RoundButton" customModule="GapdarMyPages" customModuleProvider="target">
-                                                                <rect key="frame" x="305" y="0.0" width="30" height="29"/>
+                                                                <rect key="frame" x="281" y="0.0" width="54" height="42"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <state key="normal" title="Save">

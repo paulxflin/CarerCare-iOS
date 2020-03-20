@@ -38,6 +38,9 @@ class PermissionsViewController: UIViewController {
         tracking = defaults.bool(forKey: "tracking") // Returns false if tracking doesn't exist
         if !tracking {
             saveBT.isEnabled = false
+        } else {
+            //Case where is app is already tracking
+            sharingSwitch.isOn = defaults.bool(forKey: "allowShare")
         }
         
 
@@ -86,6 +89,9 @@ class PermissionsViewController: UIViewController {
         let setup = true
         defaults.set(setup, forKey: "setup")
         
+        //save sharing state here
+        defaults.set(sharingSwitch.isOn, forKey: "allowShare")
+        
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         var VC = barSB.instantiateViewController(withIdentifier: "tabBar")
         if trackingChanged {
@@ -95,20 +101,6 @@ class PermissionsViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate
         appDelegate?.window??.rootViewController = VC
         appDelegate?.window??.makeKeyAndVisible()
-    }
-    
-    //Saves whether sharing is allowed (Paul)
-    @IBAction func sharingSwitchPressed(_ sender: Any) {
-        defaults.set(sharingSwitch.isOn, forKey: "allowShare")
-        
-        let height = startTracking.frame.height
-        
-        let width = startTracking.frame.width
-        
-        print("width:", width, "height", height)
-        //Debugging
-        //print(defaults.bool(forKey: "allowShare"))
-        
     }
     
     // setup or clear arrays storing data as appropriate (Paul)

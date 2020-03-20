@@ -28,6 +28,7 @@ class ContactHistory:UIViewController{
     
     var yposition : Int = 60
     
+    // Get info and update data each time view opened (Paul)
     override func viewWillAppear(_ animated: Bool) {
         let width = self.view.frame.width - 30
         messageImage.frame = CGRect(x: width - 50, y:8, width:50, height:50)
@@ -53,7 +54,7 @@ class ContactHistory:UIViewController{
     }
     
     
-    
+    // Get data and store in arrays (Paul)
     func getInfo(){
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         
@@ -75,6 +76,7 @@ class ContactHistory:UIViewController{
         
     }
     
+    // Update the text fields with data (Paul)
     func updateTF() {
         if callLabelArray.count < nameArray.count {
             updateLabel(callLabelArray.count)
@@ -90,6 +92,7 @@ class ContactHistory:UIViewController{
         }
     }
     
+    // Update Calls, messages number labels (Paul)
     func updateLabel(_ start : Int) {
         var i = start
         let width = self.view.frame.width - 30

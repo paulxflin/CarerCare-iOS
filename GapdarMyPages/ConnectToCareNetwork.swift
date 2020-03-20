@@ -21,6 +21,7 @@ class ConnectToCareNetwork: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // Navigate back to home when X pressed (Paul)
     @IBAction func crossPressed(_ sender: UIButton) {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")

@@ -56,10 +56,12 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // MARK: Actions
     
+    // Set picker columns (Paul)
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // Set picker rows (Paul)
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var numRows = 0
         if (pickerView == activityPV) {
@@ -70,6 +72,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return numRows
     }
     
+    // Set picker option to display (Paul)
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var option = "";
         if (pickerView == activityPV) {
@@ -80,6 +83,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return option
     }
     
+    // Put data in textfield (Paul)
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == activityPV) {
             activity = activityOptions[row]
@@ -92,6 +96,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    // Show appropriate picker (Paul)
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if (textField == activityTF) {
             activityPV.isHidden = false
@@ -101,6 +106,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
+    // Generate message, and call imessages (Paul)
     @IBAction func sendPressed(_ sender: UIButton) {
         let phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         let number = phoneArray[0] //Arbitrarily determined by Joseph 1st contact is carer
@@ -125,7 +131,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         returnHome()
     }
     
-    
+    //Dismiss messages view after sent, and navigate home (Paul)
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
         //checks whether message has been sent (0: cancelled, 1: sent, 2: failed)

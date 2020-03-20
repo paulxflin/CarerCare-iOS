@@ -55,6 +55,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var sendButton: UIButton!
     
+    // Setup delegates and datasources (Paul)
     override func viewDidLoad() {
         super.viewDidLoad()
         msgView.backgroundColor = .white
@@ -115,7 +116,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // MARK: Actions
     
-    
+    // Format Date time data to input into textfields (Paul)
     @IBAction func dateTimePickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
@@ -182,6 +183,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return option
     }
     
+    // Adjust the right textfield and make picker invisible again (Paul)
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == namePV) {
             name = nameOptions[row]
@@ -209,6 +211,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
+    // Find the correct pickerview to show (Paul)
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if (textField == nameTF) {
             namePV.isHidden = false
@@ -226,6 +229,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
+    // Compose message + add json as appropriate (Paul)
     func composeMsg() {
         msg = ""
         msg += "Hello " + (name ?? "") + "\n"
@@ -253,6 +257,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    //Builds appropriate message (Paul)
     @IBAction func sendPressed(_ sender: UIButton) {
         composeMsg()
         let number = phoneArray[nameIndex!]
@@ -299,6 +304,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    // Navigate back to home (Paul)
     @IBAction func cancelPressed(_ sender: UIButton) {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")

@@ -12,15 +12,12 @@ import Alamofire
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var scoreView: UIView!
-    //    let label = UILabel()
     @IBOutlet weak var stepsLabel: rotateLabel!
     @IBOutlet weak var callsLabel: rotateLabel!
     @IBOutlet weak var messagesLabel: rotateLabel!
     
     
     @IBOutlet weak var figuresView: UIView!
-    
-//    @IBOutlet weak var btSendJSON: UIButton!
     
     let defaults = UserDefaults.standard
     
@@ -33,9 +30,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-               // Do any additional setup after loading the view, typically from a nib.
     }
     
+    //ln 36-56 Set up user components, colour, rounded edges, etc (Karunya)
     func setUI(){
         scoreView.layer.masksToBounds = true
         scoreView.layer.cornerRadius = 10.0
@@ -58,7 +55,8 @@ class HomeViewController: UIViewController {
         backgroundLabel.layer.addSublayer(newLayer)
     }
     
-    // viewWillAppear is called every single time a view is presented, unlike viewDidLoad which is only called once when view is added to memory
+    // Note: viewWillAppear is called every single time a view is presented, unlike viewDidLoad which is only called once when view is added to memory
+    //ln 60-65 update the predicted score label, as well as other data labels (Paul)
     override func viewWillAppear(_ animated: Bool) {
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
         stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
@@ -92,6 +90,7 @@ class HomeViewController: UIViewController {
         return try! JSONSerialization.jsonObject(with: object, options:.mutableContainers)
     }
     
+    //ln 94-127 get formatted date, send anonymised data to an online database in JSON (Paul)
     func sendDataToDB() {
         //order of json matters, All String Data
         

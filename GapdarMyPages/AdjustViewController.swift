@@ -34,6 +34,7 @@ class AdjustViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
+    //ln 38-49 setup UI, setup data values, get predicted score and setup slider position and score (Paul)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -64,7 +65,7 @@ class AdjustViewController: UIViewController {
         let score : Int = Int(scoreLabel.text!)!
         print(score)
         
-        //Small bit to calculate error rate, store in errorRate var.
+        //ln 69-77 Small bit to calculate error rate, store in errorRate var (Paul)
         let predictedScore = defaults.integer(forKey: "score")
         if score != 0 {
             let error : Double = Double(abs(predictedScore - score)) / Double(score) * 100
@@ -77,16 +78,17 @@ class AdjustViewController: UIViewController {
         
         defaults.set(score, forKey: "score")
         
-        //Can Call a DB Submit at this point if share is enabled (Paul)
+        //ln 82-84 Can Call a DB Submit at this point if share is enabled (Paul)
         if defaults.bool(forKey: "allowShare") {
             HomeViewController().sendDataToDB()
         }
         
-        //Update the scoresArray with this score.
+        //ln 87-89 Update the scoresArray with this score (Paul)
         var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
         scoresArray[0] = defaults.integer(forKey: "score")
         defaults.set(scoresArray, forKey: "scoresArray")
         
+        //ln 92-96 navigate to HomeVC with tabbar (Paul)
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
         let appDelegate = UIApplication.shared.delegate
@@ -94,11 +96,11 @@ class AdjustViewController: UIViewController {
         appDelegate?.window??.makeKeyAndVisible()
     }
     
+    //ln 100-136, make a score prediction (Paul)
     func getPredictedScore() -> Int {
         let VC = stepController()
         VC.getThisWeekSteps()
         
-        //Unfortunately there is potential that the steps isn't called in time based on current understanding.
         let weekSteps = defaults.integer(forKey: "oneWeekSteps")
         print("The weekSteps appears to be: " + String(weekSteps))
         let targetSteps = Int(defaults.string(forKey: "targetSteps") ?? "1000") ?? 1000
@@ -120,10 +122,10 @@ class AdjustViewController: UIViewController {
         
         let score : Double = (stepsRatio + callsRatio) / 2.0 * 10.0
         
-        //Record down the predicted score, if modified will update later.
+        //ln 126 Record down the predicted score, if modified will update later.
         defaults.set(score, forKey: "score")
         
-        //This function shifts the records or steps and calls to put current week into last week
+        //ln 129 This function shifts the records or steps and calls to put current week into last week
         updateArrays()
         
         if Int(score) > 10 {
@@ -133,8 +135,9 @@ class AdjustViewController: UIViewController {
         return Int(score)
     }
     
+    //ln 139-178 update all the relevant arrays storing data
     func updateArrays() {
-        // Structure: Index 0 corresponds to last week, Index 11 corresponds to 12 weeks ago
+        // Structure: Index 0 corresponds to last week, Index 11 corresponds to 12 weeks ago (Paul)
         var callsArray : [Int] = defaults.array(forKey: "callsArray") as! [Int]
         var stepsArray : [Int] = defaults.array(forKey: "stepsArray") as! [Int]
         var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
@@ -145,12 +148,12 @@ class AdjustViewController: UIViewController {
             scoresArray[i] = scoresArray[i-1]
             i = i-1
         }
-        //Set last week's steps and calls
+        //ln 152-154 Set last week's steps and calls (Paul)
         callsArray[0] = defaults.integer(forKey: "totalCalls")
         stepsArray[0] = defaults.integer(forKey: "oneWeekSteps")
         scoresArray[0] = defaults.integer(forKey: "score")
         
-        //Store the arrays:
+        //ln 157-159 Store the arrays (Paul)
         defaults.set(callsArray, forKey: "callsArray")
         defaults.set(stepsArray, forKey: "stepsArray")
         defaults.set(scoresArray, forKey: "scoresArray")
@@ -158,12 +161,12 @@ class AdjustViewController: UIViewController {
         print(stepsArray)
         print(scoresArray)
         
-        //Clear the current accumulations for steps, calls, and messages, not scores because that remains
+        //ln 165-167 Clear the current accumulations for steps, calls, and messages, not scores because that remains (Paul)
         defaults.set(0, forKey: "oneWeekSteps")
         defaults.set(0, forKey: "totalCalls")
         defaults.set(0, forKey: "totalMessages")
         
-        //Clear Network Calls and Msgs
+        //ln 170-176 Clear Network Calls and Msgs (Paul)
         var networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
         networkCallsArray = [Int](repeating: 0, count: networkCallsArray.count)
         defaults.set(networkCallsArray, forKey: "networkCallsArray")
@@ -174,15 +177,4 @@ class AdjustViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

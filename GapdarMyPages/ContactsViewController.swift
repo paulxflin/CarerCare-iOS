@@ -259,7 +259,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     
-    //ln 263-282 clean number, update data, open call dialogue
+    //ln 263-282 clean number, update data, open call dialogue (Paul)
     @objc func callPressed(_ sender: UIButton) {
         // Debug: print(sender.tag)
         let phone = phoneArray[sender.tag]
@@ -281,7 +281,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         }
     }
     
-    //ln 285-292 navigate to message composer
+    //ln 285-292 navigate to message composer (Paul)
     @objc func messagePressed(_ sender: UIButton) {
         print("message pressed")
         let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
@@ -306,13 +306,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //ln 310 Hide the keyboard
+        //ln 310 Hide the keyboard (Paul)
         textField.resignFirstResponder()
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //ln 317-326 Modify the phoneArray or nameArray
+        //ln 317-326 Modify the phoneArray or nameArray (Paul)
         let tag = textField.tag
         if tag < 100 {
             //modify nameArray

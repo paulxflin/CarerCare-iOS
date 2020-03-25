@@ -15,12 +15,11 @@
 4. From the project directory, open GapdarMyPages, and double click GapdarMyPages.xcworkspace to open with Xcode. 
 5. Go to the left top of the navigator and double click the top Project navigator icon, then 'GapdarMyPages'. It will display a page in your main window.
 6. Go to the 'Signing' section under 'Signing & Capabilities' tab and tick the 'Automatically manage signing' option. In 'Team', select your Apple developer account.
-7. Go to signing and capabilities and select your developer account 
-8. Change the bundle identifier to something unique eg. com.example.GapdarMyPages
-9. Update your iPhone to iOS 13 if it isn't already
-10. Connect your iPhone to your Mac's USB port with a Lightning Connector
-11. Keep your iPhone unlocked, and select 'trust this computer' in the dialogue that pops up.
-12. Click the "Set the active scheme" menu near the top left of X-code, next to "Build" and "Stop Running" buttons, and select your iPhone in the dropdown menu
-13. Click the 'Build and Run' button at top left of X-code
-14. On your iPhone, go to Settings -> General -> Device Management -> Select your App Development -> Trust App Developer
-15. Close Settings, and click the GapdarMyPages Icon to start the App.
+7. Change the bundle identifier to something unique eg. com.example.GapdarMyPages
+8. Update your iPhone to iOS 13 if it isn't already
+9. Connect your iPhone to your Mac's USB port with a Lightning Connector
+10. Keep your iPhone unlocked, and select 'trust this computer' in the dialogue that pops up.
+11. Click the "Set the active scheme" menu near the top left of X-code, next to "Build" and "Stop Running" buttons, and select your iPhone in the dropdown menu
+12. Click the 'Build and Run' button at top left of X-code
+13. On your iPhone, go to Settings -> General -> Device Management -> Select your App Development -> Trust App Developer
+14. Close Settings, and click the GapdarMyPages Icon to start the App.

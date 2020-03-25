@@ -1,16 +1,16 @@
 # Deployment (Side Loading)
 1. Sign up for a free apple developer account if you haven't already
-    a. Go to developer.apple.com 
-    b. Navigate to ‘Account’ on the top bar 
-    c. Sign in with Apple Id 
-    d. Agree to Terms and Conditions 
-    e. Done.
+    1. Go to developer.apple.com 
+    2. Navigate to ‘Account’ on the top bar 
+    3. Sign in with Apple Id 
+    4. Agree to Terms and Conditions 
+    5. Done.
 2. If you don’t have Cocoa Pods, Open Terminal: 
-    a. `sudo gem install cocoapods` 
-    b. Type in computer password 
-    c. Navigate to project directory
-    d. `pod install` 
-    e. Check it has completed without errors 
+    1. `sudo gem install cocoapods` 
+    2. Type in computer password 
+    3. Navigate to project directory
+    4. `pod install` 
+    5. Check it has completed without errors 
 3. Download X-Code from App Store if you haven't already
 4. From the project directory, open GapdarMyPages, and double click GapdarMyPages.xcworkspace to open with Xcode. 
 5. Go to the left top of the navigator and double click the top Project navigator icon, then 'GapdarMyPages'. It will display a page in your main window.

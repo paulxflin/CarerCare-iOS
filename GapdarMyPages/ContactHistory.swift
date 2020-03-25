@@ -11,24 +11,27 @@ import UIKit
 
 class ContactHistory:UIViewController{
     
+    //ln 15 setup variable to store data
     let defaults = UserDefaults.standard
     
+    //ln 18-20 link UI components
     @IBOutlet weak var historyScroller: UIScrollView!
-    
     @IBOutlet weak var messageImage: UIImageView!
-    
     @IBOutlet weak var callsImage: UIImageView!
     
+    //ln 23-25 arrays to store data
     var nameArray : [String] = []
     var networkCallsArray : [Int] = []
     var networkMessagesArray : [Int] = []
     
+    //ln 28-29 arrays to store labels displaying data
     var callLabelArray : [UILabel]  = []
     var messageLabelArray : [UILabel]  = []
     
+    //ln 32 set starting height of scrollview
     var yposition : Int = 60
     
-    // Get info and update data each time view opened (Paul)
+    //ln 35-43 Get info and update data each time view opened (Paul)
     override func viewWillAppear(_ animated: Bool) {
         let width = self.view.frame.width - 30
         messageImage.frame = CGRect(x: width - 50, y:8, width:50, height:50)
@@ -39,26 +42,18 @@ class ContactHistory:UIViewController{
         updateTF()
     }
     
+    //ln 46-50 setup UI
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         historyScroller.layer.masksToBounds = true
         historyScroller.layer.cornerRadius = 10.0
-        
-//        getInfo()
-//        callLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
-//        messageLabelArray = [UILabel](repeating: UILabel.init(), count: nameArray.count)
-//
-//        print("0..............hi")
-//        placeInfo()
     }
     
     
-    // Get data and store in arrays (Paul)
+    //ln 54-72 Get data and store in arrays (Paul)
     func getInfo(){
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         
-        //Potential Error Hiding
         if defaults.array(forKey: "networkCallsArray") == nil || defaults.array(forKey: "networkCallsArray")!.count == 0 {
             networkCallsArray = [Int](repeating: 0, count: nameArray.count)
             defaults.set(networkCallsArray, forKey: "networkCallsArray")
@@ -66,17 +61,15 @@ class ContactHistory:UIViewController{
         }
         networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
         
-        //Potential Error Hiding
         if defaults.array(forKey: "networkMessagesArray") == nil || defaults.array(forKey: "networkMessagesArray")!.count == 0 {
             networkMessagesArray = [Int](repeating: 0, count: nameArray.count)
             defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
             print(networkMessagesArray)
         }
         networkMessagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
-        
     }
     
-    // Update the text fields with data (Paul)
+    //ln 75-88 Update the text fields with data (Paul)
     func updateTF() {
         if callLabelArray.count < nameArray.count {
             updateLabel(callLabelArray.count)
@@ -92,7 +85,7 @@ class ContactHistory:UIViewController{
         }
     }
     
-    // Update Calls, messages number labels (Paul)
+    //ln 91-118 Update Calls, messages number labels (Paul)
     func updateLabel(_ start : Int) {
         var i = start
         let width = self.view.frame.width - 30
@@ -121,74 +114,4 @@ class ContactHistory:UIViewController{
         }
         historyScroller.contentSize.height = CGFloat(yposition)
     }
-    
-//    func placeInfo(){
-////        var yposition = 60
-//        var i = 0
-//        while i < nameArray.count{
-//            print(i)
-//
-//            let nameLabel = UILabel(frame:CGRect(x:44, y:yposition, width: 130, height:33))
-//            nameLabel.textAlignment = .left
-//            nameLabel.text = nameArray[i]
-//            historyScroller.addSubview(nameLabel)
-//
-//            let callLabel = UILabel(frame:CGRect(x:210, y:yposition, width: 50, height:33))
-//            callLabel.textAlignment = .left
-//            print("Debugging temp")
-//            print(networkCallsArray)
-//            print(i)
-//            callLabel.text = String(networkCallsArray[i])
-//            historyScroller.addSubview(callLabel)
-//            callLabelArray[i] = callLabel
-//
-//
-//            let messageLabel = UILabel(frame:CGRect(x:274, y:yposition, width: 50, height:33))
-//            messageLabel.textAlignment = .left
-//            messageLabel.text = String(networkMessagesArray[i])
-//            historyScroller.addSubview(messageLabel)
-//            messageLabelArray[i] = messageLabel
-//
-//            yposition += 40
-//
-//            i += 1
-//        }
-        
-        
-        
-        
-        
-        
-        //        let label = UILabel(frame: CGRect(x:44, y:yContactsValue, width:66, height:33))
-//        //label.center = CGPoint(x:44, y:146)
-//        label.textAlignment = .center
-//        label.text = "Name: "
-//        self.view.addSubview(label)
-//
-//        let namelabel = UITextField(frame: CGRect(x:118, y:yContactsValue, width:272, height:33))
-//        //namelabel.center = CGPoint(x:118, y:152)
-//        namelabel.textAlignment = .center
-//        namelabel.text = familyName
-//        namelabel.backgroundColor = .white
-//        self.view.addSubview(namelabel)
-//
-//        yContactsValue += 40
-//
-//        let label2 = UILabel(frame: CGRect(x:44, y:yContactsValue, width:166, height:33))
-//        //label.center = CGPoint(x:44, y:146)
-//        label2.textAlignment = .center
-//        label2.text = "Contact Number: "
-//        self.view.addSubview(label2)
-//
-//        let numlabel = UITextField(frame: CGRect(x:200, y:yContactsValue, width:150, height:33))
-//        //namelabel.center = CGPoint(x:118, y:152)
-//
-//        numlabel.text = phoneNumber
-//        numlabel.backgroundColor = .white
-//        self.view.addSubview(numlabel)
-//
-//        yContactsValue += 40
-//
-//    }
-    
 }

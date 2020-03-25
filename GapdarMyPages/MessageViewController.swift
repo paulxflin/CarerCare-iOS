@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 import UserNotifications
 
+//Unused class for the app from previously demoing the code functionalities.
 class MessageViewController: UIViewController, UITextFieldDelegate, MFMessageComposeViewControllerDelegate  {
     //MARK: Properties
     @IBOutlet weak var messageTextField: UITextField!

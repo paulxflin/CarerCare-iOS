@@ -11,6 +11,7 @@ import MessageUI
 
 class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MFMessageComposeViewControllerDelegate {
     
+    //ln 14 setup variable to store data
     let defaults = UserDefaults.standard
     
     var firstName : String?
@@ -29,6 +30,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var messageView: UIView!
     
+    //ln 34-57 setup UI, hide Pickers, assign VC to control components, setup variables displays
     override func viewDidLoad() {
         messageView.layer.masksToBounds = true
         messageView.layer.cornerRadius = 10
@@ -56,12 +58,12 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // MARK: Actions
     
-    // Set picker columns (Paul)
+    //ln 62-64 Set picker columns (Paul)
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    // Set picker rows (Paul)
+    //ln 67-75 Set picker rows (Paul)
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var numRows = 0
         if (pickerView == activityPV) {
@@ -72,7 +74,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return numRows
     }
     
-    // Set picker option to display (Paul)
+    //ln 78-86 Set picker option to display (Paul)
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var option = "";
         if (pickerView == activityPV) {
@@ -83,7 +85,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return option
     }
     
-    // Put data in textfield (Paul)
+    //ln 89-99 Put data in textfield (Paul)
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == activityPV) {
             activity = activityOptions[row]
@@ -96,7 +98,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    // Show appropriate picker (Paul)
+    //ln 101-109 Show appropriate picker (Paul)
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if (textField == activityTF) {
             activityPV.isHidden = false
@@ -106,7 +108,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
-    // Generate message, and call imessages (Paul)
+    //ln 112-130 Generate message, and call imessages (Paul)
     @IBAction func sendPressed(_ sender: UIButton) {
         let phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         let number = phoneArray[0] //Arbitrarily determined by Joseph 1st contact is carer
@@ -131,7 +133,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         returnHome()
     }
     
-    //Dismiss messages view after sent, and navigate home (Paul)
+    //ln 137-144 Dismiss messages view after sent, and navigate home (Paul)
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
         //checks whether message has been sent (0: cancelled, 1: sent, 2: failed)
@@ -141,6 +143,7 @@ class ActivitySupportMessage:UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
+    //ln 147-153 Return to homeVC
     func returnHome() {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")

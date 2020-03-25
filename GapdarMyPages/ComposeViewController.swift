@@ -10,11 +10,11 @@ import UIKit
 import MessageUI
 
 class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MFMessageComposeViewControllerDelegate {
-
+    //ln 14 setup data storing
     let defaults = UserDefaults.standard
     
     var firstName : String?
-    
+    //ln 18-31 link UI components
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     
     @IBOutlet weak var signoffLabel: UILabel!
@@ -29,33 +29,33 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var datePV: UIPickerView!
     @IBOutlet weak var timePV: UIPickerView!
     @IBOutlet weak var activityPV: UIPickerView!
-    
+    //ln 33-37 setup arrays to store picker options
     var nameOptions : [String] = [String]()
     var statusOptions : [String] = [String]()
     var dateOptions : [String] = [String]()
     var timeOptions : [String] = [String]()
     var activityOptions : [String] = [String]()
-    
+    //ln 39-43 setup variables to store user input
     var name : String?
     var status : String?
     var date : String?
     var time : String?
     var activity : String?
-    
+    //ln 45-48 setup index to track who to send message, phone number array, and variable to store msg
     var nameIndex : Int?
     var phoneArray : [String] = []
     var msg = ""
-    
+    //ln 49-50 initialise activity and name row tracking variables for logic later on
     var activityRow = -1
     var nameRow = -1
-    
+    //ln 52-26 connect more sb components to code
     @IBOutlet weak var msgView: UIView!
     
     @IBOutlet weak var attachSwitch: UISwitch!
     
     @IBOutlet weak var sendButton: UIButton!
     
-    // Setup delegates and datasources (Paul)
+    //ln 59-115 Setup delegates and datasources (Paul)
     override func viewDidLoad() {
         super.viewDidLoad()
         msgView.backgroundColor = .white
@@ -116,7 +116,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // MARK: Actions
     
-    // Format Date time data to input into textfields (Paul)
+    //ln 121-144 Format Date time data to input into textfields (Paul)
     @IBAction func dateTimePickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
@@ -143,12 +143,12 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         dateTimePicker.isHidden = true
     }
     
-    //Number of Columns of Data
+    //ln 147-149 Number of Columns of Data for normal pickers
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    // Number of Rows of Data
+    //ln 152-166 Number of Rows of Data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var numRows = 0
         if (pickerView == namePV) {
@@ -165,7 +165,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return numRows
     }
     
-    // Data to return for the row and component (column) being passed in
+    //ln 169-184 Data to return for the row and component (column) being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var option = "";
         if (pickerView == namePV) {
@@ -183,7 +183,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return option
     }
     
-    // Adjust the right textfield and make picker invisible again (Paul)
+    //ln 187-210 Adjust the right textfield and make picker invisible again (Paul)
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == namePV) {
             name = nameOptions[row]
@@ -229,7 +229,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return false
     }
     
-    // Compose message + add json as appropriate (Paul)
+    //ln 233-258 Compose message + add json as appropriate (Paul)
     func composeMsg() {
         msg = ""
         msg += "Hello " + (name ?? "") + "\n"
@@ -257,7 +257,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    //Builds appropriate message (Paul)
+    //ln 261-305 Builds appropriate message (Paul)
     @IBAction func sendPressed(_ sender: UIButton) {
         composeMsg()
         let number = phoneArray[nameIndex!]
@@ -280,7 +280,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     self.present(msgVC, animated: true, completion: nil)
                 }
                 
-                //The commented out section here gets the two graphs separately with their axises
+                //ln 284-298 The commented out section here gets the two graphs separately with their axises
                 /*
                 let callsVC : CallsStatisticsViewController = graphsSB.instantiateViewController(withIdentifier: "callsStats") as! CallsStatisticsViewController
                 self.present(callsVC, animated: true, completion: nil)
@@ -304,7 +304,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    // Navigate back to home (Paul)
+    //ln 308-314 Navigate back to home (Paul)
     @IBAction func cancelPressed(_ sender: UIButton) {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
@@ -314,7 +314,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     
-    //This part is reached after the apple message view is closed.
+    //ln 318-333 This part is reached after the apple message view is closed.
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true) {
             //checks whether message has been sent (0: cancelled, 1: sent, 2: failed)
@@ -332,6 +332,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    //ln 336-346 update number of messages sent for specific person, and total messsages count
     func updateNetworkMessagesCount(_ row: Int)
     {
         var networkMessagesArray : [Int] = defaults.array(forKey: "networkMessagesArray") as! [Int]? ?? [0, 0, 0]
@@ -344,6 +345,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         defaults.set(totalMessages, forKey: "totalMessages")
     }
     
+    //ln 349-370 update number of times an activity has been chosen, and decide whether to navigate to network message or return home
     func updateActivityCount(_ row: Int) {
         var activityCountArray = defaults.array(forKey: "activityCountArray") ?? [0, 0, 0]
         var num : Int = activityCountArray[row] as? Int ?? 0
@@ -367,6 +369,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
+    // ln 373-381 return to the homeVC
     func returnHome() {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")

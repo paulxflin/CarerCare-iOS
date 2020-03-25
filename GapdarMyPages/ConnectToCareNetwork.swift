@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 
 class ConnectToCareNetwork: UIViewController {
-    
-
-   
+    //ln 14 link the tick cross view from sb to code
     @IBOutlet weak var viewTickCros: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //ln 19-20 setup UI
         viewTickCros.layer.masksToBounds = true
         viewTickCros.layer.cornerRadius = 10.0
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    // Navigate back to home when X pressed (Paul)
+    //ln 25-31 Navigate back to home when X pressed (Paul)
     @IBAction func crossPressed(_ sender: UIButton) {
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")

@@ -4,13 +4,13 @@
 //
 //  Created by Mac Mini on 12/28/19.
 //  Copyright © 2019 Mac Mini. All rights reserved.
-//
+//  Contributors: Paul, Lishen
 
 import UIKit
 import HealthKit
 import UserNotifications
 
-
+// This is the view controller where a lot of nudges are written (Paul)
 class stepController: UIViewController {
     let defaults = UserDefaults.standard
     
@@ -20,15 +20,16 @@ class stepController: UIViewController {
     @IBOutlet weak var lbStep: UILabel!
     @IBOutlet weak var btUpdate: UIButton!
     
+    //ln 24-30 Set up VC and get permissions to read steps from Healthkit (Paul)
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.lbStep.text = "None"
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         healthStore.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    //ln 33-50 function to get step since start of today (Lishen)
     func getStepsCount(forSpecificDate:Date,completion: @escaping (Double) -> Void) {
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         
@@ -48,6 +49,7 @@ class stepController: UIViewController {
         healthStore.execute(query)
     }
     
+    //ln 53-59 get steps between a given date range (Paul)
     func getCountStepUsingStatisticsQuery(from start: Date, to end: Date, completion handler: @escaping (HKStatisticsQuery, HKStatistics?, Error?) -> Void) {
         let type = HKSampleType.quantityType(forIdentifier: .stepCount)!
         let predicate = HKQuery.predicateForSamples(withStart: start, end: end)
@@ -56,6 +58,7 @@ class stepController: UIViewController {
         healthStore.execute(query)
     }
     
+    //ln 62-73 add the notification for when user haven't moved for 2 days, and display 5 seconds after function is called (usually through background fetch) (Paul)
     func inactiveNotify() {
         let content = UNMutableNotificationContent()
         content.title = "Haven't moved 2 days"
@@ -69,6 +72,7 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    //ln 76-87 add notification for where users haven't reached their 1000 steps a day goal. Display 5 seconds after notifiaction is called (Paul)
     func tooLazyNotify(_ steps: Int) {
         let content = UNMutableNotificationContent()
         content.title = "Less than 1000 Steps, Current: " + String(steps)
@@ -82,6 +86,7 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    //ln 90-101 add notification for where users haven't made calls for a week. Display 5 seconds after notification is called (Paul)
     func noCallsNotify() {
         let content = UNMutableNotificationContent()
         content.title = "Haven't called anyone for a week"
@@ -95,6 +100,7 @@ class stepController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    //ln 104-133 add notification with choices for when wellbeing score should be rated by user, display 10 seconds after notifications is called, but commented out sections shows how to add notification for a specific date and time to repeat (Paul)
     func weeklyNotify() {
         let yes = UNNotificationAction(identifier: "yes", title: "Yes", options: .foreground)
         let no = UNNotificationAction(identifier: "no", title: "No", options: .foreground)
@@ -126,6 +132,7 @@ class stepController: UIViewController {
         //center.getPendingNotificationRequests {(requestArray) in print(requestArray)}
     }
     
+    //ln 136-179 function that is called usually from app delegate bg fetch, to set up notifications if conditions are met.
     func nudge(){
         // TODO: Check whether user has been inactive for past two days and send off notification
         let now = Date()
@@ -163,6 +170,7 @@ class stepController: UIViewController {
         if defaults.integer(forKey: "totalCalls") == 0 {
             noCallsNotify()
         }
+        //This is always called from bg fetch now, but in future when prepared for deployment, and no longer primarily for demo purposes, should be called once repeatably, and automatically updated every Sunday.
         weeklyNotify()
         
         //Calling this here to periodically refresh this week steps, to prevent the async bug.
@@ -171,6 +179,7 @@ class stepController: UIViewController {
         print("fetched")
     }
     
+    //ln 182-192 gets the past 7 day's steps, and stores it (Paul)
     func getThisWeekSteps(){
         let now = Date()
         let oneWeekAgo = Date(timeIntervalSinceNow: -7*24*60*60)

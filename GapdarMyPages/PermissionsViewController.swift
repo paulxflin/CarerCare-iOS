@@ -9,9 +9,9 @@
 import UIKit
 
 class PermissionsViewController: UIViewController {
-    
+    //ln 13 set up defaults to store data
     let defaults = UserDefaults.standard
-
+    //ln 15-24 link ui components from storyboard to code
     @IBOutlet weak var startTracking: UIButton!
     
     @IBOutlet weak var viewTracking: UIView!
@@ -25,12 +25,12 @@ class PermissionsViewController: UIViewController {
     
     let newLayer = CAGradientLayer()
     
+    //ln 29-31 setup variables to track user interactions
     var tracking = false
-    
     var willResetHistory = false
     var trackingChanged = false
     
-    //Set up state of "Start tracking" button based on saved state (Paul)
+    //ln 34-44 Set up state of "Start tracking" button based on saved state (Paul)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -47,7 +47,7 @@ class PermissionsViewController: UIViewController {
     }
     
     
-    //sets ui (Karunya)
+    //ln 51-57 sets ui (Karunya)
     func setUI(){
         view.setGradientBackground()
         viewTracking.layer.cornerRadius = 15.0
@@ -56,7 +56,7 @@ class PermissionsViewController: UIViewController {
         viewScoreShare.layer.borderColor = UIColor.white.cgColor
     }
     
-    //Ensures the buttton is circular (Karunya)
+    //ln 60-65 Ensures the buttton is circular (Karunya)
     override func viewWillLayoutSubviews() {
         let width = startTracking.frame.width
         startTracking.layer.cornerRadius = width/2
@@ -65,7 +65,7 @@ class PermissionsViewController: UIViewController {
     }
     
     
-    //Changes the tracking button to stop or to start (Karunya and Paul)
+    // ln 69-83 Changes the tracking button to stop or to start (Karunya and Paul)
     @IBAction func trackingPressed(_ sender: Any) {
         if !tracking{
             tracking = true
@@ -82,14 +82,13 @@ class PermissionsViewController: UIViewController {
         
     }
     
-    // Navigate to rate WB page or home page (Paul)
+    //ln 86-104 Navigate to rate WB page or home page (Paul)
     @IBAction func saveButtonPressed(_ sender: Any) {
-        //MOVED FUNCTIONALITY FROM PREVIOUS TRACKINGPRESSED INTO SAVEBUTTONPRESSED
         setupHistory()
         let setup = true
         defaults.set(setup, forKey: "setup")
         
-        //save sharing state here
+        //ln 92 save sharing state here
         defaults.set(sharingSwitch.isOn, forKey: "allowShare")
         
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
@@ -103,7 +102,7 @@ class PermissionsViewController: UIViewController {
         appDelegate?.window??.makeKeyAndVisible()
     }
     
-    // setup or clear arrays storing data as appropriate (Paul)
+    //ln 106-154 setup or clear arrays storing data as appropriate (Paul)
     func setupHistory() {
         if defaults.array(forKey: "callsArray") == nil || willResetHistory {
             let callsArray = [Int](repeating: 0, count: 12)
@@ -132,14 +131,14 @@ class PermissionsViewController: UIViewController {
         print("activity count array")
         print(activityCountArray ?? "This array doesn't exist")
         
-        //Reset more stored data here
+        //ln 135-149 Reset more stored data here
         if willResetHistory {
             //Clear the current accumulations for steps, calls, and messages
             defaults.set(0, forKey: "oneWeekSteps")
             defaults.set(0, forKey: "totalCalls")
             defaults.set(0, forKey: "totalMessages")
             
-            //Clear Network Calls and Msgs
+            //ln 142-148 Clear Network Calls and Msgs
             var networkCallsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
             networkCallsArray = [Int](repeating: 0, count: networkCallsArray.count)
             defaults.set(networkCallsArray, forKey: "networkCallsArray")
@@ -149,13 +148,13 @@ class PermissionsViewController: UIViewController {
             defaults.set(networkMessagesArray, forKey: "networkMessagesArray")
         }
         
-        //Do a quick update of weekly Steps Here. 
+        //ln 152-153 Do a quick update of weekly Steps Here.
         let VC = stepController()
         VC.getThisWeekSteps()
     }
     
     
-    //sets tracking button colour to blue or green (Karunya)
+    //ln 158-179 sets tracking button colour to blue or green (Karunya)
     func setTrackingButton(isTracking: Bool){
         startTracking.layer.sublayers?[0].removeFromSuperlayer()
         newLayer.frame = startTracking.bounds
@@ -179,23 +178,14 @@ class PermissionsViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    //ln 182-186 navigate to privacy policy site when link pressed
     @IBAction func privacyLinkPressed(_ sender: Any) {
         
         guard let url = URL(string: "https://www.torfaen.gov.uk/en/AboutTheCouncil/DataProtectionFreedomofInformation/DataProtection/Privacy-Notice/PrivacyNotice.aspx") else {return}
         UIApplication.shared.open(url)
     }
     
+    //ln 189-195 navigate to initial setup page when No Thanks button is pressed
     @IBAction func noThanksPressed(_ sender: UIButton) {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")

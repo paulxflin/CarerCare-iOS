@@ -10,6 +10,7 @@ import UIKit
 import HealthKit
 import UserNotifications
 
+// This is an outdated ViewController that is no longer displayed in our final app.
 class SetUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTF: UITextField!

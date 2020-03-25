@@ -11,13 +11,16 @@ import UIKit
 import ContactsUI
 
 class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
+    
+    //ln 16-18 set initial scroller height and arrays to store textfields and activities
     var yActivityValue = 10
     var activityTextFields : [UITextField] = []
     var activityArray : [String] = []
     
-    
+    //ln 21 set defaults variable to store data
     let defaults = UserDefaults.standard
     
+    //ln 24-34 link up UI Components
     @IBOutlet weak var activityScrollView: UIScrollView!
     
     
@@ -31,26 +34,25 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     @IBOutlet weak var SupportCodeTextField: UITextField!
     
     override func viewDidLoad() {
-        //Make sure the layouts are initialised correctly
+        //ln 36-38 Make sure the layouts are initialised correctly
         super.viewDidLoad()
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
-        
-        
         activityScrollView.layer.cornerRadius = 10.0
+        
+        //ln 41-44 Give UI Component Control as this class
         postcodeTextField.delegate = self
         stepsPerDayTextField.delegate = self
         contactsPerDayTextField.delegate = self
         SupportCodeTextField.delegate = self
         
+        //ln 47-48 Fill Fields and Existing Activites
         fillFieldsWithPreviousData()
         setActivityScroller()
-        
-        
     }
     
     
-    //Gets the data previously filled and places the text in the text fields (Karunya)
+    //ln 53-58 Gets the data previously filled and places the text in the text fields (Karunya)
     func fillFieldsWithPreviousData(){
         postcodeTextField.text = defaults.string(forKey: "postcode")
         stepsPerDayTextField.text = defaults.string(forKey: "targetSteps")
@@ -58,7 +60,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         SupportCodeTextField.text = defaults.string(forKey: "reference")
     }
     
-    //places previous activities on scroller (Karunya)
+    //ln 61-70 places previous activities on scroller (Karunya)
     func setActivityScroller(){
         let activityStringArray = defaults.stringArray(forKey: "activityArray") ?? []
         
@@ -70,13 +72,13 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         }
     }
     
-    // Links UI to add a blank activity textfield onto screen (Paul)
+    //ln 73-75 Links UI to add a blank activity textfield onto screen (Paul)
     @IBAction func getActivitiesButtonPressed(_ sender: Any) {
         placeActivityOnScreen(activity: "")
     }
     
     
-    //places the activities on the screen (Karunya)
+    //ln 79-101 places the activities on the screen (Karunya)
     func placeActivityOnScreen(activity: String){
         let widthOfCanvas = activityScrollView.frame.width
         let heightOfCanvas = self.view.frame.height * 0.15
@@ -101,7 +103,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         
     }
     
-    // Save the textfield data (Paul)
+    //ln 104-122 Save the textfield data (Paul)
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         for activity in activityTextFields{
@@ -123,12 +125,12 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard
+        //ln 126 Hide the keyboard after hitting return
         textField.resignFirstResponder()
         return true
     }
     
-    // Limits the postcode textfield to 4 characters (Paul)
+    //ln 131-140 Limits the postcode textfield to 4 characters (Paul)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == postcodeTextField {
             let maxLength = 4
@@ -140,7 +142,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         return true
     }
     
-    // Navigate back to first page (Paul)
+    //ln 143-149 Navigate back to first page (Paul)
     @IBAction func noThanksPressed(_ sender: UIButton) {
         let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = mainSB.instantiateViewController(withIdentifier: "Setup")

@@ -11,9 +11,10 @@ import ContactsUI
 
 class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPickerDelegate {
     
-    
+    //ln 15 variable to store data to phone
     let defaults = UserDefaults.standard
     
+    //ln 18-25 declare variables to track scrollview height, store number and name data, and UI Components
     var yContactsValue = 10
     var phoneArray : [String] = []
     var nameArray : [String] = []
@@ -23,27 +24,17 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     var callsArray : [Int] = []
     var messagesArray : [Int] = []
     
+    //ln 28-38 link SB to code
     @IBOutlet weak var contactSV: UIScrollView!
     
-    
     @IBOutlet weak var weblink01: RoundButton!
-    
-
     @IBOutlet weak var weblink02: UIButton!
-    
-  
     @IBOutlet weak var weblink03: UIButton!
-    
     @IBOutlet weak var weblink04: UIButton!
-    
     @IBOutlet weak var weblink05: UIButton!
-    
     @IBOutlet weak var weblink06: UIButton!
-    
     @IBOutlet weak var weblink07: UIButton!
-    
     @IBOutlet weak var weblink08: UIButton!
-    
     @IBOutlet weak var weblink09: UIButton!
     
     override func viewDidLoad() {
@@ -51,12 +42,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         var subviews = self.contactSV.subviews
         subviews.removeAll()
         
-        //Make sure the layouts are initialised correctly
+        //ln 46-47 Make sure the layouts are initialised correctly
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
         
         contactSV.layer.cornerRadius = 15.0
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //ln 52-58 setup arrays
         phoneArray = defaults.stringArray(forKey: "phoneArray") ?? []
         nameArray = defaults.stringArray(forKey: "nameArray") ?? []
         // Note this is already setup during the settings phase
@@ -129,16 +121,15 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     
-    //places contacts that are already on the screen (Karunya)
+    //ln 125-129 places contacts that are already on the screen (Karunya and Paul)
     func setupContactSV() {
-        // TODO: Add a for loop to add in the saved contacts.
         view.addSubview(contactSV)
         
         addExistingContacts()
     }
     
     
-    //Goes through previously added contacts (Karunya)
+    //ln 133-143 Goes through previously added contacts (Paul and Karunya)
     func addExistingContacts() {
         
         while i < nameArray.count {
@@ -153,7 +144,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
 
     
-    //Allows user to get another contact (Karunya)
+    //ln 148-152 Allows user to get another contact (Karunya)
     @IBAction func getNumber(_ sender: Any) {
         let picker = CNContactPickerViewController()
         picker.delegate = self
@@ -162,8 +153,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     
-    //Gets the contact and places it on the screen (Karunya)
-    //Appends the new contact to the defaults storage
+    //ln 157-189 Gets the contact and places it on the screen (Karunya)
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         var familyName = ""
         var phoneNumber = ""
@@ -173,7 +163,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
             phoneNumber = phoneNo.stringValue
             
         }
-        
+        //ln 167-171 Appends the new contact to the defaults storage (Paul)
         phoneArray.append(phoneNumber)
         nameArray.append(familyName)
         
@@ -185,13 +175,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         i += 1
         
         
-        //retrieves network calls array
+        //ln 179-182 retrieves network calls array (Paul)
         if defaults.array(forKey: "networkCallsArray") != nil {
             callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
             messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
         }
         
-        //adds network array to all of the new contacts
+        //ln 185-188 adds network array to all of the new contacts (Paul)
         callsArray.append(0)
         messagesArray.append(0)
         defaults.set(callsArray, forKey: "networkCallsArray")
@@ -200,7 +190,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     
-    //UI For placing the contacts on the screen (Karunya)
+    //ln 194-259 UI For placing the contacts on the screen (Karunya and Paul)
     func placeContactOnScreen(name: String, phone: String, i: Int){
         let swidth = self.view.frame.width - 30
         print("this is swidth")
@@ -269,7 +259,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     }
     
     
-    
+    //ln 263-282 clean number, update data, open call dialogue
     @objc func callPressed(_ sender: UIButton) {
         // Debug: print(sender.tag)
         let phone = phoneArray[sender.tag]
@@ -291,6 +281,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         }
     }
     
+    //ln 285-292 navigate to message composer
     @objc func messagePressed(_ sender: UIButton) {
         print("message pressed")
         let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
@@ -299,8 +290,6 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         appDelegate?.window??.rootViewController = composeVC
         appDelegate?.window??.makeKeyAndVisible()
     }
-    
-    
     
     
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
@@ -316,16 +305,14 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
 //    }
     
     
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard
+        //ln 310 Hide the keyboard
         textField.resignFirstResponder()
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //Modify the phoneArray or nameArray here
+        //ln 317-326 Modify the phoneArray or nameArray
         let tag = textField.tag
         if tag < 100 {
             //modify nameArray

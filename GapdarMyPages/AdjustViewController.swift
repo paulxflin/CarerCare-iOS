@@ -84,12 +84,15 @@ class AdjustViewController: UIViewController {
             HomeViewController().sendDataToDB()
         }
         
-        //ln 87-89 Update the scoresArray with this score (Paul)
+        //ln 87 This function shifts the records or steps and calls to put current week into last week
+        updateArrays()
+        
+        //ln 90-92 Update the scoresArray with this score (Paul)
         var scoresArray : [Int] = defaults.array(forKey: "scoresArray") as! [Int]
         scoresArray[0] = defaults.integer(forKey: "score")
         defaults.set(scoresArray, forKey: "scoresArray")
         
-        //ln 92-96 navigate to HomeVC with tabbar (Paul)
+        //ln 95-99 navigate to HomeVC with tabbar (Paul)
         let barSB : UIStoryboard = UIStoryboard(name: "MenuTabBar", bundle: nil)
         let barVC = barSB.instantiateViewController(withIdentifier: "tabBar")
         let appDelegate = UIApplication.shared.delegate
@@ -97,7 +100,7 @@ class AdjustViewController: UIViewController {
         appDelegate?.window??.makeKeyAndVisible()
     }
     
-    //ln 100-136, make a score prediction (Paul)
+    //ln 103-136, make a score prediction (Paul)
     func getPredictedScore() -> Int {
         let VC = stepController()
         VC.getThisWeekSteps()
@@ -123,11 +126,8 @@ class AdjustViewController: UIViewController {
         
         let score : Double = (stepsRatio + callsRatio) / 2.0 * 10.0
         
-        //ln 126 Record down the predicted score, if modified will update later.
+        //ln 129 Record down the predicted score, if modified will update later.
         defaults.set(score, forKey: "score")
-        
-        //ln 129 This function shifts the records or steps and calls to put current week into last week
-        updateArrays()
         
         if Int(score) > 10 {
             return 10

@@ -74,7 +74,7 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
     }
     
     
-    //UI for placing contacts on the screen (Karunya)
+    //UI for placing contacts on the screen (Karunya) Same as ContactsViewController
     func placeContactOnScreen(name: String, phone: String){
         
         let widthOfCanvas = contactsScrollView.frame.width
@@ -127,18 +127,18 @@ class SetUpCareNetwork: UIViewController, UITextFieldDelegate, CNContactPickerDe
             phoneNumber = phoneNo.stringValue
             
         }
+        //131 places newly selected contact onto screen
         placeContactOnScreen(name: familyName, phone: phoneNumber)
+        
+        //133-136 checks whether the defaults arrays are empty, if not, calls the current array
         if defaults.array(forKey: "networkCallsArray") != nil {
             callsArray = defaults.array(forKey: "networkCallsArray") as! [Int]
             messagesArray = defaults.array(forKey: "networkMessagesArray") as! [Int]
         }
         
-        
+        //140-141 appends the value 0 to calls and messages assigning them call and messages history value; 142/3 updates the defaults array of arrays with those names
         callsArray.append(0)
         messagesArray.append(0)
-        //Two set empty arrays may be redundant
-//        defaults.set([], forKey: "networkCallsArray")
-//        defaults.set([], forKey: "networkMessagesArray")
         defaults.set(callsArray, forKey: "networkCallsArray")
         defaults.set(messagesArray, forKey: "networkMessagesArray")
         

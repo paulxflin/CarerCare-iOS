@@ -32,6 +32,7 @@ class Graph: ChartViewDelegate{
     
     //Alocates settings on the graphs: position the axis, enable/disable gridlines (Karunya)
     func setChartDecorSettings(){
+        //36, 37 ensures plane background, 38 determines the order in which the graphs are drawn
         chartView.drawGridBackgroundEnabled = false
         chartView.leftAxis.drawAxisLineEnabled = false
         chartView.drawOrder = [DrawOrder.bar.rawValue,  DrawOrder.line.rawValue]
@@ -60,7 +61,7 @@ class Graph: ChartViewDelegate{
         rightAxis.axisMinimum               = 0.0
         
         
-        //Places the text correctly
+        //66-70 Places the text correctly
         // MARK: legend
         let legend                          = chartView.legend
         legend.horizontalAlignment          = .center
@@ -73,7 +74,7 @@ class Graph: ChartViewDelegate{
     }
     
     
-    //calls the functions to place data on graphs (Karunya)
+    //80-84 calls the functions to place data on graphs (Karunya)
     func setChartData()
     {
         let data = CombinedChartData()
@@ -84,7 +85,7 @@ class Graph: ChartViewDelegate{
     }
     
     
-    
+    //(Paul)
     func getSubArray(_ array : [Int], _ numElems : Int) -> [Int] {
         var finalArr = [Int](repeating: 0, count: numElems)
         var i = 0
@@ -96,7 +97,7 @@ class Graph: ChartViewDelegate{
     }
     
     
-    //Generates line graphs (Karunya)
+    //Generates line graphs (Karunya); 105 accesses the values in the scoreArray
     func generateLineData() -> LineChartData
     {
         // MARK: ChartDataEntry
@@ -107,14 +108,14 @@ class Graph: ChartViewDelegate{
         
         //var wellBeingValues: [Int]=[3,5,4,4,9,4,7,6,8]
         
-        //Calculates the x, y position for the graphs
+        //112-115 Calculates the x, y position for the graphs
         for index in 1..<ITEM_COUNT+1
         {
             entries.append(ChartDataEntry(x: Double(index-1) + 0.5, y: Double(wellBeingValues[index-1])))
         }
         
         
-        //Line Data colours
+        //120-130 Line Data colours, settings such as width, circles
         // MARK: LineChartDataSet
         let set = LineChartDataSet(values: entries, label: "Well-being Score")
         set.colors = [#colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)]
@@ -126,7 +127,7 @@ class Graph: ChartViewDelegate{
         set.drawValuesEnabled = true
         set.valueFont = NSUIFont.systemFont(ofSize: CGFloat(10.0))
         set.valueTextColor = #colorLiteral(red: 0.941176470588235, green: 0.933333333333333, blue: 0.274509803921569, alpha: 1.0)
-        set.axisDependency = .left
+        set.axisDependency = .left //ensures that it is connected to the left axis
         
         // MARK: LineChartData
         let data = LineChartData()
@@ -155,6 +156,7 @@ class Graph: ChartViewDelegate{
             
         }
         var axisLabel : String
+        //160-177 since shows 2 diff data, checks what was called and sets graph accordingly
         if (type == "callsArray"){
             axisLabel = "Number of calls"
         }

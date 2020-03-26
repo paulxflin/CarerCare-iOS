@@ -60,7 +60,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
         SupportCodeTextField.text = defaults.string(forKey: "reference")
     }
     
-    //ln 61-70 places previous activities on scroller (Karunya)
+    //ln 61-70 places previous activities on scroller (Karunya);65 gets the values in activity
     func setActivityScroller(){
         let activityStringArray = defaults.stringArray(forKey: "activityArray") ?? []
         
@@ -78,7 +78,7 @@ class SetUpPage2: UIViewController, UITextFieldDelegate, CNContactPickerDelegate
     }
     
     
-    //ln 79-101 places the activities on the screen (Karunya)
+    //ln 79-101 places the activities on the screen (Karunya) 
     func placeActivityOnScreen(activity: String){
         let widthOfCanvas = activityScrollView.frame.width
         let heightOfCanvas = self.view.frame.height * 0.15

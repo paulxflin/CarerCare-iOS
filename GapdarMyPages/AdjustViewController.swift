@@ -49,6 +49,7 @@ class AdjustViewController: UIViewController {
     }
     
     //decorate UI (Karunya)
+    //maskstobound ensures that the radius will curve, corner radius allows the square button, view to curve
     func setUI(){
         sliderView.layer.masksToBounds = true
         sliderView.layer.cornerRadius = 10.0

@@ -65,8 +65,8 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         
     }
    
-    //Gets the users name and surname iteratively in the phone (Karunya)
-    //once they select it, the name is placed on the screen
+    //(lines 71-78)Gets the users name and surname iteratively in the phone (Karunya)
+    //(lines 80 -111)once they select it, the name is placed on the screen
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         var familyName = ""
         var phoneNumber = ""
@@ -116,7 +116,7 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
     }
     
     
-    //Allows you to add an activity when + button pressed (Karunya)
+    //Allows you to add an activity when + button pressed (Karunya);lines121-125 generate a new label with the name activity; lines 127-131 create a text field; 134 adds the text field to an array so that it can then be iterated through and the values within can be collected
     @IBAction func activityButtonPressed(_ sender: Any) {
         let label = UILabel(frame: CGRect(x:10, y:yActivityValue, width:74, height:33))
         //label.center = CGPoint(x:44, y:146)
@@ -129,8 +129,8 @@ class ContactsActvitiesSetUpViewController: UIViewController, UITextFieldDelegat
         activityTF.backgroundColor = .white
         activityTF.textAlignment = .left
         activityTF.borderStyle = .roundedRect
-        
         activityScrollView.addSubview(activityTF)
+        
         activityTextFields.append(activityTF)
         yActivityValue += 40
         

@@ -156,6 +156,7 @@ class PermissionsViewController: UIViewController {
     
     //ln 158-179 sets tracking button colour to blue or green (Karunya)
     func setTrackingButton(isTracking: Bool){
+        //160 checks removes current colour; 161 ensures that the gradient background covers all of the button; 162-172 checks what state tracking is and sets the texts and colours accordingly
         startTracking.layer.sublayers?[0].removeFromSuperlayer()
         newLayer.frame = startTracking.bounds
         if tracking{
@@ -168,6 +169,8 @@ class PermissionsViewController: UIViewController {
             newLayer.colors = [UIColor(red: 16/255.0, green: 94/255.0, blue: 103/255.0, alpha: 1.0).cgColor, UIColor(red: 26/255.0, green: 154/255.0, blue: 169/255.0, alpha: 1.0).cgColor]
             
         }
+        
+        //174 sets position of the button to the center, endpoint changes the direction the gradient goes down; 178-180 adds the updated colour on
         newLayer.locations = [0.0, 1.0]
         newLayer.startPoint = CGPoint(x:0.0, y:0.0)
         newLayer.endPoint = CGPoint(x:0.0, y:1.0)

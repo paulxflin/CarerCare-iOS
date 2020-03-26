@@ -191,10 +191,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
     
     
     //ln 194-259 UI For placing the contacts on the screen (Karunya and Paul)
+    //199 finds the value of the scroller, 0.25 comes from the constraints set on the scrollview in the stroyboard (i.e. it is to be equal to 0.25*height of the screen);204-207,221-225 labels called name and phone no are created ; 209-216, 221-235 display the value of name and phone no. in text fields
     func placeContactOnScreen(name: String, phone: String, i: Int){
         let swidth = self.view.frame.width - 30
-        print("this is swidth")
-        print(swidth)
+        //print("this is swidth")
+        //print(swidth)
         let height = self.view.frame.height * 0.25
         let adjustedHeight = swidth * 0.57
         print("this is the adjustedHeight")
@@ -233,7 +234,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, CNContactPi
         numTF.tag = i + 100
         contactSV.addSubview(numTF)
         
-        
+        //237-254 add buttons of call and message on the screen
         
         let image = UIImage(named: "icons8-call-32.png") as UIImage?
         let button = UIButton.init(type: .roundedRect)

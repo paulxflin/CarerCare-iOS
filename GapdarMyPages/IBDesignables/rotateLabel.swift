@@ -11,7 +11,7 @@ import UIKit
 
 @IBDesignable
 class rotateLabel: UILabel{
-    //allows label to be rotated
+    //allows label to be rotated;17 converts degrees to radians;18 performs the transformation allowing labels to rotate
     @IBInspectable var rotation: CGFloat = 0{
         didSet{
             let radians = CGFloat(CGFloat(Double.pi)*CGFloat(rotation)/CGFloat(180.0))
@@ -20,7 +20,7 @@ class rotateLabel: UILabel{
     }
     
     
-    //Dynamically changes the size the text on the label
+    //Dynamically changes the size the text on the label (same as TextFontScreen)
     @IBInspectable var textSize: CGFloat = 0{
         didSet{
             let bounds = UIScreen.main.bounds

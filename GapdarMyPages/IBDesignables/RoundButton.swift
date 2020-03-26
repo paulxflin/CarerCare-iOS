@@ -18,7 +18,7 @@ class RoundButton: UIButton{
         }
     }
     
-    //dynamically changes the size of text on buttons
+    //dynamically changes the size of text on buttons. gets current font, and then changes the size by multiplying the value with the height of the screen
     @IBInspectable var textSize: CGFloat = 0{
         didSet{
             let bounds = UIScreen.main.bounds

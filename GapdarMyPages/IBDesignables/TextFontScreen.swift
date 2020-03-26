@@ -11,7 +11,7 @@ import  UIKit
 
 @IBDesignable
 class TextFontScreen: UITextView{
-    //this enables the text to change dynamically, i.e. text gets larger as screen gets larger
+    //this enables the text to change dynamically, i.e. text gets larger as screen gets larger; 18-20 gets current font and uses that to create a new font, however with a size that is larger;21-22 adjusts the frame size, i.e. ensures that the larger text will fully display on the screen;23 ensures that the text is fully visible on the screen and not scrollable within a small area
     @IBInspectable var textSize: CGFloat = 0{
         didSet{
             let bounds = UIScreen.main.bounds

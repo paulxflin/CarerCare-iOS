@@ -56,8 +56,10 @@ class HomeViewController: UIViewController {
     }
     
     // Note: viewWillAppear is called every single time a view is presented, unlike viewDidLoad which is only called once when view is added to memory
-    //ln 60-65 update the predicted score label, as well as other data labels (Paul)
+    //ln 60-67 get steps since Sunday, update the predicted score label, as well as other data labels (Paul)
     override func viewWillAppear(_ animated: Bool) {
+        let stepVC = stepController()
+        stepVC.getStepsSinceLastSunday()
         displayedScoreLabel.text = String(defaults.integer(forKey: "score"))
         stepsLabel.text = String(defaults.integer(forKey: "oneWeekSteps"))
         callsLabel.text = String(defaults.integer(forKey: "totalCalls"))
@@ -73,8 +75,7 @@ class HomeViewController: UIViewController {
     }
     
     func foundationToJSON(object:Any) -> Data {
-        if !JSONSerialization.isValidJSONObject(object)
-        {
+        if !JSONSerialization.isValidJSONObject(object) {
             print("invalid01")
             return Data.init()
         }
@@ -82,8 +83,7 @@ class HomeViewController: UIViewController {
     }
     
     func JSONToFoundation(object:Data) -> Any {
-        if JSONSerialization.isValidJSONObject(object)
-        {
+        if JSONSerialization.isValidJSONObject(object) {
             print("invalid02")
             return NSNull.init()
         }

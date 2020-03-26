@@ -179,7 +179,7 @@ class stepController: UIViewController {
         print("fetched")
     }
     
-    //ln 182-192 gets the past 7 day's steps, and stores it (Paul)
+    //ln 183-193 gets the past 7 day's steps, and stores it (Paul)
     func getThisWeekSteps(){
         let now = Date()
         let oneWeekAgo = Date(timeIntervalSinceNow: -7*24*60*60)
@@ -189,6 +189,22 @@ class stepController: UIViewController {
                 print("fetched one week steps: " + String(oneWeekSteps))
                 self.defaults.set(oneWeekSteps, forKey: "oneWeekSteps")
             }
+        }
+    }
+    
+    //ln 196-209 get steps since last Sunday, useful for home page display.
+    func getStepsSinceLastSunday() {
+        let now = Date()
+        let cal = Calendar(identifier: .gregorian)
+        let comp = cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date())
+        let lastSunday = cal.date(from: comp)!
+        getCountStepUsingStatisticsQuery(from: lastSunday, to: now) { (query, stats, error) in
+            if let value = stats?.sumQuantity()?.doubleValue(for: .count()) {
+                let stepsSinceSunday = Int(value)
+                print("stepsSinceSunday: " + String(stepsSinceSunday))
+                self.defaults.set(stepsSinceSunday, forKey: "oneWeekSteps")
+            }
+            
         }
     }
     

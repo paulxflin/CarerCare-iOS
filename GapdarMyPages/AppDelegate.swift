@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     let defaults = UserDefaults.standard
 
-
+    //ln 20-49 handles instructions for when an app is first opened, sets up VC and enables BG Fetch
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UNUserNotificationCenter.current().delegate = self
@@ -48,11 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    //ln 52-55 calls nudge when BG fetch happens
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         let vc = stepController()
         vc.nudge()
     }
     
+    //ln 58-68 handles notification clicked from outside app
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         //This is the method called if notification is received while app is in foreground.
         print("I've reached willPresent method")
@@ -65,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
+    //ln 71-85 handles notifications called from inside app
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("I did receive a response")
         
@@ -150,6 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        defaults.set(0, forKey: "totalCalls")
 //    }
     
+    //ln 157-162 present the wellbeing nudge VC
     func presentNudge() {
         let messagesSB : UIStoryboard = UIStoryboard(name: "Messages", bundle: nil)
         let nudgeVC = messagesSB.instantiateViewController(withIdentifier: "nudge")
@@ -157,6 +161,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.window?.makeKeyAndVisible()
     }
     
+    //ln 165-173 presents the Home VC with tab bars
     func presentWBAlert() {
         //Call a function to calculate predicted score here
         //This is being tranferred over to AdjustVC
